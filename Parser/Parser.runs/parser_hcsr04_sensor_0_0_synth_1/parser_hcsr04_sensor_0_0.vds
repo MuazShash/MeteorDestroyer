@@ -1,0 +1,348 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Tue Feb 11 01:17:43 2025
+# Process ID: 13052
+# Current directory: C:/Users/Muaz/Documents/MeteorDestroyer/Parser/Parser.runs/parser_hcsr04_sensor_0_0_synth_1
+# Command line: vivado.exe -log parser_hcsr04_sensor_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source parser_hcsr04_sensor_0_0.tcl
+# Log file: C:/Users/Muaz/Documents/MeteorDestroyer/Parser/Parser.runs/parser_hcsr04_sensor_0_0_synth_1/parser_hcsr04_sensor_0_0.vds
+# Journal file: C:/Users/Muaz/Documents/MeteorDestroyer/Parser/Parser.runs/parser_hcsr04_sensor_0_0_synth_1\vivado.jou
+#-----------------------------------------------------------
+source parser_hcsr04_sensor_0_0.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/users/muaz/documents/meteordestroyer/parser/parser.srcs/sources_1/parser_ip'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.3/data/ip'.
+Command: synth_design -top parser_hcsr04_sensor_0_0 -part xc7a200tsbg484-1 -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a200t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a200t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 24032 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 369.344 ; gain = 101.270
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'parser_hcsr04_sensor_0_0' [c:/Users/Muaz/Documents/MeteorDestroyer/Parser/Parser.srcs/sources_1/bd/parser/ip/parser_hcsr04_sensor_0_0/synth/parser_hcsr04_sensor_0_0.sv:58]
+INFO: [Synth 8-6157] synthesizing module 'hcsr04_sensor' [c:/Users/Muaz/Documents/MeteorDestroyer/Parser/Parser.srcs/sources_1/bd/parser/ipshared/2109/src/sensor_parser.sv:1]
+	Parameter CLK_FREQ bound to: 100000000 - type: integer 
+	Parameter TRIG_PULSE bound to: 1000 - type: integer 
+	Parameter WAIT_TIME bound to: 4000 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'hcsr04_sensor' (1#1) [c:/Users/Muaz/Documents/MeteorDestroyer/Parser/Parser.srcs/sources_1/bd/parser/ipshared/2109/src/sensor_parser.sv:1]
+INFO: [Synth 8-6155] done synthesizing module 'parser_hcsr04_sensor_0_0' (2#1) [c:/Users/Muaz/Documents/MeteorDestroyer/Parser/Parser.srcs/sources_1/bd/parser/ip/parser_hcsr04_sensor_0_0/synth/parser_hcsr04_sensor_0_0.sv:58]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 424.582 ; gain = 156.508
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 424.582 ; gain = 156.508
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 424.582 ; gain = 156.508
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7a200tsbg484-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 787.043 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 787.043 ; gain = 0.000
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.047 . Memory (MB): peak = 789.164 ; gain = 2.121
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 789.164 ; gain = 521.090
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a200tsbg484-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 789.164 ; gain = 521.090
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 789.164 ; gain = 521.090
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'hcsr04_sensor'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+            SEND_TRIGGER |                            00001 |                              000
+     WAIT_BEFORE_MEASURE |                            00010 |                              001
+          WAIT_ECHO_HIGH |                            00100 |                              010
+            MEASURE_ECHO |                            01000 |                              011
+      CALCULATE_DISTANCE |                            10000 |                              100
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'hcsr04_sensor'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 789.164 ; gain = 521.090
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 2     
+	                5 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Multipliers : 
+	                16x32  Multipliers := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 4     
+	   5 Input      5 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 1     
+	   5 Input      3 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+	   5 Input      1 Bit        Muxes := 2     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module hcsr04_sensor 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 2     
+	                5 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Multipliers : 
+	                16x32  Multipliers := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 4     
+	   5 Input      5 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 1     
+	   5 Input      3 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+	   5 Input      1 Bit        Muxes := 2     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 740 (col length:100)
+BRAMs: 730 (col length: RAMB18 100 RAMB36 50)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+INFO: [Synth 8-3917] design parser_hcsr04_sensor_0_0 has port distance_cm[31] driven by constant 0
+INFO: [Synth 8-3917] design parser_hcsr04_sensor_0_0 has port distance_cm[30] driven by constant 0
+INFO: [Synth 8-3917] design parser_hcsr04_sensor_0_0 has port distance_cm[29] driven by constant 0
+INFO: [Synth 8-3917] design parser_hcsr04_sensor_0_0 has port distance_cm[28] driven by constant 0
+INFO: [Synth 8-3917] design parser_hcsr04_sensor_0_0 has port distance_cm[27] driven by constant 0
+INFO: [Synth 8-3917] design parser_hcsr04_sensor_0_0 has port distance_cm[26] driven by constant 0
+INFO: [Synth 8-3917] design parser_hcsr04_sensor_0_0 has port distance_cm[25] driven by constant 0
+INFO: [Synth 8-3917] design parser_hcsr04_sensor_0_0 has port distance_cm[24] driven by constant 0
+INFO: [Synth 8-3917] design parser_hcsr04_sensor_0_0 has port distance_cm[23] driven by constant 0
+INFO: [Synth 8-3917] design parser_hcsr04_sensor_0_0 has port distance_cm[22] driven by constant 0
+INFO: [Synth 8-3917] design parser_hcsr04_sensor_0_0 has port distance_cm[21] driven by constant 0
+INFO: [Synth 8-3917] design parser_hcsr04_sensor_0_0 has port distance_cm[20] driven by constant 0
+INFO: [Synth 8-3917] design parser_hcsr04_sensor_0_0 has port distance_cm[19] driven by constant 0
+INFO: [Synth 8-3917] design parser_hcsr04_sensor_0_0 has port distance_cm[18] driven by constant 0
+INFO: [Synth 8-3917] design parser_hcsr04_sensor_0_0 has port distance_cm[17] driven by constant 0
+INFO: [Synth 8-3917] design parser_hcsr04_sensor_0_0 has port distance_cm[16] driven by constant 0
+INFO: [Synth 8-3917] design parser_hcsr04_sensor_0_0 has port distance_cm[15] driven by constant 0
+INFO: [Synth 8-3917] design parser_hcsr04_sensor_0_0 has port distance_cm[14] driven by constant 0
+INFO: [Synth 8-3917] design parser_hcsr04_sensor_0_0 has port distance_cm[13] driven by constant 0
+INFO: [Synth 8-3917] design parser_hcsr04_sensor_0_0 has port distance_cm[12] driven by constant 0
+INFO: [Synth 8-3917] design parser_hcsr04_sensor_0_0 has port distance_cm[11] driven by constant 0
+INFO: [Synth 8-3917] design parser_hcsr04_sensor_0_0 has port distance_cm[10] driven by constant 0
+INFO: [Synth 8-3917] design parser_hcsr04_sensor_0_0 has port distance_cm[9] driven by constant 0
+INFO: [Synth 8-3917] design parser_hcsr04_sensor_0_0 has port distance_cm[8] driven by constant 0
+INFO: [Synth 8-3917] design parser_hcsr04_sensor_0_0 has port distance_cm[7] driven by constant 0
+INFO: [Synth 8-3917] design parser_hcsr04_sensor_0_0 has port distance_cm[6] driven by constant 0
+INFO: [Synth 8-3917] design parser_hcsr04_sensor_0_0 has port distance_cm[5] driven by constant 0
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 789.164 ; gain = 521.090
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 791.145 ; gain = 523.070
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 791.441 ; gain = 523.367
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 812.355 ; gain = 544.281
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 812.355 ; gain = 544.281
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 812.355 ; gain = 544.281
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 812.355 ; gain = 544.281
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 812.355 ; gain = 544.281
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 812.355 ; gain = 544.281
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 812.355 ; gain = 544.281
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |CARRY4 |    61|
+|2     |LUT1   |     4|
+|3     |LUT2   |   105|
+|4     |LUT3   |    97|
+|5     |LUT4   |   106|
+|6     |LUT5   |    15|
+|7     |LUT6   |    16|
+|8     |FDRE   |    73|
++------+-------+------+
+
+Report Instance Areas: 
++------+---------+--------------+------+
+|      |Instance |Module        |Cells |
++------+---------+--------------+------+
+|1     |top      |              |   477|
+|2     |  inst   |hcsr04_sensor |   477|
++------+---------+--------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 812.355 ; gain = 544.281
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:11 ; elapsed = 00:00:15 . Memory (MB): peak = 812.355 ; gain = 179.699
+Synthesis Optimization Complete : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 812.355 ; gain = 544.281
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 61 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 814.707 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+47 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 814.777 ; gain = 550.410
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 814.777 ; gain = 0.000
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint 'C:/Users/Muaz/Documents/MeteorDestroyer/Parser/Parser.runs/parser_hcsr04_sensor_0_0_synth_1/parser_hcsr04_sensor_0_0.dcp' has been generated.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP parser_hcsr04_sensor_0_0, cache-ID = 03523454a1aaba5d
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 814.777 ; gain = 0.000
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint 'C:/Users/Muaz/Documents/MeteorDestroyer/Parser/Parser.runs/parser_hcsr04_sensor_0_0_synth_1/parser_hcsr04_sensor_0_0.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file parser_hcsr04_sensor_0_0_utilization_synth.rpt -pb parser_hcsr04_sensor_0_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Tue Feb 11 01:18:10 2025...
