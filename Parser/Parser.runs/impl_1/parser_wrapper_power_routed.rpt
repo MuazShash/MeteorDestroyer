@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-| Date             : Tue Feb 11 01:49:48 2025
+| Date             : Tue Feb 11 02:36:31 2025
 | Host             : DESKTOP-BINRERU running 64-bit major release  (build 9200)
 | Command          : report_power -file parser_wrapper_power_routed.rpt -pb parser_wrapper_power_summary_routed.pb -rpx parser_wrapper_power_routed.rpx
 | Design           : parser_wrapper
@@ -30,14 +30,14 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.266        |
+| Total On-Chip Power (W)  | 0.288        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.137        |
-| Device Static (W)        | 0.129        |
+| Dynamic (W)              | 0.154        |
+| Device Static (W)        | 0.134        |
 | Effective TJA (C/W)      | 3.3          |
-| Max Ambient (C)          | 84.1         |
-| Junction Temperature (C) | 25.9         |
+| Max Ambient (C)          | 84.0         |
+| Junction Temperature (C) | 26.0         |
 | Confidence Level         | Medium       |
 | Setting File             | ---          |
 | Simulation Activity File | ---          |
@@ -52,21 +52,21 @@ Table of Contents
 +--------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
-| Clocks                   |     0.016 |        6 |       --- |             --- |
-| Slice Logic              |     0.003 |     5548 |       --- |             --- |
-|   LUT as Logic           |     0.003 |     1860 |    133800 |            1.39 |
-|   CARRY4                 |    <0.001 |      112 |     33450 |            0.33 |
-|   Register               |    <0.001 |     2287 |    267600 |            0.85 |
-|   LUT as Shift Register  |    <0.001 |      119 |     46200 |            0.26 |
+| Clocks                   |     0.022 |        6 |       --- |             --- |
+| Slice Logic              |     0.003 |     6729 |       --- |             --- |
+|   LUT as Logic           |     0.003 |     2264 |    133800 |            1.69 |
+|   CARRY4                 |    <0.001 |      117 |     33450 |            0.35 |
+|   Register               |    <0.001 |     2530 |    267600 |            0.95 |
+|   LUT as Shift Register  |    <0.001 |      152 |     46200 |            0.33 |
 |   LUT as Distributed RAM |    <0.001 |       24 |     46200 |            0.05 |
-|   F7/F8 Muxes            |    <0.001 |      147 |    133800 |            0.11 |
-|   Others                 |     0.000 |      647 |       --- |             --- |
-| Signals                  |     0.005 |     4769 |       --- |             --- |
-| Block RAM                |     0.007 |      136 |       365 |           37.26 |
+|   F7/F8 Muxes            |    <0.001 |      255 |    133800 |            0.19 |
+|   Others                 |     0.000 |      981 |       --- |             --- |
+| Signals                  |     0.007 |     6121 |       --- |             --- |
+| Block RAM                |     0.015 |      252 |       365 |           69.04 |
 | MMCM                     |     0.106 |        1 |        10 |           10.00 |
 | I/O                      |    <0.001 |        4 |       285 |            1.40 |
-| Static Power             |     0.129 |          |           |                 |
-| Total                    |     0.266 |          |           |                 |
+| Static Power             |     0.134 |          |           |                 |
+| Total                    |     0.288 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -76,7 +76,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.065 |       0.031 |      0.034 |
+| Vccint    |       1.000 |     0.084 |       0.047 |      0.037 |
 | Vccaux    |       1.800 |     0.089 |       0.059 |      0.031 |
 | Vcco33    |       3.300 |     0.000 |       0.000 |      0.000 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
@@ -85,7 +85,7 @@ Table of Contents
 | Vcco135   |       1.350 |     0.000 |       0.000 |      0.000 |
 | Vcco12    |       1.200 |     0.000 |       0.000 |      0.000 |
 | Vccaux_io |       1.800 |     0.000 |       0.000 |      0.000 |
-| Vccbram   |       1.000 |     0.004 |       0.000 |      0.004 |
+| Vccbram   |       1.000 |     0.008 |       0.001 |      0.007 |
 | MGTAVcc   |       1.000 |     0.000 |       0.000 |      0.000 |
 | MGTAVtt   |       1.200 |     0.000 |       0.000 |      0.000 |
 | Vccadc    |       1.800 |     0.020 |       0.000 |      0.020 |
@@ -148,17 +148,17 @@ Table of Contents
 +--------------------------+-----------+
 | Name                     | Power (W) |
 +--------------------------+-----------+
-| parser_wrapper           |     0.137 |
-|   dbg_hub                |     0.003 |
-|     inst                 |     0.003 |
-|       BSCANID.u_xsdbm_id |     0.003 |
-|   parser_i               |     0.133 |
+| parser_wrapper           |     0.154 |
+|   dbg_hub                |     0.004 |
+|     inst                 |     0.004 |
+|       BSCANID.u_xsdbm_id |     0.004 |
+|   parser_i               |     0.150 |
 |     clk_wiz_0            |     0.107 |
 |       inst               |     0.107 |
 |     hcsr04_sensor_0      |     0.005 |
 |       inst               |     0.005 |
-|     ila_0                |     0.022 |
-|       inst               |     0.022 |
+|     ila_0                |     0.039 |
+|       inst               |     0.039 |
 +--------------------------+-----------+
 
 

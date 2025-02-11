@@ -90,27 +90,56 @@
             "value": "Native"
           },
           "C_NUM_OF_PROBES": {
-            "value": "4"
+            "value": "5"
           },
           "C_PROBE0_WIDTH": {
             "value": "32"
           },
           "C_PROBE3_WIDTH": {
             "value": "3"
+          },
+          "C_PROBE4_WIDTH": {
+            "value": "32"
           }
         }
       },
       "hcsr04_sensor_0": {
         "vlnv": "xilinx.com:user:hcsr04_sensor:1.0",
-        "xci_name": "parser_hcsr04_sensor_0_0"
+        "xci_name": "parser_hcsr04_sensor_0_1"
       }
     },
     "nets": {
       "clk_wiz_0_clk_out1": {
         "ports": [
           "clk_wiz_0/clk_out1",
-          "hcsr04_sensor_0/clk",
-          "ila_0/clk"
+          "ila_0/clk",
+          "hcsr04_sensor_0/clk"
+        ]
+      },
+      "hcsr04_sensor_0_trig": {
+        "ports": [
+          "hcsr04_sensor_0/trig",
+          "trig_0",
+          "ila_0/probe1"
+        ]
+      },
+      "echo_0_1": {
+        "ports": [
+          "echo_0",
+          "ila_0/probe2",
+          "hcsr04_sensor_0/echo"
+        ]
+      },
+      "reset_1": {
+        "ports": [
+          "reset",
+          "clk_wiz_0/resetn"
+        ]
+      },
+      "sys_clock_1": {
+        "ports": [
+          "sys_clock",
+          "clk_wiz_0/clk_in1"
         ]
       },
       "hcsr04_sensor_0_distance_cm": {
@@ -125,30 +154,10 @@
           "ila_0/probe3"
         ]
       },
-      "hcsr04_sensor_0_trig": {
+      "hcsr04_sensor_0_echo_time": {
         "ports": [
-          "hcsr04_sensor_0/trig",
-          "trig_0",
-          "ila_0/probe1"
-        ]
-      },
-      "echo_0_1": {
-        "ports": [
-          "echo_0",
-          "hcsr04_sensor_0/echo",
-          "ila_0/probe2"
-        ]
-      },
-      "reset_1": {
-        "ports": [
-          "reset",
-          "clk_wiz_0/resetn"
-        ]
-      },
-      "sys_clock_1": {
-        "ports": [
-          "sys_clock",
-          "clk_wiz_0/clk_in1"
+          "hcsr04_sensor_0/echo_time",
+          "ila_0/probe4"
         ]
       }
     }

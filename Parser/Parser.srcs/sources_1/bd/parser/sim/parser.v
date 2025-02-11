@@ -1,7 +1,7 @@
 //Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-//Date        : Tue Feb 11 01:17:35 2025
+//Date        : Tue Feb 11 02:26:35 2025
 //Host        : DESKTOP-BINRERU running 64-bit major release  (build 9200)
 //Command     : generate_target parser.bd
 //Design      : parser
@@ -23,6 +23,7 @@ module parser
   wire clk_wiz_0_clk_out1;
   wire echo_0_1;
   wire [31:0]hcsr04_sensor_0_distance_cm;
+  wire [31:0]hcsr04_sensor_0_echo_time;
   wire [2:0]hcsr04_sensor_0_my_state;
   wire hcsr04_sensor_0_trig;
   wire reset_1;
@@ -36,10 +37,11 @@ module parser
        (.clk_in1(sys_clock_1),
         .clk_out1(clk_wiz_0_clk_out1),
         .resetn(reset_1));
-  parser_hcsr04_sensor_0_0 hcsr04_sensor_0
+  parser_hcsr04_sensor_0_1 hcsr04_sensor_0
        (.clk(clk_wiz_0_clk_out1),
         .distance_cm(hcsr04_sensor_0_distance_cm),
         .echo(echo_0_1),
+        .echo_time(hcsr04_sensor_0_echo_time),
         .my_state(hcsr04_sensor_0_my_state),
         .trig(hcsr04_sensor_0_trig));
   parser_ila_0_0 ila_0
@@ -47,5 +49,6 @@ module parser
         .probe0(hcsr04_sensor_0_distance_cm),
         .probe1(hcsr04_sensor_0_trig),
         .probe2(echo_0_1),
-        .probe3(hcsr04_sensor_0_my_state));
+        .probe3(hcsr04_sensor_0_my_state),
+        .probe4(hcsr04_sensor_0_echo_time));
 endmodule

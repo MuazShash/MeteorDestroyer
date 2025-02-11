@@ -189,15 +189,17 @@ proc create_root_design { parentCell } {
    CONFIG.C_DATA_DEPTH {131072} \
    CONFIG.C_ENABLE_ILA_AXI_MON {false} \
    CONFIG.C_MONITOR_TYPE {Native} \
-   CONFIG.C_NUM_OF_PROBES {4} \
+   CONFIG.C_NUM_OF_PROBES {5} \
    CONFIG.C_PROBE0_WIDTH {32} \
    CONFIG.C_PROBE3_WIDTH {3} \
+   CONFIG.C_PROBE4_WIDTH {32} \
  ] $ila_0
 
   # Create port connections
   connect_bd_net -net clk_wiz_0_clk_out1 [get_bd_pins clk_wiz_0/clk_out1] [get_bd_pins hcsr04_sensor_0/clk] [get_bd_pins ila_0/clk]
   connect_bd_net -net echo_0_1 [get_bd_ports echo_0] [get_bd_pins hcsr04_sensor_0/echo] [get_bd_pins ila_0/probe2]
   connect_bd_net -net hcsr04_sensor_0_distance_cm [get_bd_pins hcsr04_sensor_0/distance_cm] [get_bd_pins ila_0/probe0]
+  connect_bd_net -net hcsr04_sensor_0_echo_time [get_bd_pins hcsr04_sensor_0/echo_time] [get_bd_pins ila_0/probe4]
   connect_bd_net -net hcsr04_sensor_0_my_state [get_bd_pins hcsr04_sensor_0/my_state] [get_bd_pins ila_0/probe3]
   connect_bd_net -net hcsr04_sensor_0_trig [get_bd_ports trig_0] [get_bd_pins hcsr04_sensor_0/trig] [get_bd_pins ila_0/probe1]
   connect_bd_net -net reset_1 [get_bd_ports reset] [get_bd_pins clk_wiz_0/resetn]

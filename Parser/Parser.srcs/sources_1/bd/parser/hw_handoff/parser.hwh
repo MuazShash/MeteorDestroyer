@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Tue Feb 11 01:17:38 2025" VIVADOVERSION="2018.3">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Tue Feb 11 02:26:36 2025" VIVADOVERSION="2018.3">
 
   <SYSTEMINFO ARCH="artix7" BOARD="digilentinc.com:nexys_video:part0:1.2" DEVICE="7a200t" NAME="parser" PACKAGE="sbg484" SPEEDGRADE="-1"/>
 
@@ -11,8 +11,8 @@
     </PORT>
     <PORT DIR="I" NAME="echo_0" SIGIS="undef" SIGNAME="External_Ports_echo_0">
       <CONNECTIONS>
-        <CONNECTION INSTANCE="hcsr04_sensor_0" PORT="echo"/>
         <CONNECTION INSTANCE="ila_0" PORT="probe2"/>
+        <CONNECTION INSTANCE="hcsr04_sensor_0" PORT="echo"/>
       </CONNECTIONS>
     </PORT>
     <PORT DIR="I" NAME="reset" SIGIS="rst" SIGNAME="External_Ports_reset">
@@ -612,18 +612,18 @@
         </PORT>
         <PORT CLKFREQUENCY="100000000" DIR="O" NAME="clk_out1" SIGIS="clk" SIGNAME="clk_wiz_0_clk_out1">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="hcsr04_sensor_0" PORT="clk"/>
             <CONNECTION INSTANCE="ila_0" PORT="clk"/>
+            <CONNECTION INSTANCE="hcsr04_sensor_0" PORT="clk"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="locked" SIGIS="undef"/>
       </PORTS>
       <BUSINTERFACES/>
     </MODULE>
-    <MODULE COREREVISION="2" FULLNAME="/hcsr04_sensor_0" HWVERSION="1.0" INSTANCE="hcsr04_sensor_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="hcsr04_sensor" VLNV="xilinx.com:user:hcsr04_sensor:1.0">
+    <MODULE COREREVISION="3" FULLNAME="/hcsr04_sensor_0" HWVERSION="1.0" INSTANCE="hcsr04_sensor_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="hcsr04_sensor" VLNV="xilinx.com:user:hcsr04_sensor:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
-        <PARAMETER NAME="Component_Name" VALUE="parser_hcsr04_sensor_0_0"/>
+        <PARAMETER NAME="Component_Name" VALUE="parser_hcsr04_sensor_0_1"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
@@ -653,6 +653,11 @@
             <CONNECTION INSTANCE="ila_0" PORT="probe3"/>
           </CONNECTIONS>
         </PORT>
+        <PORT DIR="O" LEFT="31" NAME="echo_time" RIGHT="0" SIGIS="undef" SIGNAME="hcsr04_sensor_0_echo_time">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ila_0" PORT="probe4"/>
+          </CONNECTIONS>
+        </PORT>
       </PORTS>
       <BUSINTERFACES/>
     </MODULE>
@@ -676,7 +681,7 @@
         <PARAMETER NAME="C_SLOT_0_AXI_PROTOCOL" VALUE="AXI4"/>
         <PARAMETER NAME="C_NUM_MONITOR_SLOTS" VALUE="1"/>
         <PARAMETER NAME="C_ENABLE_ILA_AXI_MON" VALUE="0"/>
-        <PARAMETER NAME="C_NUM_OF_PROBES" VALUE="4"/>
+        <PARAMETER NAME="C_NUM_OF_PROBES" VALUE="5"/>
         <PARAMETER NAME="C_DATA_DEPTH" VALUE="131072"/>
         <PARAMETER NAME="C_MAJOR_VERSION" VALUE="2018"/>
         <PARAMETER NAME="C_MINOR_VERSION" VALUE="3"/>
@@ -704,7 +709,7 @@
         <PARAMETER NAME="C_PROBE1_WIDTH" VALUE="1"/>
         <PARAMETER NAME="C_PROBE2_WIDTH" VALUE="1"/>
         <PARAMETER NAME="C_PROBE3_WIDTH" VALUE="3"/>
-        <PARAMETER NAME="C_PROBE4_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="C_PROBE4_WIDTH" VALUE="32"/>
         <PARAMETER NAME="C_PROBE5_WIDTH" VALUE="1"/>
         <PARAMETER NAME="C_PROBE6_WIDTH" VALUE="1"/>
         <PARAMETER NAME="C_PROBE7_WIDTH" VALUE="1"/>
@@ -3819,6 +3824,11 @@
         <PORT DIR="I" LEFT="2" NAME="probe3" RIGHT="0" SIGIS="undef" SIGNAME="hcsr04_sensor_0_my_state">
           <CONNECTIONS>
             <CONNECTION INSTANCE="hcsr04_sensor_0" PORT="my_state"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="31" NAME="probe4" RIGHT="0" SIGIS="undef" SIGNAME="hcsr04_sensor_0_echo_time">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="hcsr04_sensor_0" PORT="echo_time"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
