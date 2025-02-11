@@ -98,8 +98,8 @@
         }
       },
       "hcsr04_sensor_0": {
-        "vlnv": "xilinx.com:user:hcsr04_sensor:1.0",
-        "xci_name": "parser_bd_hcsr04_sensor_0_1"
+        "vlnv": "xilinx.com:user:hcsr04_sensor:1.1",
+        "xci_name": "parser_bd_hcsr04_sensor_0_3"
       }
     },
     "nets": {

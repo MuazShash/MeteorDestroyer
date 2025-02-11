@@ -2,10 +2,10 @@
 <Root MajorVersion="0" MinorVersion="36">
   <CompositeFile CompositeFileTopName="parser_bd" CanBeSetAsTop="false" CanDisplayChildGraph="true">
     <Description>Composite Fileset</Description>
-    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1739250462"/>
-    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1739250462"/>
-    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1739250462"/>
-    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1739250462"/>
+    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1739251360"/>
+    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1739251360"/>
+    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1739251360"/>
+    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1739251360"/>
     <FileCollection Name="SOURCES" Type="SOURCES">
       <File Name="ip\parser_bd_clk_wiz_0_0\parser_bd_clk_wiz_0_0.xci" Type="IP">
         <Instance HierarchyPath="clk_wiz_0"/>
@@ -34,7 +34,7 @@
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SIMULATION"/>
       </File>
-      <File Name="ip\parser_bd_hcsr04_sensor_0_1\parser_bd_hcsr04_sensor_0_1.xci" Type="IP">
+      <File Name="ip\parser_bd_hcsr04_sensor_0_3\parser_bd_hcsr04_sensor_0_3.xci" Type="IP">
         <Instance HierarchyPath="hcsr04_sensor_0"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>

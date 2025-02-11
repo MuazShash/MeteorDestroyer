@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Tue Feb 11 00:22:44 2025
+# Process ID: 9132
+# Current directory: C:/Users/Muaz/Documents/MeteorDestroyer/Parser/Parser.runs/parser_bd_hcsr04_sensor_0_3_synth_1
+# Command line: vivado.exe -log parser_bd_hcsr04_sensor_0_3.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source parser_bd_hcsr04_sensor_0_3.tcl
+# Log file: C:/Users/Muaz/Documents/MeteorDestroyer/Parser/Parser.runs/parser_bd_hcsr04_sensor_0_3_synth_1/parser_bd_hcsr04_sensor_0_3.vds
+# Journal file: C:/Users/Muaz/Documents/MeteorDestroyer/Parser/Parser.runs/parser_bd_hcsr04_sensor_0_3_synth_1\vivado.jou
+#-----------------------------------------------------------
+source parser_bd_hcsr04_sensor_0_3.tcl -notrace

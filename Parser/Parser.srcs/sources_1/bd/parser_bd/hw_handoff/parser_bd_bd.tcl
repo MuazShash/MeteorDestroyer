@@ -181,7 +181,7 @@ proc create_root_design { parentCell } {
  ] $clk_wiz_0
 
   # Create instance: hcsr04_sensor_0, and set properties
-  set hcsr04_sensor_0 [ create_bd_cell -type ip -vlnv xilinx.com:user:hcsr04_sensor:1.0 hcsr04_sensor_0 ]
+  set hcsr04_sensor_0 [ create_bd_cell -type ip -vlnv xilinx.com:user:hcsr04_sensor:1.1 hcsr04_sensor_0 ]
 
   # Create instance: ila_0, and set properties
   set ila_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:ila:6.2 ila_0 ]

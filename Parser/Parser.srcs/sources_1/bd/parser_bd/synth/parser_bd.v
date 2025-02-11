@@ -1,7 +1,7 @@
 //Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-//Date        : Tue Feb 11 00:07:42 2025
+//Date        : Tue Feb 11 00:22:39 2025
 //Host        : DESKTOP-BINRERU running 64-bit major release  (build 9200)
 //Command     : generate_target parser_bd.bd
 //Design      : parser_bd
@@ -35,7 +35,7 @@ module parser_bd
        (.clk_in1(sys_clock_1),
         .clk_out1(clk_wiz_0_clk_out1),
         .resetn(reset_1));
-  parser_bd_hcsr04_sensor_0_1 hcsr04_sensor_0
+  parser_bd_hcsr04_sensor_0_3 hcsr04_sensor_0
        (.clk(clk_wiz_0_clk_out1),
         .distance_cm(hcsr04_sensor_0_distance_cm),
         .echo(echo_0_1),

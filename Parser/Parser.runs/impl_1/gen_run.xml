@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7a200tsbg484-1" LaunchTime="1739250465">
+<GenRun Id="impl_1" LaunchPart="xc7a200tsbg484-1" LaunchTime="1739251362">
   <File Type="BITSTR-BMM" Name="parser_bd_wrapper_bd.bmm"/>
   <File Type="OPT-METHODOLOGY-DRC" Name="parser_bd_wrapper_methodology_drc_opted.rpt"/>
   <File Type="INIT-TIMING" Name="parser_bd_wrapper_timing_summary_init.rpt"/>
@@ -135,5 +135,6 @@
     <Step Id="write_bitstream"/>
   </Strategy>
   <BlockFileSet Type="BlockSrcs" Name="parser_bd_clk_wiz_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="parser_bd_hcsr04_sensor_0_3"/>
   <BlockFileSet Type="BlockSrcs" Name="parser_bd_ila_0_0"/>
 </GenRun>
