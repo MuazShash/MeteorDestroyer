@@ -3,8 +3,8 @@
 // Tool Version: Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
 // Date        : Mon Feb 10 23:46:03 2025
 // Host        : DESKTOP-BINRERU running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode funcsim
-//               c:/Users/Muaz/Documents/Parser/Parser.srcs/sources_1/bd/parser_bd/ip/parser_bd_hcsr04_sensor_0_1/parser_bd_hcsr04_sensor_0_1_sim_netlist.v
+// Command     : write_verilog -force -mode funcsim -rename_top parser_bd_hcsr04_sensor_0_1 -prefix
+//               parser_bd_hcsr04_sensor_0_1_ parser_bd_hcsr04_sensor_0_1_sim_netlist.v
 // Design      : parser_bd_hcsr04_sensor_0_1
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -12,63 +12,6 @@
 // --------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CHECK_LICENSE_TYPE = "parser_bd_hcsr04_sensor_0_1,hcsr04_sensor,{}" *) (* DowngradeIPIdentifiedWarnings = "yes" *) (* IP_DEFINITION_SOURCE = "package_project" *) 
-(* X_CORE_INFO = "hcsr04_sensor,Vivado 2018.3" *) 
-(* NotValidForBitStream *)
-module parser_bd_hcsr04_sensor_0_1
-   (clk,
-    trig,
-    echo,
-    distance_cm);
-  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 clk CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME clk, FREQ_HZ 100000000, PHASE 0.0, CLK_DOMAIN /clk_wiz_0_clk_out1, INSERT_VIP 0" *) input clk;
-  output trig;
-  input echo;
-  output [31:0]distance_cm;
-
-  wire \<const0> ;
-  wire clk;
-  wire [4:0]\^distance_cm ;
-  wire echo;
-  wire trig;
-
-  assign distance_cm[31] = \<const0> ;
-  assign distance_cm[30] = \<const0> ;
-  assign distance_cm[29] = \<const0> ;
-  assign distance_cm[28] = \<const0> ;
-  assign distance_cm[27] = \<const0> ;
-  assign distance_cm[26] = \<const0> ;
-  assign distance_cm[25] = \<const0> ;
-  assign distance_cm[24] = \<const0> ;
-  assign distance_cm[23] = \<const0> ;
-  assign distance_cm[22] = \<const0> ;
-  assign distance_cm[21] = \<const0> ;
-  assign distance_cm[20] = \<const0> ;
-  assign distance_cm[19] = \<const0> ;
-  assign distance_cm[18] = \<const0> ;
-  assign distance_cm[17] = \<const0> ;
-  assign distance_cm[16] = \<const0> ;
-  assign distance_cm[15] = \<const0> ;
-  assign distance_cm[14] = \<const0> ;
-  assign distance_cm[13] = \<const0> ;
-  assign distance_cm[12] = \<const0> ;
-  assign distance_cm[11] = \<const0> ;
-  assign distance_cm[10] = \<const0> ;
-  assign distance_cm[9] = \<const0> ;
-  assign distance_cm[8] = \<const0> ;
-  assign distance_cm[7] = \<const0> ;
-  assign distance_cm[6] = \<const0> ;
-  assign distance_cm[5] = \<const0> ;
-  assign distance_cm[4:0] = \^distance_cm [4:0];
-  GND GND
-       (.G(\<const0> ));
-  parser_bd_hcsr04_sensor_0_1_hcsr04_sensor inst
-       (.clk(clk),
-        .distance_cm(\^distance_cm ),
-        .echo(echo),
-        .trig(trig));
-endmodule
-
-(* ORIG_REF_NAME = "hcsr04_sensor" *) 
 module parser_bd_hcsr04_sensor_0_1_hcsr04_sensor
    (distance_cm,
     trig,
@@ -4286,6 +4229,62 @@ module parser_bd_hcsr04_sensor_0_1_hcsr04_sensor
         .D(trig_i_1_n_0),
         .Q(trig),
         .R(1'b0));
+endmodule
+
+(* CHECK_LICENSE_TYPE = "parser_bd_hcsr04_sensor_0_1,hcsr04_sensor,{}" *) (* DowngradeIPIdentifiedWarnings = "yes" *) (* IP_DEFINITION_SOURCE = "package_project" *) 
+(* X_CORE_INFO = "hcsr04_sensor,Vivado 2018.3" *) 
+(* NotValidForBitStream *)
+module parser_bd_hcsr04_sensor_0_1
+   (clk,
+    trig,
+    echo,
+    distance_cm);
+  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 clk CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME clk, FREQ_HZ 100000000, PHASE 0.0, CLK_DOMAIN /clk_wiz_0_clk_out1, INSERT_VIP 0" *) input clk;
+  output trig;
+  input echo;
+  output [31:0]distance_cm;
+
+  wire \<const0> ;
+  wire clk;
+  wire [4:0]\^distance_cm ;
+  wire echo;
+  wire trig;
+
+  assign distance_cm[31] = \<const0> ;
+  assign distance_cm[30] = \<const0> ;
+  assign distance_cm[29] = \<const0> ;
+  assign distance_cm[28] = \<const0> ;
+  assign distance_cm[27] = \<const0> ;
+  assign distance_cm[26] = \<const0> ;
+  assign distance_cm[25] = \<const0> ;
+  assign distance_cm[24] = \<const0> ;
+  assign distance_cm[23] = \<const0> ;
+  assign distance_cm[22] = \<const0> ;
+  assign distance_cm[21] = \<const0> ;
+  assign distance_cm[20] = \<const0> ;
+  assign distance_cm[19] = \<const0> ;
+  assign distance_cm[18] = \<const0> ;
+  assign distance_cm[17] = \<const0> ;
+  assign distance_cm[16] = \<const0> ;
+  assign distance_cm[15] = \<const0> ;
+  assign distance_cm[14] = \<const0> ;
+  assign distance_cm[13] = \<const0> ;
+  assign distance_cm[12] = \<const0> ;
+  assign distance_cm[11] = \<const0> ;
+  assign distance_cm[10] = \<const0> ;
+  assign distance_cm[9] = \<const0> ;
+  assign distance_cm[8] = \<const0> ;
+  assign distance_cm[7] = \<const0> ;
+  assign distance_cm[6] = \<const0> ;
+  assign distance_cm[5] = \<const0> ;
+  assign distance_cm[4:0] = \^distance_cm [4:0];
+  GND GND
+       (.G(\<const0> ));
+  parser_bd_hcsr04_sensor_0_1_hcsr04_sensor inst
+       (.clk(clk),
+        .distance_cm(\^distance_cm ),
+        .echo(echo),
+        .trig(trig));
 endmodule
 `ifndef GLBL
 `define GLBL

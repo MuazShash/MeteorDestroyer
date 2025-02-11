@@ -60,6 +60,7 @@ proc step_failed { step } {
   close $ch
 }
 
+set_msg_config -id {Common 17-41} -limit 10000000
 set_msg_config -id {HDL-1065} -limit 10000
 
 start_step init_design
@@ -70,22 +71,23 @@ set rc [catch {
   set_property board_part digilentinc.com:nexys_video:part0:1.2 [current_project]
   set_property design_mode GateLvl [current_fileset]
   set_param project.singleFileAddWarning.threshold 0
-  set_property webtalk.parent_dir C:/Users/Muaz/Documents/Parser/Parser.cache/wt [current_project]
-  set_property parent.project_path C:/Users/Muaz/Documents/Parser/Parser.xpr [current_project]
+  set_property webtalk.parent_dir C:/Users/Muaz/Documents/MeteorDestroyer/Parser/Parser.cache/wt [current_project]
+  set_property parent.project_path C:/Users/Muaz/Documents/MeteorDestroyer/Parser/Parser.xpr [current_project]
   set_property ip_repo_paths {
   c:/Users/Muaz/Documents/Parser/Parser.srcs/sources_1/imports
-  c:/Users/Muaz/Documents/Parser/Parser.srcs/sources_1/imports/parser
+  c:/Users/Muaz/Documents/MeteorDestroyer/Parser/Parser.srcs/sources_1/imports
+  c:/Users/Muaz/Documents/MeteorDestroyer/Parser/Parser.srcs/sources_1/imports/parser
 } [current_project]
   update_ip_catalog
-  set_property ip_output_repo C:/Users/Muaz/Documents/Parser/Parser.cache/ip [current_project]
+  set_property ip_output_repo C:/Users/Muaz/Documents/MeteorDestroyer/Parser/Parser.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
   set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
-  add_files -quiet C:/Users/Muaz/Documents/Parser/Parser.runs/synth_1/parser_bd_wrapper.dcp
+  add_files -quiet C:/Users/Muaz/Documents/MeteorDestroyer/Parser/Parser.runs/synth_1/parser_bd_wrapper.dcp
   set_msg_config -source 4 -id {BD 41-1661} -limit 0
   set_param project.isImplRun true
-  add_files C:/Users/Muaz/Documents/Parser/Parser.srcs/sources_1/bd/parser_bd/parser_bd.bd
+  add_files C:/Users/Muaz/Documents/MeteorDestroyer/Parser/Parser.srcs/sources_1/bd/parser_bd/parser_bd.bd
   set_param project.isImplRun false
-  read_xdc C:/Users/Muaz/Documents/Parser/Parser.srcs/constrs_1/new/constraints.xdc
+  read_xdc C:/Users/Muaz/Documents/MeteorDestroyer/Parser/Parser.srcs/constrs_1/new/constraints.xdc
   set_param project.isImplRun true
   link_design -top parser_bd_wrapper -part xc7a200tsbg484-1
   set_param project.isImplRun false

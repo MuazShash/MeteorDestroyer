@@ -3,8 +3,8 @@
 -- Tool Version: Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
 -- Date        : Mon Feb 10 23:46:03 2025
 -- Host        : DESKTOP-BINRERU running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode synth_stub
---               c:/Users/Muaz/Documents/Parser/Parser.srcs/sources_1/bd/parser_bd/ip/parser_bd_hcsr04_sensor_0_1/parser_bd_hcsr04_sensor_0_1_stub.vhdl
+-- Command     : write_vhdl -force -mode synth_stub -rename_top parser_bd_hcsr04_sensor_0_1 -prefix
+--               parser_bd_hcsr04_sensor_0_1_ parser_bd_hcsr04_sensor_0_1_stub.vhdl
 -- Design      : parser_bd_hcsr04_sensor_0_1
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xc7a200tsbg484-1
