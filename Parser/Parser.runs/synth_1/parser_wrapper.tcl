@@ -17,7 +17,6 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
-set_msg_config -id {HDL-1065} -limit 10000
 create_project -in_memory -part xc7a200tsbg484-1
 
 set_param project.singleFileAddWarning.threshold 0
@@ -30,7 +29,7 @@ set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
 set_property board_part digilentinc.com:nexys_video:part0:1.2 [current_project]
-set_property ip_repo_paths c:/users/muaz/documents/meteordestroyer/parser/parser.srcs/sources_1/parser_ip [current_project]
+set_property ip_repo_paths c:/Users/Muaz/Documents/MeteorDestroyer/Parser/Parser.srcs/sources_1/parser_ip [current_project]
 update_ip_catalog
 set_property ip_output_repo c:/Users/Muaz/Documents/MeteorDestroyer/Parser/Parser.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
@@ -53,6 +52,9 @@ set_property used_in_implementation false [get_files -all C:/Users/Muaz/Document
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
+read_xdc C:/Users/Muaz/Documents/MeteorDestroyer/Parser/Parser.srcs/constrs_1/new/constraints.xdc
+set_property used_in_implementation false [get_files C:/Users/Muaz/Documents/MeteorDestroyer/Parser/Parser.srcs/constrs_1/new/constraints.xdc]
+
 read_xdc dont_touch.xdc
 set_property used_in_implementation false [get_files dont_touch.xdc]
 set_param ips.enableIPCacheLiteLoad 1
