@@ -3,16 +3,16 @@
 
 # XDC: new/constraints.xdc
 
-# Block Designs: bd/parser_bd/parser_bd.bd
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==parser_bd || ORIG_REF_NAME==parser_bd} -quiet] -quiet
+# Block Designs: bd/parser/parser.bd
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==parser || ORIG_REF_NAME==parser} -quiet] -quiet
 
-# IP: bd/parser_bd/ip/parser_bd_clk_wiz_0_0/parser_bd_clk_wiz_0_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==parser_bd_clk_wiz_0_0 || ORIG_REF_NAME==parser_bd_clk_wiz_0_0} -quiet] -quiet
+# IP: bd/parser/ip/parser_clk_wiz_0_0/parser_clk_wiz_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==parser_clk_wiz_0_0 || ORIG_REF_NAME==parser_clk_wiz_0_0} -quiet] -quiet
 
-# IP: bd/parser_bd/ip/parser_bd_ila_0_0/parser_bd_ila_0_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==parser_bd_ila_0_0 || ORIG_REF_NAME==parser_bd_ila_0_0} -quiet] -quiet
+# IP: bd/parser/ip/parser_ila_0_0/parser_ila_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==parser_ila_0_0 || ORIG_REF_NAME==parser_ila_0_0} -quiet] -quiet
 
-# IP: bd/parser_bd/ip/parser_bd_hcsr04_sensor_0_3/parser_bd_hcsr04_sensor_0_3.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==parser_bd_hcsr04_sensor_0_3 || ORIG_REF_NAME==parser_bd_hcsr04_sensor_0_3} -quiet] -quiet
+# IP: bd/parser/ip/parser_hcsr04_sensor_0_1/parser_hcsr04_sensor_0_1.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==parser_hcsr04_sensor_0_1 || ORIG_REF_NAME==parser_hcsr04_sensor_0_1} -quiet] -quiet
 
-# XDC: bd/parser_bd/parser_bd_ooc.xdc
+# XDC: bd/parser/parser_ooc.xdc

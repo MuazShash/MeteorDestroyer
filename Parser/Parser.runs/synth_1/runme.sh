@@ -40,4 +40,4 @@ EAStep()
      fi
 }
 
-EAStep vivado -log parser_bd_wrapper.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source parser_bd_wrapper.tcl
+EAStep vivado -log parser_wrapper.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source parser_wrapper.tcl

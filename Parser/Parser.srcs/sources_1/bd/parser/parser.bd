@@ -1,0 +1,165 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0x912C87CFB34053C7",
+      "device": "xc7a200tsbg484-1",
+      "name": "parser",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2018.3",
+      "validated": "true"
+    },
+    "design_tree": {
+      "clk_wiz_0": "",
+      "ila_0": "",
+      "hcsr04_sensor_0": ""
+    },
+    "ports": {
+      "trig_0": {
+        "direction": "O"
+      },
+      "echo_0": {
+        "direction": "I"
+      },
+      "reset": {
+        "type": "rst",
+        "direction": "I",
+        "parameters": {
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "POLARITY": {
+            "value": "ACTIVE_LOW"
+          }
+        }
+      },
+      "sys_clock": {
+        "type": "clk",
+        "direction": "I",
+        "parameters": {
+          "CLK_DOMAIN": {
+            "value": "parser_sys_clock",
+            "value_src": "default"
+          },
+          "FREQ_HZ": {
+            "value": "100000000"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.000"
+          }
+        }
+      }
+    },
+    "components": {
+      "clk_wiz_0": {
+        "vlnv": "xilinx.com:ip:clk_wiz:6.0",
+        "xci_name": "parser_clk_wiz_0_0",
+        "parameters": {
+          "CLK_IN1_BOARD_INTERFACE": {
+            "value": "sys_clock"
+          },
+          "RESET_BOARD_INTERFACE": {
+            "value": "reset"
+          },
+          "RESET_PORT": {
+            "value": "resetn"
+          },
+          "RESET_TYPE": {
+            "value": "ACTIVE_LOW"
+          },
+          "USE_BOARD_FLOW": {
+            "value": "true"
+          }
+        }
+      },
+      "ila_0": {
+        "vlnv": "xilinx.com:ip:ila:6.2",
+        "xci_name": "parser_ila_0_0",
+        "parameters": {
+          "C_DATA_DEPTH": {
+            "value": "131072"
+          },
+          "C_ENABLE_ILA_AXI_MON": {
+            "value": "false"
+          },
+          "C_MONITOR_TYPE": {
+            "value": "Native"
+          },
+          "C_NUM_OF_PROBES": {
+            "value": "5"
+          },
+          "C_PROBE0_WIDTH": {
+            "value": "32"
+          },
+          "C_PROBE3_WIDTH": {
+            "value": "3"
+          },
+          "C_PROBE4_WIDTH": {
+            "value": "32"
+          }
+        }
+      },
+      "hcsr04_sensor_0": {
+        "vlnv": "xilinx.com:user:hcsr04_sensor:1.0",
+        "xci_name": "parser_hcsr04_sensor_0_1"
+      }
+    },
+    "nets": {
+      "clk_wiz_0_clk_out1": {
+        "ports": [
+          "clk_wiz_0/clk_out1",
+          "ila_0/clk",
+          "hcsr04_sensor_0/clk"
+        ]
+      },
+      "hcsr04_sensor_0_trig": {
+        "ports": [
+          "hcsr04_sensor_0/trig",
+          "trig_0",
+          "ila_0/probe1"
+        ]
+      },
+      "echo_0_1": {
+        "ports": [
+          "echo_0",
+          "ila_0/probe2",
+          "hcsr04_sensor_0/echo"
+        ]
+      },
+      "reset_1": {
+        "ports": [
+          "reset",
+          "clk_wiz_0/resetn"
+        ]
+      },
+      "sys_clock_1": {
+        "ports": [
+          "sys_clock",
+          "clk_wiz_0/clk_in1"
+        ]
+      },
+      "hcsr04_sensor_0_distance_cm": {
+        "ports": [
+          "hcsr04_sensor_0/distance_cm",
+          "ila_0/probe0"
+        ]
+      },
+      "hcsr04_sensor_0_my_state": {
+        "ports": [
+          "hcsr04_sensor_0/my_state",
+          "ila_0/probe3"
+        ]
+      },
+      "hcsr04_sensor_0_echo_time": {
+        "ports": [
+          "hcsr04_sensor_0/echo_time",
+          "ila_0/probe4"
+        ]
+      }
+    }
+  }
+}
