@@ -1,0 +1,72 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0x0",
+      "device": "xc7a200tsbg484-1",
+      "gen_directory": "../../../../led_ip.gen/sources_1/bd/led_ip",
+      "name": "led_ip",
+      "rev_ctrl_bd_flag": "RevCtrlBdOff",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2022.1"
+    },
+    "design_tree": {
+      "axi_gpio_0": "",
+      "axi_gpio_1": "",
+      "microblaze_0": ""
+    },
+    "components": {
+      "axi_gpio_0": {
+        "vlnv": "xilinx.com:ip:axi_gpio:2.0",
+        "xci_name": "led_ip_axi_gpio_0_0",
+        "xci_path": "ip\\led_ip_axi_gpio_0_0\\led_ip_axi_gpio_0_0.xci",
+        "inst_hier_path": "axi_gpio_0"
+      },
+      "axi_gpio_1": {
+        "vlnv": "xilinx.com:ip:axi_gpio:2.0",
+        "xci_name": "led_ip_axi_gpio_1_0",
+        "xci_path": "ip\\led_ip_axi_gpio_1_0\\led_ip_axi_gpio_1_0.xci",
+        "inst_hier_path": "axi_gpio_1"
+      },
+      "microblaze_0": {
+        "vlnv": "xilinx.com:ip:microblaze:11.0",
+        "xci_name": "led_ip_microblaze_0_1",
+        "xci_path": "ip\\led_ip_microblaze_0_1\\led_ip_microblaze_0_1.xci",
+        "inst_hier_path": "microblaze_0",
+        "interface_ports": {
+          "DLMB": {
+            "vlnv": "xilinx.com:interface:lmb_rtl:1.0",
+            "mode": "Master",
+            "address_space_ref": "Data",
+            "base_address": {
+              "minimum": "0x00000000",
+              "maximum": "0xFFFFFFFF",
+              "width": "32"
+            }
+          },
+          "ILMB": {
+            "vlnv": "xilinx.com:interface:lmb_rtl:1.0",
+            "mode": "Master",
+            "address_space_ref": "Instruction",
+            "base_address": {
+              "minimum": "0x00000000",
+              "maximum": "0xFFFFFFFF",
+              "width": "32"
+            }
+          }
+        },
+        "addressing": {
+          "address_spaces": {
+            "Data": {
+              "range": "4G",
+              "width": "32"
+            },
+            "Instruction": {
+              "range": "4G",
+              "width": "32"
+            }
+          }
+        }
+      }
+    }
+  }
+}
