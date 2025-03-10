@@ -48,35 +48,38 @@
 
 
 // IP VLNV: xilinx.com:user:array_parser:1.0
-// IP Revision: 3
+// IP Revision: 5
 
 (* X_CORE_INFO = "array_parser,Vivado 2018.3" *)
 (* CHECK_LICENSE_TYPE = "parser_array_parser_1_0,array_parser,{}" *)
-(* CORE_GENERATION_INFO = "parser_array_parser_1_0,array_parser,{x_ipProduct=Vivado 2018.3,x_ipVendor=xilinx.com,x_ipLibrary=user,x_ipName=array_parser,x_ipVersion=1.0,x_ipCoreRevision=3,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,NUM_SENSORS=5}" *)
+(* CORE_GENERATION_INFO = "parser_array_parser_1_0,array_parser,{x_ipProduct=Vivado 2018.3,x_ipVendor=xilinx.com,x_ipLibrary=user,x_ipName=array_parser,x_ipVersion=1.0,x_ipCoreRevision=5,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,NUM_SENSORS=3}" *)
 (* IP_DEFINITION_SOURCE = "package_project" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module parser_array_parser_1_0 (
   clk,
   echo,
   trig,
-  distance_mm
+  distance_mm,
+  valid
 );
 
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME clk, FREQ_HZ 100000000, PHASE 0.0, CLK_DOMAIN /clk_wiz_0_clk_out1, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 clk CLK" *)
 input wire clk;
-input wire [4 : 0] echo;
+input wire [2 : 0] echo;
 output wire trig;
-output wire [79 : 0] distance_mm;
-wire  [15:0] distance_mm_unpacked [4:0];
+output wire [47 : 0] distance_mm;
+wire  [15:0] distance_mm_unpacked [2:0];
 assign {>>{distance_mm}} = distance_mm_unpacked;
+output wire valid;
 
   array_parser #(
-    .NUM_SENSORS(5)
+    .NUM_SENSORS(3)
   ) inst (
     .clk(clk),
     .echo(echo),
     .trig(trig),
-    .distance_mm(distance_mm_unpacked)
+    .distance_mm(distance_mm_unpacked),
+    .valid(valid)
   );
 endmodule

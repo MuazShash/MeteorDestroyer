@@ -2,8 +2,8 @@
 # Vivado v2018.3 (64-bit)
 # SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
 # IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
-# Start of session at: Mon Mar  3 23:51:10 2025
-# Process ID: 28532
+# Start of session at: Sun Mar  9 19:27:00 2025
+# Process ID: 22640
 # Current directory: C:/Users/Muaz/Documents/MeteorDestroyer/Parser/Parser.runs/parser_array_parser_1_0_synth_1
 # Command line: vivado.exe -log parser_array_parser_1_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source parser_array_parser_1_0.tcl
 # Log file: C:/Users/Muaz/Documents/MeteorDestroyer/Parser/Parser.runs/parser_array_parser_1_0_synth_1/parser_array_parser_1_0.vds
@@ -11,6 +11,7 @@
 #-----------------------------------------------------------
 source parser_array_parser_1_0.tcl -notrace
 INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/Muaz/Documents/MeteorDestroyer/Parser/Parser.srcs/sources_1/localization'.
 INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/Muaz/Documents/MeteorDestroyer/Parser/Parser.srcs/sources_1/new'.
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.3/data/ip'.
 Command: synth_design -top parser_array_parser_1_0 -part xc7a200tsbg484-1 -mode out_of_context
@@ -18,24 +19,24 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a200t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a200t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 6732 
+INFO: Helper process launched with PID 11200 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 369.703 ; gain = 100.809
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 369.625 ; gain = 100.980
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'parser_array_parser_1_0' [c:/Users/Muaz/Documents/MeteorDestroyer/Parser/Parser.srcs/sources_1/bd/parser/ip/parser_array_parser_1_0/synth/parser_array_parser_1_0.sv:58]
-INFO: [Synth 8-6157] synthesizing module 'array_parser' [c:/Users/Muaz/Documents/MeteorDestroyer/Parser/Parser.srcs/sources_1/bd/parser/ipshared/27ba/array_parser.sv:1]
-	Parameter NUM_SENSORS bound to: 5 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'array_parser' [c:/Users/Muaz/Documents/MeteorDestroyer/Parser/Parser.srcs/sources_1/bd/parser/ipshared/1a43/array_parser.sv:1]
+	Parameter NUM_SENSORS bound to: 3 - type: integer 
 	Parameter TRIG_PULSE bound to: 1000 - type: integer 
-INFO: [Synth 8-6157] synthesizing module 'hcsr04_sensor' [c:/Users/Muaz/Documents/MeteorDestroyer/Parser/Parser.srcs/sources_1/bd/parser/ipshared/27ba/sensor_parser.sv:1]
+INFO: [Synth 8-6157] synthesizing module 'hcsr04_sensor' [c:/Users/Muaz/Documents/MeteorDestroyer/Parser/Parser.srcs/sources_1/bd/parser/ipshared/1a43/sensor_parser.sv:1]
 	Parameter CLK_FREQ bound to: 100000 - type: integer 
-	Parameter TIMEOUT bound to: 3800000 - type: integer 
+	Parameter TIMEOUT bound to: 4000000 - type: integer 
 	Parameter SPEED_OF_SOUND bound to: 343 - type: integer 
-INFO: [Synth 8-226] default block is never used [c:/Users/Muaz/Documents/MeteorDestroyer/Parser/Parser.srcs/sources_1/bd/parser/ipshared/27ba/sensor_parser.sv:29]
-INFO: [Synth 8-6155] done synthesizing module 'hcsr04_sensor' (1#1) [c:/Users/Muaz/Documents/MeteorDestroyer/Parser/Parser.srcs/sources_1/bd/parser/ipshared/27ba/sensor_parser.sv:1]
-INFO: [Synth 8-6155] done synthesizing module 'array_parser' (2#1) [c:/Users/Muaz/Documents/MeteorDestroyer/Parser/Parser.srcs/sources_1/bd/parser/ipshared/27ba/array_parser.sv:1]
+INFO: [Synth 8-226] default block is never used [c:/Users/Muaz/Documents/MeteorDestroyer/Parser/Parser.srcs/sources_1/bd/parser/ipshared/1a43/sensor_parser.sv:32]
+INFO: [Synth 8-6155] done synthesizing module 'hcsr04_sensor' (1#1) [c:/Users/Muaz/Documents/MeteorDestroyer/Parser/Parser.srcs/sources_1/bd/parser/ipshared/1a43/sensor_parser.sv:1]
+INFO: [Synth 8-6155] done synthesizing module 'array_parser' (2#1) [c:/Users/Muaz/Documents/MeteorDestroyer/Parser/Parser.srcs/sources_1/bd/parser/ipshared/1a43/array_parser.sv:1]
 INFO: [Synth 8-6155] done synthesizing module 'parser_array_parser_1_0' (3#1) [c:/Users/Muaz/Documents/MeteorDestroyer/Parser/Parser.srcs/sources_1/bd/parser/ip/parser_array_parser_1_0/synth/parser_array_parser_1_0.sv:58]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 425.359 ; gain = 156.465
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 425.129 ; gain = 156.484
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -48,10 +49,10 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 425.359 ; gain = 156.465
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 425.129 ; gain = 156.484
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 425.359 ; gain = 156.465
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 425.129 ; gain = 156.484
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7a200tsbg484-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -60,32 +61,32 @@ Processing XDC Constraints
 Initializing timing engine
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 794.805 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 794.809 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 794.805 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 794.809 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.046 . Memory (MB): peak = 796.965 ; gain = 2.160
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.050 . Memory (MB): peak = 797.105 ; gain = 2.297
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 796.965 ; gain = 528.070
+Finished Constraint Validation : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 797.105 ; gain = 528.461
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a200tsbg484-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 796.965 ; gain = 528.070
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 797.105 ; gain = 528.461
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 796.965 ; gain = 528.070
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 797.105 ; gain = 528.461
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 796.965 ; gain = 528.070
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 797.105 ; gain = 528.461
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -98,23 +99,23 @@ Start RTL Component Statistics
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
 +---Adders : 
-	   2 Input     32 Bit       Adders := 5     
+	   2 Input     22 Bit       Adders := 3     
 	   2 Input     10 Bit       Adders := 1     
 +---Registers : 
-	               32 Bit    Registers := 10    
-	               16 Bit    Registers := 5     
+	               22 Bit    Registers := 3     
+	               21 Bit    Registers := 3     
+	               16 Bit    Registers := 3     
 	               10 Bit    Registers := 1     
-	                2 Bit    Registers := 5     
-	                1 Bit    Registers := 9     
-+---Multipliers : 
-	                 9x32  Multipliers := 5     
+	                2 Bit    Registers := 3     
+	                1 Bit    Registers := 11    
 +---Muxes : 
-	   4 Input     32 Bit        Muxes := 5     
-	   2 Input     32 Bit        Muxes := 5     
-	   4 Input     16 Bit        Muxes := 5     
-	   6 Input      2 Bit        Muxes := 5     
-	   4 Input      1 Bit        Muxes := 25    
-	   2 Input      1 Bit        Muxes := 21    
+	   4 Input     22 Bit        Muxes := 3     
+	   2 Input     22 Bit        Muxes := 3     
+	   4 Input     16 Bit        Muxes := 3     
+	   2 Input     10 Bit        Muxes := 3     
+	   6 Input      2 Bit        Muxes := 3     
+	   4 Input      1 Bit        Muxes := 18    
+	   2 Input      1 Bit        Muxes := 15    
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -125,20 +126,19 @@ Hierarchical RTL Component report
 Module hcsr04_sensor 
 Detailed RTL Component Info : 
 +---Adders : 
-	   2 Input     32 Bit       Adders := 1     
+	   2 Input     22 Bit       Adders := 1     
 +---Registers : 
-	               32 Bit    Registers := 2     
+	               22 Bit    Registers := 1     
+	               21 Bit    Registers := 1     
 	               16 Bit    Registers := 1     
 	                2 Bit    Registers := 1     
-	                1 Bit    Registers := 1     
-+---Multipliers : 
-	                 9x32  Multipliers := 1     
+	                1 Bit    Registers := 2     
 +---Muxes : 
-	   4 Input     32 Bit        Muxes := 1     
-	   2 Input     32 Bit        Muxes := 1     
+	   4 Input     22 Bit        Muxes := 1     
+	   2 Input     22 Bit        Muxes := 1     
 	   4 Input     16 Bit        Muxes := 1     
 	   6 Input      2 Bit        Muxes := 1     
-	   4 Input      1 Bit        Muxes := 5     
+	   4 Input      1 Bit        Muxes := 6     
 	   2 Input      1 Bit        Muxes := 3     
 Module array_parser 
 Detailed RTL Component Info : 
@@ -146,8 +146,9 @@ Detailed RTL Component Info :
 	   2 Input     10 Bit       Adders := 1     
 +---Registers : 
 	               10 Bit    Registers := 1     
-	                1 Bit    Registers := 4     
+	                1 Bit    Registers := 5     
 +---Muxes : 
+	   2 Input     10 Bit        Muxes := 3     
 	   2 Input      1 Bit        Muxes := 6     
 ---------------------------------------------------------------------------------
 Finished RTL Hierarchical Component Statistics
@@ -165,8 +166,46 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 Warning: Parallel synthesis criteria is not met 
+DSP Report: Generating DSP product_reg, operation Mode is: (A''*(B:0x157))'.
+DSP Report: register A is absorbed into DSP product_reg.
+DSP Report: register A is absorbed into DSP product_reg.
+DSP Report: register product_reg is absorbed into DSP product_reg.
+DSP Report: operator product0 is absorbed into DSP product_reg.
+DSP Report: Generating DSP product_reg, operation Mode is: (A''*(B:0x157))'.
+DSP Report: register A is absorbed into DSP product_reg.
+DSP Report: register A is absorbed into DSP product_reg.
+DSP Report: register product_reg is absorbed into DSP product_reg.
+DSP Report: operator product0 is absorbed into DSP product_reg.
+DSP Report: Generating DSP product_reg, operation Mode is: (A''*(B:0x157))'.
+DSP Report: register A is absorbed into DSP product_reg.
+DSP Report: register A is absorbed into DSP product_reg.
+DSP Report: register product_reg is absorbed into DSP product_reg.
+DSP Report: operator product0 is absorbed into DSP product_reg.
+INFO: [Synth 8-3886] merging instance 'inst/genblk1[0].ultrasonic_sensor/distance_mm_reg[13]' (FDE) to 'inst/genblk1[0].ultrasonic_sensor/distance_mm_reg[15]'
+INFO: [Synth 8-3886] merging instance 'inst/genblk1[0].ultrasonic_sensor/distance_mm_reg[14]' (FDE) to 'inst/genblk1[0].ultrasonic_sensor/distance_mm_reg[15]'
+INFO: [Synth 8-3886] merging instance 'inst/genblk1[1].ultrasonic_sensor/distance_mm_reg[13]' (FDE) to 'inst/genblk1[1].ultrasonic_sensor/distance_mm_reg[15]'
+INFO: [Synth 8-3886] merging instance 'inst/genblk1[1].ultrasonic_sensor/distance_mm_reg[14]' (FDE) to 'inst/genblk1[1].ultrasonic_sensor/distance_mm_reg[15]'
+INFO: [Synth 8-3886] merging instance 'inst/genblk1[2].ultrasonic_sensor/distance_mm_reg[13]' (FDE) to 'inst/genblk1[2].ultrasonic_sensor/distance_mm_reg[15]'
+INFO: [Synth 8-3886] merging instance 'inst/genblk1[2].ultrasonic_sensor/distance_mm_reg[14]' (FDE) to 'inst/genblk1[2].ultrasonic_sensor/distance_mm_reg[15]'
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 796.965 ; gain = 528.070
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 797.105 ; gain = 528.461
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+DSP: Preliminary Mapping  Report (see note below)
++--------------+------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name   | DSP Mapping      | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++--------------+------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|hcsr04_sensor | (A''*(B:0x157))' | 21     | 9      | -      | -      | 29     | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|hcsr04_sensor | (A''*(B:0x157))' | 21     | 9      | -      | -      | 29     | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|hcsr04_sensor | (A''*(B:0x157))' | 21     | 9      | -      | -      | 29     | 2    | 0    | -    | -    | -     | 1    | 0    | 
++--------------+------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -178,13 +217,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 801.273 ; gain = 532.379
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 836.754 ; gain = 568.109
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 804.531 ; gain = 535.637
+Finished Timing Optimization : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 837.574 ; gain = 568.930
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -196,7 +235,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 841.051 ; gain = 572.156
+Finished Technology Mapping : Time (s): cpu = 00:00:24 ; elapsed = 00:00:24 . Memory (MB): peak = 864.266 ; gain = 595.621
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -220,7 +259,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 841.051 ; gain = 572.156
+Finished IO Insertion : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 864.266 ; gain = 595.621
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -233,7 +272,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 841.051 ; gain = 572.156
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 864.266 ; gain = 595.621
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -245,25 +284,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 841.051 ; gain = 572.156
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 864.266 ; gain = 595.621
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 841.051 ; gain = 572.156
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 864.266 ; gain = 595.621
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 841.051 ; gain = 572.156
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 864.266 ; gain = 595.621
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 841.051 ; gain = 572.156
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 864.266 ; gain = 595.621
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -276,59 +315,59 @@ Report BlackBoxes:
 +-+--------------+----------+
 
 Report Cell Usage: 
-+------+-------+------+
-|      |Cell   |Count |
-+------+-------+------+
-|1     |CARRY4 |   455|
-|2     |LUT1   |    52|
-|3     |LUT2   |   702|
-|4     |LUT3   |   702|
-|5     |LUT4   |   793|
-|6     |LUT5   |   230|
-|7     |LUT6   |   118|
-|8     |FDRE   |   424|
-+------+-------+------+
++------+----------+------+
+|      |Cell      |Count |
++------+----------+------+
+|1     |CARRY4    |   159|
+|2     |DSP48E1_1 |     3|
+|3     |LUT1      |    28|
+|4     |LUT2      |   217|
+|5     |LUT3      |   233|
+|6     |LUT4      |   257|
+|7     |LUT5      |   112|
+|8     |LUT6      |   120|
+|9     |FDRE      |    96|
+|10    |FDSE      |    39|
++------+----------+------+
 
 Report Instance Areas: 
 +------+-----------------------------------+----------------+------+
 |      |Instance                           |Module          |Cells |
 +------+-----------------------------------+----------------+------+
-|1     |top                                |                |  3476|
-|2     |  inst                             |array_parser    |  1341|
-|3     |    \genblk1[0].ultrasonic_sensor  |hcsr04_sensor   |   262|
-|4     |    \genblk1[1].ultrasonic_sensor  |hcsr04_sensor_0 |   262|
-|5     |    \genblk1[2].ultrasonic_sensor  |hcsr04_sensor_1 |   264|
-|6     |    \genblk1[3].ultrasonic_sensor  |hcsr04_sensor_2 |   262|
-|7     |    \genblk1[4].ultrasonic_sensor  |hcsr04_sensor_3 |   262|
+|1     |top                                |                |  1264|
+|2     |  inst                             |array_parser    |  1264|
+|3     |    \genblk1[0].ultrasonic_sensor  |hcsr04_sensor   |   414|
+|4     |    \genblk1[1].ultrasonic_sensor  |hcsr04_sensor_0 |   410|
+|5     |    \genblk1[2].ultrasonic_sensor  |hcsr04_sensor_1 |   411|
 +------+-----------------------------------+----------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 841.051 ; gain = 572.156
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 864.266 ; gain = 595.621
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:16 ; elapsed = 00:00:19 . Memory (MB): peak = 841.051 ; gain = 200.551
-Synthesis Optimization Complete : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 841.051 ; gain = 572.156
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:17 ; elapsed = 00:00:20 . Memory (MB): peak = 864.266 ; gain = 223.645
+Synthesis Optimization Complete : Time (s): cpu = 00:00:25 ; elapsed = 00:00:25 . Memory (MB): peak = 864.266 ; gain = 595.621
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 455 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 162 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 841.051 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 864.266 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-21 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+28 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:25 ; elapsed = 00:00:27 . Memory (MB): peak = 841.051 ; gain = 572.156
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 841.051 ; gain = 0.000
+synth_design: Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 864.266 ; gain = 595.621
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 864.266 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
 INFO: [Common 17-1381] The checkpoint 'C:/Users/Muaz/Documents/MeteorDestroyer/Parser/Parser.runs/parser_array_parser_1_0_synth_1/parser_array_parser_1_0.dcp' has been generated.
-INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP parser_array_parser_1_0, cache-ID = c070da3d80de343a
-INFO: [Coretcl 2-1174] Renamed 6 cell refs.
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 841.051 ; gain = 0.000
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP parser_array_parser_1_0, cache-ID = 27e01ce0c0bdccf0
+INFO: [Coretcl 2-1174] Renamed 4 cell refs.
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 864.266 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
 INFO: [Common 17-1381] The checkpoint 'C:/Users/Muaz/Documents/MeteorDestroyer/Parser/Parser.runs/parser_array_parser_1_0_synth_1/parser_array_parser_1_0.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file parser_array_parser_1_0_utilization_synth.rpt -pb parser_array_parser_1_0_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Mon Mar  3 23:51:42 2025...
+INFO: [Common 17-206] Exiting Vivado at Sun Mar  9 19:27:32 2025...

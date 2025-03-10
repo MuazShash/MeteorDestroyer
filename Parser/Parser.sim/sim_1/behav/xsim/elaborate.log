@@ -4,16 +4,4 @@ Running: C:/Xilinx/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe -wto 0056d15ece
 Using 2 slave threads.
 Starting static elaboration
 Completed static elaboration
-Starting simulation data flow analysis
-WARNING: [XSIM 43-4100] "C:/Users/Muaz/Documents/MeteorDestroyer/Parser/Parser.sim/sim_1/behav/xsim/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling module xil_defaultlib.hcsr04_sensor
-Compiling module xil_defaultlib.array_parser(NUM_SENSORS=3)
-Compiling module xil_defaultlib.min3(DW=16)
-Compiling module xil_defaultlib.min_n(DW=16,NUM_SENSORS=1)
-Compiling module xil_defaultlib.min_n(DW=16)
-Compiling module xil_defaultlib.object_localizer(NUM_SENSORS=3)
-Compiling module xil_defaultlib.localize_tb
-Compiling module xil_defaultlib.glbl
-Built simulation snapshot localize_tb_behav
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel

@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0x7104DE7CC98B5961",
+      "boundary_crc": "0xF846944C8647FCF9",
       "device": "xc7a200tsbg484-1",
       "name": "parser",
       "synth_flow_mode": "Hierarchical",
@@ -14,8 +14,10 @@
       "xlslice_3": "",
       "xlslice_4": "",
       "xlslice_5": "",
+      "object_localizer_0": "",
       "xlslice_6": "",
       "xlslice_7": "",
+      "xlslice_8": "",
       "array_parser_1": ""
     },
     "ports": {
@@ -57,7 +59,7 @@
       },
       "echo_0": {
         "direction": "I",
-        "left": "4",
+        "left": "2",
         "right": "0"
       }
     },
@@ -97,13 +99,13 @@
             "value": "Native"
           },
           "C_NUM_OF_PROBES": {
-            "value": "7"
+            "value": "9"
           },
           "C_PROBE0_WIDTH": {
             "value": "16"
           },
           "C_PROBE2_WIDTH": {
-            "value": "5"
+            "value": "3"
           },
           "C_PROBE3_WIDTH": {
             "value": "16"
@@ -115,6 +117,9 @@
             "value": "16"
           },
           "C_PROBE6_WIDTH": {
+            "value": "16"
+          },
+          "C_PROBE7_WIDTH": {
             "value": "16"
           }
         }
@@ -130,7 +135,7 @@
             "value": "0"
           },
           "DIN_WIDTH": {
-            "value": "80"
+            "value": "48"
           },
           "DOUT_WIDTH": {
             "value": "16"
@@ -148,7 +153,7 @@
             "value": "16"
           },
           "DIN_WIDTH": {
-            "value": "80"
+            "value": "48"
           },
           "DOUT_WIDTH": {
             "value": "16"
@@ -166,43 +171,70 @@
             "value": "32"
           },
           "DIN_WIDTH": {
-            "value": "80"
+            "value": "48"
           },
           "DOUT_WIDTH": {
             "value": "1"
+          }
+        }
+      },
+      "object_localizer_0": {
+        "vlnv": "xilinx.com:user:object_localizer:1.0",
+        "xci_name": "parser_object_localizer_0_0",
+        "parameters": {
+          "NUM_SENSORS": {
+            "value": "3"
           }
         }
       },
       "xlslice_6": {
         "vlnv": "xilinx.com:ip:xlslice:1.0",
-        "xci_name": "parser_xlslice_6_0",
+        "xci_name": "parser_xlslice_3_1",
         "parameters": {
           "DIN_FROM": {
-            "value": "63"
+            "value": "15"
           },
           "DIN_TO": {
-            "value": "48"
+            "value": "0"
           },
           "DIN_WIDTH": {
-            "value": "80"
+            "value": "48"
           },
           "DOUT_WIDTH": {
-            "value": "1"
+            "value": "16"
           }
         }
       },
       "xlslice_7": {
         "vlnv": "xilinx.com:ip:xlslice:1.0",
-        "xci_name": "parser_xlslice_7_0",
+        "xci_name": "parser_xlslice_4_1",
         "parameters": {
           "DIN_FROM": {
-            "value": "79"
+            "value": "31"
           },
           "DIN_TO": {
-            "value": "64"
+            "value": "16"
           },
           "DIN_WIDTH": {
-            "value": "80"
+            "value": "48"
+          },
+          "DOUT_WIDTH": {
+            "value": "16"
+          }
+        }
+      },
+      "xlslice_8": {
+        "vlnv": "xilinx.com:ip:xlslice:1.0",
+        "xci_name": "parser_xlslice_5_2",
+        "parameters": {
+          "DIN_FROM": {
+            "value": "47"
+          },
+          "DIN_TO": {
+            "value": "32"
+          },
+          "DIN_WIDTH": {
+            "value": "48"
           },
           "DOUT_WIDTH": {
             "value": "1"
@@ -214,7 +246,7 @@
         "xci_name": "parser_array_parser_1_0",
         "parameters": {
           "NUM_SENSORS": {
-            "value": "5"
+            "value": "3"
           }
         }
       }
@@ -224,6 +256,7 @@
         "ports": [
           "clk_wiz_0/clk_out1",
           "ila_0/clk",
+          "object_localizer_0/clk",
           "array_parser_1/clk"
         ]
       },
@@ -252,8 +285,7 @@
           "xlslice_3/Din",
           "xlslice_4/Din",
           "xlslice_5/Din",
-          "xlslice_6/Din",
-          "xlslice_7/Din"
+          "object_localizer_0/distances"
         ]
       },
       "xlslice_3_Dout": {
@@ -281,16 +313,36 @@
           "array_parser_1/echo"
         ]
       },
+      "object_localizer_0_pose": {
+        "ports": [
+          "object_localizer_0/pose",
+          "xlslice_6/Din",
+          "xlslice_8/Din",
+          "xlslice_7/Din"
+        ]
+      },
       "xlslice_6_Dout": {
         "ports": [
           "xlslice_6/Dout",
           "ila_0/probe5"
         ]
       },
+      "xlslice_8_Dout": {
+        "ports": [
+          "xlslice_8/Dout",
+          "ila_0/probe6"
+        ]
+      },
       "xlslice_7_Dout": {
         "ports": [
           "xlslice_7/Dout",
-          "ila_0/probe6"
+          "ila_0/probe7"
+        ]
+      },
+      "array_parser_1_valid": {
+        "ports": [
+          "array_parser_1/valid",
+          "ila_0/probe8"
         ]
       }
     }

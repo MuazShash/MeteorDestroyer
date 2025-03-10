@@ -18,13 +18,19 @@
   "../../../bd/parser/ip/parser_xlslice_3_0/sim/parser_xlslice_3_0.v" \
   "../../../bd/parser/ip/parser_xlslice_4_0/sim/parser_xlslice_4_0.v" \
   "../../../bd/parser/ip/parser_xlslice_5_0/sim/parser_xlslice_5_0.v" \
-  "../../../bd/parser/ip/parser_xlslice_6_0/sim/parser_xlslice_6_0.v" \
-  "../../../bd/parser/ip/parser_xlslice_7_0/sim/parser_xlslice_7_0.v" \
 -endlib
 -makelib xcelium_lib/xil_defaultlib -sv \
-  "../../../bd/parser/ipshared/27ba/sensor_parser.sv" \
-  "../../../bd/parser/ipshared/27ba/array_parser.sv" \
+  "../../../bd/parser/ipshared/1a43/sensor_parser.sv" \
+  "../../../bd/parser/ipshared/1a43/array_parser.sv" \
   "../../../bd/parser/ip/parser_array_parser_1_0/sim/parser_array_parser_1_0.sv" \
+  "../../../bd/parser/ipshared/48b4/min.sv" \
+  "../../../bd/parser/ipshared/48b4/object_localization.sv" \
+  "../../../bd/parser/ip/parser_object_localizer_0_0/sim/parser_object_localizer_0_0.sv" \
+-endlib
+-makelib xcelium_lib/xil_defaultlib \
+  "../../../bd/parser/ip/parser_xlslice_3_1/sim/parser_xlslice_3_1.v" \
+  "../../../bd/parser/ip/parser_xlslice_4_1/sim/parser_xlslice_4_1.v" \
+  "../../../bd/parser/ip/parser_xlslice_5_2/sim/parser_xlslice_5_2.v" \
 -endlib
 -makelib xcelium_lib/xil_defaultlib \
   glbl.v

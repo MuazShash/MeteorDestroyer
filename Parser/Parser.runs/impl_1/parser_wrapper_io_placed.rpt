@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------
 | Tool Version              : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-| Date                      : Mon Mar  3 23:54:50 2025
+| Date                      : Sun Mar  9 20:30:36 2025
 | Host                      : DESKTOP-BINRERU running 64-bit major release  (build 9200)
 | Command                   : report_io -file parser_wrapper_io_placed.rpt
 | Design                    : parser_wrapper
@@ -25,7 +25,7 @@ Table of Contents
 +---------------+
 | Total User IO |
 +---------------+
-|             8 |
+|             6 |
 +---------------+
 
 
@@ -77,7 +77,7 @@ Table of Contents
 | AA18       |             | High Range | IO_L17P_T2_A14_D30_14        | User IO       |             |      14 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
 | AA19       |             | High Range | IO_L15P_T2_DQS_RDWR_B_14     | User IO       |             |      14 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
 | AA20       |             | High Range | IO_L8P_T1_D11_14             | User IO       |             |      14 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
-| AA21       | echo_0[4]   | High Range | IO_L8N_T1_D12_14             | INPUT         | LVCMOS33    |      14 |            |      |                     |                 NONE |         | FIXED      |           |          |      | NONE             |              |                   |              |
+| AA21       |             | High Range | IO_L8N_T1_D12_14             | User IO       |             |      14 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
 | AA22       |             |            | GND                          | GND           |             |         |            |      |                     |                      |     0.0 |            |           |          |      |                  |              |                   |              |
 | AB1        |             | High Range | IO_L7N_T1_34                 | User IO       |             |      34 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
 | AB2        |             | High Range | IO_L8N_T1_34                 | User IO       |             |      34 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
@@ -517,7 +517,7 @@ Table of Contents
 | Y18        |             | High Range | IO_L13P_T2_MRCC_14           | User IO       |             |      14 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
 | Y19        |             | High Range | IO_L13N_T2_MRCC_14           | User IO       |             |      14 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
 | Y20        |             | High Range | VCCO_14                      | VCCO          |             |      14 |            |      |                     |                      |    3.30 |            |           |          |      |                  |              |                   |              |
-| Y21        | echo_0[3]   | High Range | IO_L9P_T1_DQS_14             | INPUT         | LVCMOS33    |      14 |            |      |                     |                 NONE |         | FIXED      |           |          |      | NONE             |              |                   |              |
+| Y21        |             | High Range | IO_L9P_T1_DQS_14             | User IO       |             |      14 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
 | Y22        |             | High Range | IO_L9N_T1_DQS_D13_14         | User IO       |             |      14 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
 +------------+-------------+------------+------------------------------+---------------+-------------+---------+------------+------+---------------------+----------------------+---------+------------+-----------+----------+------+------------------+--------------+-------------------+--------------+
 * Default value

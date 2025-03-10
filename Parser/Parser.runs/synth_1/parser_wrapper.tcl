@@ -30,7 +30,10 @@ set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
 set_property board_part digilentinc.com:nexys_video:part0:1.2 [current_project]
-set_property ip_repo_paths c:/Users/Muaz/Documents/MeteorDestroyer/Parser/Parser.srcs/sources_1/new [current_project]
+set_property ip_repo_paths {
+  c:/Users/Muaz/Documents/MeteorDestroyer/Parser/Parser.srcs/sources_1/localization
+  c:/Users/Muaz/Documents/MeteorDestroyer/Parser/Parser.srcs/sources_1/new
+} [current_project]
 update_ip_catalog
 set_property ip_output_repo c:/Users/Muaz/Documents/MeteorDestroyer/Parser/Parser.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]

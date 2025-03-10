@@ -72,7 +72,10 @@ set rc [catch {
   set_param project.singleFileAddWarning.threshold 0
   set_property webtalk.parent_dir C:/Users/Muaz/Documents/MeteorDestroyer/Parser/Parser.cache/wt [current_project]
   set_property parent.project_path C:/Users/Muaz/Documents/MeteorDestroyer/Parser/Parser.xpr [current_project]
-  set_property ip_repo_paths c:/Users/Muaz/Documents/MeteorDestroyer/Parser/Parser.srcs/sources_1/new [current_project]
+  set_property ip_repo_paths {
+  C:/Users/Muaz/Documents/MeteorDestroyer/Parser/Parser.srcs/sources_1/localization
+  C:/Users/Muaz/Documents/MeteorDestroyer/Parser/Parser.srcs/sources_1/new
+} [current_project]
   update_ip_catalog
   set_property ip_output_repo C:/Users/Muaz/Documents/MeteorDestroyer/Parser/Parser.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]

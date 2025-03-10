@@ -1,6 +1,6 @@
 {
    "ExpandedHierarchyInLayout":"",
-   "guistr":"# # String gsaved with Nlview 6.8.11  2018-08-07 bk=1.4403 VDI=40 GEI=35 GUI=JA:9.0 non-TLS-threadsafe
+   "guistr":"# # String gsaved with Nlview 6.8.11  2018-08-07 bk=1.4403 VDI=40 GEI=35 GUI=JA:9.0 non-TLS
 #  -string -flagsOSRD
 preplace port sys_clock -pg 1 -y 90 -defaultsOSRD
 preplace port trig_0 -pg 1 -y -80 -defaultsOSRD
@@ -10,22 +10,27 @@ preplace inst array_parser_1 -pg 1 -lvl 2 -y -10 -defaultsOSRD
 preplace inst xlslice_3 -pg 1 -lvl 1 -y 260 -defaultsOSRD
 preplace inst xlslice_4 -pg 1 -lvl 1 -y 360 -defaultsOSRD
 preplace inst xlslice_5 -pg 1 -lvl 1 -y 460 -defaultsOSRD
-preplace inst xlslice_6 -pg 1 -lvl 1 -y 560 -defaultsOSRD
-preplace inst xlslice_7 -pg 1 -lvl 1 -y 690 -defaultsOSRD
-preplace inst ila_0 -pg 1 -lvl 2 -y 170 -defaultsOSRD
+preplace inst xlslice_6 -pg 1 -lvl 3 -y 240 -defaultsOSRD
+preplace inst xlslice_7 -pg 1 -lvl 3 -y 450 -defaultsOSRD
+preplace inst ila_0 -pg 1 -lvl 2 -y 200 -defaultsOSRD
+preplace inst xlslice_8 -pg 1 -lvl 3 -y 350 -defaultsOSRD
+preplace inst object_localizer_0 -pg 1 -lvl 3 -y 70 -defaultsOSRD
 preplace inst clk_wiz_0 -pg 1 -lvl 1 -y -30 -defaultsOSRD
-preplace netloc array_parser_0_distance_mm 1 0 3 20 620 N 620 770
-preplace netloc hcsr04_sensor_0_trig 1 1 2 510 -80 770J
+preplace netloc array_parser_0_distance_mm 1 0 3 30 -120 N -120 810
+preplace netloc hcsr04_sensor_0_trig 1 1 3 520 -90 790J -80 NJ
 preplace netloc xlslice_4_Dout 1 1 1 480
 preplace netloc xlslice_3_Dout 1 1 1 470
-preplace netloc xlslice_7_Dout 1 1 1 510
+preplace netloc xlslice_7_Dout 1 1 3 530 530 NJ 530 1060
 preplace netloc xlslice_5_Dout 1 1 1 490
 preplace netloc sys_clock_1 1 0 1 20J
 preplace netloc echo_0_1 1 0 2 10J -100 480J
-preplace netloc clk_wiz_0_clk_out1 1 1 1 470
+preplace netloc object_localizer_0_pose 1 2 2 790 510 1080
+preplace netloc clk_wiz_0_clk_out1 1 1 2 490 -100 800
+preplace netloc xlslice_8_Dout 1 1 3 510 540 NJ 540 1090
 preplace netloc reset_1 1 0 1 10J
-preplace netloc xlslice_6_Dout 1 1 1 500
-levelinfo -pg 1 -10 370 640 820 -top -280 -bot 750
+preplace netloc array_parser_1_valid 1 1 2 500 -110 780
+preplace netloc xlslice_6_Dout 1 1 3 520 520 NJ 520 1070
+levelinfo -pg 1 -10 370 660 940 1120 -top -280 -bot 750
 "
 }
 {

@@ -34,20 +34,20 @@
     <Option Name="DSAVendor" Val="xilinx"/>
     <Option Name="DSABoardId" Val="nexys_video"/>
     <Option Name="DSANumComputeUnits" Val="60"/>
-    <Option Name="WTXSimLaunchSim" Val="41"/>
+    <Option Name="WTXSimLaunchSim" Val="80"/>
     <Option Name="WTModelSimLaunchSim" Val="0"/>
     <Option Name="WTQuestaLaunchSim" Val="0"/>
     <Option Name="WTIesLaunchSim" Val="0"/>
     <Option Name="WTVcsLaunchSim" Val="0"/>
     <Option Name="WTRivieraLaunchSim" Val="0"/>
     <Option Name="WTActivehdlLaunchSim" Val="0"/>
-    <Option Name="WTXSimExportSim" Val="2"/>
-    <Option Name="WTModelSimExportSim" Val="2"/>
-    <Option Name="WTQuestaExportSim" Val="2"/>
-    <Option Name="WTIesExportSim" Val="2"/>
-    <Option Name="WTVcsExportSim" Val="2"/>
-    <Option Name="WTRivieraExportSim" Val="2"/>
-    <Option Name="WTActivehdlExportSim" Val="2"/>
+    <Option Name="WTXSimExportSim" Val="4"/>
+    <Option Name="WTModelSimExportSim" Val="4"/>
+    <Option Name="WTQuestaExportSim" Val="4"/>
+    <Option Name="WTIesExportSim" Val="4"/>
+    <Option Name="WTVcsExportSim" Val="4"/>
+    <Option Name="WTRivieraExportSim" Val="4"/>
+    <Option Name="WTActivehdlExportSim" Val="4"/>
     <Option Name="GenerateIPUpgradeLog" Val="TRUE"/>
     <Option Name="XSimRadix" Val="hex"/>
     <Option Name="XSimTimeUnit" Val="ns"/>
@@ -68,11 +68,11 @@
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
-        <CompFileExtendedInfo CompFileName="parser.bd" FileRelPathName="ip/parser_object_localizer_0_0/parser_object_localizer_0_0.xci">
-          <Proxy FileSetName="parser_object_localizer_0_0"/>
-        </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="parser.bd" FileRelPathName="ip/parser_array_parser_1_0/parser_array_parser_1_0.xci">
           <Proxy FileSetName="parser_array_parser_1_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="parser.bd" FileRelPathName="ip/parser_object_localizer_0_0/parser_object_localizer_0_0.xci">
+          <Proxy FileSetName="parser_object_localizer_0_0"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="parser.bd" FileRelPathName="ip/parser_ila_0_0/parser_ila_0_0.xci">
           <Proxy FileSetName="parser_ila_0_0"/>
@@ -176,12 +176,6 @@
         <Option Name="TopAutoSet" Val="TRUE"/>
       </Config>
     </FileSet>
-    <FileSet Name="parser_array_parser_1_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/parser_array_parser_1_0">
-      <Config>
-        <Option Name="TopModule" Val="parser_array_parser_1_0"/>
-        <Option Name="UseBlackboxStub" Val="1"/>
-      </Config>
-    </FileSet>
     <FileSet Name="parser_object_localizer_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/parser_object_localizer_0_0">
       <Config>
         <Option Name="TopModule" Val="parser_object_localizer_0_0"/>
@@ -191,6 +185,12 @@
     <FileSet Name="parser_ila_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/parser_ila_0_0">
       <Config>
         <Option Name="TopModule" Val="parser_ila_0_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="parser_array_parser_1_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/parser_array_parser_1_0">
+      <Config>
+        <Option Name="TopModule" Val="parser_array_parser_1_0"/>
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
@@ -223,7 +223,7 @@
       <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2018"/>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
-    <Run Id="parser_array_parser_1_0_synth_1" Type="Ft3:Synth" SrcSet="parser_array_parser_1_0" Part="xc7a200tsbg484-1" ConstrsSet="parser_array_parser_1_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/parser_array_parser_1_0_synth_1" IncludeInArchive="true">
+    <Run Id="parser_object_localizer_0_0_synth_1" Type="Ft3:Synth" SrcSet="parser_object_localizer_0_0" Part="xc7a200tsbg484-1" ConstrsSet="parser_object_localizer_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/parser_object_localizer_0_0_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018"/>
         <Step Id="synth_design"/>
@@ -232,18 +232,16 @@
       <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2018"/>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
-    <Run Id="parser_object_localizer_0_0_synth_1" Type="Ft3:Synth" SrcSet="parser_object_localizer_0_0" Part="xc7a200tsbg484-1" ConstrsSet="parser_object_localizer_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/parser_object_localizer_0_0_synth_1" IncludeInArchive="true">
+    <Run Id="parser_ila_0_0_synth_1" Type="Ft3:Synth" SrcSet="parser_ila_0_0" Part="xc7a200tsbg484-1" ConstrsSet="parser_ila_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/parser_ila_0_0_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018"/>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
       <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2018"/>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
-    <Run Id="parser_ila_0_0_synth_1" Type="Ft3:Synth" SrcSet="parser_ila_0_0" Part="xc7a200tsbg484-1" ConstrsSet="parser_ila_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/parser_ila_0_0_synth_1" IncludeInArchive="true">
+    <Run Id="parser_array_parser_1_0_synth_1" Type="Ft3:Synth" SrcSet="parser_array_parser_1_0" Part="xc7a200tsbg484-1" ConstrsSet="parser_array_parser_1_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/parser_array_parser_1_0_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018">
           <Desc>Vivado Synthesis Defaults</Desc>
@@ -271,7 +269,7 @@
       <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2018"/>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
-    <Run Id="parser_array_parser_1_0_impl_1" Type="Ft2:EntireDesign" Part="xc7a200tsbg484-1" ConstrsSet="parser_array_parser_1_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="parser_array_parser_1_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
+    <Run Id="parser_object_localizer_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7a200tsbg484-1" ConstrsSet="parser_object_localizer_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="parser_object_localizer_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018"/>
         <Step Id="init_design"/>
@@ -287,11 +285,9 @@
       <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2018"/>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
-    <Run Id="parser_object_localizer_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7a200tsbg484-1" ConstrsSet="parser_object_localizer_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="parser_object_localizer_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
+    <Run Id="parser_ila_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7a200tsbg484-1" ConstrsSet="parser_ila_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="parser_ila_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -305,7 +301,7 @@
       <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2018"/>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
-    <Run Id="parser_ila_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7a200tsbg484-1" ConstrsSet="parser_ila_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="parser_ila_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
+    <Run Id="parser_array_parser_1_0_impl_1" Type="Ft2:EntireDesign" Part="xc7a200tsbg484-1" ConstrsSet="parser_array_parser_1_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="parser_array_parser_1_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018">
           <Desc>Default settings for Implementation.</Desc>

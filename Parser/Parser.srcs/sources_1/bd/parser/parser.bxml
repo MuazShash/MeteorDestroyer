@@ -2,10 +2,10 @@
 <Root MajorVersion="0" MinorVersion="36">
   <CompositeFile CompositeFileTopName="parser" CanBeSetAsTop="false" CanDisplayChildGraph="true">
     <Description>Composite Fileset</Description>
-    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1741063845"/>
-    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1741063845"/>
-    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1741063845"/>
-    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1741063845"/>
+    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1741566030"/>
+    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1741566030"/>
+    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1741566030"/>
+    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1741566030"/>
     <FileCollection Name="SOURCES" Type="SOURCES">
       <File Name="ip\parser_clk_wiz_0_0\parser_clk_wiz_0_0.xci" Type="IP">
         <Instance HierarchyPath="clk_wiz_0"/>
@@ -58,7 +58,23 @@
         <UsedIn Val="IMPLEMENTATION"/>
         <UsedIn Val="SIMULATION"/>
       </File>
-      <File Name="ip\parser_xlslice_6_0\parser_xlslice_6_0.xci" Type="IP">
+      <File Name="ip\parser_array_parser_1_0\parser_array_parser_1_0.xci" Type="IP">
+        <Instance HierarchyPath="array_parser_1"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip\parser_object_localizer_0_0\parser_object_localizer_0_0.xci" Type="IP">
+        <Instance HierarchyPath="object_localizer_0"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip\parser_xlslice_3_1\parser_xlslice_3_1.xci" Type="IP">
         <Instance HierarchyPath="xlslice_6"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
@@ -66,7 +82,7 @@
         <UsedIn Val="IMPLEMENTATION"/>
         <UsedIn Val="SIMULATION"/>
       </File>
-      <File Name="ip\parser_xlslice_7_0\parser_xlslice_7_0.xci" Type="IP">
+      <File Name="ip\parser_xlslice_4_1\parser_xlslice_4_1.xci" Type="IP">
         <Instance HierarchyPath="xlslice_7"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
@@ -74,8 +90,8 @@
         <UsedIn Val="IMPLEMENTATION"/>
         <UsedIn Val="SIMULATION"/>
       </File>
-      <File Name="ip\parser_array_parser_1_0\parser_array_parser_1_0.xci" Type="IP">
-        <Instance HierarchyPath="array_parser_1"/>
+      <File Name="ip\parser_xlslice_5_2\parser_xlslice_5_2.xci" Type="IP">
+        <Instance HierarchyPath="xlslice_8"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>

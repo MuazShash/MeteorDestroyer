@@ -1,4 +1,4 @@
-Running: xsim.dir/localize_tb_behav/xsimk.exe -simmode gui -wdb localize_tb_behav.wdb -simrunnum 0 -socket 26951
+Running: xsim.dir/localize_tb_behav/xsimk.exe -simmode gui -wdb localize_tb_behav.wdb -simrunnum 0 -socket 2277
 Design successfully loaded
-Design Loading Memory Usage: 6516 KB (Peak: 6516 KB)
+Design Loading Memory Usage: 6012 KB (Peak: 6012 KB)
 Design Loading CPU Usage: 0 ms

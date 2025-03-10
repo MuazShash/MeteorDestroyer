@@ -29,13 +29,19 @@ vlog -work xil_defaultlib -64 -incr "+incdir+../../../../Parser.srcs/sources_1/b
 "../../../bd/parser/ip/parser_xlslice_3_0/sim/parser_xlslice_3_0.v" \
 "../../../bd/parser/ip/parser_xlslice_4_0/sim/parser_xlslice_4_0.v" \
 "../../../bd/parser/ip/parser_xlslice_5_0/sim/parser_xlslice_5_0.v" \
-"../../../bd/parser/ip/parser_xlslice_6_0/sim/parser_xlslice_6_0.v" \
-"../../../bd/parser/ip/parser_xlslice_7_0/sim/parser_xlslice_7_0.v" \
 
 vlog -work xil_defaultlib -64 -incr -sv "+incdir+../../../../Parser.srcs/sources_1/bd/parser/ipshared/85a3" "+incdir+../../../../Parser.srcs/sources_1/bd/parser/ipshared/1b7e/hdl/verilog" "+incdir+../../../../Parser.srcs/sources_1/bd/parser/ipshared/122e/hdl/verilog" "+incdir+../../../../Parser.srcs/sources_1/bd/parser/ipshared/7d3c/hdl/verilog" "+incdir+../../../../Parser.srcs/sources_1/bd/parser/ipshared/c45e/hdl/verilog" \
-"../../../bd/parser/ipshared/27ba/sensor_parser.sv" \
-"../../../bd/parser/ipshared/27ba/array_parser.sv" \
+"../../../bd/parser/ipshared/1a43/sensor_parser.sv" \
+"../../../bd/parser/ipshared/1a43/array_parser.sv" \
 "../../../bd/parser/ip/parser_array_parser_1_0/sim/parser_array_parser_1_0.sv" \
+"../../../bd/parser/ipshared/48b4/min.sv" \
+"../../../bd/parser/ipshared/48b4/object_localization.sv" \
+"../../../bd/parser/ip/parser_object_localizer_0_0/sim/parser_object_localizer_0_0.sv" \
+
+vlog -work xil_defaultlib -64 -incr "+incdir+../../../../Parser.srcs/sources_1/bd/parser/ipshared/85a3" "+incdir+../../../../Parser.srcs/sources_1/bd/parser/ipshared/1b7e/hdl/verilog" "+incdir+../../../../Parser.srcs/sources_1/bd/parser/ipshared/122e/hdl/verilog" "+incdir+../../../../Parser.srcs/sources_1/bd/parser/ipshared/7d3c/hdl/verilog" "+incdir+../../../../Parser.srcs/sources_1/bd/parser/ipshared/c45e/hdl/verilog" \
+"../../../bd/parser/ip/parser_xlslice_3_1/sim/parser_xlslice_3_1.v" \
+"../../../bd/parser/ip/parser_xlslice_4_1/sim/parser_xlslice_4_1.v" \
+"../../../bd/parser/ip/parser_xlslice_5_2/sim/parser_xlslice_5_2.v" \
 
 vlog -work xil_defaultlib \
 "glbl.v"

@@ -48,7 +48,7 @@
 
 
 // IP VLNV: xilinx.com:user:array_parser:1.0
-// IP Revision: 3
+// IP Revision: 5
 
 `timescale 1ns/1ps
 
@@ -58,24 +58,27 @@ module parser_array_parser_1_0 (
   clk,
   echo,
   trig,
-  distance_mm
+  distance_mm,
+  valid
 );
 
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME clk, FREQ_HZ 100000000, PHASE 0.0, CLK_DOMAIN /clk_wiz_0_clk_out1, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 clk CLK" *)
 input wire clk;
-input wire [4 : 0] echo;
+input wire [2 : 0] echo;
 output wire trig;
-output wire [79 : 0] distance_mm;
-wire  [15:0] distance_mm_unpacked [4:0];
+output wire [47 : 0] distance_mm;
+wire  [15:0] distance_mm_unpacked [2:0];
 assign {>>{distance_mm}} = distance_mm_unpacked;
+output wire valid;
 
   array_parser #(
-    .NUM_SENSORS(5)
+    .NUM_SENSORS(3)
   ) inst (
     .clk(clk),
     .echo(echo),
     .trig(trig),
-    .distance_mm(distance_mm_unpacked)
+    .distance_mm(distance_mm_unpacked),
+    .valid(valid)
   );
 endmodule

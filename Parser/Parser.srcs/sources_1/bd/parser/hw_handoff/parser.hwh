@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Mon Mar  3 23:50:45 2025" VIVADOVERSION="2018.3">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Sun Mar  9 20:20:30 2025" VIVADOVERSION="2018.3">
 
   <SYSTEMINFO ARCH="artix7" BOARD="digilentinc.com:nexys_video:part0:1.2" DEVICE="7a200t" NAME="parser" PACKAGE="sbg484" SPEEDGRADE="-1"/>
 
@@ -19,7 +19,7 @@
         <CONNECTION INSTANCE="clk_wiz_0" PORT="clk_in1"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="I" LEFT="4" NAME="echo_0" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_echo_0">
+    <PORT DIR="I" LEFT="2" NAME="echo_0" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_echo_0">
       <CONNECTIONS>
         <CONNECTION INSTANCE="ila_0" PORT="probe2"/>
         <CONNECTION INSTANCE="array_parser_1" PORT="echo"/>
@@ -30,10 +30,10 @@
   <EXTERNALINTERFACES/>
 
   <MODULES>
-    <MODULE COREREVISION="3" FULLNAME="/array_parser_1" HWVERSION="1.0" INSTANCE="array_parser_1" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="array_parser" VLNV="xilinx.com:user:array_parser:1.0">
+    <MODULE COREREVISION="5" FULLNAME="/array_parser_1" HWVERSION="1.0" INSTANCE="array_parser_1" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="array_parser" VLNV="xilinx.com:user:array_parser:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
-        <PARAMETER NAME="NUM_SENSORS" VALUE="5"/>
+        <PARAMETER NAME="NUM_SENSORS" VALUE="3"/>
         <PARAMETER NAME="Component_Name" VALUE="parser_array_parser_1_0"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
@@ -43,7 +43,7 @@
             <CONNECTION INSTANCE="clk_wiz_0" PORT="clk_out1"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="4" NAME="echo" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_echo_0">
+        <PORT DIR="I" LEFT="2" NAME="echo" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_echo_0">
           <CONNECTIONS>
             <CONNECTION INSTANCE="External_Ports" PORT="echo_0"/>
           </CONNECTIONS>
@@ -54,13 +54,17 @@
             <CONNECTION INSTANCE="ila_0" PORT="probe1"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="79" NAME="distance_mm" RIGHT="0" SIGIS="undef" SIGNAME="array_parser_1_distance_mm">
+        <PORT DIR="O" LEFT="47" NAME="distance_mm" RIGHT="0" SIGIS="undef" SIGNAME="array_parser_1_distance_mm">
           <CONNECTIONS>
             <CONNECTION INSTANCE="xlslice_3" PORT="Din"/>
             <CONNECTION INSTANCE="xlslice_4" PORT="Din"/>
             <CONNECTION INSTANCE="xlslice_5" PORT="Din"/>
-            <CONNECTION INSTANCE="xlslice_6" PORT="Din"/>
-            <CONNECTION INSTANCE="xlslice_7" PORT="Din"/>
+            <CONNECTION INSTANCE="object_localizer_0" PORT="distances"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="valid" SIGIS="undef" SIGNAME="array_parser_1_valid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ila_0" PORT="probe8"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -649,6 +653,7 @@
         <PORT CLKFREQUENCY="100000000" DIR="O" NAME="clk_out1" SIGIS="clk" SIGNAME="clk_wiz_0_clk_out1">
           <CONNECTIONS>
             <CONNECTION INSTANCE="ila_0" PORT="clk"/>
+            <CONNECTION INSTANCE="object_localizer_0" PORT="clk"/>
             <CONNECTION INSTANCE="array_parser_1" PORT="clk"/>
           </CONNECTIONS>
         </PORT>
@@ -676,7 +681,7 @@
         <PARAMETER NAME="C_SLOT_0_AXI_PROTOCOL" VALUE="AXI4"/>
         <PARAMETER NAME="C_NUM_MONITOR_SLOTS" VALUE="1"/>
         <PARAMETER NAME="C_ENABLE_ILA_AXI_MON" VALUE="0"/>
-        <PARAMETER NAME="C_NUM_OF_PROBES" VALUE="7"/>
+        <PARAMETER NAME="C_NUM_OF_PROBES" VALUE="9"/>
         <PARAMETER NAME="C_DATA_DEPTH" VALUE="131072"/>
         <PARAMETER NAME="C_MAJOR_VERSION" VALUE="2018"/>
         <PARAMETER NAME="C_MINOR_VERSION" VALUE="3"/>
@@ -692,7 +697,7 @@
         <PARAMETER NAME="C_TRIGOUT_EN" VALUE="0"/>
         <PARAMETER NAME="C_TRIGIN_EN" VALUE="0"/>
         <PARAMETER NAME="C_SLOT_0_AXIS_TUSER_WIDTH" VALUE="16"/>
-        <PARAMETER NAME="C_SLOT_0_AXIS_TDEST_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="C_SLOT_0_AXIS_TDEST_WIDTH" VALUE="16"/>
         <PARAMETER NAME="C_SLOT_0_AXIS_TID_WIDTH" VALUE="1"/>
         <PARAMETER NAME="C_SLOT_0_AXI_ID_WIDTH" VALUE="1"/>
         <PARAMETER NAME="C_SLOT_0_AXI_ARUSER_WIDTH" VALUE="1"/>
@@ -702,12 +707,12 @@
         <PARAMETER NAME="C_SLOT_0_AXI_BUSER_WIDTH" VALUE="1"/>
         <PARAMETER NAME="C_PROBE0_WIDTH" VALUE="16"/>
         <PARAMETER NAME="C_PROBE1_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="C_PROBE2_WIDTH" VALUE="5"/>
+        <PARAMETER NAME="C_PROBE2_WIDTH" VALUE="3"/>
         <PARAMETER NAME="C_PROBE3_WIDTH" VALUE="16"/>
         <PARAMETER NAME="C_PROBE4_WIDTH" VALUE="16"/>
         <PARAMETER NAME="C_PROBE5_WIDTH" VALUE="16"/>
         <PARAMETER NAME="C_PROBE6_WIDTH" VALUE="16"/>
-        <PARAMETER NAME="C_PROBE7_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="C_PROBE7_WIDTH" VALUE="16"/>
         <PARAMETER NAME="C_PROBE8_WIDTH" VALUE="1"/>
         <PARAMETER NAME="C_PROBE9_WIDTH" VALUE="1"/>
         <PARAMETER NAME="C_PROBE10_WIDTH" VALUE="1"/>
@@ -3811,7 +3816,7 @@
             <CONNECTION INSTANCE="array_parser_1" PORT="trig"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="4" NAME="probe2" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_echo_0">
+        <PORT DIR="I" LEFT="2" NAME="probe2" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_echo_0">
           <CONNECTIONS>
             <CONNECTION INSTANCE="External_Ports" PORT="echo_0"/>
           </CONNECTIONS>
@@ -3831,9 +3836,48 @@
             <CONNECTION INSTANCE="xlslice_6" PORT="Dout"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="15" NAME="probe6" RIGHT="0" SIGIS="undef" SIGNAME="xlslice_7_Dout">
+        <PORT DIR="I" LEFT="15" NAME="probe6" RIGHT="0" SIGIS="undef" SIGNAME="xlslice_8_Dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="xlslice_8" PORT="Dout"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="15" NAME="probe7" RIGHT="0" SIGIS="undef" SIGNAME="xlslice_7_Dout">
           <CONNECTIONS>
             <CONNECTION INSTANCE="xlslice_7" PORT="Dout"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="0" NAME="probe8" RIGHT="0" SIGIS="undef" SIGNAME="array_parser_1_valid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="array_parser_1" PORT="valid"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="2" FULLNAME="/object_localizer_0" HWVERSION="1.0" INSTANCE="object_localizer_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="object_localizer" VLNV="xilinx.com:user:object_localizer:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="NUM_SENSORS" VALUE="3"/>
+        <PARAMETER NAME="DW" VALUE="16"/>
+        <PARAMETER NAME="Component_Name" VALUE="parser_object_localizer_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="clk_wiz_0_clk_out1">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="clk_wiz_0" PORT="clk_out1"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="47" NAME="distances" RIGHT="0" SIGIS="undef" SIGNAME="array_parser_1_distance_mm">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="array_parser_1" PORT="distance_mm"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="47" NAME="pose" RIGHT="0" SIGIS="undef" SIGNAME="object_localizer_0_pose">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="xlslice_6" PORT="Din"/>
+            <CONNECTION INSTANCE="xlslice_8" PORT="Din"/>
+            <CONNECTION INSTANCE="xlslice_7" PORT="Din"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -3842,7 +3886,7 @@
     <MODULE COREREVISION="1" FULLNAME="/xlslice_3" HWVERSION="1.0" INSTANCE="xlslice_3" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="xlslice" VLNV="xilinx.com:ip:xlslice:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
-        <PARAMETER NAME="DIN_WIDTH" VALUE="80"/>
+        <PARAMETER NAME="DIN_WIDTH" VALUE="48"/>
         <PARAMETER NAME="DIN_FROM" VALUE="15"/>
         <PARAMETER NAME="DIN_TO" VALUE="0"/>
         <PARAMETER NAME="Component_Name" VALUE="parser_xlslice_3_0"/>
@@ -3850,7 +3894,7 @@
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
-        <PORT DIR="I" LEFT="79" NAME="Din" RIGHT="0" SIGIS="undef" SIGNAME="array_parser_1_distance_mm">
+        <PORT DIR="I" LEFT="47" NAME="Din" RIGHT="0" SIGIS="undef" SIGNAME="array_parser_1_distance_mm">
           <CONNECTIONS>
             <CONNECTION INSTANCE="array_parser_1" PORT="distance_mm"/>
           </CONNECTIONS>
@@ -3866,7 +3910,7 @@
     <MODULE COREREVISION="1" FULLNAME="/xlslice_4" HWVERSION="1.0" INSTANCE="xlslice_4" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="xlslice" VLNV="xilinx.com:ip:xlslice:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
-        <PARAMETER NAME="DIN_WIDTH" VALUE="80"/>
+        <PARAMETER NAME="DIN_WIDTH" VALUE="48"/>
         <PARAMETER NAME="DIN_FROM" VALUE="31"/>
         <PARAMETER NAME="DIN_TO" VALUE="16"/>
         <PARAMETER NAME="Component_Name" VALUE="parser_xlslice_4_0"/>
@@ -3874,7 +3918,7 @@
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
-        <PORT DIR="I" LEFT="79" NAME="Din" RIGHT="0" SIGIS="undef" SIGNAME="array_parser_1_distance_mm">
+        <PORT DIR="I" LEFT="47" NAME="Din" RIGHT="0" SIGIS="undef" SIGNAME="array_parser_1_distance_mm">
           <CONNECTIONS>
             <CONNECTION INSTANCE="array_parser_1" PORT="distance_mm"/>
           </CONNECTIONS>
@@ -3890,7 +3934,7 @@
     <MODULE COREREVISION="1" FULLNAME="/xlslice_5" HWVERSION="1.0" INSTANCE="xlslice_5" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="xlslice" VLNV="xilinx.com:ip:xlslice:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
-        <PARAMETER NAME="DIN_WIDTH" VALUE="80"/>
+        <PARAMETER NAME="DIN_WIDTH" VALUE="48"/>
         <PARAMETER NAME="DIN_FROM" VALUE="47"/>
         <PARAMETER NAME="DIN_TO" VALUE="32"/>
         <PARAMETER NAME="Component_Name" VALUE="parser_xlslice_5_0"/>
@@ -3898,7 +3942,7 @@
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
-        <PORT DIR="I" LEFT="79" NAME="Din" RIGHT="0" SIGIS="undef" SIGNAME="array_parser_1_distance_mm">
+        <PORT DIR="I" LEFT="47" NAME="Din" RIGHT="0" SIGIS="undef" SIGNAME="array_parser_1_distance_mm">
           <CONNECTIONS>
             <CONNECTION INSTANCE="array_parser_1" PORT="distance_mm"/>
           </CONNECTIONS>
@@ -3914,17 +3958,17 @@
     <MODULE COREREVISION="1" FULLNAME="/xlslice_6" HWVERSION="1.0" INSTANCE="xlslice_6" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="xlslice" VLNV="xilinx.com:ip:xlslice:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
-        <PARAMETER NAME="DIN_WIDTH" VALUE="80"/>
-        <PARAMETER NAME="DIN_FROM" VALUE="63"/>
-        <PARAMETER NAME="DIN_TO" VALUE="48"/>
-        <PARAMETER NAME="Component_Name" VALUE="parser_xlslice_6_0"/>
-        <PARAMETER NAME="DOUT_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="DIN_WIDTH" VALUE="48"/>
+        <PARAMETER NAME="DIN_FROM" VALUE="15"/>
+        <PARAMETER NAME="DIN_TO" VALUE="0"/>
+        <PARAMETER NAME="Component_Name" VALUE="parser_xlslice_3_1"/>
+        <PARAMETER NAME="DOUT_WIDTH" VALUE="16"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
-        <PORT DIR="I" LEFT="79" NAME="Din" RIGHT="0" SIGIS="undef" SIGNAME="array_parser_1_distance_mm">
+        <PORT DIR="I" LEFT="47" NAME="Din" RIGHT="0" SIGIS="undef" SIGNAME="object_localizer_0_pose">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="array_parser_1" PORT="distance_mm"/>
+            <CONNECTION INSTANCE="object_localizer_0" PORT="pose"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="15" NAME="Dout" RIGHT="0" SIGIS="undef" SIGNAME="xlslice_6_Dout">
@@ -3938,20 +3982,44 @@
     <MODULE COREREVISION="1" FULLNAME="/xlslice_7" HWVERSION="1.0" INSTANCE="xlslice_7" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="xlslice" VLNV="xilinx.com:ip:xlslice:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
-        <PARAMETER NAME="DIN_WIDTH" VALUE="80"/>
-        <PARAMETER NAME="DIN_FROM" VALUE="79"/>
-        <PARAMETER NAME="DIN_TO" VALUE="64"/>
-        <PARAMETER NAME="Component_Name" VALUE="parser_xlslice_7_0"/>
+        <PARAMETER NAME="DIN_WIDTH" VALUE="48"/>
+        <PARAMETER NAME="DIN_FROM" VALUE="31"/>
+        <PARAMETER NAME="DIN_TO" VALUE="16"/>
+        <PARAMETER NAME="Component_Name" VALUE="parser_xlslice_4_1"/>
+        <PARAMETER NAME="DOUT_WIDTH" VALUE="16"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" LEFT="47" NAME="Din" RIGHT="0" SIGIS="undef" SIGNAME="object_localizer_0_pose">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="object_localizer_0" PORT="pose"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="15" NAME="Dout" RIGHT="0" SIGIS="undef" SIGNAME="xlslice_7_Dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ila_0" PORT="probe7"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/xlslice_8" HWVERSION="1.0" INSTANCE="xlslice_8" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="xlslice" VLNV="xilinx.com:ip:xlslice:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="DIN_WIDTH" VALUE="48"/>
+        <PARAMETER NAME="DIN_FROM" VALUE="47"/>
+        <PARAMETER NAME="DIN_TO" VALUE="32"/>
+        <PARAMETER NAME="Component_Name" VALUE="parser_xlslice_5_2"/>
         <PARAMETER NAME="DOUT_WIDTH" VALUE="1"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
-        <PORT DIR="I" LEFT="79" NAME="Din" RIGHT="0" SIGIS="undef" SIGNAME="array_parser_1_distance_mm">
+        <PORT DIR="I" LEFT="47" NAME="Din" RIGHT="0" SIGIS="undef" SIGNAME="object_localizer_0_pose">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="array_parser_1" PORT="distance_mm"/>
+            <CONNECTION INSTANCE="object_localizer_0" PORT="pose"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="15" NAME="Dout" RIGHT="0" SIGIS="undef" SIGNAME="xlslice_7_Dout">
+        <PORT DIR="O" LEFT="15" NAME="Dout" RIGHT="0" SIGIS="undef" SIGNAME="xlslice_8_Dout">
           <CONNECTIONS>
             <CONNECTION INSTANCE="ila_0" PORT="probe6"/>
           </CONNECTIONS>

@@ -58,11 +58,11 @@ module parser_xlslice_5_0 (
   Dout
 );
 
-input wire [79 : 0] Din;
+input wire [47 : 0] Din;
 output wire [15 : 0] Dout;
 
   xlslice_v1_0_1_xlslice #(
-    .DIN_WIDTH(80),
+    .DIN_WIDTH(48),
     .DIN_FROM(47),
     .DIN_TO(32)
   ) inst (

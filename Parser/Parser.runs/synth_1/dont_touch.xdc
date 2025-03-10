@@ -21,13 +21,19 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==parser_xlslice_
 # IP: bd/parser/ip/parser_xlslice_5_0/parser_xlslice_5_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==parser_xlslice_5_0 || ORIG_REF_NAME==parser_xlslice_5_0} -quiet] -quiet
 
-# IP: bd/parser/ip/parser_xlslice_6_0/parser_xlslice_6_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==parser_xlslice_6_0 || ORIG_REF_NAME==parser_xlslice_6_0} -quiet] -quiet
-
-# IP: bd/parser/ip/parser_xlslice_7_0/parser_xlslice_7_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==parser_xlslice_7_0 || ORIG_REF_NAME==parser_xlslice_7_0} -quiet] -quiet
-
 # IP: bd/parser/ip/parser_array_parser_1_0/parser_array_parser_1_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==parser_array_parser_1_0 || ORIG_REF_NAME==parser_array_parser_1_0} -quiet] -quiet
+
+# IP: bd/parser/ip/parser_object_localizer_0_0/parser_object_localizer_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==parser_object_localizer_0_0 || ORIG_REF_NAME==parser_object_localizer_0_0} -quiet] -quiet
+
+# IP: bd/parser/ip/parser_xlslice_3_1/parser_xlslice_3_1.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==parser_xlslice_3_1 || ORIG_REF_NAME==parser_xlslice_3_1} -quiet] -quiet
+
+# IP: bd/parser/ip/parser_xlslice_4_1/parser_xlslice_4_1.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==parser_xlslice_4_1 || ORIG_REF_NAME==parser_xlslice_4_1} -quiet] -quiet
+
+# IP: bd/parser/ip/parser_xlslice_5_2/parser_xlslice_5_2.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==parser_xlslice_5_2 || ORIG_REF_NAME==parser_xlslice_5_2} -quiet] -quiet
 
 # XDC: bd/parser/parser_ooc.xdc
