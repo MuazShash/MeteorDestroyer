@@ -1,0 +1,4 @@
+vhdl xil_defaultlib  \
+"../../../bd/parser/ip/parser_rst_clk_wiz_0_100M_0/sim/parser_rst_clk_wiz_0_100M_0.vhd" \
+
+nosort

@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------
 | Tool Version              : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-| Date                      : Sun Mar  9 20:30:36 2025
+| Date                      : Sun Mar  9 23:46:10 2025
 | Host                      : DESKTOP-BINRERU running 64-bit major release  (build 9200)
 | Command                   : report_io -file parser_wrapper_io_placed.rpt
 | Design                    : parser_wrapper

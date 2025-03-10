@@ -48,7 +48,7 @@
 
 
 // IP VLNV: xilinx.com:user:array_parser:1.0
-// IP Revision: 5
+// IP Revision: 11
 
 `timescale 1ns/1ps
 
@@ -62,7 +62,7 @@ module parser_array_parser_1_0 (
   valid
 );
 
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME clk, FREQ_HZ 100000000, PHASE 0.0, CLK_DOMAIN /clk_wiz_0_clk_out1, INSERT_VIP 0" *)
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME clk, ASSOCIATED_RESET rstn, FREQ_HZ 100000000, PHASE 0.0, CLK_DOMAIN /clk_wiz_0_clk_out1, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 clk CLK" *)
 input wire clk;
 input wire [2 : 0] echo;

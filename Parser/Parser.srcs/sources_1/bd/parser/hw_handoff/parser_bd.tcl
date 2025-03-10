@@ -159,10 +159,10 @@ proc create_root_design { parentCell } {
 
   # Create ports
   set echo_0 [ create_bd_port -dir I -from 2 -to 0 echo_0 ]
-  set reset [ create_bd_port -dir I -type rst reset ]
+  set reset_0 [ create_bd_port -dir I -type rst reset_0 ]
   set_property -dict [ list \
    CONFIG.POLARITY {ACTIVE_LOW} \
- ] $reset
+ ] $reset_0
   set sys_clock [ create_bd_port -dir I -type clk sys_clock ]
   set_property -dict [ list \
    CONFIG.FREQ_HZ {100000000} \
@@ -175,6 +175,41 @@ proc create_root_design { parentCell } {
   set_property -dict [ list \
    CONFIG.NUM_SENSORS {3} \
  ] $array_parser_1
+
+  # Create instance: axi_interconnect_0, and set properties
+  set axi_interconnect_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_interconnect:2.1 axi_interconnect_0 ]
+  set_property -dict [ list \
+   CONFIG.NUM_MI {1} \
+   CONFIG.STRATEGY {0} \
+ ] $axi_interconnect_0
+
+  # Create instance: axi_vip_0, and set properties
+  set axi_vip_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_vip:1.1 axi_vip_0 ]
+  set_property -dict [ list \
+   CONFIG.ADDR_WIDTH {32} \
+   CONFIG.ARUSER_WIDTH {0} \
+   CONFIG.AWUSER_WIDTH {0} \
+   CONFIG.BUSER_WIDTH {0} \
+   CONFIG.DATA_WIDTH {32} \
+   CONFIG.HAS_BRESP {0} \
+   CONFIG.HAS_BURST {1} \
+   CONFIG.HAS_CACHE {1} \
+   CONFIG.HAS_LOCK {0} \
+   CONFIG.HAS_PROT {1} \
+   CONFIG.HAS_QOS {1} \
+   CONFIG.HAS_REGION {1} \
+   CONFIG.HAS_RRESP {1} \
+   CONFIG.HAS_WSTRB {0} \
+   CONFIG.ID_WIDTH {0} \
+   CONFIG.INTERFACE_MODE {MASTER} \
+   CONFIG.PROTOCOL {AXI4} \
+   CONFIG.READ_WRITE_MODE {READ_ONLY} \
+   CONFIG.RUSER_BITS_PER_BYTE {0} \
+   CONFIG.RUSER_WIDTH {0} \
+   CONFIG.SUPPORTS_NARROW {0} \
+   CONFIG.WUSER_BITS_PER_BYTE {0} \
+   CONFIG.WUSER_WIDTH {0} \
+ ] $axi_vip_0
 
   # Create instance: clk_wiz_0, and set properties
   set clk_wiz_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:clk_wiz:6.0 clk_wiz_0 ]
@@ -189,17 +224,10 @@ proc create_root_design { parentCell } {
   # Create instance: ila_0, and set properties
   set ila_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:ila:6.2 ila_0 ]
   set_property -dict [ list \
-   CONFIG.C_DATA_DEPTH {131072} \
    CONFIG.C_ENABLE_ILA_AXI_MON {false} \
    CONFIG.C_MONITOR_TYPE {Native} \
-   CONFIG.C_NUM_OF_PROBES {9} \
-   CONFIG.C_PROBE0_WIDTH {16} \
-   CONFIG.C_PROBE2_WIDTH {3} \
-   CONFIG.C_PROBE3_WIDTH {16} \
-   CONFIG.C_PROBE4_WIDTH {16} \
-   CONFIG.C_PROBE5_WIDTH {16} \
-   CONFIG.C_PROBE6_WIDTH {16} \
-   CONFIG.C_PROBE7_WIDTH {16} \
+   CONFIG.C_NUM_OF_PROBES {2} \
+   CONFIG.C_PROBE0_WIDTH {48} \
  ] $ila_0
 
   # Create instance: object_localizer_0, and set properties
@@ -208,77 +236,33 @@ proc create_root_design { parentCell } {
    CONFIG.NUM_SENSORS {3} \
  ] $object_localizer_0
 
-  # Create instance: xlslice_3, and set properties
-  set xlslice_3 [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlslice:1.0 xlslice_3 ]
+  # Create instance: rst_clk_wiz_0_100M, and set properties
+  set rst_clk_wiz_0_100M [ create_bd_cell -type ip -vlnv xilinx.com:ip:proc_sys_reset:5.0 rst_clk_wiz_0_100M ]
   set_property -dict [ list \
-   CONFIG.DIN_FROM {15} \
-   CONFIG.DIN_TO {0} \
-   CONFIG.DIN_WIDTH {48} \
-   CONFIG.DOUT_WIDTH {16} \
- ] $xlslice_3
+   CONFIG.RESET_BOARD_INTERFACE {reset} \
+   CONFIG.USE_BOARD_FLOW {true} \
+ ] $rst_clk_wiz_0_100M
 
-  # Create instance: xlslice_4, and set properties
-  set xlslice_4 [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlslice:1.0 xlslice_4 ]
-  set_property -dict [ list \
-   CONFIG.DIN_FROM {31} \
-   CONFIG.DIN_TO {16} \
-   CONFIG.DIN_WIDTH {48} \
-   CONFIG.DOUT_WIDTH {16} \
- ] $xlslice_4
-
-  # Create instance: xlslice_5, and set properties
-  set xlslice_5 [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlslice:1.0 xlslice_5 ]
-  set_property -dict [ list \
-   CONFIG.DIN_FROM {47} \
-   CONFIG.DIN_TO {32} \
-   CONFIG.DIN_WIDTH {48} \
-   CONFIG.DOUT_WIDTH {1} \
- ] $xlslice_5
-
-  # Create instance: xlslice_6, and set properties
-  set xlslice_6 [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlslice:1.0 xlslice_6 ]
-  set_property -dict [ list \
-   CONFIG.DIN_FROM {15} \
-   CONFIG.DIN_TO {0} \
-   CONFIG.DIN_WIDTH {48} \
-   CONFIG.DOUT_WIDTH {16} \
- ] $xlslice_6
-
-  # Create instance: xlslice_7, and set properties
-  set xlslice_7 [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlslice:1.0 xlslice_7 ]
-  set_property -dict [ list \
-   CONFIG.DIN_FROM {31} \
-   CONFIG.DIN_TO {16} \
-   CONFIG.DIN_WIDTH {48} \
-   CONFIG.DOUT_WIDTH {16} \
- ] $xlslice_7
-
-  # Create instance: xlslice_8, and set properties
-  set xlslice_8 [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlslice:1.0 xlslice_8 ]
-  set_property -dict [ list \
-   CONFIG.DIN_FROM {47} \
-   CONFIG.DIN_TO {32} \
-   CONFIG.DIN_WIDTH {48} \
-   CONFIG.DOUT_WIDTH {1} \
- ] $xlslice_8
+  # Create interface connections
+  connect_bd_intf_net -intf_net axi_interconnect_0_M00_AXI [get_bd_intf_pins axi_interconnect_0/M00_AXI] [get_bd_intf_pins object_localizer_0/S_AXI]
+  connect_bd_intf_net -intf_net axi_vip_0_M_AXI [get_bd_intf_pins axi_interconnect_0/S00_AXI] [get_bd_intf_pins axi_vip_0/M_AXI]
 
   # Create port connections
-  connect_bd_net -net array_parser_0_distance_mm [get_bd_pins array_parser_1/distance_mm] [get_bd_pins object_localizer_0/distances] [get_bd_pins xlslice_3/Din] [get_bd_pins xlslice_4/Din] [get_bd_pins xlslice_5/Din]
-  connect_bd_net -net array_parser_1_valid [get_bd_pins array_parser_1/valid] [get_bd_pins ila_0/probe8]
-  connect_bd_net -net clk_wiz_0_clk_out1 [get_bd_pins array_parser_1/clk] [get_bd_pins clk_wiz_0/clk_out1] [get_bd_pins ila_0/clk] [get_bd_pins object_localizer_0/clk]
-  connect_bd_net -net echo_0_1 [get_bd_ports echo_0] [get_bd_pins array_parser_1/echo] [get_bd_pins ila_0/probe2]
-  connect_bd_net -net hcsr04_sensor_0_trig [get_bd_ports trig_0] [get_bd_pins array_parser_1/trig] [get_bd_pins ila_0/probe1]
-  connect_bd_net -net object_localizer_0_pose [get_bd_pins object_localizer_0/pose] [get_bd_pins xlslice_6/Din] [get_bd_pins xlslice_7/Din] [get_bd_pins xlslice_8/Din]
-  connect_bd_net -net reset_1 [get_bd_ports reset] [get_bd_pins clk_wiz_0/resetn]
+  connect_bd_net -net ARESETN_1 [get_bd_pins axi_interconnect_0/ARESETN] [get_bd_pins axi_interconnect_0/M00_ARESETN] [get_bd_pins axi_interconnect_0/S00_ARESETN] [get_bd_pins object_localizer_0/S_AXI_ARESETN] [get_bd_pins rst_clk_wiz_0_100M/interconnect_aresetn]
+  connect_bd_net -net array_parser_0_distance_mm [get_bd_pins array_parser_1/distance_mm] [get_bd_pins object_localizer_0/distances]
+  connect_bd_net -net array_parser_1_valid [get_bd_pins array_parser_1/valid] [get_bd_pins object_localizer_0/in_valid]
+  connect_bd_net -net clk_wiz_0_locked [get_bd_pins clk_wiz_0/locked] [get_bd_pins rst_clk_wiz_0_100M/dcm_locked]
+  connect_bd_net -net echo_0_1 [get_bd_ports echo_0] [get_bd_pins array_parser_1/echo]
+  connect_bd_net -net hcsr04_sensor_0_trig [get_bd_ports trig_0] [get_bd_pins array_parser_1/trig]
+  connect_bd_net -net microblaze_0_Clk [get_bd_pins array_parser_1/clk] [get_bd_pins axi_interconnect_0/ACLK] [get_bd_pins axi_interconnect_0/M00_ACLK] [get_bd_pins axi_interconnect_0/S00_ACLK] [get_bd_pins axi_vip_0/aclk] [get_bd_pins clk_wiz_0/clk_out1] [get_bd_pins ila_0/clk] [get_bd_pins object_localizer_0/clk] [get_bd_pins rst_clk_wiz_0_100M/slowest_sync_clk]
+  connect_bd_net -net object_localizer_0_out_valid [get_bd_pins ila_0/probe1] [get_bd_pins object_localizer_0/out_valid]
+  connect_bd_net -net object_localizer_0_pose [get_bd_pins ila_0/probe0] [get_bd_pins object_localizer_0/pose]
+  connect_bd_net -net reset_0_1 [get_bd_ports reset_0] [get_bd_pins clk_wiz_0/resetn] [get_bd_pins rst_clk_wiz_0_100M/ext_reset_in]
+  connect_bd_net -net rst_clk_wiz_0_100M_peripheral_aresetn [get_bd_pins axi_vip_0/aresetn] [get_bd_pins rst_clk_wiz_0_100M/peripheral_aresetn]
   connect_bd_net -net sys_clock_1 [get_bd_ports sys_clock] [get_bd_pins clk_wiz_0/clk_in1]
-  connect_bd_net -net xlslice_3_Dout [get_bd_pins ila_0/probe0] [get_bd_pins xlslice_3/Dout]
-  connect_bd_net -net xlslice_4_Dout [get_bd_pins ila_0/probe3] [get_bd_pins xlslice_4/Dout]
-  connect_bd_net -net xlslice_5_Dout [get_bd_pins ila_0/probe4] [get_bd_pins xlslice_5/Dout]
-  connect_bd_net -net xlslice_6_Dout [get_bd_pins ila_0/probe5] [get_bd_pins xlslice_6/Dout]
-  connect_bd_net -net xlslice_7_Dout [get_bd_pins ila_0/probe7] [get_bd_pins xlslice_7/Dout]
-  connect_bd_net -net xlslice_8_Dout [get_bd_pins ila_0/probe6] [get_bd_pins xlslice_8/Dout]
 
   # Create address segments
+  create_bd_addr_seg -range 0x00001000 -offset 0x00000000 [get_bd_addr_spaces axi_vip_0/Master_AXI] [get_bd_addr_segs object_localizer_0/S_AXI/reg0] SEG_object_localizer_0_reg0
 
 
   # Restore current instance

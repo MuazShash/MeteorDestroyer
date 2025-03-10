@@ -48,35 +48,76 @@
 
 
 // IP VLNV: xilinx.com:user:object_localizer:1.0
-// IP Revision: 2
+// IP Revision: 9
 
 (* X_CORE_INFO = "object_localizer,Vivado 2018.3" *)
 (* CHECK_LICENSE_TYPE = "parser_object_localizer_0_0,object_localizer,{}" *)
-(* CORE_GENERATION_INFO = "parser_object_localizer_0_0,object_localizer,{x_ipProduct=Vivado 2018.3,x_ipVendor=xilinx.com,x_ipLibrary=user,x_ipName=object_localizer,x_ipVersion=1.0,x_ipCoreRevision=2,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,NUM_SENSORS=3,DW=16}" *)
+(* CORE_GENERATION_INFO = "parser_object_localizer_0_0,object_localizer,{x_ipProduct=Vivado 2018.3,x_ipVendor=xilinx.com,x_ipLibrary=user,x_ipName=object_localizer,x_ipVersion=1.0,x_ipCoreRevision=9,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,NUM_SENSORS=3,DW=16}" *)
 (* IP_DEFINITION_SOURCE = "package_project" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module parser_object_localizer_0_0 (
   clk,
+  in_valid,
   distances,
-  pose
+  pose,
+  out_valid,
+  S_AXI_ARESETN,
+  S_AXI_ARADDR,
+  S_AXI_ARVALID,
+  S_AXI_ARREADY,
+  S_AXI_RDATA,
+  S_AXI_RRESP,
+  S_AXI_RVALID,
+  S_AXI_RREADY
 );
 
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME clk, FREQ_HZ 100000000, PHASE 0.0, CLK_DOMAIN /clk_wiz_0_clk_out1, INSERT_VIP 0" *)
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME clk, ASSOCIATED_BUSIF S_AXI, FREQ_HZ 100000000, PHASE 0.0, CLK_DOMAIN /clk_wiz_0_clk_out1, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 clk CLK" *)
 input wire clk;
+input wire in_valid;
 input wire [47 : 0] distances;
 wire  [15:0] distances_unpacked [0:2];
 assign {>>{distances_unpacked}} = distances;
 output wire [47 : 0] pose;
 wire signed  [15:0] pose_unpacked [2:0];
 assign {>>{pose}} = pose_unpacked;
+output wire out_valid;
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME S_AXI_ARESETN, POLARITY ACTIVE_LOW, INSERT_VIP 0" *)
+(* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 S_AXI_ARESETN RST" *)
+input wire S_AXI_ARESETN;
+(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI ARADDR" *)
+input wire [31 : 0] S_AXI_ARADDR;
+(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI ARVALID" *)
+input wire S_AXI_ARVALID;
+(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI ARREADY" *)
+output wire S_AXI_ARREADY;
+(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI RDATA" *)
+output wire [31 : 0] S_AXI_RDATA;
+(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI RRESP" *)
+output wire [1 : 0] S_AXI_RRESP;
+(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI RVALID" *)
+output wire S_AXI_RVALID;
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME S_AXI, DATA_WIDTH 32, PROTOCOL AXI4LITE, FREQ_HZ 100000000, ID_WIDTH 0, ADDR_WIDTH 32, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_ONLY, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 0, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 0, HAS_BRESP 0, HAS_RRESP 1, SUPPORTS_NARROW_BURST 0, MAX_BURST_LENGTH 1, PHASE 0.0, CLK_DOMAIN /clk_wiz_0_clk_out1, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, IN\
+SERT_VIP 0" *)
+(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI RREADY" *)
+input wire S_AXI_RREADY;
 
   object_localizer #(
     .NUM_SENSORS(3),
     .DW(16)
   ) inst (
     .clk(clk),
+    .in_valid(in_valid),
     .distances(distances_unpacked),
-    .pose(pose_unpacked)
+    .pose(pose_unpacked),
+    .out_valid(out_valid),
+    .S_AXI_ARESETN(S_AXI_ARESETN),
+    .S_AXI_ARADDR(S_AXI_ARADDR),
+    .S_AXI_ARVALID(S_AXI_ARVALID),
+    .S_AXI_ARREADY(S_AXI_ARREADY),
+    .S_AXI_RDATA(S_AXI_RDATA),
+    .S_AXI_RRESP(S_AXI_RRESP),
+    .S_AXI_RVALID(S_AXI_RVALID),
+    .S_AXI_RREADY(S_AXI_RREADY)
   );
 endmodule
