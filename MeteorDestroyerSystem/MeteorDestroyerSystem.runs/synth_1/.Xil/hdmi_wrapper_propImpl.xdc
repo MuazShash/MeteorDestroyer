@@ -1,5 +1,5 @@
-set_property SRC_FILE_INFO {cfile:C:/Users/marko/Downloads/NVideoHDMI-22-1-hw/hw/hw.srcs/constrs_1/imports/constraints/vdma_timing_workaround.xdc rfile:../../../hw.srcs/constrs_1/imports/constraints/vdma_timing_workaround.xdc id:1} [current_design]
-set_property SRC_FILE_INFO {cfile:C:/Users/marko/Downloads/NVideoHDMI-22-1-hw/hw/hw.srcs/constrs_1/imports/constraints/NexysVideo_Master.xdc rfile:../../../hw.srcs/constrs_1/imports/constraints/NexysVideo_Master.xdc id:2} [current_design]
+set_property SRC_FILE_INFO {cfile:C:/Users/marko/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.srcs/constrs_1/imports/constraints/vdma_timing_workaround.xdc rfile:../../../MeteorDestroyerSystem.srcs/constrs_1/imports/constraints/vdma_timing_workaround.xdc id:1} [current_design]
+set_property SRC_FILE_INFO {cfile:C:/Users/marko/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.srcs/constrs_1/imports/constraints/NexysVideo_Master.xdc rfile:../../../MeteorDestroyerSystem.srcs/constrs_1/imports/constraints/NexysVideo_Master.xdc id:2} [current_design]
 set_property src_info {type:XDC file:1 line:3 export:INPUT save:INPUT read:READ} [current_design]
 set_false_path -from [get_cells -hierarchical  -filter "NAME =~*axi_vdma_0*MM2S*LB_BUILT_IN*/*rstbt*/*rst_reg[*]"]
 set_property src_info {type:XDC file:1 line:4 export:INPUT save:INPUT read:READ} [current_design]
@@ -18,6 +18,8 @@ set_property src_info {type:XDC file:2 line:52 export:INPUT save:INPUT read:READ
 set_property -dict { PACKAGE_PIN W4    IOSTANDARD TMDS_33     } [get_ports { TMDS_IN_clk_n }]; #IO_L12N_T1_MRCC_34 Sch=hdmi_rx_clk_n
 set_property src_info {type:XDC file:2 line:53 export:INPUT save:INPUT read:READ} [current_design]
 set_property -dict { PACKAGE_PIN V4    IOSTANDARD TMDS_33     } [get_ports { TMDS_IN_clk_p }]; #IO_L12P_T1_MRCC_34 Sch=hdmi_rx_clk_p
+set_property src_info {type:XDC file:2 line:54 export:INPUT save:INPUT read:READ} [current_design]
+create_clock -period 12.500 -name tmds_clk_pin -waveform {0.000 6.250} -add [get_ports TMDS_IN_clk_p];
 set_property src_info {type:XDC file:2 line:55 export:INPUT save:INPUT read:READ} [current_design]
 set_property -dict { PACKAGE_PIN AB12  IOSTANDARD LVCMOS25 } [get_ports { hdmi_hpd }]; #IO_L7N_T1_13 Sch=hdmi_rx_hpa
 set_property src_info {type:XDC file:2 line:56 export:INPUT save:INPUT read:READ} [current_design]

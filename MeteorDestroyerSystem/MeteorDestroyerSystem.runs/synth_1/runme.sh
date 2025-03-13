@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/Users/marko/Downloads/NVideoHDMI-22-1-hw/hw/hw.runs/synth_1'
+HD_PWD='C:/Users/marko/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.runs/synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

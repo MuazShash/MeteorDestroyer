@@ -5,8 +5,8 @@
 
 
 #Clock Signal
-set_property -dict { PACKAGE_PIN R4    IOSTANDARD LVCMOS33 } [get_ports { sys_clk_i }]; #IO_L13P_T2_MRCC_34 Sch=sysclk
-create_clock -period 10.000 -name sys_clk_i -waveform {0.000 5.000} -add [get_ports sys_clk_i];
+set_property -dict {PACKAGE_PIN R4 IOSTANDARD LVCMOS33} [get_ports sys_clk_i]
+create_clock -period 10.000 -name sys_clk_i -waveform {0.000 5.000} -add [get_ports sys_clk_i]
 
 ##LEDs
 #set_property -dict { PACKAGE_PIN T14   IOSTANDARD LVCMOS25 } [get_ports { led[0] }]; #IO_L15P_T2_DQS_13 Sch=led[0]
@@ -52,10 +52,10 @@ create_clock -period 10.000 -name sys_clk_i -waveform {0.000 5.000} -add [get_po
 set_property -dict { PACKAGE_PIN W4    IOSTANDARD TMDS_33     } [get_ports { TMDS_IN_clk_n }]; #IO_L12N_T1_MRCC_34 Sch=hdmi_rx_clk_n
 set_property -dict { PACKAGE_PIN V4    IOSTANDARD TMDS_33     } [get_ports { TMDS_IN_clk_p }]; #IO_L12P_T1_MRCC_34 Sch=hdmi_rx_clk_p
 create_clock -period 12.500 -name tmds_clk_pin -waveform {0.000 6.250} -add [get_ports TMDS_IN_clk_p];
-set_property -dict { PACKAGE_PIN AB12  IOSTANDARD LVCMOS25 } [get_ports { hdmi_hpd }]; #IO_L7N_T1_13 Sch=hdmi_rx_hpa
-set_property -dict { PACKAGE_PIN Y4    IOSTANDARD LVCMOS33 } [get_ports { DDC_scl_io }]; #IO_L11P_T1_SRCC_34 Sch=hdmi_rx_scl
-set_property -dict { PACKAGE_PIN AB5   IOSTANDARD LVCMOS33 } [get_ports { DDC_sda_io }]; #IO_L10N_T1_34 Sch=hdmi_rx_sda
-set_property -dict { PACKAGE_PIN R3    IOSTANDARD LVCMOS33 } [get_ports { hdmi_rx_txen }]; #IO_L3P_T0_DQS_34 Sch=hdmi_rx_txen
+set_property -dict {PACKAGE_PIN AB12 IOSTANDARD LVCMOS25} [get_ports hdmi_hpd]
+set_property -dict {PACKAGE_PIN Y4 IOSTANDARD LVCMOS33} [get_ports DDC_scl_io]
+set_property -dict {PACKAGE_PIN AB5 IOSTANDARD LVCMOS33} [get_ports DDC_sda_io]
+set_property -dict {PACKAGE_PIN R3 IOSTANDARD LVCMOS33} [get_ports hdmi_rx_txen]
 set_property -dict { PACKAGE_PIN AA3   IOSTANDARD TMDS_33     } [get_ports { TMDS_IN_data_n[0] }]; #IO_L9N_T1_DQS_34 Sch=hdmi_rx_n[0]
 set_property -dict { PACKAGE_PIN Y3    IOSTANDARD TMDS_33     } [get_ports { TMDS_IN_data_p[0] }]; #IO_L9P_T1_DQS_34 Sch=hdmi_rx_p[0]
 set_property -dict { PACKAGE_PIN Y2    IOSTANDARD TMDS_33     } [get_ports { TMDS_IN_data_n[1] }]; #IO_L4N_T0_34 Sch=hdmi_rx_n[1]
@@ -115,9 +115,9 @@ set_property -dict { PACKAGE_PIN AB3   IOSTANDARD TMDS_33     } [get_ports { TMD
 #set_property -dict { PACKAGE_PIN W9    IOSTANDARD LVCMOS33 } [get_ports { jb[5] }]; #IO_L24P_T3_34 Sch=jb_p[3]
 #set_property -dict { PACKAGE_PIN Y7    IOSTANDARD LVCMOS33 } [get_ports { jb[6] }]; #IO_L23N_T3_34 Sch=jb_n[4]
 #set_property -dict { PACKAGE_PIN Y8    IOSTANDARD LVCMOS33 } [get_ports { jb[7] }]; #IO_L23P_T3_34 Sch=jb_p[4]
-                                                         
-                                                         
-##Pmod header JC                                           
+
+
+##Pmod header JC
 #set_property -dict { PACKAGE_PIN AA6   IOSTANDARD LVCMOS33 } [get_ports { jc[0] }]; #IO_L18N_T2_34 Sch=jc_n[1]
 #set_property -dict { PACKAGE_PIN Y6    IOSTANDARD LVCMOS33 } [get_ports { jc[1] }]; #IO_L18P_T2_34 Sch=jc_p[1]
 #set_property -dict { PACKAGE_PIN AB8   IOSTANDARD LVCMOS33 } [get_ports { jc[2] }]; #IO_L22N_T3_34 Sch=jc_n[2]
@@ -126,9 +126,9 @@ set_property -dict { PACKAGE_PIN AB3   IOSTANDARD TMDS_33     } [get_ports { TMD
 #set_property -dict { PACKAGE_PIN R6    IOSTANDARD LVCMOS33 } [get_ports { jc[5] }]; #IO_L17P_T2_34 Sch=jc_p[3]
 #set_property -dict { PACKAGE_PIN AB6   IOSTANDARD LVCMOS33 } [get_ports { jc[6] }]; #IO_L20N_T3_34 Sch=jc_n[4]
 #set_property -dict { PACKAGE_PIN AB7   IOSTANDARD LVCMOS33 } [get_ports { jc[7] }]; #IO_L20P_T3_34 Sch=jc_p[4]
-                                                         
-                                                         
-##XADC Header                                              
+
+
+##XADC Header
 #set_property -dict { PACKAGE_PIN H14   IOSTANDARD LVCMOS33 } [get_ports { xa_n[0] }]; #IO_L3N_T0_DQS_AD1N_15 Sch=xa_n[1]
 #set_property -dict { PACKAGE_PIN J14   IOSTANDARD LVCMOS33 } [get_ports { xa_p[0] }]; #IO_L3P_T0_DQS_AD1P_15 Sch=xa_p[1]
 #set_property -dict { PACKAGE_PIN G13   IOSTANDARD LVCMOS33 } [get_ports { xa_n[1] }]; #IO_L1N_T0_AD0N_15 Sch=xa_n[2]
@@ -354,3 +354,12 @@ set_property -dict { PACKAGE_PIN AB3   IOSTANDARD TMDS_33     } [get_ports { TMD
 
 
 #set_property -dict { PACKAGE_PIN R2    IOSTANDARD LVCMOS33 } [get_ports { pic_ss_b }]; #IO_L3N_T0_DQS_34 Sch=pic_ss_b
+
+set_property PACKAGE_PIN AB18 [get_ports {echo_0[2]}]
+set_property PACKAGE_PIN AB20 [get_ports {echo_0[1]}]
+set_property PACKAGE_PIN AB21 [get_ports {echo_0[0]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {echo_0[2]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {echo_0[1]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {echo_0[0]}]
+set_property PACKAGE_PIN AB22 [get_ports trig_0]
+set_property IOSTANDARD LVCMOS33 [get_ports trig_0]

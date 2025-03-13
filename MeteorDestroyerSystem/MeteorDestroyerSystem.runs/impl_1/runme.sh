@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/Users/marko/Downloads/NVideoHDMI-22-1-hw/hw/hw.runs/impl_1'
+HD_PWD='C:/Users/marko/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.runs/impl_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log
@@ -41,7 +41,7 @@ EAStep()
 }
 
 # pre-commands:
-/bin/touch .write_bitstream.begin.rst
+/bin/touch .init_design.begin.rst
 EAStep vivado -log hdmi_wrapper.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source hdmi_wrapper.tcl -notrace
 
 

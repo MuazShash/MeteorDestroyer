@@ -128,4 +128,13 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==hdmi_auto_d
 # IP: bd/hdmi/ip/hdmi_auto_rs_w_0/hdmi_auto_rs_w_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==hdmi_auto_rs_w_0 || ORIG_REF_NAME==hdmi_auto_rs_w_0} -quiet] -quiet
 
-# XDC: c:/Users/marko/Downloads/NVideoHDMI-22-1-hw/hw/hw.gen/sources_1/bd/hdmi/hdmi_ooc.xdc
+# IP: bd/hdmi/ip/hdmi_array_parser_0_0/hdmi_array_parser_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==hdmi_array_parser_0_0 || ORIG_REF_NAME==hdmi_array_parser_0_0} -quiet] -quiet
+
+# IP: bd/hdmi/ip/hdmi_object_localizer_0_0/hdmi_object_localizer_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==hdmi_object_localizer_0_0 || ORIG_REF_NAME==hdmi_object_localizer_0_0} -quiet] -quiet
+
+# IP: bd/hdmi/ip/hdmi_ila_0_0/hdmi_ila_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==hdmi_ila_0_0 || ORIG_REF_NAME==hdmi_ila_0_0} -quiet] -quiet
+
+# XDC: c:/Users/marko/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/hdmi_ooc.xdc

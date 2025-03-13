@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
-| Date         : Mon Mar 10 19:03:48 2025
+| Date         : Wed Mar 12 22:14:13 2025
 | Host         : MUGEN running 64-bit major release  (build 9200)
 | Command      : report_utilization -file hdmi_mig_7series_0_0_utilization_synth.rpt -pb hdmi_mig_7series_0_0_utilization_synth.pb
 | Design       : hdmi_mig_7series_0_0
