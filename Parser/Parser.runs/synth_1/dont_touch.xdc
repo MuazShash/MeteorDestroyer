@@ -9,31 +9,46 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==parser || ORIG_
 # IP: bd/parser/ip/parser_clk_wiz_0_0/parser_clk_wiz_0_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==parser_clk_wiz_0_0 || ORIG_REF_NAME==parser_clk_wiz_0_0} -quiet] -quiet
 
-# IP: bd/parser/ip/parser_ila_0_0/parser_ila_0_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==parser_ila_0_0 || ORIG_REF_NAME==parser_ila_0_0} -quiet] -quiet
-
-# IP: bd/parser/ip/parser_xlslice_3_0/parser_xlslice_3_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==parser_xlslice_3_0 || ORIG_REF_NAME==parser_xlslice_3_0} -quiet] -quiet
-
-# IP: bd/parser/ip/parser_xlslice_4_0/parser_xlslice_4_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==parser_xlslice_4_0 || ORIG_REF_NAME==parser_xlslice_4_0} -quiet] -quiet
-
-# IP: bd/parser/ip/parser_xlslice_5_0/parser_xlslice_5_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==parser_xlslice_5_0 || ORIG_REF_NAME==parser_xlslice_5_0} -quiet] -quiet
-
 # IP: bd/parser/ip/parser_array_parser_1_0/parser_array_parser_1_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==parser_array_parser_1_0 || ORIG_REF_NAME==parser_array_parser_1_0} -quiet] -quiet
 
 # IP: bd/parser/ip/parser_object_localizer_0_0/parser_object_localizer_0_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==parser_object_localizer_0_0 || ORIG_REF_NAME==parser_object_localizer_0_0} -quiet] -quiet
 
-# IP: bd/parser/ip/parser_xlslice_3_1/parser_xlslice_3_1.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==parser_xlslice_3_1 || ORIG_REF_NAME==parser_xlslice_3_1} -quiet] -quiet
+# IP: bd/parser/ip/parser_ila_0_1/parser_ila_0_1.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==parser_ila_0_1 || ORIG_REF_NAME==parser_ila_0_1} -quiet] -quiet
 
-# IP: bd/parser/ip/parser_xlslice_4_1/parser_xlslice_4_1.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==parser_xlslice_4_1 || ORIG_REF_NAME==parser_xlslice_4_1} -quiet] -quiet
+# IP: bd/parser/ip/parser_axi_interconnect_0_1/parser_axi_interconnect_0_1.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==parser_axi_interconnect_0_1 || ORIG_REF_NAME==parser_axi_interconnect_0_1} -quiet] -quiet
 
-# IP: bd/parser/ip/parser_xlslice_5_2/parser_xlslice_5_2.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==parser_xlslice_5_2 || ORIG_REF_NAME==parser_xlslice_5_2} -quiet] -quiet
+# IP: bd/parser/ip/parser_rst_clk_wiz_0_100M_0/parser_rst_clk_wiz_0_100M_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==parser_rst_clk_wiz_0_100M_0 || ORIG_REF_NAME==parser_rst_clk_wiz_0_100M_0} -quiet] -quiet
+
+# IP: bd/parser/ip/parser_xbar_2/parser_xbar_2.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==parser_xbar_2 || ORIG_REF_NAME==parser_xbar_2} -quiet] -quiet
+
+# IP: bd/parser/ip/parser_microblaze_0_0/parser_microblaze_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==parser_microblaze_0_0 || ORIG_REF_NAME==parser_microblaze_0_0} -quiet] -quiet
+
+# IP: bd/parser/ip/parser_dlmb_v10_4/parser_dlmb_v10_4.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==parser_dlmb_v10_4 || ORIG_REF_NAME==parser_dlmb_v10_4} -quiet] -quiet
+
+# IP: bd/parser/ip/parser_ilmb_v10_4/parser_ilmb_v10_4.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==parser_ilmb_v10_4 || ORIG_REF_NAME==parser_ilmb_v10_4} -quiet] -quiet
+
+# IP: bd/parser/ip/parser_dlmb_bram_if_cntlr_4/parser_dlmb_bram_if_cntlr_4.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==parser_dlmb_bram_if_cntlr_4 || ORIG_REF_NAME==parser_dlmb_bram_if_cntlr_4} -quiet] -quiet
+
+# IP: bd/parser/ip/parser_ilmb_bram_if_cntlr_4/parser_ilmb_bram_if_cntlr_4.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==parser_ilmb_bram_if_cntlr_4 || ORIG_REF_NAME==parser_ilmb_bram_if_cntlr_4} -quiet] -quiet
+
+# IP: bd/parser/ip/parser_lmb_bram_4/parser_lmb_bram_4.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==parser_lmb_bram_4 || ORIG_REF_NAME==parser_lmb_bram_4} -quiet] -quiet
+
+# IP: bd/parser/ip/parser_mdm_1_4/parser_mdm_1_4.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==parser_mdm_1_4 || ORIG_REF_NAME==parser_mdm_1_4} -quiet] -quiet
+
+# IP: bd/parser/ip/parser_axi_uartlite_0_0/parser_axi_uartlite_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==parser_axi_uartlite_0_0 || ORIG_REF_NAME==parser_axi_uartlite_0_0} -quiet] -quiet
 
 # XDC: bd/parser/parser_ooc.xdc

@@ -17,7 +17,6 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
-set_msg_config -id {HDL-1065} -limit 10000
 create_project -in_memory -part xc7a200tsbg484-1
 
 set_param project.singleFileAddWarning.threshold 0
@@ -42,10 +41,29 @@ add_files C:/Users/Muaz/Documents/MeteorDestroyer/Parser/Parser.srcs/sources_1/b
 set_property used_in_implementation false [get_files -all c:/Users/Muaz/Documents/MeteorDestroyer/Parser/Parser.srcs/sources_1/bd/parser/ip/parser_clk_wiz_0_0/parser_clk_wiz_0_0_board.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/Muaz/Documents/MeteorDestroyer/Parser/Parser.srcs/sources_1/bd/parser/ip/parser_clk_wiz_0_0/parser_clk_wiz_0_0.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/Muaz/Documents/MeteorDestroyer/Parser/Parser.srcs/sources_1/bd/parser/ip/parser_clk_wiz_0_0/parser_clk_wiz_0_0_ooc.xdc]
-set_property used_in_synthesis false [get_files -all c:/Users/Muaz/Documents/MeteorDestroyer/Parser/Parser.srcs/sources_1/bd/parser/ip/parser_ila_0_0/ila_v6_2/constraints/ila_impl.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/Muaz/Documents/MeteorDestroyer/Parser/Parser.srcs/sources_1/bd/parser/ip/parser_ila_0_0/ila_v6_2/constraints/ila_impl.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/Muaz/Documents/MeteorDestroyer/Parser/Parser.srcs/sources_1/bd/parser/ip/parser_ila_0_0/ila_v6_2/constraints/ila.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/Muaz/Documents/MeteorDestroyer/Parser/Parser.srcs/sources_1/bd/parser/ip/parser_ila_0_0/parser_ila_0_0_ooc.xdc]
+set_property used_in_synthesis false [get_files -all c:/Users/Muaz/Documents/MeteorDestroyer/Parser/Parser.srcs/sources_1/bd/parser/ip/parser_ila_0_1/ila_v6_2/constraints/ila_impl.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/Muaz/Documents/MeteorDestroyer/Parser/Parser.srcs/sources_1/bd/parser/ip/parser_ila_0_1/ila_v6_2/constraints/ila_impl.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/Muaz/Documents/MeteorDestroyer/Parser/Parser.srcs/sources_1/bd/parser/ip/parser_ila_0_1/ila_v6_2/constraints/ila.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/Muaz/Documents/MeteorDestroyer/Parser/Parser.srcs/sources_1/bd/parser/ip/parser_ila_0_1/parser_ila_0_1_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/Muaz/Documents/MeteorDestroyer/Parser/Parser.srcs/sources_1/bd/parser/ip/parser_rst_clk_wiz_0_100M_0/parser_rst_clk_wiz_0_100M_0_board.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/Muaz/Documents/MeteorDestroyer/Parser/Parser.srcs/sources_1/bd/parser/ip/parser_rst_clk_wiz_0_100M_0/parser_rst_clk_wiz_0_100M_0.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/Muaz/Documents/MeteorDestroyer/Parser/Parser.srcs/sources_1/bd/parser/ip/parser_rst_clk_wiz_0_100M_0/parser_rst_clk_wiz_0_100M_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/Muaz/Documents/MeteorDestroyer/Parser/Parser.srcs/sources_1/bd/parser/ip/parser_xbar_2/parser_xbar_2_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/Muaz/Documents/MeteorDestroyer/Parser/Parser.srcs/sources_1/bd/parser/ip/parser_microblaze_0_0/parser_microblaze_0_0.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/Muaz/Documents/MeteorDestroyer/Parser/Parser.srcs/sources_1/bd/parser/ip/parser_microblaze_0_0/parser_microblaze_0_0_ooc_debug.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/Muaz/Documents/MeteorDestroyer/Parser/Parser.srcs/sources_1/bd/parser/ip/parser_microblaze_0_0/parser_microblaze_0_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/Muaz/Documents/MeteorDestroyer/Parser/Parser.srcs/sources_1/bd/parser/ip/parser_dlmb_v10_4/parser_dlmb_v10_4.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/Muaz/Documents/MeteorDestroyer/Parser/Parser.srcs/sources_1/bd/parser/ip/parser_dlmb_v10_4/parser_dlmb_v10_4_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/Muaz/Documents/MeteorDestroyer/Parser/Parser.srcs/sources_1/bd/parser/ip/parser_ilmb_v10_4/parser_ilmb_v10_4.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/Muaz/Documents/MeteorDestroyer/Parser/Parser.srcs/sources_1/bd/parser/ip/parser_ilmb_v10_4/parser_ilmb_v10_4_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/Muaz/Documents/MeteorDestroyer/Parser/Parser.srcs/sources_1/bd/parser/ip/parser_dlmb_bram_if_cntlr_4/parser_dlmb_bram_if_cntlr_4_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/Muaz/Documents/MeteorDestroyer/Parser/Parser.srcs/sources_1/bd/parser/ip/parser_ilmb_bram_if_cntlr_4/parser_ilmb_bram_if_cntlr_4_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/Muaz/Documents/MeteorDestroyer/Parser/Parser.srcs/sources_1/bd/parser/ip/parser_lmb_bram_4/parser_lmb_bram_4_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/Muaz/Documents/MeteorDestroyer/Parser/Parser.srcs/sources_1/bd/parser/ip/parser_mdm_1_4/parser_mdm_1_4.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/Muaz/Documents/MeteorDestroyer/Parser/Parser.srcs/sources_1/bd/parser/ip/parser_mdm_1_4/parser_mdm_1_4_ooc_trace.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/Muaz/Documents/MeteorDestroyer/Parser/Parser.srcs/sources_1/bd/parser/ip/parser_axi_uartlite_0_0/parser_axi_uartlite_0_0_board.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/Muaz/Documents/MeteorDestroyer/Parser/Parser.srcs/sources_1/bd/parser/ip/parser_axi_uartlite_0_0/parser_axi_uartlite_0_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/Muaz/Documents/MeteorDestroyer/Parser/Parser.srcs/sources_1/bd/parser/ip/parser_axi_uartlite_0_0/parser_axi_uartlite_0_0.xdc]
 set_property used_in_implementation false [get_files -all C:/Users/Muaz/Documents/MeteorDestroyer/Parser/Parser.srcs/sources_1/bd/parser/parser_ooc.xdc]
 
 # Mark all dcp files as not used in implementation to prevent them from being

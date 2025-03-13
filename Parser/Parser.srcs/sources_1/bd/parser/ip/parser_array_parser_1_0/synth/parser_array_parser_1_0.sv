@@ -48,11 +48,11 @@
 
 
 // IP VLNV: xilinx.com:user:array_parser:1.0
-// IP Revision: 11
+// IP Revision: 12
 
 (* X_CORE_INFO = "array_parser,Vivado 2018.3" *)
 (* CHECK_LICENSE_TYPE = "parser_array_parser_1_0,array_parser,{}" *)
-(* CORE_GENERATION_INFO = "parser_array_parser_1_0,array_parser,{x_ipProduct=Vivado 2018.3,x_ipVendor=xilinx.com,x_ipLibrary=user,x_ipName=array_parser,x_ipVersion=1.0,x_ipCoreRevision=11,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,NUM_SENSORS=3}" *)
+(* CORE_GENERATION_INFO = "parser_array_parser_1_0,array_parser,{x_ipProduct=Vivado 2018.3,x_ipVendor=xilinx.com,x_ipLibrary=user,x_ipName=array_parser,x_ipVersion=1.0,x_ipCoreRevision=12,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,NUM_SENSORS=3}" *)
 (* IP_DEFINITION_SOURCE = "package_project" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module parser_array_parser_1_0 (

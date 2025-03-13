@@ -1,0 +1,24 @@
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+XilinxAXIVIP: Found at Path: localize_axi_tb.DUT.parser_i.axi_vip_0.inst
+Started Agent
+:
+WARNING: 885 ns localize_axi_tb.DUT.parser_i.axi_vip_0.inst.IF.ARREADY_eight_cycle_chk : XILINX_ARREADY_MAX_RESET: ARREADY must go low after 8 cycles following the first clock edge that ARESETn goes low--UG1037 Xilinx IP generally deasserts all VALID and READY outputs within eight cycles of reset. To downgrade, use <hierarchy_path to VIP>.IF.clr_xilinx_slave_ready_check().
+WARNING: 1025 ns localize_axi_tb.DUT.parser_i.axi_vip_0.inst.IF.ARREADY_one_cycle_chk : XILINX_ARREADY_RESET: ARREADY must be low for the first clock edge that ARESETn goes high--PG101 XILINX_ARREADY_RESET. To downgrade, use <hierarchy_path to VIP>.IF.clr_xilinx_slave_ready_check().
+Sensor: 0 Distance: 3
+
+Sensor: 1 Distance: 1
+
+Sensor: 2 Distance: 0
+
+Position:      0      0      0
+
+Sensor: 0 Distance: 17
+
+Sensor: 1 Distance: 17
+
+Sensor: 2 Distance: 17
+
+Position:     -3     16      0
+
+Executing Axi4 End Of Simulation checks

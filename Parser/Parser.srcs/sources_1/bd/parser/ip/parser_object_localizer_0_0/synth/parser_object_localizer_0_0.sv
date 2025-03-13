@@ -48,11 +48,11 @@
 
 
 // IP VLNV: xilinx.com:user:object_localizer:1.0
-// IP Revision: 9
+// IP Revision: 12
 
 (* X_CORE_INFO = "object_localizer,Vivado 2018.3" *)
 (* CHECK_LICENSE_TYPE = "parser_object_localizer_0_0,object_localizer,{}" *)
-(* CORE_GENERATION_INFO = "parser_object_localizer_0_0,object_localizer,{x_ipProduct=Vivado 2018.3,x_ipVendor=xilinx.com,x_ipLibrary=user,x_ipName=object_localizer,x_ipVersion=1.0,x_ipCoreRevision=9,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,NUM_SENSORS=3,DW=16}" *)
+(* CORE_GENERATION_INFO = "parser_object_localizer_0_0,object_localizer,{x_ipProduct=Vivado 2018.3,x_ipVendor=xilinx.com,x_ipLibrary=user,x_ipName=object_localizer,x_ipVersion=1.0,x_ipCoreRevision=12,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,NUM_SENSORS=3,DW=16}" *)
 (* IP_DEFINITION_SOURCE = "package_project" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module parser_object_localizer_0_0 (
