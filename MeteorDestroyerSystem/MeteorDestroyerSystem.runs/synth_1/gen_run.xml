@@ -93,11 +93,11 @@
     </Step>
   </Strategy>
   <BlockFileSet Type="BlockSrcs" Name="hdmi_microblaze_0_axi_intc_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="hdmi_dvi2rgb_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="hdmi_mig_7series_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="hdmi_axi_gpio_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="hdmi_xbar_3"/>
+  <BlockFileSet Type="BlockSrcs" Name="hdmi_mig_7series_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="hdmi_dvi2rgb_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="hdmi_array_parser_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="hdmi_object_localizer_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="hdmi_xbar_3"/>
   <BlockFileSet Type="BlockSrcs" Name="hdmi_ila_1_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="hdmi_object_localizer_0_0"/>
 </GenRun>
