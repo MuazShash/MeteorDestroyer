@@ -1,7 +1,9 @@
 # compile verilog/system verilog design source files
-sv xil_defaultlib  --include "../../../../Parser.srcs/sources_1/bd/parser/ipshared/85a3" \
-"../../../../Parser.srcs/sources_1/new/array_parser.sv" \
-"../../../../Parser.srcs/sources_1/new/sensor_parser.sv" \
+sv xil_defaultlib  --include "../../../../Parser.gen/sources_1/bd/parser/ipshared/4e49" --include "../../../../Parser.gen/sources_1/bd/parser/ipshared/ec67/hdl" \
+"../../../../Parser.srcs/sources_1/localization/min.sv" \
+"../../../../Parser.srcs/sources_1/localization/mult2.sv" \
+"../../../../Parser.srcs/sources_1/localization/object_localization.sv" \
+"../../../../Parser.srcs/sources_1/localization/p2s.sv" \
 "../../../../Parser.srcs/sources_1/tb/localize_tb.sv" \
 
 # compile glbl module

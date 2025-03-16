@@ -4,51 +4,51 @@
 # XDC: new/constraints.xdc
 
 # Block Designs: bd/parser/parser.bd
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==parser || ORIG_REF_NAME==parser} -quiet] -quiet
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==parser || ORIG_REF_NAME==parser} -quiet] -quiet
 
 # IP: bd/parser/ip/parser_clk_wiz_0_0/parser_clk_wiz_0_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==parser_clk_wiz_0_0 || ORIG_REF_NAME==parser_clk_wiz_0_0} -quiet] -quiet
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==parser_clk_wiz_0_0 || ORIG_REF_NAME==parser_clk_wiz_0_0} -quiet] -quiet
 
 # IP: bd/parser/ip/parser_array_parser_1_0/parser_array_parser_1_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==parser_array_parser_1_0 || ORIG_REF_NAME==parser_array_parser_1_0} -quiet] -quiet
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==parser_array_parser_1_0 || ORIG_REF_NAME==parser_array_parser_1_0} -quiet] -quiet
 
 # IP: bd/parser/ip/parser_object_localizer_0_0/parser_object_localizer_0_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==parser_object_localizer_0_0 || ORIG_REF_NAME==parser_object_localizer_0_0} -quiet] -quiet
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==parser_object_localizer_0_0 || ORIG_REF_NAME==parser_object_localizer_0_0} -quiet] -quiet
 
 # IP: bd/parser/ip/parser_ila_0_1/parser_ila_0_1.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==parser_ila_0_1 || ORIG_REF_NAME==parser_ila_0_1} -quiet] -quiet
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==parser_ila_0_1 || ORIG_REF_NAME==parser_ila_0_1} -quiet] -quiet
 
 # IP: bd/parser/ip/parser_axi_interconnect_0_1/parser_axi_interconnect_0_1.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==parser_axi_interconnect_0_1 || ORIG_REF_NAME==parser_axi_interconnect_0_1} -quiet] -quiet
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==parser_axi_interconnect_0_1 || ORIG_REF_NAME==parser_axi_interconnect_0_1} -quiet] -quiet
 
 # IP: bd/parser/ip/parser_rst_clk_wiz_0_100M_0/parser_rst_clk_wiz_0_100M_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==parser_rst_clk_wiz_0_100M_0 || ORIG_REF_NAME==parser_rst_clk_wiz_0_100M_0} -quiet] -quiet
-
-# IP: bd/parser/ip/parser_xbar_2/parser_xbar_2.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==parser_xbar_2 || ORIG_REF_NAME==parser_xbar_2} -quiet] -quiet
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==parser_rst_clk_wiz_0_100M_0 || ORIG_REF_NAME==parser_rst_clk_wiz_0_100M_0} -quiet] -quiet
 
 # IP: bd/parser/ip/parser_microblaze_0_0/parser_microblaze_0_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==parser_microblaze_0_0 || ORIG_REF_NAME==parser_microblaze_0_0} -quiet] -quiet
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==parser_microblaze_0_0 || ORIG_REF_NAME==parser_microblaze_0_0} -quiet] -quiet
 
 # IP: bd/parser/ip/parser_dlmb_v10_4/parser_dlmb_v10_4.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==parser_dlmb_v10_4 || ORIG_REF_NAME==parser_dlmb_v10_4} -quiet] -quiet
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==parser_dlmb_v10_4 || ORIG_REF_NAME==parser_dlmb_v10_4} -quiet] -quiet
 
 # IP: bd/parser/ip/parser_ilmb_v10_4/parser_ilmb_v10_4.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==parser_ilmb_v10_4 || ORIG_REF_NAME==parser_ilmb_v10_4} -quiet] -quiet
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==parser_ilmb_v10_4 || ORIG_REF_NAME==parser_ilmb_v10_4} -quiet] -quiet
 
 # IP: bd/parser/ip/parser_dlmb_bram_if_cntlr_4/parser_dlmb_bram_if_cntlr_4.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==parser_dlmb_bram_if_cntlr_4 || ORIG_REF_NAME==parser_dlmb_bram_if_cntlr_4} -quiet] -quiet
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==parser_dlmb_bram_if_cntlr_4 || ORIG_REF_NAME==parser_dlmb_bram_if_cntlr_4} -quiet] -quiet
 
 # IP: bd/parser/ip/parser_ilmb_bram_if_cntlr_4/parser_ilmb_bram_if_cntlr_4.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==parser_ilmb_bram_if_cntlr_4 || ORIG_REF_NAME==parser_ilmb_bram_if_cntlr_4} -quiet] -quiet
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==parser_ilmb_bram_if_cntlr_4 || ORIG_REF_NAME==parser_ilmb_bram_if_cntlr_4} -quiet] -quiet
 
 # IP: bd/parser/ip/parser_lmb_bram_4/parser_lmb_bram_4.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==parser_lmb_bram_4 || ORIG_REF_NAME==parser_lmb_bram_4} -quiet] -quiet
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==parser_lmb_bram_4 || ORIG_REF_NAME==parser_lmb_bram_4} -quiet] -quiet
 
 # IP: bd/parser/ip/parser_mdm_1_4/parser_mdm_1_4.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==parser_mdm_1_4 || ORIG_REF_NAME==parser_mdm_1_4} -quiet] -quiet
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==parser_mdm_1_4 || ORIG_REF_NAME==parser_mdm_1_4} -quiet] -quiet
 
 # IP: bd/parser/ip/parser_axi_uartlite_0_0/parser_axi_uartlite_0_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==parser_axi_uartlite_0_0 || ORIG_REF_NAME==parser_axi_uartlite_0_0} -quiet] -quiet
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==parser_axi_uartlite_0_0 || ORIG_REF_NAME==parser_axi_uartlite_0_0} -quiet] -quiet
 
-# XDC: bd/parser/parser_ooc.xdc
+# IP: bd/parser/ip/parser_xbar_0_1/parser_xbar_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==parser_xbar_0 || ORIG_REF_NAME==parser_xbar_0} -quiet] -quiet
+
+# XDC: c:/Users/Muaz/Documents/MeteorDestroyer/Parser/Parser.gen/sources_1/bd/parser/parser_ooc.xdc

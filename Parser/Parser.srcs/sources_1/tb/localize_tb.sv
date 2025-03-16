@@ -1,25 +1,24 @@
 module localize_tb();
-    localparam NUM_SENSORS = 3;
+    localparam NUM_SENSORS = 12;
     logic clk = 0;
-    logic [NUM_SENSORS-1:0] echo;
-    wire trig;
-    wire [15:0] distance_mm [NUM_SENSORS-1:0];
-    wire [15:0] pose [2:0];
+    logic rstn = 0;
+    reg in_valid = 0;
+    wire out_valid;
+    reg [15:0] distance_mm [NUM_SENSORS-1:0];
+    wire signed [15:0] pose [2:0];
     integer i;
 
-    array_parser #(.NUM_SENSORS(NUM_SENSORS))
-    u0(
-        .clk(clk),
-        .echo(echo),
-        .trig(trig),
-        .distance_mm(distance_mm)
-    );
-
-    object_localizer #(.NUM_SENSORS(NUM_SENSORS))
+    object_localizer #(
+        .DW(16),
+        .NUM_SENSORS(NUM_SENSORS)
+    )
     u1(
         .clk(clk),
+        .rstn(rstn),
+        .in_valid(in_valid),
         .distances(distance_mm),
-        .pose(pose)
+        .pose(pose),
+        .out_valid(out_valid)
     );
 
     initial begin
@@ -28,55 +27,46 @@ module localize_tb();
     end
 
     initial begin 
-        @(posedge clk); 
-        @(posedge clk);      
-        while(trig)
-            @(posedge clk);
-
-        echo = {NUM_SENSORS{1'b1}};
+        rstn <= 0;
+        repeat(10)@(posedge clk);
+        rstn <= 1;
         @(posedge clk);
-
-        if(~trig) begin
-            for(i = 0; i < NUM_SENSORS; i = i + 1) begin
-                repeat(100000) @(posedge clk);
-                echo[i] <= 0;
-            end
+        for(i = 0; i < NUM_SENSORS; i = i + 1) begin
+            distance_mm[i] <= 3000;
         end
-
-        while(~trig)
-            @(posedge clk);
-        
-        while(trig)
-            @(posedge clk);
-
-        echo = {NUM_SENSORS{1'b1}};
+        distance_mm[0] <= 1000;
+        in_valid <= 1;
         @(posedge clk);
-        repeat(1000000) @(posedge clk);
+        in_valid <= 0;
 
-        if(~trig) begin
-            for(i = NUM_SENSORS-1; i >= 0; i = i -1) begin
-                repeat(100000) @(posedge clk);
-                echo[i] <= 0;
-            end
+        repeat(100) @(posedge clk);
+
+        for(i = 0; i < NUM_SENSORS; i = i + 1) begin
+            distance_mm[i] <= 3000;
         end
-
-        while(~trig)
-            @(posedge clk);
-        
-        while(trig)
-            @(posedge clk);
-
-        echo = {NUM_SENSORS{1'b1}};
+        distance_mm[0] <= 700;
+        distance_mm[1] <= 750;
+        distance_mm[3] <= 600;
+        in_valid <= 1;
         @(posedge clk);
+        in_valid <= 0;
 
-        if(~trig) begin
-            repeat(250000) @(posedge clk);
-            echo[1] <= 0;
-            repeat(10000) @(posedge clk);
-            echo[0] <= 0;
-            repeat(100000) @(posedge clk);
-            echo[2] <= 0;
+        repeat(100) @(posedge clk);
+
+        for(i = 0; i < NUM_SENSORS; i = i + 1) begin
+            distance_mm[i] <= 3000;
         end
+        distance_mm[8] <= 400;
+        distance_mm[11] <= 430;
+        distance_mm[9] <= 500;
+        in_valid <= 1;
+        @(posedge clk);
+        in_valid <= 0;
+
+        repeat(100) @(posedge clk);
+
+        $finish;
+
     end
 
 endmodule

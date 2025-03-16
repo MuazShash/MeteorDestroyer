@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a200tsbg484-1" LaunchTime="1741652491">
+<GenRun Id="synth_1" LaunchPart="xc7a200tsbg484-1" LaunchTime="1742118904">
   <File Type="PA-TCL" Name="parser_wrapper.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="parser_wrapper_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="parser_wrapper_reports.tcl"/>
@@ -9,7 +9,7 @@
   <File Type="RDS-DCP" Name="parser_wrapper.dcp"/>
   <File Type="VDS-TIMINGSUMMARY" Name="parser_wrapper_timing_summary_synth.rpt"/>
   <File Type="VDS-TIMING-PB" Name="parser_wrapper_timing_summary_synth.pb"/>
-  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/bd/parser/parser.bd">
       <FileInfo>
@@ -18,8 +18,40 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/bd/parser/hdl/parser_wrapper.v">
+    <File Path="$PGENDIR/sources_1/bd/parser/hdl/parser_wrapper.v">
       <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/localization/min.sv">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/localization/p2s.sv">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/tb/min_tb.sv">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/localization/mult2.sv">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -49,22 +81,6 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/localization/min.sv">
-      <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/tb/min_tb.sv">
-      <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
     <File Path="$PSRCDIR/sources_1/localization/object_localization.sv">
       <FileInfo>
         <Attr Name="AutoDisabled" Val="1"/>
@@ -74,6 +90,14 @@
       </FileInfo>
     </File>
     <File Path="$PSRCDIR/sources_1/tb/localize_tb.sv">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/tb/mult_tb.sv">
       <FileInfo>
         <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -109,17 +133,18 @@
     <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018"/>
     <Step Id="synth_design"/>
   </Strategy>
-  <BlockFileSet Type="BlockSrcs" Name="parser_ila_0_1"/>
   <BlockFileSet Type="BlockSrcs" Name="parser_rst_clk_wiz_0_100M_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="parser_ilmb_bram_if_cntlr_4"/>
-  <BlockFileSet Type="BlockSrcs" Name="parser_xbar_2"/>
   <BlockFileSet Type="BlockSrcs" Name="parser_dlmb_v10_4"/>
   <BlockFileSet Type="BlockSrcs" Name="parser_microblaze_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="parser_array_parser_1_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="parser_clk_wiz_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="parser_ila_0_1"/>
   <BlockFileSet Type="BlockSrcs" Name="parser_dlmb_bram_if_cntlr_4"/>
   <BlockFileSet Type="BlockSrcs" Name="parser_ilmb_v10_4"/>
+  <BlockFileSet Type="BlockSrcs" Name="parser_ilmb_bram_if_cntlr_4"/>
   <BlockFileSet Type="BlockSrcs" Name="parser_lmb_bram_4"/>
   <BlockFileSet Type="BlockSrcs" Name="parser_mdm_1_4"/>
   <BlockFileSet Type="BlockSrcs" Name="parser_object_localizer_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="parser_axi_uartlite_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="parser_array_parser_1_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="parser_xbar_0"/>
 </GenRun>

@@ -4,29 +4,29 @@
 # IP: c:/Users/Muaz/Documents/MeteorDestroyer/Parser/Parser.srcs/sources_1/bd/parser/ip/parser_axi_uartlite_0_0/parser_axi_uartlite_0_0.xci
 # IP: The module: 'parser_axi_uartlite_0_0' is the root of the design. Do not add the DONT_TOUCH constraint.
 
-# XDC: c:/Users/Muaz/Documents/MeteorDestroyer/Parser/Parser.srcs/sources_1/bd/parser/ip/parser_axi_uartlite_0_0/parser_axi_uartlite_0_0_board.xdc
+# XDC: c:/Users/Muaz/Documents/MeteorDestroyer/Parser/Parser.gen/sources_1/bd/parser/ip/parser_axi_uartlite_0_0/parser_axi_uartlite_0_0_board.xdc
 # XDC: The top module name and the constraint reference have the same name: 'parser_axi_uartlite_0_0'. Do not add the DONT_TOUCH constraint.
-set_property DONT_TOUCH TRUE [get_cells U0 -quiet] -quiet
+set_property KEEP_HIERARCHY SOFT [get_cells U0 -quiet] -quiet
 
-# XDC: c:/Users/Muaz/Documents/MeteorDestroyer/Parser/Parser.srcs/sources_1/bd/parser/ip/parser_axi_uartlite_0_0/parser_axi_uartlite_0_0_ooc.xdc
+# XDC: c:/Users/Muaz/Documents/MeteorDestroyer/Parser/Parser.gen/sources_1/bd/parser/ip/parser_axi_uartlite_0_0/parser_axi_uartlite_0_0_ooc.xdc
 # XDC: The top module name and the constraint reference have the same name: 'parser_axi_uartlite_0_0'. Do not add the DONT_TOUCH constraint.
-#dup# set_property DONT_TOUCH TRUE [get_cells U0 -quiet] -quiet
+#dup# set_property KEEP_HIERARCHY SOFT [get_cells U0 -quiet] -quiet
 
-# XDC: c:/Users/Muaz/Documents/MeteorDestroyer/Parser/Parser.srcs/sources_1/bd/parser/ip/parser_axi_uartlite_0_0/parser_axi_uartlite_0_0.xdc
+# XDC: c:/Users/Muaz/Documents/MeteorDestroyer/Parser/Parser.gen/sources_1/bd/parser/ip/parser_axi_uartlite_0_0/parser_axi_uartlite_0_0.xdc
 # XDC: The top module name and the constraint reference have the same name: 'parser_axi_uartlite_0_0'. Do not add the DONT_TOUCH constraint.
-#dup# set_property DONT_TOUCH TRUE [get_cells U0 -quiet] -quiet
+#dup# set_property KEEP_HIERARCHY SOFT [get_cells U0 -quiet] -quiet
 
 # IP: c:/Users/Muaz/Documents/MeteorDestroyer/Parser/Parser.srcs/sources_1/bd/parser/ip/parser_axi_uartlite_0_0/parser_axi_uartlite_0_0.xci
 # IP: The module: 'parser_axi_uartlite_0_0' is the root of the design. Do not add the DONT_TOUCH constraint.
 
-# XDC: c:/Users/Muaz/Documents/MeteorDestroyer/Parser/Parser.srcs/sources_1/bd/parser/ip/parser_axi_uartlite_0_0/parser_axi_uartlite_0_0_board.xdc
+# XDC: c:/Users/Muaz/Documents/MeteorDestroyer/Parser/Parser.gen/sources_1/bd/parser/ip/parser_axi_uartlite_0_0/parser_axi_uartlite_0_0_board.xdc
 # XDC: The top module name and the constraint reference have the same name: 'parser_axi_uartlite_0_0'. Do not add the DONT_TOUCH constraint.
-#dup# set_property DONT_TOUCH TRUE [get_cells U0 -quiet] -quiet
+#dup# set_property KEEP_HIERARCHY SOFT [get_cells U0 -quiet] -quiet
 
-# XDC: c:/Users/Muaz/Documents/MeteorDestroyer/Parser/Parser.srcs/sources_1/bd/parser/ip/parser_axi_uartlite_0_0/parser_axi_uartlite_0_0_ooc.xdc
+# XDC: c:/Users/Muaz/Documents/MeteorDestroyer/Parser/Parser.gen/sources_1/bd/parser/ip/parser_axi_uartlite_0_0/parser_axi_uartlite_0_0_ooc.xdc
 # XDC: The top module name and the constraint reference have the same name: 'parser_axi_uartlite_0_0'. Do not add the DONT_TOUCH constraint.
-#dup# set_property DONT_TOUCH TRUE [get_cells U0 -quiet] -quiet
+#dup# set_property KEEP_HIERARCHY SOFT [get_cells U0 -quiet] -quiet
 
-# XDC: c:/Users/Muaz/Documents/MeteorDestroyer/Parser/Parser.srcs/sources_1/bd/parser/ip/parser_axi_uartlite_0_0/parser_axi_uartlite_0_0.xdc
+# XDC: c:/Users/Muaz/Documents/MeteorDestroyer/Parser/Parser.gen/sources_1/bd/parser/ip/parser_axi_uartlite_0_0/parser_axi_uartlite_0_0.xdc
 # XDC: The top module name and the constraint reference have the same name: 'parser_axi_uartlite_0_0'. Do not add the DONT_TOUCH constraint.
-#dup# set_property DONT_TOUCH TRUE [get_cells U0 -quiet] -quiet
+#dup# set_property KEEP_HIERARCHY SOFT [get_cells U0 -quiet] -quiet

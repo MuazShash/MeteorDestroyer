@@ -1,7 +1,7 @@
-Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------
-| Tool Version     : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-| Date             : Mon Mar 10 20:26:24 2025
+| Tool Version     : Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
+| Date             : Sun Mar 16 05:59:54 2025
 | Host             : DESKTOP-BINRERU running 64-bit major release  (build 9200)
 | Command          : report_power -file parser_wrapper_power_routed.rpt -pb parser_wrapper_power_summary_routed.pb -rpx parser_wrapper_power_routed.rpx
 | Design           : parser_wrapper
@@ -30,14 +30,14 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.280        |
+| Total On-Chip Power (W)  | 0.288        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.141        |
+| Dynamic (W)              | 0.148        |
 | Device Static (W)        | 0.140        |
 | Effective TJA (C/W)      | 3.3          |
-| Max Ambient (C)          | 84.1         |
-| Junction Temperature (C) | 25.9         |
+| Max Ambient (C)          | 84.0         |
+| Junction Temperature (C) | 26.0         |
 | Confidence Level         | Low          |
 | Setting File             | ---          |
 | Simulation Activity File | ---          |
@@ -52,45 +52,45 @@ Table of Contents
 +--------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
-| Clocks                   |     0.017 |        8 |       --- |             --- |
-| Slice Logic              |     0.004 |     7844 |       --- |             --- |
-|   LUT as Logic           |     0.003 |     2566 |    133800 |            1.92 |
+| Clocks                   |     0.019 |        8 |       --- |             --- |
+| Slice Logic              |     0.005 |     8437 |       --- |             --- |
+|   LUT as Logic           |     0.004 |     2563 |    133800 |            1.92 |
 |   LUT as Distributed RAM |    <0.001 |       88 |     46200 |            0.19 |
-|   Register               |    <0.001 |     3467 |    267600 |            1.30 |
+|   Register               |    <0.001 |     3798 |    269200 |            1.41 |
 |   CARRY4                 |    <0.001 |       90 |     33450 |            0.27 |
-|   LUT as Shift Register  |    <0.001 |      184 |     46200 |            0.40 |
-|   F7/F8 Muxes            |    <0.001 |      117 |    133800 |            0.09 |
-|   Others                 |    <0.001 |      686 |       --- |             --- |
-| Signals                  |     0.006 |     5741 |       --- |             --- |
+|   F7/F8 Muxes            |    <0.001 |      127 |    133800 |            0.09 |
+|   LUT as Shift Register  |    <0.001 |      185 |     46200 |            0.40 |
+|   Others                 |    <0.001 |      717 |       --- |             --- |
+| Signals                  |     0.007 |     6031 |       --- |             --- |
 | Block RAM                |     0.003 |      9.5 |       365 |            2.60 |
 | MMCM                     |     0.106 |        1 |        10 |           10.00 |
-| DSPs                     |     0.003 |        7 |       740 |            0.95 |
+| DSPs                     |     0.009 |        9 |       740 |            1.22 |
 | I/O                      |    <0.001 |        8 |       285 |            2.81 |
 | Static Power             |     0.140 |          |           |                 |
-| Total                    |     0.280 |          |           |                 |
+| Total                    |     0.288 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
 1.2 Power Supply Summary
 ------------------------
 
-+-----------+-------------+-----------+-------------+------------+
-| Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
-+-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.066 |       0.034 |      0.031 |
-| Vccaux    |       1.800 |     0.089 |       0.059 |      0.031 |
-| Vcco33    |       3.300 |     0.005 |       0.000 |      0.005 |
-| Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
-| Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |
-| Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |
-| Vcco135   |       1.350 |     0.000 |       0.000 |      0.000 |
-| Vcco12    |       1.200 |     0.000 |       0.000 |      0.000 |
-| Vccaux_io |       1.800 |     0.000 |       0.000 |      0.000 |
-| Vccbram   |       1.000 |     0.001 |       0.000 |      0.001 |
-| MGTAVcc   |       1.000 |     0.000 |       0.000 |      0.000 |
-| MGTAVtt   |       1.200 |     0.000 |       0.000 |      0.000 |
-| Vccadc    |       1.800 |     0.020 |       0.000 |      0.020 |
-+-----------+-------------+-----------+-------------+------------+
++-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
+| Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
++-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
+| Vccint    |       1.000 |     0.074 |       0.042 |      0.031 |       NA    | Unspecified | NA         |
+| Vccaux    |       1.800 |     0.089 |       0.059 |      0.031 |       NA    | Unspecified | NA         |
+| Vcco33    |       3.300 |     0.005 |       0.000 |      0.005 |       NA    | Unspecified | NA         |
+| Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| Vcco135   |       1.350 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| Vcco12    |       1.200 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| Vccaux_io |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| Vccbram   |       1.000 |     0.001 |       0.000 |      0.001 |       NA    | Unspecified | NA         |
+| MGTAVcc   |       1.000 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| MGTAVtt   |       1.200 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| Vccadc    |       1.800 |     0.020 |       0.000 |      0.020 |       NA    | Unspecified | NA         |
++-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 
 
 1.3 Confidence Level
@@ -130,16 +130,16 @@ Table of Contents
 2.2 Clock Constraints
 ---------------------
 
-+--------------------------------------------------------------------------------------------+----------------------------------------------------------------------+-----------------+
-| Clock                                                                                      | Domain                                                               | Constraint (ns) |
-+--------------------------------------------------------------------------------------------+----------------------------------------------------------------------+-----------------+
-| clk_out1_parser_clk_wiz_0_0                                                                | parser_i/clk_wiz_0/inst/clk_out1_parser_clk_wiz_0_0                  |            10.0 |
-| clkfbout_parser_clk_wiz_0_0                                                                | parser_i/clk_wiz_0/inst/clkfbout_parser_clk_wiz_0_0                  |            10.0 |
-| dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_inst/SERIES7_BSCAN.bscan_inst/TCK | dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_inst/tck_bs |            33.0 |
-| parser_i/mdm_1/U0/Use_E2.BSCAN_I/Use_E2.BSCANE2_I/DRCK                                     | parser_i/mdm_1/U0/Use_E2.BSCAN_I/DRCK                                |            33.3 |
-| parser_i/mdm_1/U0/Use_E2.BSCAN_I/Use_E2.BSCANE2_I/UPDATE                                   | parser_i/mdm_1/U0/Use_E2.BSCAN_I/Dbg_Update_0                        |            33.3 |
-| sys_clock                                                                                  | sys_clock                                                            |            10.0 |
-+--------------------------------------------------------------------------------------------+----------------------------------------------------------------------+-----------------+
++--------------------------------------------------------------------------------------------+-------------------------------------------------------------------+-----------------+
+| Clock                                                                                      | Domain                                                            | Constraint (ns) |
++--------------------------------------------------------------------------------------------+-------------------------------------------------------------------+-----------------+
+| clk_out1_parser_clk_wiz_0_0                                                                | parser_i/clk_wiz_0/inst/clk_out1_parser_clk_wiz_0_0               |            10.0 |
+| clkfbout_parser_clk_wiz_0_0                                                                | parser_i/clk_wiz_0/inst/clkfbout_parser_clk_wiz_0_0               |            10.0 |
+| dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_inst/SERIES7_BSCAN.bscan_inst/TCK | dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_inst/TCK |            33.0 |
+| parser_i/mdm_1/U0/Use_E2.BSCAN_I/Use_E2.BSCANE2_I/DRCK                                     | parser_i/mdm_1/U0/Use_E2.BSCAN_I/DRCK                             |            33.3 |
+| parser_i/mdm_1/U0/Use_E2.BSCAN_I/Use_E2.BSCANE2_I/UPDATE                                   | parser_i/mdm_1/U0/Use_E2.BSCAN_I/Dbg_Update_0                     |            33.3 |
+| sys_clock                                                                                  | sys_clock                                                         |            10.0 |
++--------------------------------------------------------------------------------------------+-------------------------------------------------------------------+-----------------+
 
 
 3. Detailed Reports
@@ -151,23 +151,23 @@ Table of Contents
 +-------------------------------+-----------+
 | Name                          | Power (W) |
 +-------------------------------+-----------+
-| parser_wrapper                |     0.141 |
+| parser_wrapper                |     0.148 |
 |   dbg_hub                     |     0.003 |
 |     inst                      |     0.003 |
 |       BSCANID.u_xsdbm_id      |     0.003 |
-|   parser_i                    |     0.137 |
+|   parser_i                    |     0.145 |
 |     array_parser_1            |     0.005 |
 |       inst                    |     0.005 |
 |     clk_wiz_0                 |     0.107 |
 |       inst                    |     0.107 |
-|     ila_0                     |     0.009 |
-|       inst                    |     0.009 |
-|     microblaze_0              |     0.011 |
-|       U0                      |     0.011 |
+|     ila_0                     |     0.010 |
+|       inst                    |     0.010 |
+|     microblaze_0              |     0.010 |
+|       U0                      |     0.010 |
 |     microblaze_0_local_memory |     0.002 |
-|       lmb_bram                |     0.002 |
-|     object_localizer_0        |     0.001 |
-|       inst                    |     0.001 |
+|       lmb_bram                |     0.001 |
+|     object_localizer_0        |     0.009 |
+|       inst                    |     0.009 |
 +-------------------------------+-----------+
 
 
