@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0x5E89C59A5C23F32F",
+      "boundary_crc": "0x851F287933DC63A4",
       "device": "xc7a200tsbg484-1",
       "gen_directory": "../../../../MeteorDestroyerSystem.gen/sources_1/bd/hdmi",
       "name": "hdmi",
@@ -76,12 +76,12 @@
       "v_tc_0": "",
       "v_tc_1": "",
       "axi_gpio_0": "",
-      "object_localizer_0": "",
-      "array_parser_0": "",
       "ila_1": "",
       "xlslice_0": "",
       "xlslice_1": "",
-      "xlslice_2": ""
+      "xlslice_2": "",
+      "array_parser_1": "",
+      "object_localizer_1": ""
     },
     "interface_ports": {
       "DDC": {
@@ -212,12 +212,12 @@
           }
         }
       },
-      "echo_0": {
+      "echo": {
         "direction": "I",
-        "left": "2",
+        "left": "11",
         "right": "0"
       },
-      "trig_0": {
+      "trig": {
         "direction": "O"
       }
     },
@@ -3159,28 +3159,6 @@
           }
         }
       },
-      "object_localizer_0": {
-        "vlnv": "xilinx.com:user:object_localizer:1.0",
-        "xci_name": "hdmi_object_localizer_0_0",
-        "xci_path": "ip\\hdmi_object_localizer_0_0\\hdmi_object_localizer_0_0.xci",
-        "inst_hier_path": "object_localizer_0",
-        "parameters": {
-          "NUM_SENSORS": {
-            "value": "3"
-          }
-        }
-      },
-      "array_parser_0": {
-        "vlnv": "xilinx.com:user:array_parser:1.0",
-        "xci_name": "hdmi_array_parser_0_0",
-        "xci_path": "ip\\hdmi_array_parser_0_0\\hdmi_array_parser_0_0.xci",
-        "inst_hier_path": "array_parser_0",
-        "parameters": {
-          "NUM_SENSORS": {
-            "value": "3"
-          }
-        }
-      },
       "ila_1": {
         "vlnv": "xilinx.com:ip:ila:6.2",
         "xci_name": "hdmi_ila_1_0",
@@ -3263,6 +3241,23 @@
             "value": "16"
           }
         }
+      },
+      "array_parser_1": {
+        "vlnv": "xilinx.com:user:array_parser:2.0",
+        "xci_name": "hdmi_array_parser_1_0",
+        "xci_path": "ip\\hdmi_array_parser_1_0\\hdmi_array_parser_1_0.xci",
+        "inst_hier_path": "array_parser_1",
+        "parameters": {
+          "NUM_SENSORS": {
+            "value": "12"
+          }
+        }
+      },
+      "object_localizer_1": {
+        "vlnv": "xilinx.com:user:object_localizer:2.0",
+        "xci_name": "hdmi_object_localizer_1_0",
+        "xci_path": "ip\\hdmi_object_localizer_1_0\\hdmi_object_localizer_1_0.xci",
+        "inst_hier_path": "object_localizer_1"
       }
     },
     "interface_nets": {
@@ -3389,7 +3384,7 @@
       "microblaze_0_axi_periph_M09_AXI": {
         "interface_ports": [
           "microblaze_0_axi_periph/M09_AXI",
-          "object_localizer_0/S_AXI"
+          "object_localizer_1/S_AXI"
         ]
       },
       "microblaze_0_debug": {
@@ -3466,22 +3461,22 @@
           "microblaze_0_local_memory/SYS_Rst"
         ]
       },
-      "array_parser_0_distance_mm": {
+      "array_parser_1_distance_mm": {
         "ports": [
-          "array_parser_0/distance_mm",
-          "object_localizer_0/distances"
+          "array_parser_1/distance_mm",
+          "object_localizer_1/distances"
         ]
       },
-      "array_parser_0_trig": {
+      "array_parser_1_trig": {
         "ports": [
-          "array_parser_0/trig",
-          "trig_0"
+          "array_parser_1/trig",
+          "trig"
         ]
       },
-      "array_parser_0_valid": {
+      "array_parser_1_valid": {
         "ports": [
-          "array_parser_0/valid",
-          "object_localizer_0/in_valid"
+          "array_parser_1/valid",
+          "object_localizer_1/in_valid"
         ]
       },
       "axi_dynclk_0_PXL_CLK_5X_O": {
@@ -3552,8 +3547,8 @@
       },
       "echo_0_1": {
         "ports": [
-          "echo_0",
-          "array_parser_0/echo"
+          "echo",
+          "array_parser_1/echo"
         ]
       },
       "microblaze_0_intr": {
@@ -3619,10 +3614,10 @@
           "v_tc_1/s_axi_aclk",
           "axi_gpio_0/s_axi_aclk",
           "microblaze_0_axi_periph/M08_ACLK",
-          "array_parser_0/clk",
-          "object_localizer_0/clk",
           "microblaze_0_axi_periph/M09_ACLK",
-          "ila_1/clk"
+          "ila_1/clk",
+          "array_parser_1/clk",
+          "object_localizer_1/clk"
         ]
       },
       "mig_7series_0_ui_clk_sync_rst": {
@@ -3631,18 +3626,18 @@
           "rst_mig_7series_0_100M/ext_reset_in"
         ]
       },
-      "object_localizer_0_out_valid": {
-        "ports": [
-          "object_localizer_0/out_valid",
-          "ila_1/probe3"
-        ]
-      },
       "object_localizer_0_pose": {
         "ports": [
-          "object_localizer_0/pose",
+          "object_localizer_1/pose",
           "xlslice_0/Din",
           "xlslice_1/Din",
           "xlslice_2/Din"
+        ]
+      },
+      "object_localizer_1_out_valid": {
+        "ports": [
+          "object_localizer_1/out_valid",
+          "ila_1/probe3"
         ]
       },
       "reset_1": {
@@ -3695,7 +3690,7 @@
           "axi_gpio_0/s_axi_aresetn",
           "microblaze_0_axi_periph/M08_ARESETN",
           "microblaze_0_axi_periph/M09_ARESETN",
-          "object_localizer_0/S_AXI_ARESETN"
+          "object_localizer_1/rstn"
         ]
       },
       "rst_mig_7series_0_pxl_peripheral_aresetn": {
@@ -3828,10 +3823,10 @@
                 "offset": "0x80000000",
                 "range": "512M"
               },
-              "SEG_object_localizer_0_Reg": {
-                "address_block": "/object_localizer_0/S_AXI/Reg",
-                "offset": "0x44A40000",
-                "range": "64K"
+              "SEG_object_localizer_1_reg0": {
+                "address_block": "/object_localizer_1/S_AXI/reg0",
+                "offset": "0xC0000000",
+                "range": "4K"
               },
               "SEG_v_tc_0_Reg": {
                 "address_block": "/v_tc_0/ctrl/Reg",

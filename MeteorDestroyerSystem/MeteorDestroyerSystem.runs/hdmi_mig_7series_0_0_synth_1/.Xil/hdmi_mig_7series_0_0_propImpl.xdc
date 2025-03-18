@@ -1,4 +1,4 @@
-set_property SRC_FILE_INFO {cfile:c:/Users/Muaz/Downloads/hw/hw.gen/sources_1/bd/hdmi/ip/hdmi_mig_7series_0_0/hdmi_mig_7series_0_0/user_design/constraints/hdmi_mig_7series_0_0.xdc rfile:../../../hw.gen/sources_1/bd/hdmi/ip/hdmi_mig_7series_0_0/hdmi_mig_7series_0_0/user_design/constraints/hdmi_mig_7series_0_0.xdc id:1 order:EARLY} [current_design]
+set_property SRC_FILE_INFO {cfile:c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/ip/hdmi_mig_7series_0_0/hdmi_mig_7series_0_0/user_design/constraints/hdmi_mig_7series_0_0.xdc rfile:../../../MeteorDestroyerSystem.gen/sources_1/bd/hdmi/ip/hdmi_mig_7series_0_0/hdmi_mig_7series_0_0/user_design/constraints/hdmi_mig_7series_0_0.xdc id:1 order:EARLY} [current_design]
 set_property src_info {type:XDC file:1 line:52 export:INPUT save:INPUT read:READ} [current_design]
 set_property PACKAGE_PIN G2 [get_ports {ddr3_dq[0]}]
 set_property src_info {type:XDC file:1 line:58 export:INPUT save:INPUT read:READ} [current_design]

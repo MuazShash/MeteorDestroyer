@@ -68,6 +68,28 @@ module mult_tb();
 
         @(posedge clk);
         accumulate <= 0;
+
+         @(posedge clk);
+        accumulate <= 1;
+        din_a <= 16'd2000;
+        din_b <= 16'd10923;
+        din_c <= 16'd100;
+
+        @(posedge clk);
+        
+        
+        din_a <= 16'd1000;
+        din_b <= 16'd10923;
+        din_c <= 16'd200;
+
+        @(posedge clk);
+        
+        din_a <= 16'd2000;
+        din_b <= 16'd10923;
+        din_c <= 16'd300;
+
+        @(posedge clk);
+        accumulate <= 0;
         #100;
 
     end

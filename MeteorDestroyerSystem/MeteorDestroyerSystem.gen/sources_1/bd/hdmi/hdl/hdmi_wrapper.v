@@ -1,7 +1,7 @@
 //Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
-//Date        : Thu Mar 13 00:18:48 2025
+//Date        : Mon Mar 17 19:30:21 2025
 //Host        : DESKTOP-BINRERU running 64-bit major release  (build 9200)
 //Command     : generate_target hdmi_wrapper.bd
 //Design      : hdmi_wrapper
@@ -34,13 +34,13 @@ module hdmi_wrapper
     TMDS_OUT_clk_p,
     TMDS_OUT_data_n,
     TMDS_OUT_data_p,
-    echo_0,
+    echo,
     hdmi_hpd,
     hdmi_rx_txen,
     push_buttons_5bits_tri_i,
     reset,
     sys_clk_i,
-    trig_0,
+    trig,
     usb_uart_rxd,
     usb_uart_txd);
   inout DDC_scl_io;
@@ -67,13 +67,13 @@ module hdmi_wrapper
   output TMDS_OUT_clk_p;
   output [2:0]TMDS_OUT_data_n;
   output [2:0]TMDS_OUT_data_p;
-  input [2:0]echo_0;
+  input [11:0]echo;
   output [0:0]hdmi_hpd;
   output [0:0]hdmi_rx_txen;
   input [4:0]push_buttons_5bits_tri_i;
   input reset;
   input sys_clk_i;
-  output trig_0;
+  output trig;
   input usb_uart_rxd;
   output usb_uart_txd;
 
@@ -107,13 +107,13 @@ module hdmi_wrapper
   wire TMDS_OUT_clk_p;
   wire [2:0]TMDS_OUT_data_n;
   wire [2:0]TMDS_OUT_data_p;
-  wire [2:0]echo_0;
+  wire [11:0]echo;
   wire [0:0]hdmi_hpd;
   wire [0:0]hdmi_rx_txen;
   wire [4:0]push_buttons_5bits_tri_i;
   wire reset;
   wire sys_clk_i;
-  wire trig_0;
+  wire trig;
   wire usb_uart_rxd;
   wire usb_uart_txd;
 
@@ -156,13 +156,13 @@ module hdmi_wrapper
         .TMDS_OUT_clk_p(TMDS_OUT_clk_p),
         .TMDS_OUT_data_n(TMDS_OUT_data_n),
         .TMDS_OUT_data_p(TMDS_OUT_data_p),
-        .echo_0(echo_0),
+        .echo(echo),
         .hdmi_hpd(hdmi_hpd),
         .hdmi_rx_txen(hdmi_rx_txen),
         .push_buttons_5bits_tri_i(push_buttons_5bits_tri_i),
         .reset(reset),
         .sys_clk_i(sys_clk_i),
-        .trig_0(trig_0),
+        .trig(trig),
         .usb_uart_rxd(usb_uart_rxd),
         .usb_uart_txd(usb_uart_txd));
 endmodule

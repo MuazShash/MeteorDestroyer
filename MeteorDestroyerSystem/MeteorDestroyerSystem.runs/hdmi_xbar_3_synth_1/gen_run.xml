@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="hdmi_xbar_3_synth_1" LaunchPart="xc7a200tsbg484-1" LaunchTime="1741839575">
+<GenRun Id="hdmi_xbar_3_synth_1" LaunchPart="xc7a200tsbg484-1" LaunchTime="1742254262">
   <File Type="PA-TCL" Name="hdmi_xbar_3.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="hdmi_xbar_3_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="hdmi_xbar_3_reports.tcl"/>
   <File Type="RDS-RDS" Name="hdmi_xbar_3.vds"/>
   <File Type="RDS-UTIL" Name="hdmi_xbar_3_utilization_synth.rpt"/>
   <File Type="RDS-UTIL-PB" Name="hdmi_xbar_3_utilization_synth.pb"/>
   <File Type="RDS-DCP" Name="hdmi_xbar_3.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="hdmi_xbar_3_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="hdmi_xbar_3_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="BlockSrcs" RelSrcDir="$PSRCDIR/hdmi_xbar_3">
     <File Path="$PSRCDIR/sources_1/bd/hdmi/ip/hdmi_xbar_3/hdmi_xbar_3.xci">
       <FileInfo>
@@ -45,7 +48,9 @@
     </Config>
   </FileSet>
   <Strategy Version="1" Minor="2">
-    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2022"/>
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2022">
+      <Desc>Vivado Synthesis Defaults</Desc>
+    </StratHandle>
     <Step Id="synth_design"/>
   </Strategy>
 </GenRun>

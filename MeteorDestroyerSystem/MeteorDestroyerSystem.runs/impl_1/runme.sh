@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/Users/Muaz/Downloads/hw/hw.runs/impl_1'
+HD_PWD='C:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.runs/impl_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

@@ -73,12 +73,12 @@
 						"ACLK": { "actual": "M_ACLK"},
 						"ARADDR": { "actual": "M_AXI_araddr[31:0]"},
 						"ARESETN": { "actual": "M_ARESETN"},
-						"ARREADY": { "actual": "M_AXI_arready[0:0]"},
-						"ARVALID": { "actual": "M_AXI_arvalid[0:0]"},
+						"ARREADY": { "actual": "M_AXI_arready"},
+						"ARVALID": { "actual": "M_AXI_arvalid"},
 						"RDATA": { "actual": "M_AXI_rdata[31:0]"},
-						"RREADY": { "actual": "M_AXI_rready[0:0]"},
+						"RREADY": { "actual": "M_AXI_rready"},
 						"RRESP": { "actual": "M_AXI_rresp[1:0]"},
-						"RVALID": { "actual": "M_AXI_rvalid[0:0]"}
+						"RVALID": { "actual": "M_AXI_rvalid"}
 					}
 				},
 				"/axi_interconnect_0/m00_couplers/S_AXI": {
@@ -87,12 +87,12 @@
 						"ACLK": { "actual": "S_ACLK"},
 						"ARADDR": { "actual": "S_AXI_araddr[31:0]"},
 						"ARESETN": { "actual": "S_ARESETN"},
-						"ARREADY": { "actual": "S_AXI_arready[0:0]"},
-						"ARVALID": { "actual": "S_AXI_arvalid[0:0]"},
+						"ARREADY": { "actual": "S_AXI_arready"},
+						"ARVALID": { "actual": "S_AXI_arvalid"},
 						"RDATA": { "actual": "S_AXI_rdata[31:0]"},
-						"RREADY": { "actual": "S_AXI_rready[0:0]"},
+						"RREADY": { "actual": "S_AXI_rready"},
 						"RRESP": { "actual": "S_AXI_rresp[1:0]"},
-						"RVALID": { "actual": "S_AXI_rvalid[0:0]"}
+						"RVALID": { "actual": "S_AXI_rvalid"}
 					}
 				},
 				"/axi_interconnect_0/m01_couplers/M_AXI": {
@@ -328,6 +328,7 @@
 					"ports": {
 						"ACLK": { "actual": "clk"},
 						"ARADDR": { "actual": "S_AXI_ARADDR"},
+						"ARESETN": { "actual": "rstn"},
 						"ARREADY": { "actual": "S_AXI_ARREADY"},
 						"ARVALID": { "actual": "S_AXI_ARVALID"},
 						"RDATA": { "actual": "S_AXI_RDATA"},

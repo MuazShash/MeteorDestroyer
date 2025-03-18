@@ -5,12 +5,23 @@ module object_localizer #(
     input clk,
     input rstn,
     input in_valid,
-    input [DW-1:0] distances [NUM_SENSORS], // Distance readings from each sensor
+    input [DW-1:0] distances [NUM_SENSORS-1:0], // Distance readings from each sensor
     output reg signed [DW-1:0] pose [2:0], // Calculated position
     output logic out_valid,
 
     // AXI-Lite slave interface
-    input         S_AXI_ARESETN,
+    input [31:0]  S_AXI_AWADDR,
+    input         S_AXI_AWVALID,
+    output        S_AXI_AWREADY,
+
+    input [31:0]  S_AXI_WDATA,
+    input [3:0]   S_AXI_WSTRB,
+    input         S_AXI_WVALID,
+    output        S_AXI_WREADY,
+
+    output [1:0]  S_AXI_BRESP,
+    output        S_AXI_BVALID,
+    input         S_AXI_BREADY,
 
     input [31:0]  S_AXI_ARADDR,
     input         S_AXI_ARVALID,
@@ -21,46 +32,18 @@ module object_localizer #(
     output        S_AXI_RVALID,
     input         S_AXI_RREADY
 );
-    localparam MAX_CONSIDERED_DISTANCE = 2000;
 
     // Sensor parameters: (x, y, z, theta in degrees)
-    reg [DW-1:0] sensor_locations [12-1:0][2:0]; 
-    reg [DW-1:0] sin_tilt_approx = 16'h2121;
-    reg [1:0] sensor_angles [12-1:0]; 
+    wire signed [DW-1:0] sensor_locations [12-1:0][2:0]; 
+    wire signed[1:0] sensor_angles [12-1:0]; 
+    wire signed [DW-1:0] sensor_tilt;
+    wire [DW-1:0] max_considered_distance;
 
     reg [4-1:0] index [NUM_SENSORS-1:0];
     integer k;
     initial begin
         for(k = 0; k < NUM_SENSORS; k = k + 1)
             index[k] = k;
-    end
-
-    // Fixed sensor positions and angles
-    initial begin
-        sensor_locations[0] = {16'd0, 16'd0, 16'd0};     // Sensor 1: (x=0, y=0, z=0, theta=0)
-        sensor_angles[0] = 2'h0;
-        sensor_locations[1] = {16'd74, -16'd4, 16'd0};    // Sensor 2: (x=74, y=4, z=0, theta=10)
-        sensor_angles[1] = 2'h1;
-        sensor_locations[2] = {-16'd74, -16'd4, 16'd0};    // Sensor 3: (x=-74, y=-4, z=0, theta=100)
-        sensor_angles[2] = 2'h2;
-        sensor_locations[3] = {16'd0, 16'd0, 16'd100};     // Sensor 4: (x=0, y=0, z=100, theta=0)
-        sensor_angles[3] = 2'h0;
-        sensor_locations[4] = {16'd74, -16'd4, 16'd100};    // Sensor 5: (x=74, y=4, z=100, theta=10)
-        sensor_angles[4] = 2'h1;
-        sensor_locations[5] = {-16'd74, -16'd4, 16'd100};    // Sensor 6: (x=-74, y=-4, z=100, theta=100)
-        sensor_angles[5] = 2'h2;
-        sensor_locations[6] = {16'd0, 16'd0, 16'd200};     // Sensor 7: (x=0, y=0, z=200, theta=0)
-        sensor_angles[6] = 2'h0;
-        sensor_locations[7] = {16'd74, -16'd4, 16'd200};    // Sensor 8: (x=74, y=4, z=200, theta=10)
-        sensor_angles[7] = 2'h1;
-        sensor_locations[8] = {-16'd74, -16'd4, 16'd200};    // Sensor 9: (x=-74, y=-4, z=200, theta=-10)
-        sensor_angles[8] = 2'h2;
-        sensor_locations[9] = {16'd0, 16'd0, 16'd300};     // Sensor 10: (x=0, y=0, z=300, theta=0)
-        sensor_angles[9] = 2'h0;
-        sensor_locations[10] = {16'd74, -16'd4, 16'd300};    // Sensor 11: (x=74, y=4, z=300, theta=10)
-        sensor_angles[10] = 2'h1;
-        sensor_locations[11] = {-16'd74, -16'd4, 16'd300};    // Sensor 12: (x=-74, y=-4, z=300, theta=100)
-        sensor_angles[11] = 2'h2;
     end
 
     integer i;
@@ -123,7 +106,7 @@ module object_localizer #(
 
     always @(posedge clk) begin
         if(min_valid) begin
-            if(min_distance > MAX_CONSIDERED_DISTANCE) begin
+            if(min_distance > max_considered_distance) begin
                 out_min_distance <= latched_min_distance;
                 out_min_index <= latched_min_index;
             end
@@ -242,7 +225,7 @@ module object_localizer #(
         .clk(clk),
         .rst(~rstn),
         .a(delayed_min_distance),
-        .b(sin_tilt_approx),
+        .b(sensor_tilt),
         .c(sens_z),
 
         .dout(pose_z)
@@ -288,7 +271,20 @@ module object_localizer #(
     )
     u_axi_slave_interface (
         .S_AXI_ACLK   (clk),    
-        .S_AXI_ARESETN(S_AXI_ARESETN),
+        .S_AXI_ARESETN(rstn),
+
+        .S_AXI_AWADDR (S_AXI_AWADDR),
+        .S_AXI_AWVALID(S_AXI_AWVALID),
+        .S_AXI_AWREADY(S_AXI_AWREADY),
+
+        .S_AXI_WDATA  (S_AXI_WDATA),
+        .S_AXI_WSTRB  (S_AXI_WSTRB),
+        .S_AXI_WVALID (S_AXI_WVALID),
+        .S_AXI_WREADY (S_AXI_WREADY),
+
+        .S_AXI_BRESP  (S_AXI_BRESP),
+        .S_AXI_BVALID (S_AXI_BVALID),
+        .S_AXI_BREADY (S_AXI_BREADY),
 
         .S_AXI_ARADDR (S_AXI_ARADDR),
         .S_AXI_ARVALID(S_AXI_ARVALID),
@@ -300,7 +296,12 @@ module object_localizer #(
         .S_AXI_RREADY (S_AXI_RREADY),
 
         .distances(distances),
-        .position(pose)
+        .position(pose),
+
+        .sensor_locations(sensor_locations),
+        .sensor_angles(sensor_angles),
+        .sensor_tilt(sensor_tilt),
+        .max_considered_distance(max_considered_distance)
     );
 endmodule
 
@@ -311,6 +312,19 @@ module axi_slave_interface #(
     input         S_AXI_ACLK,
     input         S_AXI_ARESETN,
 
+    input [31:0]  S_AXI_AWADDR,
+    input         S_AXI_AWVALID,
+    output        S_AXI_AWREADY,
+
+    input [31:0]  S_AXI_WDATA,
+    input [3:0]   S_AXI_WSTRB,
+    input         S_AXI_WVALID,
+    output        S_AXI_WREADY,
+
+    output [1:0]  S_AXI_BRESP,
+    output        S_AXI_BVALID,
+    input         S_AXI_BREADY,
+
     input [31:0]  S_AXI_ARADDR,
     input         S_AXI_ARVALID,
     output        S_AXI_ARREADY,
@@ -320,9 +334,27 @@ module axi_slave_interface #(
     output        S_AXI_RVALID,
     input         S_AXI_RREADY,
 
-    input  [DW-1:0] distances [NUM_SENSORS],
-    input signed [DW-1:0] position [2:0]
+    input  [DW-1:0] distances [NUM_SENSORS-1:0],
+    input signed [DW-1:0] position [2:0],
+
+    output reg signed  [DW-1:0] sensor_locations [12-1:0][2:0],
+    output reg signed  [1:0]    sensor_angles [12-1:0],
+    output reg signed  [DW-1:0] sensor_tilt,
+    output reg [DW-1:0] max_considered_distance
 );
+
+    //Write registers and wires
+    reg [31:0] 	axi_awaddr;
+	reg  	    axi_awready;
+	reg  	    axi_wready;
+
+	reg [1:0] 	axi_bresp;
+	reg  	    axi_bvalid;
+
+    wire	 slv_reg_wren;
+    reg	 aw_en;
+
+    //Read registers and wires
     reg [31:0] axi_araddr;
     reg        axi_arready;
     reg [31:0] axi_rdata;
@@ -333,8 +365,196 @@ module axi_slave_interface #(
     reg [31:0]	 reg_data_out;
 
     localparam integer ADDR_LSB = 2; // Address offset for 32-bit registers
-    localparam integer OPT_MEM_ADDR_BITS = $clog2(NUM_SENSORS + 3);
+    localparam integer OPT_MEM_ADDR_BITS = $clog2(2*12 +1);
 
+    assign S_AXI_AWREADY	= axi_awready;
+	assign S_AXI_WREADY	    = axi_wready;
+	assign S_AXI_BRESP	    = axi_bresp;
+	assign S_AXI_BVALID	    = axi_bvalid;
+	assign S_AXI_ARREADY	= axi_arready;
+	assign S_AXI_RDATA	    = axi_rdata;
+	assign S_AXI_RRESP	    = axi_rresp;
+	assign S_AXI_RVALID 	= axi_rvalid;
+
+    // Implement axi_awready generation
+	// axi_awready is asserted for one S_AXI_ACLK clock cycle when both
+	// S_AXI_AWVALID and S_AXI_WVALID are asserted. axi_awready is
+	// de-asserted when reset is low.
+	always @( posedge S_AXI_ACLK )
+	begin
+	  if ( S_AXI_ARESETN == 1'b0 )
+	    begin
+            axi_awready <= 1'b0;
+            aw_en <= 1'b1;
+	    end 
+	  else
+	    begin    
+            if (~axi_awready && S_AXI_AWVALID && S_AXI_WVALID && aw_en)
+                begin
+                    // slave is ready to accept write address when 
+                    // there is a valid write address and write data
+                    // on the write address and data bus. This design 
+                    // expects no outstanding transactions. 
+                    axi_awready <= 1'b1;
+                    aw_en <= 1'b0;
+                end
+            else if (S_AXI_BREADY && axi_bvalid)
+                begin
+                    aw_en <= 1'b1;
+                    axi_awready <= 1'b0;
+                end
+            else           
+                begin
+                    axi_awready <= 1'b0;
+                end
+	    end 
+	end
+
+    // Implement axi_awaddr latching
+	// This process is used to latch the address when both 
+	// S_AXI_AWVALID and S_AXI_WVALID are valid. 
+	always @( posedge S_AXI_ACLK )
+	begin
+	  if ( S_AXI_ARESETN == 1'b0 )
+	    begin
+	      axi_awaddr <= 0;
+	    end 
+	  else
+	    begin    
+	      if (~axi_awready && S_AXI_AWVALID && S_AXI_WVALID && aw_en)
+	        begin
+	          // Write Address latching 
+	          axi_awaddr <= S_AXI_AWADDR;
+	        end
+	    end 
+	end
+
+    // Implement axi_wready generation
+	// axi_wready is asserted for one S_AXI_ACLK clock cycle when both
+	// S_AXI_AWVALID and S_AXI_WVALID are asserted. axi_wready is 
+	// de-asserted when reset is low. 
+	always @( posedge S_AXI_ACLK )
+	begin
+	  if ( S_AXI_ARESETN == 1'b0 )
+	    begin
+	      axi_wready <= 1'b0;
+	    end 
+	  else
+	    begin    
+	      if (~axi_wready && S_AXI_WVALID && S_AXI_AWVALID && aw_en )
+	        begin
+	          // slave is ready to accept write data when 
+	          // there is a valid write address and write data
+	          // on the write address and data bus. This design 
+	          // expects no outstanding transactions. 
+	          axi_wready <= 1'b1;
+	        end
+	      else
+	        begin
+	          axi_wready <= 1'b0;
+	        end
+	    end 
+	end
+
+    // Implement memory mapped register select and write logic generation
+	// The write data is accepted and written to memory mapped registers when
+	// axi_awready, S_AXI_WVALID, axi_wready and S_AXI_WVALID are asserted. Write strobes are used to
+	// select byte enables of slave registers while writing.
+	// These registers are cleared when reset (active low) is applied.
+	// Slave register write enable is asserted when valid address and data are available
+	// and the slave is ready to accept the write address and write data.
+
+	assign slv_reg_wren = axi_wready && S_AXI_WVALID && axi_awready && S_AXI_AWVALID;
+
+	always @( posedge S_AXI_ACLK )
+	begin
+	  if ( S_AXI_ARESETN == 1'b0 )
+	    begin
+	        sensor_locations[0] <= {16'd0, 16'd0, 16'd0};     // Sensor 1: (x=0, y=0, z=0, theta=0)
+            sensor_angles[0] <= 2'h0;
+            sensor_locations[1] <= {16'd74, -16'd4, 16'd0};    // Sensor 2: (x=74, y=4, z=0, theta=10)
+            sensor_angles[1] <= 2'h1;
+            sensor_locations[2] <= {-16'd74, -16'd4, 16'd0};    // Sensor 3: (x=-74, y=-4, z=0, theta=100)
+            sensor_angles[2] <= 2'h2;
+            sensor_locations[3] <= {16'd0, 16'd0, 16'd100};     // Sensor 4: (x=0, y=0, z=100, theta=0)
+            sensor_angles[3] <= 2'h0;
+            sensor_locations[4] <= {16'd74, -16'd4, 16'd100};    // Sensor 5: (x=74, y=4, z=100, theta=10)
+            sensor_angles[4] <= 2'h1;
+            sensor_locations[5] <= {-16'd74, -16'd4, 16'd100};    // Sensor 6: (x=-74, y=-4, z=100, theta=100)
+            sensor_angles[5] <= 2'h2;
+            sensor_locations[6] <= {16'd0, 16'd0, 16'd200};     // Sensor 7: (x=0, y=0, z=200, theta=0)
+            sensor_angles[6] <= 2'h0;
+            sensor_locations[7] <= {16'd74, -16'd4, 16'd200};    // Sensor 8: (x=74, y=4, z=200, theta=10)
+            sensor_angles[7] <= 2'h1;
+            sensor_locations[8] <= {-16'd74, -16'd4, 16'd200};    // Sensor 9: (x=-74, y=-4, z=200, theta=-10)
+            sensor_angles[8] <= 2'h2;
+            sensor_locations[9] <= {16'd0, 16'd0, 16'd300};     // Sensor 10: (x=0, y=0, z=300, theta=0)
+            sensor_angles[9] <= 2'h0;
+            sensor_locations[10] <= {16'd74, -16'd4, 16'd300};    // Sensor 11: (x=74, y=4, z=300, theta=10)
+            sensor_angles[10] <= 2'h1;
+            sensor_locations[11] <= {-16'd74, -16'd4, 16'd300};    // Sensor 12: (x=-74, y=-4, z=300, theta=100)
+            sensor_angles[11] <= 2'h2;
+
+            sensor_tilt <= 16'h2121;
+            max_considered_distance <= 16'd2000;
+	    end 
+	  else begin
+	    if (slv_reg_wren)
+	      begin
+	        case ( axi_awaddr[ADDR_LSB+OPT_MEM_ADDR_BITS:ADDR_LSB] )
+	          default: begin
+	            if (axi_awaddr[ADDR_LSB+OPT_MEM_ADDR_BITS:ADDR_LSB] < 2*12) begin
+	              int i = axi_awaddr[ADDR_LSB+OPT_MEM_ADDR_BITS:ADDR_LSB] >> 1;
+	              if (axi_awaddr[ADDR_LSB+OPT_MEM_ADDR_BITS:ADDR_LSB] % 2 == 0) begin
+	                sensor_locations[i][2] <= S_AXI_WDATA[31:16]; // x coordinate
+	                sensor_locations[i][1]  <= S_AXI_WDATA[15:0];  // y coordinate
+	              end else begin
+	                sensor_locations[i][0] <= S_AXI_WDATA[15:0];  // z coordinate
+	                sensor_angles[i] <= S_AXI_WDATA[31:16];       // sensor angle
+	              end
+	            end
+                else if(axi_awaddr[ADDR_LSB+OPT_MEM_ADDR_BITS:ADDR_LSB] == 2*12) begin
+                    sensor_tilt <= S_AXI_WDATA[15:0];
+                    max_considered_distance <= S_AXI_WDATA[31:16];
+                end
+	          end
+	        endcase
+	    end
+	  end
+	end
+
+    // Implement write response logic generation
+	// The write response and response valid signals are asserted by the slave 
+	// when axi_awready, S_AXI_AWVALID, axi_wready and S_AXI_WVALID are asserted.  
+	// This marks the acceptance of address and indicates the status of 
+	// write transaction.
+	always @( posedge S_AXI_ACLK )
+	begin
+	  if ( S_AXI_ARESETN == 1'b0 )
+	    begin
+	      axi_bvalid  <= 0;
+	      axi_bresp   <= 2'b0;
+	    end 
+	  else
+	    begin    
+	      if (axi_awready && S_AXI_AWVALID && ~axi_bvalid && axi_wready && S_AXI_WVALID)
+	        begin
+	          // indicates a valid write response is available
+	          axi_bvalid <= 1'b1;
+	          axi_bresp  <= 2'b0; // 'OKAY' response 
+	        end                   // work error responses in future
+	      else
+	        begin
+	          if (S_AXI_BREADY && axi_bvalid) 
+	            //check if bready is asserted while bvalid is high) 
+	            //(there is a possibility that bready is always asserted high)   
+	            begin
+	              axi_bvalid <= 1'b0; 
+	            end  
+	        end
+	    end
+	end
+    
     assign S_AXI_ARREADY = axi_arready;
     assign S_AXI_RDATA   = axi_rdata;
     assign S_AXI_RRESP   = axi_rresp;

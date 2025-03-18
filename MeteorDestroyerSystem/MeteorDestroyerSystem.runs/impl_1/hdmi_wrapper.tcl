@@ -17,7 +17,7 @@ proc create_report { reportName command } {
   }
 }
 namespace eval ::optrace {
-  variable script "C:/Users/Muaz/Downloads/hw/hw.runs/impl_1/hdmi_wrapper.tcl"
+  variable script "C:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.runs/impl_1/hdmi_wrapper.tcl"
   variable category "vivado_impl"
 }
 
@@ -124,19 +124,45 @@ set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
   set_param chipscope.maxJobs 3
-  reset_param project.defaultXPMLibraries 
-  open_checkpoint C:/Users/Muaz/Downloads/hw/hw.runs/impl_1/hdmi_wrapper.dcp
-  set_property webtalk.parent_dir C:/Users/Muaz/Downloads/hw/hw.cache/wt [current_project]
-  set_property parent.project_path C:/Users/Muaz/Downloads/hw/hw.xpr [current_project]
+OPTRACE "create in-memory project" START { }
+  create_project -in_memory -part xc7a200tsbg484-1
+  set_property board_part digilentinc.com:nexys_video:part0:1.1 [current_project]
+  set_property design_mode GateLvl [current_fileset]
+  set_param project.singleFileAddWarning.threshold 0
+OPTRACE "create in-memory project" END { }
+OPTRACE "set parameters" START { }
+  set_property webtalk.parent_dir C:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.cache/wt [current_project]
+  set_property parent.project_path C:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.xpr [current_project]
   set_property ip_repo_paths {
   c:/Users/Muaz/Downloads/hw/hw.srcs/sources_1/parser
   c:/Users/Muaz/Downloads/hw/hw.srcs/sources_1/localization
   c:/Users/Muaz/Downloads/hw/hw.ipdefs/repo
+  c:/Users/Muaz/Documents/MeteorDestroyer/Parser_ip
+  C:/Users/Muaz/Documents/MeteorDestroyer/Localizer_ip
 } [current_project]
   update_ip_catalog
-  set_property ip_output_repo C:/Users/Muaz/Downloads/hw/hw.cache/ip [current_project]
+  set_property ip_output_repo C:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
   set_property XPM_LIBRARIES {XPM_CDC XPM_FIFO XPM_MEMORY} [current_project]
+OPTRACE "set parameters" END { }
+OPTRACE "add files" START { }
+  add_files -quiet C:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.runs/synth_1/hdmi_wrapper.dcp
+  set_msg_config -source 4 -id {BD 41-1661} -limit 0
+  set_param project.isImplRun true
+  add_files C:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.srcs/sources_1/bd/hdmi/hdmi.bd
+  set_param project.isImplRun false
+OPTRACE "read constraints: implementation" START { }
+  read_xdc C:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.srcs/constrs_1/imports/constraints/vdma_timing_workaround.xdc
+  read_xdc C:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.srcs/constrs_1/imports/constraints/NexysVideo_Master.xdc
+OPTRACE "read constraints: implementation" END { }
+OPTRACE "add files" END { }
+OPTRACE "link_design" START { }
+  set_param project.isImplRun true
+  link_design -top hdmi_wrapper -part xc7a200tsbg484-1 
+OPTRACE "link_design" END { }
+  set_param project.isImplRun false
+OPTRACE "gray box cells" START { }
+OPTRACE "gray box cells" END { }
 OPTRACE "init_design_reports" START { REPORT }
 OPTRACE "init_design_reports" END { }
 OPTRACE "init_design_write_hwdef" START { }

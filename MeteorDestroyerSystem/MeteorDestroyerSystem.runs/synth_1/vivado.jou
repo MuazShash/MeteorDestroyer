@@ -2,12 +2,12 @@
 # Vivado v2022.1 (64-bit)
 # SW Build 3526262 on Mon Apr 18 15:48:16 MDT 2022
 # IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
-# Start of session at: Thu Mar 13 00:30:42 2025
-# Process ID: 27744
-# Current directory: C:/Users/Muaz/Downloads/hw/hw.runs/synth_1
+# Start of session at: Mon Mar 17 19:34:11 2025
+# Process ID: 23612
+# Current directory: C:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.runs/synth_1
 # Command line: vivado.exe -log hdmi_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source hdmi_wrapper.tcl
-# Log file: C:/Users/Muaz/Downloads/hw/hw.runs/synth_1/hdmi_wrapper.vds
-# Journal file: C:/Users/Muaz/Downloads/hw/hw.runs/synth_1\vivado.jou
+# Log file: C:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.runs/synth_1/hdmi_wrapper.vds
+# Journal file: C:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.runs/synth_1\vivado.jou
 # Running On: DESKTOP-BINRERU, OS: Windows, CPU Frequency: 3993 MHz, CPU Physical cores: 12, Host memory: 17119 MB
 #-----------------------------------------------------------
 source hdmi_wrapper.tcl -notrace

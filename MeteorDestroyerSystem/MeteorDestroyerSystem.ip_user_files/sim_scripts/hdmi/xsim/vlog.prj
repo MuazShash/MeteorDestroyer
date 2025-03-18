@@ -1,5 +1,5 @@
-verilog xil_defaultlib --include "../../../../hw.gen/sources_1/bd/hdmi/ipshared/ec67/hdl" --include "../../../../hw.gen/sources_1/bd/hdmi/ipshared/fc4b/hdl" --include "../../../../hw.gen/sources_1/bd/hdmi/ip/hdmi_dvi2rgb_0_0/src/ila_refclk/hdl/verilog" --include "../../../../hw.gen/sources_1/bd/hdmi/ip/hdmi_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog" --include "../../../../hw.gen/sources_1/bd/hdmi/ipshared/1b7e/hdl/verilog" --include "../../../../hw.gen/sources_1/bd/hdmi/ipshared/122e/hdl/verilog" --include "../../../../hw.gen/sources_1/bd/hdmi/ipshared/b205/hdl/verilog" --include "../../../../hw.gen/sources_1/bd/hdmi/ipshared/fd26/hdl/verilog" \
-"../../../../hw.gen/sources_1/bd/hdmi/ipshared/2a7c/src/mmcme2_drp.v" \
+verilog xil_defaultlib --include "../../../../MeteorDestroyerSystem.gen/sources_1/bd/hdmi/ipshared/ec67/hdl" --include "../../../../MeteorDestroyerSystem.gen/sources_1/bd/hdmi/ipshared/fc4b/hdl" --include "../../../../MeteorDestroyerSystem.gen/sources_1/bd/hdmi/ip/hdmi_dvi2rgb_0_0/src/ila_refclk/hdl/verilog" --include "../../../../MeteorDestroyerSystem.gen/sources_1/bd/hdmi/ip/hdmi_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog" --include "../../../../MeteorDestroyerSystem.gen/sources_1/bd/hdmi/ipshared/1b7e/hdl/verilog" --include "../../../../MeteorDestroyerSystem.gen/sources_1/bd/hdmi/ipshared/122e/hdl/verilog" --include "../../../../MeteorDestroyerSystem.gen/sources_1/bd/hdmi/ipshared/b205/hdl/verilog" --include "../../../../MeteorDestroyerSystem.gen/sources_1/bd/hdmi/ipshared/fd26/hdl/verilog" \
+"../../../../MeteorDestroyerSystem.gen/sources_1/bd/hdmi/ipshared/2a7c/src/mmcme2_drp.v" \
 "../../../bd/hdmi/ip/hdmi_lmb_bram_0/sim/hdmi_lmb_bram_0.v" \
 "../../../bd/hdmi/ip/hdmi_microblaze_0_xlconcat_0/sim/hdmi_microblaze_0_xlconcat_0.v" \
 "../../../bd/hdmi/ip/hdmi_mig_7series_0_0/hdmi_mig_7series_0_0/user_design/rtl/axi/mig_7series_v4_2_axi_ctrl_addr_decode.v" \
@@ -110,17 +110,22 @@ verilog xil_defaultlib --include "../../../../hw.gen/sources_1/bd/hdmi/ipshared/
 "../../../bd/hdmi/ip/hdmi_dvi2rgb_0_0/src/ila_refclk/sim/ila_refclk.v" \
 "../../../bd/hdmi/ip/hdmi_xbar_3/sim/hdmi_xbar_3.v" \
 "../../../bd/hdmi/ip/hdmi_v_axi4s_vid_out_0_0/sim/hdmi_v_axi4s_vid_out_0_0.v" \
-"../../../bd/hdmi/sim/hdmi.v" \
+"../../../bd/hdmi/ip/hdmi_ila_1_0/sim/hdmi_ila_1_0.v" \
+"../../../bd/hdmi/ip/hdmi_xlslice_0_0/sim/hdmi_xlslice_0_0.v" \
+"../../../bd/hdmi/ip/hdmi_xlslice_0_2/sim/hdmi_xlslice_0_2.v" \
+"../../../bd/hdmi/ip/hdmi_xlslice_1_0/sim/hdmi_xlslice_1_0.v" \
 
-sv xil_defaultlib --include "../../../../hw.gen/sources_1/bd/hdmi/ipshared/ec67/hdl" --include "../../../../hw.gen/sources_1/bd/hdmi/ipshared/fc4b/hdl" --include "../../../../hw.gen/sources_1/bd/hdmi/ip/hdmi_dvi2rgb_0_0/src/ila_refclk/hdl/verilog" --include "../../../../hw.gen/sources_1/bd/hdmi/ip/hdmi_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog" --include "../../../../hw.gen/sources_1/bd/hdmi/ipshared/1b7e/hdl/verilog" --include "../../../../hw.gen/sources_1/bd/hdmi/ipshared/122e/hdl/verilog" --include "../../../../hw.gen/sources_1/bd/hdmi/ipshared/b205/hdl/verilog" --include "../../../../hw.gen/sources_1/bd/hdmi/ipshared/fd26/hdl/verilog" \
-"../../../bd/hdmi/ipshared/47cd/min.sv" \
-"../../../bd/hdmi/ipshared/47cd/object_localization.sv" \
-"../../../bd/hdmi/ip/hdmi_object_localizer_0_0/sim/hdmi_object_localizer_0_0.sv" \
-"../../../bd/hdmi/ipshared/0604/array_parser.sv" \
-"../../../bd/hdmi/ipshared/0604/sensor_parser.sv" \
-"../../../bd/hdmi/ip/hdmi_array_parser_0_0/sim/hdmi_array_parser_0_0.sv" \
+sv xil_defaultlib --include "../../../../MeteorDestroyerSystem.gen/sources_1/bd/hdmi/ipshared/ec67/hdl" --include "../../../../MeteorDestroyerSystem.gen/sources_1/bd/hdmi/ipshared/fc4b/hdl" --include "../../../../MeteorDestroyerSystem.gen/sources_1/bd/hdmi/ip/hdmi_dvi2rgb_0_0/src/ila_refclk/hdl/verilog" --include "../../../../MeteorDestroyerSystem.gen/sources_1/bd/hdmi/ip/hdmi_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog" --include "../../../../MeteorDestroyerSystem.gen/sources_1/bd/hdmi/ipshared/1b7e/hdl/verilog" --include "../../../../MeteorDestroyerSystem.gen/sources_1/bd/hdmi/ipshared/122e/hdl/verilog" --include "../../../../MeteorDestroyerSystem.gen/sources_1/bd/hdmi/ipshared/b205/hdl/verilog" --include "../../../../MeteorDestroyerSystem.gen/sources_1/bd/hdmi/ipshared/fd26/hdl/verilog" \
+"../../../bd/hdmi/ipshared/8135/sensor_parser.sv" \
+"../../../bd/hdmi/ipshared/8135/array_parser.sv" \
+"../../../bd/hdmi/ip/hdmi_array_parser_1_0/sim/hdmi_array_parser_1_0.sv" \
+"../../../bd/hdmi/ipshared/6912/src/min.sv" \
+"../../../bd/hdmi/ipshared/6912/src/mult2.sv" \
+"../../../bd/hdmi/ipshared/6912/src/p2s.sv" \
+"../../../bd/hdmi/ipshared/6912/src/object_localization.sv" \
+"../../../bd/hdmi/ip/hdmi_object_localizer_1_0/sim/hdmi_object_localizer_1_0.sv" \
 
-verilog xil_defaultlib --include "../../../../hw.gen/sources_1/bd/hdmi/ipshared/ec67/hdl" --include "../../../../hw.gen/sources_1/bd/hdmi/ipshared/fc4b/hdl" --include "../../../../hw.gen/sources_1/bd/hdmi/ip/hdmi_dvi2rgb_0_0/src/ila_refclk/hdl/verilog" --include "../../../../hw.gen/sources_1/bd/hdmi/ip/hdmi_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog" --include "../../../../hw.gen/sources_1/bd/hdmi/ipshared/1b7e/hdl/verilog" --include "../../../../hw.gen/sources_1/bd/hdmi/ipshared/122e/hdl/verilog" --include "../../../../hw.gen/sources_1/bd/hdmi/ipshared/b205/hdl/verilog" --include "../../../../hw.gen/sources_1/bd/hdmi/ipshared/fd26/hdl/verilog" \
+verilog xil_defaultlib --include "../../../../MeteorDestroyerSystem.gen/sources_1/bd/hdmi/ipshared/ec67/hdl" --include "../../../../MeteorDestroyerSystem.gen/sources_1/bd/hdmi/ipshared/fc4b/hdl" --include "../../../../MeteorDestroyerSystem.gen/sources_1/bd/hdmi/ip/hdmi_dvi2rgb_0_0/src/ila_refclk/hdl/verilog" --include "../../../../MeteorDestroyerSystem.gen/sources_1/bd/hdmi/ip/hdmi_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog" --include "../../../../MeteorDestroyerSystem.gen/sources_1/bd/hdmi/ipshared/1b7e/hdl/verilog" --include "../../../../MeteorDestroyerSystem.gen/sources_1/bd/hdmi/ipshared/122e/hdl/verilog" --include "../../../../MeteorDestroyerSystem.gen/sources_1/bd/hdmi/ipshared/b205/hdl/verilog" --include "../../../../MeteorDestroyerSystem.gen/sources_1/bd/hdmi/ipshared/fd26/hdl/verilog" \
 "../../../bd/hdmi/ip/hdmi_s00_regslice_0/sim/hdmi_s00_regslice_0.v" \
 "../../../bd/hdmi/ip/hdmi_auto_us_0/sim/hdmi_auto_us_0.v" \
 "../../../bd/hdmi/ip/hdmi_auto_rs_w_1/sim/hdmi_auto_rs_w_1.v" \
@@ -132,10 +137,7 @@ verilog xil_defaultlib --include "../../../../hw.gen/sources_1/bd/hdmi/ipshared/
 "../../../bd/hdmi/ip/hdmi_m00_regslice_0/sim/hdmi_m00_regslice_0.v" \
 "../../../bd/hdmi/ip/hdmi_auto_ds_0/sim/hdmi_auto_ds_0.v" \
 "../../../bd/hdmi/ip/hdmi_auto_rs_w_0/sim/hdmi_auto_rs_w_0.v" \
-"../../../bd/hdmi/ip/hdmi_ila_1_0/sim/hdmi_ila_1_0.v" \
-"../../../bd/hdmi/ip/hdmi_xlslice_0_0/sim/hdmi_xlslice_0_0.v" \
-"../../../bd/hdmi/ip/hdmi_xlslice_0_2/sim/hdmi_xlslice_0_2.v" \
-"../../../bd/hdmi/ip/hdmi_xlslice_1_0/sim/hdmi_xlslice_1_0.v" \
+"../../../bd/hdmi/sim/hdmi.v" \
 
 verilog xil_defaultlib "glbl.v"
 

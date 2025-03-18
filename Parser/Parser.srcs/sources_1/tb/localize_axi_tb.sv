@@ -1,15 +1,15 @@
 `timescale 1ns / 1ps
 
 import axi_vip_pkg::*;
-import parser_axi_vip_0_1_pkg::*;
+import design_1_axi_vip_1_0_pkg::*;
 
 
 //test module to drive the AXI VIP
 module axi_lite_stimulus(
     input clk,
-    input trig,
     output reg aresetn,
-    output reg [2:0] echo
+    output reg [15:0] distance_mm [11:0],
+    output reg in_valid
 );
 //  /*************************************************************************************************
 //  * <component_name>_mst_t for master agent
@@ -18,7 +18,7 @@ module axi_lite_stimulus(
 //  * More details please refer PG267 section about "Useful Coding Guidelines and Examples"
 //  * for more details.
 //  *************************************************************************************************/
-  parser_axi_vip_0_1_mst_t                               agent;
+  design_1_axi_vip_1_0_mst_t                               agent;
 
   /*************************************************************************************************
   * Declare variables which will be used in API and parital randomization for transaction generation
@@ -52,7 +52,7 @@ module axi_lite_stimulus(
 //Constants
 //AXI GPIO base address and register offsets
 localparam LOCALIZER_BASE_ADDR = 'h0;
-localparam NUM_SENSORS = 3;
+localparam NUM_SENSORS = 12;
 shortint x, y, z;
 integer i;
 
@@ -62,123 +62,105 @@ integer i;
     * "Xilinx AXI VIP Found at Path: my_ip_exdes_tb.DUT.ex_design.axi_vip_mst.inst" will be printed 
     * out. Pass this path to the new function. 
     ***********************************************************************************************/
-    agent = new("master vip agent",DUT.parser_i.axi_vip_0.inst.IF);
+    agent = new("master vip agent",DUT.design_1_i.axi_vip_1.inst.IF);
     agent.start_master();               // agent start to run
     $display("Started Agent\n:");
     
     aresetn <= 0;
-    @(posedge clk); 
-    @(posedge clk);
-    aresetn <= 1;      
-    while(trig)
-        @(posedge clk);
-
-    echo <= {NUM_SENSORS{1'b1}};
-    @(posedge clk);
-
-    if(~trig) begin
-        for(i = 0; i < NUM_SENSORS; i = i + 1) begin
-            repeat(1000) @(posedge clk);
-            echo[i] <= 0;
-        end
+    in_valid <= 0;
+    repeat(10)@(posedge clk);
+    aresetn <= 1;
+    writeRegister(LOCALIZER_BASE_ADDR, 100 << 16);
+    agent.wait_drivers_idle();
+    repeat(100)@(posedge clk);
+    for(i = 0; i < NUM_SENSORS; i = i + 1) begin
+        distance_mm[i] <= 3000;
     end
+    distance_mm[0] <= 1000;
+    in_valid <= 1;
+    @(posedge clk);
+    in_valid <= 0;
 
     repeat(100) @(posedge clk);
-
-    for(i = 0; i < 3; i++) begin
+    
+    for(i = 0; i < NUM_SENSORS; i++) begin
         readRegister(LOCALIZER_BASE_ADDR + 4*i, Rdatabeat);
         agent.wait_drivers_idle();
         $display("Sensor: %0d Distance: %0d\n", i, Rdatabeat[0]);
         @(posedge clk);
     end
-
-    readRegister(LOCALIZER_BASE_ADDR + 4*3, Rdatabeat);
+    
+    readRegister(LOCALIZER_BASE_ADDR + 4*NUM_SENSORS, Rdatabeat);
     x = Rdatabeat[0];
     agent.wait_drivers_idle();
-    readRegister(LOCALIZER_BASE_ADDR + 4*4, Rdatabeat);
+    readRegister(LOCALIZER_BASE_ADDR + 4*NUM_SENSORS + 4*1, Rdatabeat);
     y = Rdatabeat[0];
     agent.wait_drivers_idle();
-    readRegister(LOCALIZER_BASE_ADDR + 4*5, Rdatabeat);
+    readRegister(LOCALIZER_BASE_ADDR + 4*NUM_SENSORS + 4*2, Rdatabeat);
     z = Rdatabeat[0];
     
     $display("Position: %d %d %d\n", x, y, z);
     
-    while(~trig)
-        @(posedge clk);
-    
-    while(trig)
-        @(posedge clk);
-
-    echo <= {NUM_SENSORS{1'b1}};
-    @(posedge clk);
-    repeat(10000) @(posedge clk);
-
-    if(~trig) begin
-        for(i = NUM_SENSORS-1; i >= 0; i = i -1) begin
-            repeat(100) @(posedge clk);
-            echo[i] <= 0;
-        end
+    for(i = 0; i < NUM_SENSORS; i = i + 1) begin
+        distance_mm[i] <= 3000;
     end
+    distance_mm[0] <= 700;
+    distance_mm[1] <= 750;
+    distance_mm[3] <= 600;
+    in_valid <= 1;
+    @(posedge clk);
+    in_valid <= 0;
 
     repeat(100) @(posedge clk);
-
-    for(i = 0; i < 3; i++) begin
+    
+    for(i = 0; i < NUM_SENSORS; i++) begin
         readRegister(LOCALIZER_BASE_ADDR + 4*i, Rdatabeat);
         agent.wait_drivers_idle();
         $display("Sensor: %0d Distance: %0d\n", i, Rdatabeat[0]);
         @(posedge clk);
     end
-
-    readRegister(LOCALIZER_BASE_ADDR + 4*3, Rdatabeat);
+    
+    readRegister(LOCALIZER_BASE_ADDR + 4*NUM_SENSORS, Rdatabeat);
     x = Rdatabeat[0];
     agent.wait_drivers_idle();
-    readRegister(LOCALIZER_BASE_ADDR + 4*4, Rdatabeat);
+    readRegister(LOCALIZER_BASE_ADDR + 4*NUM_SENSORS + 4*1, Rdatabeat);
     y = Rdatabeat[0];
     agent.wait_drivers_idle();
-    readRegister(LOCALIZER_BASE_ADDR + 4*5, Rdatabeat);
+    readRegister(LOCALIZER_BASE_ADDR + 4*NUM_SENSORS + 4*2, Rdatabeat);
     z = Rdatabeat[0];
     
     $display("Position: %d %d %d\n", x, y, z);
 
-    while(~trig)
-        @(posedge clk);
-    
-    while(trig)
-        @(posedge clk);
-
-    echo <= {NUM_SENSORS{1'b1}};
-    @(posedge clk);
-
-    if(~trig) begin
-        repeat(2500) @(posedge clk);
-        echo[1] <= 0;
-        repeat(1000) @(posedge clk);
-        echo[0] <= 0;
-        repeat(1000) @(posedge clk);
-        echo[2] <= 0;
+    for(i = 0; i < NUM_SENSORS; i = i + 1) begin
+        distance_mm[i] <= 3000;
     end
+    distance_mm[8] <= 400;
+    distance_mm[11] <= 430;
+    distance_mm[9] <= 500;
+    in_valid <= 1;
+    @(posedge clk);
+    in_valid <= 0;
 
     repeat(100) @(posedge clk);
-
-    for(i = 0; i < 3; i++) begin
+    
+    for(i = 0; i < NUM_SENSORS; i++) begin
         readRegister(LOCALIZER_BASE_ADDR + 4*i, Rdatabeat);
         agent.wait_drivers_idle();
         $display("Sensor: %0d Distance: %0d\n", i, Rdatabeat[0]);
         @(posedge clk);
     end
-
-    readRegister(LOCALIZER_BASE_ADDR + 4*3, Rdatabeat);
+    
+    readRegister(LOCALIZER_BASE_ADDR + 4*NUM_SENSORS, Rdatabeat);
     x = Rdatabeat[0];
     agent.wait_drivers_idle();
-    readRegister(LOCALIZER_BASE_ADDR + 4*4, Rdatabeat);
+    readRegister(LOCALIZER_BASE_ADDR + 4*NUM_SENSORS + 4*1, Rdatabeat);
     y = Rdatabeat[0];
     agent.wait_drivers_idle();
-    readRegister(LOCALIZER_BASE_ADDR + 4*5, Rdatabeat);
+    readRegister(LOCALIZER_BASE_ADDR + 4*NUM_SENSORS + 4*2, Rdatabeat);
     z = Rdatabeat[0];
     
     $display("Position: %d %d %d\n", x, y, z);
 
-    #1000;
     $finish;
  end
 
@@ -334,16 +316,27 @@ module localize_axi_tb();
 
 	reg aclk;
 	wire aresetn;
-    wire trig;
-    wire [2:0] echo;
+    wire [12*16-1:0] distances;
+    wire [15:0] distance_mm [11:0];
+    wire in_valid;
+    genvar k;
 
 	// instantiate the "design under test" module
-	parser_wrapper DUT(
-		.sys_clock(aclk),
-		.reset_0(aresetn),
-        .echo_0(echo),
-        .trig_0(trig)
-		);
+    generate
+        for(k = 0; k < 12; k++) begin
+            assign distances[k*16+:16] = distance_mm[k];
+        end
+    endgenerate
+
+    design_1_wrapper DUT (
+        .clk(aclk),
+        .resetn(aresetn),
+        .distances(distances),
+        .in_valid(in_valid),
+        .out_valid(out_valid),
+        .pose(positions)
+    );
+
 	// clock generator (100MHz)
 	initial
 	begin
@@ -362,8 +355,8 @@ module localize_axi_tb();
 	axi_lite_stimulus mst(
         .clk(aclk),
         .aresetn(aresetn),
-        .trig(trig),
-        .echo(echo)
+        .distance_mm(distance_mm),
+        .in_valid(in_valid)
     );
 
 endmodule

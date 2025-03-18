@@ -95,11 +95,23 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==hdmi_v_tc_1
 # IP: bd/hdmi/ip/hdmi_axi_gpio_0_0/hdmi_axi_gpio_0_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==hdmi_axi_gpio_0_0 || ORIG_REF_NAME==hdmi_axi_gpio_0_0} -quiet] -quiet
 
-# IP: bd/hdmi/ip/hdmi_object_localizer_0_0/hdmi_object_localizer_0_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==hdmi_object_localizer_0_0 || ORIG_REF_NAME==hdmi_object_localizer_0_0} -quiet] -quiet
+# IP: bd/hdmi/ip/hdmi_ila_1_0/hdmi_ila_1_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==hdmi_ila_1_0 || ORIG_REF_NAME==hdmi_ila_1_0} -quiet] -quiet
 
-# IP: bd/hdmi/ip/hdmi_array_parser_0_0/hdmi_array_parser_0_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==hdmi_array_parser_0_0 || ORIG_REF_NAME==hdmi_array_parser_0_0} -quiet] -quiet
+# IP: bd/hdmi/ip/hdmi_xlslice_0_0/hdmi_xlslice_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==hdmi_xlslice_0_0 || ORIG_REF_NAME==hdmi_xlslice_0_0} -quiet] -quiet
+
+# IP: bd/hdmi/ip/hdmi_xlslice_0_2/hdmi_xlslice_0_2.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==hdmi_xlslice_0_2 || ORIG_REF_NAME==hdmi_xlslice_0_2} -quiet] -quiet
+
+# IP: bd/hdmi/ip/hdmi_xlslice_1_0/hdmi_xlslice_1_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==hdmi_xlslice_1_0 || ORIG_REF_NAME==hdmi_xlslice_1_0} -quiet] -quiet
+
+# IP: bd/hdmi/ip/hdmi_array_parser_1_0/hdmi_array_parser_1_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==hdmi_array_parser_1_0 || ORIG_REF_NAME==hdmi_array_parser_1_0} -quiet] -quiet
+
+# IP: bd/hdmi/ip/hdmi_object_localizer_1_0/hdmi_object_localizer_1_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==hdmi_object_localizer_1_0 || ORIG_REF_NAME==hdmi_object_localizer_1_0} -quiet] -quiet
 
 # IP: bd/hdmi/ip/hdmi_s00_regslice_0/hdmi_s00_regslice_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==hdmi_s00_regslice_0 || ORIG_REF_NAME==hdmi_s00_regslice_0} -quiet] -quiet
@@ -134,16 +146,4 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==hdmi_auto_d
 # IP: bd/hdmi/ip/hdmi_auto_rs_w_0/hdmi_auto_rs_w_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==hdmi_auto_rs_w_0 || ORIG_REF_NAME==hdmi_auto_rs_w_0} -quiet] -quiet
 
-# IP: bd/hdmi/ip/hdmi_ila_1_0/hdmi_ila_1_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==hdmi_ila_1_0 || ORIG_REF_NAME==hdmi_ila_1_0} -quiet] -quiet
-
-# IP: bd/hdmi/ip/hdmi_xlslice_0_0/hdmi_xlslice_0_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==hdmi_xlslice_0_0 || ORIG_REF_NAME==hdmi_xlslice_0_0} -quiet] -quiet
-
-# IP: bd/hdmi/ip/hdmi_xlslice_0_2/hdmi_xlslice_0_2.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==hdmi_xlslice_0_2 || ORIG_REF_NAME==hdmi_xlslice_0_2} -quiet] -quiet
-
-# IP: bd/hdmi/ip/hdmi_xlslice_1_0/hdmi_xlslice_1_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==hdmi_xlslice_1_0 || ORIG_REF_NAME==hdmi_xlslice_1_0} -quiet] -quiet
-
-# XDC: c:/Users/Muaz/Downloads/hw/hw.gen/sources_1/bd/hdmi/hdmi_ooc.xdc
+# XDC: c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/hdmi_ooc.xdc

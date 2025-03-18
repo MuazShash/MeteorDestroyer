@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Thu Mar 13 00:19:23 2025" VIVADOVERSION="2022.1">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Mon Mar 17 19:30:57 2025" VIVADOVERSION="2022.1">
 
   <SYSTEMINFO ARCH="artix7" BOARD="digilentinc.com:nexys_video:part0:1.1" DEVICE="7a200t" NAME="hdmi" PACKAGE="sbg484" SPEEDGRADE="-1"/>
 
@@ -43,6 +43,11 @@
     <PORT DIR="I" LEFT="2" NAME="TMDS_IN_data_n" RIGHT="0" SIGIS="undef" SIGNAME="dvi2rgb_0_TMDS_Data_n">
       <CONNECTIONS>
         <CONNECTION INSTANCE="dvi2rgb_0" PORT="TMDS_Data_n"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" LEFT="4" NAME="push_buttons_5bits_tri_i" RIGHT="0" SIGIS="undef" SIGNAME="axi_gpio_0_gpio_io_i">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="axi_gpio_0" PORT="gpio_io_i"/>
       </CONNECTIONS>
     </PORT>
     <PORT DIR="I" NAME="usb_uart_rxd" SIGIS="undef" SIGNAME="axi_uartlite_0_rx">
@@ -175,19 +180,14 @@
         <CONNECTION INSTANCE="rgb2dvi_0" PORT="TMDS_Data_n"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="I" LEFT="4" NAME="push_buttons_5bits_tri_i" RIGHT="0" SIGIS="undef" SIGNAME="axi_gpio_0_gpio_io_i">
+    <PORT DIR="I" LEFT="11" NAME="echo" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_echo">
       <CONNECTIONS>
-        <CONNECTION INSTANCE="axi_gpio_0" PORT="gpio_io_i"/>
+        <CONNECTION INSTANCE="array_parser_1" PORT="echo"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="I" LEFT="2" NAME="echo_0" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_echo_0">
+    <PORT DIR="O" NAME="trig" SIGIS="undef" SIGNAME="array_parser_1_trig">
       <CONNECTIONS>
-        <CONNECTION INSTANCE="array_parser_0" PORT="echo"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="O" NAME="trig_0" SIGIS="undef" SIGNAME="array_parser_0_trig">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="array_parser_0" PORT="trig"/>
+        <CONNECTION INSTANCE="array_parser_1" PORT="trig"/>
       </CONNECTIONS>
     </PORT>
   </EXTERNALPORTS>
@@ -265,11 +265,11 @@
   </EXTERNALINTERFACES>
 
   <MODULES>
-    <MODULE COREREVISION="2" FULLNAME="/array_parser_0" HWVERSION="1.0" INSTANCE="array_parser_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="array_parser" VLNV="xilinx.com:user:array_parser:1.0">
+    <MODULE COREREVISION="1" FULLNAME="/array_parser_1" HWVERSION="2.0" INSTANCE="array_parser_1" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="array_parser" VLNV="xilinx.com:user:array_parser:2.0">
       <DOCUMENTS/>
       <PARAMETERS>
-        <PARAMETER NAME="NUM_SENSORS" VALUE="3"/>
-        <PARAMETER NAME="Component_Name" VALUE="hdmi_array_parser_0_0"/>
+        <PARAMETER NAME="NUM_SENSORS" VALUE="12"/>
+        <PARAMETER NAME="Component_Name" VALUE="hdmi_array_parser_1_0"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
@@ -278,24 +278,24 @@
             <CONNECTION INSTANCE="mig_7series_0" PORT="ui_clk"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="2" NAME="echo" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_echo_0">
+        <PORT DIR="I" LEFT="11" NAME="echo" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_echo">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="echo_0"/>
+            <CONNECTION INSTANCE="External_Ports" PORT="echo"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="trig" SIGIS="undef" SIGNAME="array_parser_0_trig">
+        <PORT DIR="O" NAME="trig" SIGIS="undef" SIGNAME="array_parser_1_trig">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="trig_0"/>
+            <CONNECTION INSTANCE="External_Ports" PORT="trig"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="47" NAME="distance_mm" RIGHT="0" SIGIS="undef" SIGNAME="array_parser_0_distance_mm">
+        <PORT DIR="O" LEFT="191" NAME="distance_mm" RIGHT="0" SIGIS="undef" SIGNAME="array_parser_1_distance_mm">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="object_localizer_0" PORT="distances"/>
+            <CONNECTION INSTANCE="object_localizer_1" PORT="distances"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="valid" SIGIS="undef" SIGNAME="array_parser_0_valid">
+        <PORT DIR="O" NAME="valid" SIGIS="undef" SIGNAME="array_parser_1_valid">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="object_localizer_0" PORT="in_valid"/>
+            <CONNECTION INSTANCE="object_localizer_1" PORT="in_valid"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -8674,9 +8674,9 @@
             <CONNECTION INSTANCE="xlslice_2" PORT="Dout"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="0" NAME="probe3" RIGHT="0" SIGIS="undef" SIGNAME="object_localizer_0_out_valid">
+        <PORT DIR="I" LEFT="0" NAME="probe3" RIGHT="0" SIGIS="undef" SIGNAME="object_localizer_1_out_valid">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="object_localizer_0" PORT="out_valid"/>
+            <CONNECTION INSTANCE="object_localizer_1" PORT="out_valid"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -9831,9 +9831,9 @@
         <MEMRANGE ADDRESSBLOCK="Reg" BASENAME="C_BASEADDR" BASEVALUE="0x44A10000" HIGHNAME="C_HIGHADDR" HIGHVALUE="0x44A1FFFF" INSTANCE="axi_vdma_0" IS_DATA="TRUE" IS_INSTRUCTION="FALSE" MASTERBUSINTERFACE="M_AXI_DP" MEMTYPE="REGISTER" SLAVEBUSINTERFACE="S_AXI_LITE"/>
         <MEMRANGE ADDRESSBLOCK="Reg" BASENAME="C_BASEADDR" BASEVALUE="0x44A20000" HIGHNAME="C_HIGHADDR" HIGHVALUE="0x44A2FFFF" INSTANCE="v_tc_0" IS_DATA="TRUE" IS_INSTRUCTION="FALSE" MASTERBUSINTERFACE="M_AXI_DP" MEMTYPE="REGISTER" SLAVEBUSINTERFACE="ctrl"/>
         <MEMRANGE ADDRESSBLOCK="Reg" BASENAME="C_BASEADDR" BASEVALUE="0x44A30000" HIGHNAME="C_HIGHADDR" HIGHVALUE="0x44A3FFFF" INSTANCE="v_tc_1" IS_DATA="TRUE" IS_INSTRUCTION="FALSE" MASTERBUSINTERFACE="M_AXI_DP" MEMTYPE="REGISTER" SLAVEBUSINTERFACE="ctrl"/>
-        <MEMRANGE ADDRESSBLOCK="Reg" BASENAME="C_BASEADDR" BASEVALUE="0x44A40000" HIGHNAME="C_HIGHADDR" HIGHVALUE="0x44A4FFFF" INSTANCE="object_localizer_0" IS_DATA="TRUE" IS_INSTRUCTION="FALSE" MASTERBUSINTERFACE="M_AXI_DP" MEMTYPE="REGISTER" SLAVEBUSINTERFACE="S_AXI"/>
         <MEMRANGE ADDRESSBLOCK="memaddr" BASENAME="C_BASEADDR" BASEVALUE="0x80000000" HIGHNAME="C_HIGHADDR" HIGHVALUE="0x9FFFFFFF" INSTANCE="mig_7series_0" IS_DATA="TRUE" IS_INSTRUCTION="FALSE" MASTERBUSINTERFACE="M_AXI_DC" MEMTYPE="MEMORY" SLAVEBUSINTERFACE="S_AXI"/>
         <MEMRANGE ADDRESSBLOCK="memaddr" BASENAME="C_BASEADDR" BASEVALUE="0x80000000" HIGHNAME="C_HIGHADDR" HIGHVALUE="0x9FFFFFFF" INSTANCE="mig_7series_0" IS_DATA="FALSE" IS_INSTRUCTION="TRUE" MASTERBUSINTERFACE="M_AXI_IC" MEMTYPE="MEMORY" SLAVEBUSINTERFACE="S_AXI"/>
+        <MEMRANGE ADDRESSBLOCK="reg0" BASENAME="C_BASEADDR" BASEVALUE="0xC0000000" HIGHNAME="C_HIGHADDR" HIGHVALUE="0xC0000FFF" INSTANCE="object_localizer_1" IS_DATA="TRUE" IS_INSTRUCTION="FALSE" MASTERBUSINTERFACE="M_AXI_DP" MEMTYPE="REGISTER" SLAVEBUSINTERFACE="S_AXI"/>
       </MEMORYMAP>
       <PERIPHERALS>
         <PERIPHERAL INSTANCE="microblaze_0_local_memory_dlmb_bram_if_cntlr"/>
@@ -9847,8 +9847,8 @@
         <PERIPHERAL INSTANCE="axi_vdma_0"/>
         <PERIPHERAL INSTANCE="v_tc_0"/>
         <PERIPHERAL INSTANCE="v_tc_1"/>
-        <PERIPHERAL INSTANCE="object_localizer_0"/>
         <PERIPHERAL INSTANCE="mig_7series_0"/>
+        <PERIPHERAL INSTANCE="object_localizer_1"/>
       </PERIPHERALS>
     </MODULE>
     <MODULE COREREVISION="17" FULLNAME="/microblaze_0_axi_intc" HWVERSION="4.1" INSTANCE="microblaze_0_axi_intc" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="INTERRUPT_CNTLR" MODTYPE="axi_intc" VLNV="xilinx.com:ip:axi_intc:4.1">
@@ -12003,6 +12003,26 @@
             <CONNECTION INSTANCE="rst_mig_7series_0_100M" PORT="peripheral_aresetn"/>
           </CONNECTIONS>
         </PORT>
+        <PORT DIR="I" NAME="M08_ACLK" SIGIS="clk" SIGNAME="mig_7series_0_ui_clk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="mig_7series_0" PORT="ui_clk"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="M08_ARESETN" SIGIS="rst" SIGNAME="rst_mig_7series_0_100M_peripheral_aresetn">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="rst_mig_7series_0_100M" PORT="peripheral_aresetn"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="M09_ACLK" SIGIS="clk" SIGNAME="mig_7series_0_ui_clk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="mig_7series_0" PORT="ui_clk"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="M09_ARESETN" SIGIS="rst" SIGNAME="rst_mig_7series_0_100M_peripheral_aresetn">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="rst_mig_7series_0_100M" PORT="peripheral_aresetn"/>
+          </CONNECTIONS>
+        </PORT>
         <PORT DIR="I" LEFT="31" NAME="S00_AXI_awaddr" RIGHT="0" SIGIS="undef" SIGNAME="microblaze_0_M_AXI_DP_AWADDR">
           <CONNECTIONS>
             <CONNECTION INSTANCE="microblaze_0" PORT="M_AXI_DP_AWADDR"/>
@@ -12798,16 +12818,6 @@
             <CONNECTION INSTANCE="axi_uartlite_0" PORT="s_axi_rready"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="M08_ACLK" SIGIS="clk" SIGNAME="mig_7series_0_ui_clk">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="mig_7series_0" PORT="ui_clk"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="M08_ARESETN" SIGIS="rst" SIGNAME="rst_mig_7series_0_100M_peripheral_aresetn">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="rst_mig_7series_0_100M" PORT="peripheral_aresetn"/>
-          </CONNECTIONS>
-        </PORT>
         <PORT DIR="O" LEFT="31" NAME="M08_AXI_awaddr" RIGHT="0" SIGIS="undef" SIGNAME="axi_gpio_0_s_axi_awaddr">
           <CONNECTIONS>
             <CONNECTION INSTANCE="axi_gpio_0" PORT="s_axi_awaddr"/>
@@ -12895,61 +12905,91 @@
             <CONNECTION INSTANCE="axi_gpio_0" PORT="s_axi_rready"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="M09_ACLK" SIGIS="clk" SIGNAME="mig_7series_0_ui_clk">
+        <PORT DIR="O" LEFT="31" NAME="M09_AXI_awaddr" RIGHT="0" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_M09_AXI_awaddr">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="mig_7series_0" PORT="ui_clk"/>
+            <CONNECTION INSTANCE="object_localizer_1" PORT="S_AXI_AWADDR"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="M09_ARESETN" SIGIS="rst" SIGNAME="rst_mig_7series_0_100M_peripheral_aresetn">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="rst_mig_7series_0_100M" PORT="peripheral_aresetn"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="M09_AXI_awaddr" SIGIS="undef"/>
         <PORT DIR="O" NAME="M09_AXI_awprot" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M09_AXI_awvalid" SIGIS="undef"/>
-        <PORT DIR="I" NAME="M09_AXI_awready" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M09_AXI_wdata" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M09_AXI_wstrb" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M09_AXI_wvalid" SIGIS="undef"/>
-        <PORT DIR="I" NAME="M09_AXI_wready" SIGIS="undef"/>
-        <PORT DIR="I" NAME="M09_AXI_bresp" SIGIS="undef"/>
-        <PORT DIR="I" NAME="M09_AXI_bvalid" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M09_AXI_bready" SIGIS="undef"/>
+        <PORT DIR="O" NAME="M09_AXI_awvalid" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_M09_AXI_awvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="object_localizer_1" PORT="S_AXI_AWVALID"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="M09_AXI_awready" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_M09_AXI_awready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="object_localizer_1" PORT="S_AXI_AWREADY"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="M09_AXI_wdata" RIGHT="0" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_M09_AXI_wdata">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="object_localizer_1" PORT="S_AXI_WDATA"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="3" NAME="M09_AXI_wstrb" RIGHT="0" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_M09_AXI_wstrb">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="object_localizer_1" PORT="S_AXI_WSTRB"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="M09_AXI_wvalid" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_M09_AXI_wvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="object_localizer_1" PORT="S_AXI_WVALID"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="M09_AXI_wready" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_M09_AXI_wready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="object_localizer_1" PORT="S_AXI_WREADY"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="1" NAME="M09_AXI_bresp" RIGHT="0" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_M09_AXI_bresp">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="object_localizer_1" PORT="S_AXI_BRESP"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="M09_AXI_bvalid" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_M09_AXI_bvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="object_localizer_1" PORT="S_AXI_BVALID"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="M09_AXI_bready" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_M09_AXI_bready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="object_localizer_1" PORT="S_AXI_BREADY"/>
+          </CONNECTIONS>
+        </PORT>
         <PORT DIR="O" LEFT="31" NAME="M09_AXI_araddr" RIGHT="0" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_M09_AXI_araddr">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="object_localizer_0" PORT="S_AXI_ARADDR"/>
+            <CONNECTION INSTANCE="object_localizer_1" PORT="S_AXI_ARADDR"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="M09_AXI_arprot" SIGIS="undef"/>
         <PORT DIR="O" NAME="M09_AXI_arvalid" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_M09_AXI_arvalid">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="object_localizer_0" PORT="S_AXI_ARVALID"/>
+            <CONNECTION INSTANCE="object_localizer_1" PORT="S_AXI_ARVALID"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" NAME="M09_AXI_arready" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_M09_AXI_arready">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="object_localizer_0" PORT="S_AXI_ARREADY"/>
+            <CONNECTION INSTANCE="object_localizer_1" PORT="S_AXI_ARREADY"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" LEFT="31" NAME="M09_AXI_rdata" RIGHT="0" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_M09_AXI_rdata">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="object_localizer_0" PORT="S_AXI_RDATA"/>
+            <CONNECTION INSTANCE="object_localizer_1" PORT="S_AXI_RDATA"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" LEFT="1" NAME="M09_AXI_rresp" RIGHT="0" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_M09_AXI_rresp">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="object_localizer_0" PORT="S_AXI_RRESP"/>
+            <CONNECTION INSTANCE="object_localizer_1" PORT="S_AXI_RRESP"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" NAME="M09_AXI_rvalid" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_M09_AXI_rvalid">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="object_localizer_0" PORT="S_AXI_RVALID"/>
+            <CONNECTION INSTANCE="object_localizer_1" PORT="S_AXI_RVALID"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="M09_AXI_rready" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_M09_AXI_rready">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="object_localizer_0" PORT="S_AXI_RREADY"/>
+            <CONNECTION INSTANCE="object_localizer_1" PORT="S_AXI_RREADY"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -15643,10 +15683,10 @@
             <CONNECTION INSTANCE="v_tc_1" PORT="s_axi_aclk"/>
             <CONNECTION INSTANCE="axi_gpio_0" PORT="s_axi_aclk"/>
             <CONNECTION INSTANCE="microblaze_0_axi_periph" PORT="M08_ACLK"/>
-            <CONNECTION INSTANCE="array_parser_0" PORT="clk"/>
-            <CONNECTION INSTANCE="object_localizer_0" PORT="clk"/>
             <CONNECTION INSTANCE="microblaze_0_axi_periph" PORT="M09_ACLK"/>
             <CONNECTION INSTANCE="ila_1" PORT="clk"/>
+            <CONNECTION INSTANCE="array_parser_1" PORT="clk"/>
+            <CONNECTION INSTANCE="object_localizer_1" PORT="clk"/>
           </CONNECTIONS>
         </PORT>
         <PORT CLKFREQUENCY="160000000" DIR="O" NAME="ui_addn_clk_0" SIGIS="clk" SIGNAME="mig_7series_0_ui_addn_clk_0">
@@ -15955,15 +15995,18 @@
         </BUSINTERFACE>
       </BUSINTERFACES>
     </MODULE>
-    <MODULE COREREVISION="2" FULLNAME="/object_localizer_0" HWVERSION="1.0" INSTANCE="object_localizer_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="object_localizer" VLNV="xilinx.com:user:object_localizer:1.0">
+    <MODULE COREREVISION="2" FULLNAME="/object_localizer_1" HWVERSION="2.0" INSTANCE="object_localizer_1" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="object_localizer" VLNV="xilinx.com:user:object_localizer:2.0">
       <DOCUMENTS/>
+      <ADDRESSBLOCKS>
+        <ADDRESSBLOCK ACCESS="" INTERFACE="S_AXI" NAME="reg0" RANGE="4294967296" USAGE="register"/>
+      </ADDRESSBLOCKS>
       <PARAMETERS>
-        <PARAMETER NAME="NUM_SENSORS" VALUE="3"/>
+        <PARAMETER NAME="NUM_SENSORS" VALUE="12"/>
         <PARAMETER NAME="DW" VALUE="16"/>
-        <PARAMETER NAME="Component_Name" VALUE="hdmi_object_localizer_0_0"/>
+        <PARAMETER NAME="Component_Name" VALUE="hdmi_object_localizer_1_0"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
-        <PARAMETER NAME="C_BASEADDR" VALUE="0x44A40000"/>
-        <PARAMETER NAME="C_HIGHADDR" VALUE="0x44A4FFFF"/>
+        <PARAMETER NAME="C_BASEADDR" VALUE="0xC0000000"/>
+        <PARAMETER NAME="C_HIGHADDR" VALUE="0xC0000FFF"/>
       </PARAMETERS>
       <PORTS>
         <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="mig_7series_0_ui_clk">
@@ -15971,31 +16014,81 @@
             <CONNECTION INSTANCE="mig_7series_0" PORT="ui_clk"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="in_valid" SIGIS="undef" SIGNAME="array_parser_0_valid">
+        <PORT DIR="I" NAME="rstn" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="rst_mig_7series_0_100M_peripheral_aresetn">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="array_parser_0" PORT="valid"/>
+            <CONNECTION INSTANCE="rst_mig_7series_0_100M" PORT="peripheral_aresetn"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="47" NAME="distances" RIGHT="0" SIGIS="undef" SIGNAME="array_parser_0_distance_mm">
+        <PORT DIR="I" NAME="in_valid" SIGIS="undef" SIGNAME="array_parser_1_valid">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="array_parser_0" PORT="distance_mm"/>
+            <CONNECTION INSTANCE="array_parser_1" PORT="valid"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="47" NAME="pose" RIGHT="0" SIGIS="undef" SIGNAME="object_localizer_0_pose">
+        <PORT DIR="I" LEFT="191" NAME="distances" RIGHT="0" SIGIS="undef" SIGNAME="array_parser_1_distance_mm">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="array_parser_1" PORT="distance_mm"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="47" NAME="pose" RIGHT="0" SIGIS="undef" SIGNAME="object_localizer_1_pose">
           <CONNECTIONS>
             <CONNECTION INSTANCE="xlslice_0" PORT="Din"/>
             <CONNECTION INSTANCE="xlslice_1" PORT="Din"/>
             <CONNECTION INSTANCE="xlslice_2" PORT="Din"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="out_valid" SIGIS="undef" SIGNAME="object_localizer_0_out_valid">
+        <PORT DIR="O" NAME="out_valid" SIGIS="undef" SIGNAME="object_localizer_1_out_valid">
           <CONNECTIONS>
             <CONNECTION INSTANCE="ila_1" PORT="probe3"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="S_AXI_ARESETN" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="rst_mig_7series_0_100M_peripheral_aresetn">
+        <PORT DIR="I" LEFT="31" NAME="S_AXI_AWADDR" RIGHT="0" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_M09_AXI_awaddr">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="rst_mig_7series_0_100M" PORT="peripheral_aresetn"/>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph" PORT="M09_AXI_awaddr"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="S_AXI_AWVALID" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_M09_AXI_awvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph" PORT="M09_AXI_awvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="S_AXI_AWREADY" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_M09_AXI_awready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph" PORT="M09_AXI_awready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="31" NAME="S_AXI_WDATA" RIGHT="0" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_M09_AXI_wdata">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph" PORT="M09_AXI_wdata"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="3" NAME="S_AXI_WSTRB" RIGHT="0" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_M09_AXI_wstrb">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph" PORT="M09_AXI_wstrb"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="S_AXI_WVALID" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_M09_AXI_wvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph" PORT="M09_AXI_wvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="S_AXI_WREADY" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_M09_AXI_wready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph" PORT="M09_AXI_wready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="1" NAME="S_AXI_BRESP" RIGHT="0" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_M09_AXI_bresp">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph" PORT="M09_AXI_bresp"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="S_AXI_BVALID" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_M09_AXI_bvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph" PORT="M09_AXI_bvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="S_AXI_BREADY" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_M09_AXI_bready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph" PORT="M09_AXI_bready"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" LEFT="31" NAME="S_AXI_ARADDR" RIGHT="0" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_M09_AXI_araddr">
@@ -16048,15 +16141,15 @@
           <PARAMETER NAME="WUSER_WIDTH" VALUE="0"/>
           <PARAMETER NAME="RUSER_WIDTH" VALUE="0"/>
           <PARAMETER NAME="BUSER_WIDTH" VALUE="0"/>
-          <PARAMETER NAME="READ_WRITE_MODE" VALUE="READ_ONLY"/>
+          <PARAMETER NAME="READ_WRITE_MODE" VALUE="READ_WRITE"/>
           <PARAMETER NAME="HAS_BURST" VALUE="0"/>
           <PARAMETER NAME="HAS_LOCK" VALUE="0"/>
           <PARAMETER NAME="HAS_PROT" VALUE="0"/>
           <PARAMETER NAME="HAS_CACHE" VALUE="0"/>
           <PARAMETER NAME="HAS_QOS" VALUE="0"/>
           <PARAMETER NAME="HAS_REGION" VALUE="0"/>
-          <PARAMETER NAME="HAS_WSTRB" VALUE="0"/>
-          <PARAMETER NAME="HAS_BRESP" VALUE="0"/>
+          <PARAMETER NAME="HAS_WSTRB" VALUE="1"/>
+          <PARAMETER NAME="HAS_BRESP" VALUE="1"/>
           <PARAMETER NAME="HAS_RRESP" VALUE="1"/>
           <PARAMETER NAME="SUPPORTS_NARROW_BURST" VALUE="0"/>
           <PARAMETER NAME="MAX_BURST_LENGTH" VALUE="1"/>
@@ -16075,6 +16168,16 @@
             <PORTMAP LOGICAL="RVALID" PHYSICAL="S_AXI_RVALID"/>
             <PORTMAP LOGICAL="ARADDR" PHYSICAL="S_AXI_ARADDR"/>
             <PORTMAP LOGICAL="RDATA" PHYSICAL="S_AXI_RDATA"/>
+            <PORTMAP LOGICAL="BVALID" PHYSICAL="S_AXI_BVALID"/>
+            <PORTMAP LOGICAL="BREADY" PHYSICAL="S_AXI_BREADY"/>
+            <PORTMAP LOGICAL="AWVALID" PHYSICAL="S_AXI_AWVALID"/>
+            <PORTMAP LOGICAL="AWREADY" PHYSICAL="S_AXI_AWREADY"/>
+            <PORTMAP LOGICAL="WDATA" PHYSICAL="S_AXI_WDATA"/>
+            <PORTMAP LOGICAL="AWADDR" PHYSICAL="S_AXI_AWADDR"/>
+            <PORTMAP LOGICAL="WVALID" PHYSICAL="S_AXI_WVALID"/>
+            <PORTMAP LOGICAL="WREADY" PHYSICAL="S_AXI_WREADY"/>
+            <PORTMAP LOGICAL="WSTRB" PHYSICAL="S_AXI_WSTRB"/>
+            <PORTMAP LOGICAL="BRESP" PHYSICAL="S_AXI_BRESP"/>
           </PORTMAPS>
         </BUSINTERFACE>
       </BUSINTERFACES>
@@ -16254,7 +16357,7 @@
             <CONNECTION INSTANCE="axi_gpio_0" PORT="s_axi_aresetn"/>
             <CONNECTION INSTANCE="microblaze_0_axi_periph" PORT="M08_ARESETN"/>
             <CONNECTION INSTANCE="microblaze_0_axi_periph" PORT="M09_ARESETN"/>
-            <CONNECTION INSTANCE="object_localizer_0" PORT="S_AXI_ARESETN"/>
+            <CONNECTION INSTANCE="object_localizer_1" PORT="rstn"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -17434,9 +17537,9 @@
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
-        <PORT DIR="I" LEFT="47" NAME="Din" RIGHT="0" SIGIS="undef" SIGNAME="object_localizer_0_pose">
+        <PORT DIR="I" LEFT="47" NAME="Din" RIGHT="0" SIGIS="undef" SIGNAME="object_localizer_1_pose">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="object_localizer_0" PORT="pose"/>
+            <CONNECTION INSTANCE="object_localizer_1" PORT="pose"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="15" NAME="Dout" RIGHT="0" SIGIS="undef" SIGNAME="xlslice_0_Dout">
@@ -17458,9 +17561,9 @@
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
-        <PORT DIR="I" LEFT="47" NAME="Din" RIGHT="0" SIGIS="undef" SIGNAME="object_localizer_0_pose">
+        <PORT DIR="I" LEFT="47" NAME="Din" RIGHT="0" SIGIS="undef" SIGNAME="object_localizer_1_pose">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="object_localizer_0" PORT="pose"/>
+            <CONNECTION INSTANCE="object_localizer_1" PORT="pose"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="15" NAME="Dout" RIGHT="0" SIGIS="undef" SIGNAME="xlslice_1_Dout">
@@ -17482,9 +17585,9 @@
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
-        <PORT DIR="I" LEFT="47" NAME="Din" RIGHT="0" SIGIS="undef" SIGNAME="object_localizer_0_pose">
+        <PORT DIR="I" LEFT="47" NAME="Din" RIGHT="0" SIGIS="undef" SIGNAME="object_localizer_1_pose">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="object_localizer_0" PORT="pose"/>
+            <CONNECTION INSTANCE="object_localizer_1" PORT="pose"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="15" NAME="Dout" RIGHT="0" SIGIS="undef" SIGNAME="xlslice_2_Dout">
