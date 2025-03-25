@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
-| Date         : Mon Mar 17 19:35:05 2025
+| Date         : Tue Mar 18 00:52:27 2025
 | Host         : DESKTOP-BINRERU running 64-bit major release  (build 9200)
 | Command      : report_utilization -file hdmi_wrapper_utilization_synth.rpt -pb hdmi_wrapper_utilization_synth.pb
 | Design       : hdmi_wrapper
@@ -91,7 +91,7 @@ Table of Contents
 +-----------------------------+------+-------+------------+-----------+-------+
 |          Site Type          | Used | Fixed | Prohibited | Available | Util% |
 +-----------------------------+------+-------+------------+-----------+-------+
-| Bonded IOB                  |   25 |     0 |          0 |       285 |  8.77 |
+| Bonded IOB                  |   27 |     0 |          0 |       285 |  9.47 |
 | Bonded IPADs                |    0 |     0 |          0 |        14 |  0.00 |
 | Bonded OPADs                |    0 |     0 |          0 |         8 |  0.00 |
 | PHY_CONTROL                 |    0 |     0 |          0 |        10 |  0.00 |
@@ -151,7 +151,7 @@ Table of Contents
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
 | IBUF     |   21 |                  IO |
-| OBUF     |    4 |                  IO |
+| OBUF     |    6 |                  IO |
 | OBUFT    |    2 |                  IO |
 +----------+------+---------------------+
 
@@ -175,6 +175,7 @@ Table of Contents
 | hdmi_rst_mig_7series_0_pxl_0  |    1 |
 | hdmi_rst_mig_7series_0_100M_0 |    1 |
 | hdmi_rgb2dvi_0_0              |    1 |
+| hdmi_proportional_control_0_0 |    1 |
 | hdmi_object_localizer_1_0     |    1 |
 | hdmi_mig_7series_0_0          |    1 |
 | hdmi_microblaze_0_axi_intc_0  |    1 |

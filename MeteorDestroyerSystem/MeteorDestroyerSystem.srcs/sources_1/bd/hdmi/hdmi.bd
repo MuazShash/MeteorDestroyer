@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0x851F287933DC63A4",
+      "boundary_crc": "0x9EE7DBE060E973C8",
       "device": "xc7a200tsbg484-1",
       "gen_directory": "../../../../MeteorDestroyerSystem.gen/sources_1/bd/hdmi",
       "name": "hdmi",
@@ -81,7 +81,8 @@
       "xlslice_1": "",
       "xlslice_2": "",
       "array_parser_1": "",
-      "object_localizer_1": ""
+      "object_localizer_1": "",
+      "proportional_control_0": ""
     },
     "interface_ports": {
       "DDC": {
@@ -218,6 +219,12 @@
         "right": "0"
       },
       "trig": {
+        "direction": "O"
+      },
+      "pwm_pan": {
+        "direction": "O"
+      },
+      "pwm_tilt": {
         "direction": "O"
       }
     },
@@ -3258,6 +3265,12 @@
         "xci_name": "hdmi_object_localizer_1_0",
         "xci_path": "ip\\hdmi_object_localizer_1_0\\hdmi_object_localizer_1_0.xci",
         "inst_hier_path": "object_localizer_1"
+      },
+      "proportional_control_0": {
+        "vlnv": "xilinx.com:user:proportional_controller_pwm:1.0",
+        "xci_name": "hdmi_proportional_control_0_0",
+        "xci_path": "ip\\hdmi_proportional_control_0_0\\hdmi_proportional_control_0_0.xci",
+        "inst_hier_path": "proportional_control_0"
       }
     },
     "interface_nets": {
@@ -3617,7 +3630,8 @@
           "microblaze_0_axi_periph/M09_ACLK",
           "ila_1/clk",
           "array_parser_1/clk",
-          "object_localizer_1/clk"
+          "object_localizer_1/clk",
+          "proportional_control_0/clk"
         ]
       },
       "mig_7series_0_ui_clk_sync_rst": {
@@ -3631,13 +3645,27 @@
           "object_localizer_1/pose",
           "xlslice_0/Din",
           "xlslice_1/Din",
-          "xlslice_2/Din"
+          "xlslice_2/Din",
+          "proportional_control_0/position"
         ]
       },
       "object_localizer_1_out_valid": {
         "ports": [
           "object_localizer_1/out_valid",
-          "ila_1/probe3"
+          "ila_1/probe3",
+          "proportional_control_0/coord_valid"
+        ]
+      },
+      "proportional_control_0_pwm_pan": {
+        "ports": [
+          "proportional_control_0/pwm_pan",
+          "pwm_pan"
+        ]
+      },
+      "proportional_control_0_pwm_tilt": {
+        "ports": [
+          "proportional_control_0/pwm_tilt",
+          "pwm_tilt"
         ]
       },
       "reset_1": {
@@ -3690,7 +3718,8 @@
           "axi_gpio_0/s_axi_aresetn",
           "microblaze_0_axi_periph/M08_ARESETN",
           "microblaze_0_axi_periph/M09_ARESETN",
-          "object_localizer_1/rstn"
+          "object_localizer_1/rstn",
+          "proportional_control_0/rst_n"
         ]
       },
       "rst_mig_7series_0_pxl_peripheral_aresetn": {

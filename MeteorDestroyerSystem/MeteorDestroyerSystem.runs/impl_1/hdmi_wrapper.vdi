@@ -2,8 +2,8 @@
 # Vivado v2022.1 (64-bit)
 # SW Build 3526262 on Mon Apr 18 15:48:16 MDT 2022
 # IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
-# Start of session at: Mon Mar 17 19:35:12 2025
-# Process ID: 14116
+# Start of session at: Tue Mar 18 00:52:35 2025
+# Process ID: 57724
 # Current directory: C:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.runs/impl_1
 # Command line: vivado.exe -log hdmi_wrapper.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source hdmi_wrapper.tcl -notrace
 # Log file: C:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.runs/impl_1/hdmi_wrapper.vdi
@@ -17,10 +17,11 @@ INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/Muaz/Downloads/hw/hw
 INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/Muaz/Downloads/hw/hw.ipdefs/repo'.
 INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/Muaz/Documents/MeteorDestroyer/Parser_ip'.
 INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/Muaz/Documents/MeteorDestroyer/Localizer_ip'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/Muaz/Documents/MeteorDestroyer/servo_controller_ip'.
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2022.1/data/ip'.
 WARNING: [IP_Flow 19-4995] The host OS only allows 260 characters in a normal path. The IP cache path is more than 80 characters. If you experience issues with IP caching, please consider changing the IP cache to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter. 
 Current IP cache path is C:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.cache/ip 
-add_files: Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1281.402 ; gain = 0.000
+add_files: Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1282.289 ; gain = 0.000
 Command: link_design -top hdmi_wrapper -part xc7a200tsbg484-1
 Design is defaulting to srcset: sources_1
 Design is defaulting to constrset: constrs_1
@@ -39,6 +40,7 @@ INFO: [Project 1-454] Reading design checkpoint 'c:/Users/Muaz/Documents/MeteorD
 INFO: [Project 1-454] Reading design checkpoint 'c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/ip/hdmi_microblaze_0_axi_intc_0/hdmi_microblaze_0_axi_intc_0.dcp' for cell 'hdmi_i/microblaze_0_axi_intc'
 INFO: [Project 1-454] Reading design checkpoint 'c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/ip/hdmi_mig_7series_0_0/hdmi_mig_7series_0_0.dcp' for cell 'hdmi_i/mig_7series_0'
 INFO: [Project 1-454] Reading design checkpoint 'c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/ip/hdmi_object_localizer_1_0/hdmi_object_localizer_1_0.dcp' for cell 'hdmi_i/object_localizer_1'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/ip/hdmi_proportional_control_0_0/hdmi_proportional_control_0_0.dcp' for cell 'hdmi_i/proportional_control_0'
 INFO: [Project 1-454] Reading design checkpoint 'c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/ip/hdmi_rgb2dvi_0_0/hdmi_rgb2dvi_0_0.dcp' for cell 'hdmi_i/rgb2dvi_0'
 INFO: [Project 1-454] Reading design checkpoint 'c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/ip/hdmi_rst_mig_7series_0_100M_0/hdmi_rst_mig_7series_0_100M_0.dcp' for cell 'hdmi_i/rst_mig_7series_0_100M'
 INFO: [Project 1-454] Reading design checkpoint 'c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/ip/hdmi_rst_mig_7series_0_pxl_0/hdmi_rst_mig_7series_0_pxl_0.dcp' for cell 'hdmi_i/rst_mig_7series_0_pxl'
@@ -64,9 +66,9 @@ INFO: [Project 1-454] Reading design checkpoint 'c:/Users/Muaz/Documents/MeteorD
 INFO: [Project 1-454] Reading design checkpoint 'c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/ip/hdmi_ilmb_bram_if_cntlr_0/hdmi_ilmb_bram_if_cntlr_0.dcp' for cell 'hdmi_i/microblaze_0_local_memory/ilmb_bram_if_cntlr'
 INFO: [Project 1-454] Reading design checkpoint 'c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/ip/hdmi_ilmb_v10_0/hdmi_ilmb_v10_0.dcp' for cell 'hdmi_i/microblaze_0_local_memory/ilmb_v10'
 INFO: [Project 1-454] Reading design checkpoint 'c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/ip/hdmi_lmb_bram_0/hdmi_lmb_bram_0.dcp' for cell 'hdmi_i/microblaze_0_local_memory/lmb_bram'
-Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 1281.402 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 2730 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
+Netlist sorting complete. Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1282.289 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 2895 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-479] Netlist was created with Vivado 2022.1
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Chipscope 16-324] Core: hdmi_i/ila_1 UUID: 62441470-a4b6-5d52-84a6-a1c2cd57a9e3 
@@ -175,7 +177,7 @@ Finished Parsing XDC File [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroy
 Parsing XDC File [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/ip/hdmi_mdm_1_0/hdmi_mdm_1_0.xdc] for cell 'hdmi_i/mdm_1/U0'
 INFO: [Timing 38-35] Done setting XDC timing constraints. [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/ip/hdmi_mdm_1_0/hdmi_mdm_1_0.xdc:50]
 INFO: [Timing 38-2] Deriving generated clocks [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/ip/hdmi_mdm_1_0/hdmi_mdm_1_0.xdc:50]
-get_clocks: Time (s): cpu = 00:00:14 ; elapsed = 00:00:12 . Memory (MB): peak = 2059.531 ; gain = 516.887
+get_clocks: Time (s): cpu = 00:00:14 ; elapsed = 00:00:12 . Memory (MB): peak = 2076.090 ; gain = 520.879
 Finished Parsing XDC File [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/ip/hdmi_mdm_1_0/hdmi_mdm_1_0.xdc] for cell 'hdmi_i/mdm_1/U0'
 Parsing XDC File [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/ip/hdmi_microblaze_0_axi_intc_0/hdmi_microblaze_0_axi_intc_0_clocks.xdc] for cell 'hdmi_i/microblaze_0_axi_intc/U0'
 Finished Parsing XDC File [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/ip/hdmi_microblaze_0_axi_intc_0/hdmi_microblaze_0_axi_intc_0_clocks.xdc] for cell 'hdmi_i/microblaze_0_axi_intc/U0'
@@ -190,7 +192,7 @@ INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
 Generating merged BMM file for the design top 'hdmi_wrapper'...
 INFO: [Memdata 28-144] Successfully populated the BRAM INIT strings from the following elf files: c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/ip/hdmi_microblaze_0_0/data/mb_bootloop_le.elf 
 INFO: [Project 1-1687] 28 scoped IP constraints or related sub-commands were skipped due to synthesis logic optimizations usually triggered by constant connectivity or unconnected output pins. To review the skipped constraints and messages, run the command 'set_param netlist.IPMsgFiltering false' before opening the design.
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.038 . Memory (MB): peak = 2059.531 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.038 . Memory (MB): peak = 2076.188 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 861 instances were transformed.
   CFGLUT5 => CFGLUT5 (SRL16E, SRLC32E): 56 instances
@@ -204,9 +206,9 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 164 instances
   RAM32X1D => RAM32X1D (RAMD32(x2)): 12 instances
 
-60 Infos, 24 Warnings, 2 Critical Warnings and 0 Errors encountered.
+62 Infos, 24 Warnings, 2 Critical Warnings and 0 Errors encountered.
 link_design completed successfully
-link_design: Time (s): cpu = 00:00:49 ; elapsed = 00:00:50 . Memory (MB): peak = 2059.531 ; gain = 778.129
+link_design: Time (s): cpu = 00:00:50 ; elapsed = 00:00:51 . Memory (MB): peak = 2076.188 ; gain = 793.898
 Command: opt_design -directive Explore
 INFO: [Vivado_Tcl 4-136] Directive used for opt_design is: Explore
 Attempting to get a license for feature 'Implementation' and/or device 'xc7a200t'
@@ -218,7 +220,7 @@ INFO: [DRC 23-27] Running DRC with 2 threads
 INFO: [Project 1-461] DRC finished with 0 Errors
 INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2059.531 ; gain = 0.000
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 2076.188 ; gain = 0.000
 
 Starting Logic Optimization Task
 
@@ -226,10 +228,10 @@ Phase 1 Generate And Synthesize Debug Cores
 INFO: [Chipscope 16-329] Generating Script for core instance : dbg_hub 
 INFO: [IP_Flow 19-3806] Processing IP xilinx.com:ip:xsdbm:3.0 for cell dbg_hub_CV.
 INFO: [Chipscope 16-469] Using cached IP synthesis design for IP xilinx.com:ip:xsdbm:3.0, cache-ID = b6a3a851d369aadb.
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.086 . Memory (MB): peak = 2383.062 ; gain = 0.000
-Phase 1 Generate And Synthesize Debug Cores | Checksum: 16e5317ce
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.090 . Memory (MB): peak = 2397.887 ; gain = 0.000
+Phase 1 Generate And Synthesize Debug Cores | Checksum: 1540d86ce
 
-Time (s): cpu = 00:00:07 ; elapsed = 00:00:21 . Memory (MB): peak = 2383.062 ; gain = 116.793
+Time (s): cpu = 00:00:08 ; elapsed = 00:00:22 . Memory (MB): peak = 2397.887 ; gain = 122.816
 
 Phase 2 Retarget
 INFO: [Opt 31-1287] Pulled Inverter hdmi_i/axi_mem_intercon/m00_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.USE_SPLIT.write_resp_inst/first_mi_word_i_2 into driver instance hdmi_i/axi_mem_intercon/m00_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.USE_SPLIT.write_resp_inst/s_axi_bvalid_INST_0_i_1, which resulted in an inversion of 5 pins
@@ -282,46 +284,46 @@ INFO: [Opt 31-1287] Pulled Inverter hdmi_i/rgb2dvi_0/U0/DataEncoders[2].DataEnco
 INFO: [Opt 31-1287] Pulled Inverter hdmi_i/rgb2dvi_0/U0/DataEncoders[2].DataEncoder/q_m_2[7]_i_1 into driver instance hdmi_i/rgb2dvi_0/U0/DataEncoders[2].DataEncoder/q_m_2[7]_i_2__1, which resulted in an inversion of 8 pins
 INFO: [Opt 31-138] Pushed 13 inverter(s) to 18 load pin(s).
 INFO: [Opt 31-49] Retargeted 0 cell(s).
-Phase 2 Retarget | Checksum: 19014f2fa
+Phase 2 Retarget | Checksum: 210a9a91c
 
-Time (s): cpu = 00:00:13 ; elapsed = 00:00:25 . Memory (MB): peak = 2383.062 ; gain = 116.793
+Time (s): cpu = 00:00:15 ; elapsed = 00:00:26 . Memory (MB): peak = 2397.887 ; gain = 122.816
 INFO: [Opt 31-389] Phase Retarget created 651 cells and removed 981 cells
 INFO: [Opt 31-1021] In phase Retarget, 254 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
 
 Phase 3 Constant propagation
 INFO: [Opt 31-138] Pushed 22 inverter(s) to 59 load pin(s).
-Phase 3 Constant propagation | Checksum: 1b15217e9
+Phase 3 Constant propagation | Checksum: 23094ae8d
 
-Time (s): cpu = 00:00:14 ; elapsed = 00:00:27 . Memory (MB): peak = 2383.062 ; gain = 116.793
+Time (s): cpu = 00:00:16 ; elapsed = 00:00:28 . Memory (MB): peak = 2397.887 ; gain = 122.816
 INFO: [Opt 31-389] Phase Constant propagation created 1433 cells and removed 3348 cells
 INFO: [Opt 31-1021] In phase Constant propagation, 756 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
 
 Phase 4 Sweep
-Phase 4 Sweep | Checksum: 15c2261a7
+Phase 4 Sweep | Checksum: 15a10dc73
 
-Time (s): cpu = 00:00:17 ; elapsed = 00:00:29 . Memory (MB): peak = 2383.062 ; gain = 116.793
+Time (s): cpu = 00:00:19 ; elapsed = 00:00:30 . Memory (MB): peak = 2397.887 ; gain = 122.816
 INFO: [Opt 31-389] Phase Sweep created 0 cells and removed 2793 cells
 INFO: [Opt 31-1021] In phase Sweep, 1071 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
 
 Phase 5 BUFG optimization
 INFO: [Opt 31-194] Inserted BUFG hdmi_i/mdm_1/U0/Use_E2.BSCAN_I/Dbg_Update_0_BUFG_inst to drive 95 load(s) on clock net hdmi_i/mdm_1/U0/Use_E2.BSCAN_I/Dbg_Update_0_BUFG
 INFO: [Opt 31-193] Inserted 1 BUFG(s) on clock nets
-Phase 5 BUFG optimization | Checksum: cc140ca3
+Phase 5 BUFG optimization | Checksum: f1e81c90
 
-Time (s): cpu = 00:00:18 ; elapsed = 00:00:30 . Memory (MB): peak = 2383.062 ; gain = 116.793
+Time (s): cpu = 00:00:20 ; elapsed = 00:00:31 . Memory (MB): peak = 2397.887 ; gain = 122.816
 INFO: [Opt 31-662] Phase BUFG optimization created 1 cells of which 1 are BUFGs and removed 0 cells.
 
 Phase 6 Shift Register Optimization
 INFO: [Opt 31-1064] SRL Remap converted 0 SRLs to 0 registers and converted 0 registers of register chains to 0 SRLs
-Phase 6 Shift Register Optimization | Checksum: cc140ca3
+Phase 6 Shift Register Optimization | Checksum: f1e81c90
 
-Time (s): cpu = 00:00:18 ; elapsed = 00:00:30 . Memory (MB): peak = 2383.062 ; gain = 116.793
+Time (s): cpu = 00:00:20 ; elapsed = 00:00:31 . Memory (MB): peak = 2397.887 ; gain = 122.816
 INFO: [Opt 31-389] Phase Shift Register Optimization created 0 cells and removed 0 cells
 
 Phase 7 Post Processing Netlist
-Phase 7 Post Processing Netlist | Checksum: d558074c
+Phase 7 Post Processing Netlist | Checksum: 14804c706
 
-Time (s): cpu = 00:00:18 ; elapsed = 00:00:30 . Memory (MB): peak = 2383.062 ; gain = 116.793
+Time (s): cpu = 00:00:20 ; elapsed = 00:00:32 . Memory (MB): peak = 2397.887 ; gain = 122.816
 INFO: [Opt 31-389] Phase Post Processing Netlist created 0 cells and removed 0 cells
 INFO: [Opt 31-1021] In phase Post Processing Netlist, 91 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
 Opt_design Change Summary
@@ -343,35 +345,35 @@ Opt_design Change Summary
 
 Starting Connectivity Check Task
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.111 . Memory (MB): peak = 2383.062 ; gain = 0.000
-Ending Logic Optimization Task | Checksum: 16dd7746f
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.111 . Memory (MB): peak = 2397.887 ; gain = 0.000
+Ending Logic Optimization Task | Checksum: 1b5284fa0
 
-Time (s): cpu = 00:00:20 ; elapsed = 00:00:32 . Memory (MB): peak = 2383.062 ; gain = 116.793
+Time (s): cpu = 00:00:22 ; elapsed = 00:00:33 . Memory (MB): peak = 2397.887 ; gain = 122.816
 
 Starting Netlist Obfuscation Task
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.036 . Memory (MB): peak = 2383.062 ; gain = 0.000
-Ending Netlist Obfuscation Task | Checksum: 16dd7746f
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.037 . Memory (MB): peak = 2397.887 ; gain = 0.000
+Ending Netlist Obfuscation Task | Checksum: 1b5284fa0
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.045 . Memory (MB): peak = 2383.062 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.047 . Memory (MB): peak = 2397.887 ; gain = 0.000
 INFO: [Common 17-83] Releasing license: Implementation
-136 Infos, 24 Warnings, 2 Critical Warnings and 0 Errors encountered.
+138 Infos, 24 Warnings, 2 Critical Warnings and 0 Errors encountered.
 opt_design completed successfully
-opt_design: Time (s): cpu = 00:00:26 ; elapsed = 00:00:37 . Memory (MB): peak = 2383.062 ; gain = 323.531
+opt_design: Time (s): cpu = 00:00:27 ; elapsed = 00:00:38 . Memory (MB): peak = 2397.887 ; gain = 321.699
 INFO: [Timing 38-35] Done setting XDC timing constraints.
 INFO: [Timing 38-480] Writing timing data to binary archive.
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.060 . Memory (MB): peak = 2393.074 ; gain = 10.012
+Write XDEF Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.076 . Memory (MB): peak = 2414.355 ; gain = 15.020
 INFO: [Common 17-1381] The checkpoint 'C:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.runs/impl_1/hdmi_wrapper_opt.dcp' has been generated.
-write_checkpoint: Time (s): cpu = 00:00:16 ; elapsed = 00:00:11 . Memory (MB): peak = 2427.078 ; gain = 44.016
+write_checkpoint: Time (s): cpu = 00:00:16 ; elapsed = 00:00:12 . Memory (MB): peak = 2439.199 ; gain = 41.312
 INFO: [runtcl-4] Executing : report_drc -file hdmi_wrapper_drc_opted.rpt -pb hdmi_wrapper_drc_opted.pb -rpx hdmi_wrapper_drc_opted.rpx
 Command: report_drc -file hdmi_wrapper_drc_opted.rpt -pb hdmi_wrapper_drc_opted.pb -rpx hdmi_wrapper_drc_opted.rpx
 INFO: [IP_Flow 19-1839] IP Catalog is up to date.
 INFO: [DRC 23-27] Running DRC with 2 threads
 INFO: [Vivado_Tcl 2-168] The results of DRC are in file C:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.runs/impl_1/hdmi_wrapper_drc_opted.rpt.
 report_drc completed successfully
-report_drc: Time (s): cpu = 00:00:17 ; elapsed = 00:00:10 . Memory (MB): peak = 2511.113 ; gain = 84.035
+report_drc: Time (s): cpu = 00:00:18 ; elapsed = 00:00:10 . Memory (MB): peak = 2535.309 ; gain = 96.109
 INFO: [Chipscope 16-240] Debug cores have already been implemented
 Command: place_design -directive Explore
 Attempting to get a license for feature 'Implementation' and/or device 'xc7a200t'
@@ -391,53 +393,53 @@ INFO: [Place 30-611] Multithreading enabled for place_design using a maximum of 
 Phase 1 Placer Initialization
 
 Phase 1.1 Placer Initialization Netlist Sorting
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.037 . Memory (MB): peak = 2516.949 ; gain = 0.000
-Phase 1.1 Placer Initialization Netlist Sorting | Checksum: a786d229
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.037 . Memory (MB): peak = 2536.250 ; gain = 0.000
+Phase 1.1 Placer Initialization Netlist Sorting | Checksum: 1187f4b14
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.071 . Memory (MB): peak = 2516.949 ; gain = 0.000
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.037 . Memory (MB): peak = 2516.949 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.057 . Memory (MB): peak = 2536.250 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.035 . Memory (MB): peak = 2536.250 ; gain = 0.000
 
 Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device
-Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: 16c8dce00
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: 1dad93a6
 
-Time (s): cpu = 00:00:11 ; elapsed = 00:00:08 . Memory (MB): peak = 2516.949 ; gain = 0.000
+Time (s): cpu = 00:00:11 ; elapsed = 00:00:08 . Memory (MB): peak = 2536.250 ; gain = 0.000
 
 Phase 1.3 Build Placer Netlist Model
-Phase 1.3 Build Placer Netlist Model | Checksum: 14152aebf
+Phase 1.3 Build Placer Netlist Model | Checksum: fe3b04ba
 
-Time (s): cpu = 00:00:28 ; elapsed = 00:00:20 . Memory (MB): peak = 2718.086 ; gain = 201.137
+Time (s): cpu = 00:00:28 ; elapsed = 00:00:20 . Memory (MB): peak = 2740.066 ; gain = 203.816
 
 Phase 1.4 Constrain Clocks/Macros
-Phase 1.4 Constrain Clocks/Macros | Checksum: 14152aebf
+Phase 1.4 Constrain Clocks/Macros | Checksum: fe3b04ba
 
-Time (s): cpu = 00:00:28 ; elapsed = 00:00:20 . Memory (MB): peak = 2718.086 ; gain = 201.137
-Phase 1 Placer Initialization | Checksum: 14152aebf
+Time (s): cpu = 00:00:28 ; elapsed = 00:00:21 . Memory (MB): peak = 2740.066 ; gain = 203.816
+Phase 1 Placer Initialization | Checksum: fe3b04ba
 
-Time (s): cpu = 00:00:28 ; elapsed = 00:00:20 . Memory (MB): peak = 2718.086 ; gain = 201.137
+Time (s): cpu = 00:00:28 ; elapsed = 00:00:21 . Memory (MB): peak = 2740.066 ; gain = 203.816
 
 Phase 2 Global Placement
 
 Phase 2.1 Floorplanning
-Phase 2.1 Floorplanning | Checksum: 19d4c1a7b
+Phase 2.1 Floorplanning | Checksum: d3fac90b
 
-Time (s): cpu = 00:00:34 ; elapsed = 00:00:24 . Memory (MB): peak = 2718.086 ; gain = 201.137
+Time (s): cpu = 00:00:34 ; elapsed = 00:00:24 . Memory (MB): peak = 2740.066 ; gain = 203.816
 
 Phase 2.2 Update Timing before SLR Path Opt
-Phase 2.2 Update Timing before SLR Path Opt | Checksum: 1e56f57fa
+Phase 2.2 Update Timing before SLR Path Opt | Checksum: 74b88f28
 
-Time (s): cpu = 00:00:38 ; elapsed = 00:00:26 . Memory (MB): peak = 2718.086 ; gain = 201.137
+Time (s): cpu = 00:00:38 ; elapsed = 00:00:27 . Memory (MB): peak = 2740.066 ; gain = 203.816
 
 Phase 2.3 Post-Processing in Floorplanning
-Phase 2.3 Post-Processing in Floorplanning | Checksum: 1e56f57fa
+Phase 2.3 Post-Processing in Floorplanning | Checksum: 74b88f28
 
-Time (s): cpu = 00:00:38 ; elapsed = 00:00:26 . Memory (MB): peak = 2718.086 ; gain = 201.137
+Time (s): cpu = 00:00:39 ; elapsed = 00:00:27 . Memory (MB): peak = 2740.066 ; gain = 203.816
 
 Phase 2.4 Global Placement Core
 
 Phase 2.4.1 Physical Synthesis In Placer
-INFO: [Physopt 32-1035] Found 3 LUTNM shape to break, 1972 LUT instances to create LUTNM shape
-INFO: [Physopt 32-1044] Break lutnm for timing: one critical 3, two critical 0, total 3, new lutff created 0
-INFO: [Physopt 32-1138] End 1 Pass. Optimized 875 nets or LUTs. Breaked 3 LUTs, combined 872 existing LUTs and moved 0 existing LUT
+INFO: [Physopt 32-1035] Found 2 LUTNM shape to break, 1979 LUT instances to create LUTNM shape
+INFO: [Physopt 32-1044] Break lutnm for timing: one critical 2, two critical 0, total 2, new lutff created 0
+INFO: [Physopt 32-1138] End 1 Pass. Optimized 872 nets or LUTs. Breaked 2 LUTs, combined 870 existing LUTs and moved 0 existing LUT
 INFO: [Physopt 32-65] No nets found for high-fanout optimization.
 INFO: [Physopt 32-232] Optimized 0 net. Created 0 new instance.
 INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
@@ -453,7 +455,7 @@ INFO: [Physopt 32-846] No candidate cells for URAM register optimization found i
 INFO: [Physopt 32-775] End 2 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
 INFO: [Physopt 32-949] No candidate nets found for dynamic/static region interface net replication
 INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.036 . Memory (MB): peak = 2721.523 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.037 . Memory (MB): peak = 2740.066 ; gain = 0.000
 
 Summary of Physical Synthesis Optimizations
 ============================================
@@ -462,7 +464,7 @@ Summary of Physical Synthesis Optimizations
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
 |  Optimization                                     |  Added Cells  |  Removed Cells  |  Optimized Cells/Nets  |  Dont Touch  |  Iterations  |  Elapsed   |
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
-|  LUT Combining                                    |            3  |            872  |                   875  |           0  |           1  |  00:00:01  |
+|  LUT Combining                                    |            2  |            870  |                   872  |           0  |           1  |  00:00:01  |
 |  Retime                                           |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
 |  Very High Fanout                                 |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
 |  DSP Register                                     |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
@@ -471,64 +473,64 @@ Summary of Physical Synthesis Optimizations
 |  BRAM Register                                    |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
 |  URAM Register                                    |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
 |  Dynamic/Static Region Interface Net Replication  |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
-|  Total                                            |            3  |            872  |                   875  |           0  |           9  |  00:00:02  |
+|  Total                                            |            2  |            870  |                   872  |           0  |           9  |  00:00:02  |
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
-Phase 2.4.1 Physical Synthesis In Placer | Checksum: 123b20f1a
+Phase 2.4.1 Physical Synthesis In Placer | Checksum: d9b673fd
 
-Time (s): cpu = 00:01:28 ; elapsed = 00:00:57 . Memory (MB): peak = 2721.523 ; gain = 204.574
-Phase 2.4 Global Placement Core | Checksum: 172187232
+Time (s): cpu = 00:01:32 ; elapsed = 00:01:00 . Memory (MB): peak = 2740.066 ; gain = 203.816
+Phase 2.4 Global Placement Core | Checksum: 1374df6d9
 
-Time (s): cpu = 00:01:34 ; elapsed = 00:01:01 . Memory (MB): peak = 2721.523 ; gain = 204.574
-Phase 2 Global Placement | Checksum: 172187232
+Time (s): cpu = 00:01:39 ; elapsed = 00:01:05 . Memory (MB): peak = 2740.066 ; gain = 203.816
+Phase 2 Global Placement | Checksum: 1374df6d9
 
-Time (s): cpu = 00:01:34 ; elapsed = 00:01:01 . Memory (MB): peak = 2721.523 ; gain = 204.574
+Time (s): cpu = 00:01:39 ; elapsed = 00:01:05 . Memory (MB): peak = 2740.066 ; gain = 203.816
 
 Phase 3 Detail Placement
 
 Phase 3.1 Commit Multi Column Macros
-Phase 3.1 Commit Multi Column Macros | Checksum: 11c9cef1a
+Phase 3.1 Commit Multi Column Macros | Checksum: 15b256da4
 
-Time (s): cpu = 00:01:39 ; elapsed = 00:01:03 . Memory (MB): peak = 2721.523 ; gain = 204.574
+Time (s): cpu = 00:01:44 ; elapsed = 00:01:08 . Memory (MB): peak = 2740.066 ; gain = 203.816
 
 Phase 3.2 Commit Most Macros & LUTRAMs
-Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: 185250b45
+Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: 16fef5bb5
 
-Time (s): cpu = 00:01:47 ; elapsed = 00:01:09 . Memory (MB): peak = 2721.523 ; gain = 204.574
+Time (s): cpu = 00:01:53 ; elapsed = 00:01:13 . Memory (MB): peak = 2740.066 ; gain = 203.816
 
 Phase 3.3 Area Swap Optimization
-Phase 3.3 Area Swap Optimization | Checksum: 1fe9d92d3
+Phase 3.3 Area Swap Optimization | Checksum: 1eb4a9fc4
 
-Time (s): cpu = 00:01:47 ; elapsed = 00:01:09 . Memory (MB): peak = 2721.523 ; gain = 204.574
+Time (s): cpu = 00:01:53 ; elapsed = 00:01:14 . Memory (MB): peak = 2740.066 ; gain = 203.816
 
 Phase 3.4 Pipeline Register Optimization
-Phase 3.4 Pipeline Register Optimization | Checksum: 1a085d0e6
+Phase 3.4 Pipeline Register Optimization | Checksum: 1c2d7ccd3
 
-Time (s): cpu = 00:01:47 ; elapsed = 00:01:09 . Memory (MB): peak = 2721.523 ; gain = 204.574
+Time (s): cpu = 00:01:53 ; elapsed = 00:01:14 . Memory (MB): peak = 2740.066 ; gain = 203.816
 
 Phase 3.5 Fast Optimization
-Phase 3.5 Fast Optimization | Checksum: 110a6278f
+Phase 3.5 Fast Optimization | Checksum: 1d2488fca
 
-Time (s): cpu = 00:01:58 ; elapsed = 00:01:16 . Memory (MB): peak = 2721.523 ; gain = 204.574
+Time (s): cpu = 00:02:05 ; elapsed = 00:01:21 . Memory (MB): peak = 2740.066 ; gain = 203.816
 
 Phase 3.6 Small Shape Detail Placement
-Phase 3.6 Small Shape Detail Placement | Checksum: 15808540b
+Phase 3.6 Small Shape Detail Placement | Checksum: 136bab0f1
 
-Time (s): cpu = 00:02:16 ; elapsed = 00:01:36 . Memory (MB): peak = 2721.523 ; gain = 204.574
+Time (s): cpu = 00:02:23 ; elapsed = 00:01:41 . Memory (MB): peak = 2740.066 ; gain = 203.816
 
 Phase 3.7 Re-assign LUT pins
-Phase 3.7 Re-assign LUT pins | Checksum: 162312037
+Phase 3.7 Re-assign LUT pins | Checksum: 186382b12
 
-Time (s): cpu = 00:02:18 ; elapsed = 00:01:39 . Memory (MB): peak = 2721.523 ; gain = 204.574
+Time (s): cpu = 00:02:25 ; elapsed = 00:01:44 . Memory (MB): peak = 2740.066 ; gain = 203.816
 
 Phase 3.8 Pipeline Register Optimization
-Phase 3.8 Pipeline Register Optimization | Checksum: 15c6cfd36
+Phase 3.8 Pipeline Register Optimization | Checksum: f2db5670
 
-Time (s): cpu = 00:02:19 ; elapsed = 00:01:40 . Memory (MB): peak = 2721.523 ; gain = 204.574
-Phase 3 Detail Placement | Checksum: 15c6cfd36
+Time (s): cpu = 00:02:26 ; elapsed = 00:01:44 . Memory (MB): peak = 2740.066 ; gain = 203.816
+Phase 3 Detail Placement | Checksum: f2db5670
 
-Time (s): cpu = 00:02:19 ; elapsed = 00:01:40 . Memory (MB): peak = 2721.523 ; gain = 204.574
+Time (s): cpu = 00:02:26 ; elapsed = 00:01:45 . Memory (MB): peak = 2740.066 ; gain = 203.816
 
 Phase 4 Post Placement Optimization and Clean-Up
 
@@ -536,7 +538,7 @@ Phase 4.1 Post Commit Optimization
 INFO: [Timing 38-35] Done setting XDC timing constraints.
 
 Phase 4.1.1 Post Placement Optimization
-Post Placement Optimization Initialization | Checksum: 1ace73ef7
+Post Placement Optimization Initialization | Checksum: 159cd3d4b
 
 Phase 4.1.1.1 BUFG Insertion
 
@@ -544,35 +546,35 @@ Starting Physical Synthesis Task
 
 Phase 1 Physical Synthesis Initialization
 INFO: [Physopt 32-721] Multithreading enabled for phys_opt_design using a maximum of 2 CPUs
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.613 | TNS=-6.292 |
-Phase 1 Physical Synthesis Initialization | Checksum: 1bf8d7257
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.567 | TNS=-6.049 |
+Phase 1 Physical Synthesis Initialization | Checksum: 1acaf0c6e
 
-Time (s): cpu = 00:00:05 ; elapsed = 00:00:03 . Memory (MB): peak = 2761.234 ; gain = 0.000
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:03 . Memory (MB): peak = 2780.820 ; gain = 0.000
 INFO: [Place 46-33] Processed net hdmi_i/microblaze_0/U0/MicroBlaze_Core_I/sync_reset, BUFG insertion was skipped due to placement/routing conflicts.
 INFO: [Place 46-33] Processed net hdmi_i/v_tc_0/U0/U_VIDEO_CTRL/GEN_HAS_IRQ.irq_i_1_n_0, BUFG insertion was skipped due to placement/routing conflicts.
 INFO: [Place 46-56] BUFG insertion identified 2 candidate nets. Inserted BUFG: 0, Replicated BUFG Driver: 0, Skipped due to Placement/Routing Conflicts: 2, Skipped due to Timing Degradation: 0, Skipped due to Illegal Netlist: 0.
-Ending Physical Synthesis Task | Checksum: 2443cc849
+Ending Physical Synthesis Task | Checksum: 17d36b958
 
-Time (s): cpu = 00:00:07 ; elapsed = 00:00:04 . Memory (MB): peak = 2761.234 ; gain = 0.000
-Phase 4.1.1.1 BUFG Insertion | Checksum: 1ace73ef7
+Time (s): cpu = 00:00:08 ; elapsed = 00:00:05 . Memory (MB): peak = 2780.820 ; gain = 0.000
+Phase 4.1.1.1 BUFG Insertion | Checksum: 159cd3d4b
 
-Time (s): cpu = 00:02:44 ; elapsed = 00:01:56 . Memory (MB): peak = 2761.234 ; gain = 244.285
+Time (s): cpu = 00:02:53 ; elapsed = 00:02:02 . Memory (MB): peak = 2780.820 ; gain = 244.570
 
 Phase 4.1.1.2 Post Placement Timing Optimization
-INFO: [Place 30-746] Post Placement Timing Summary WNS=-0.058. For the most accurate timing information please run report_timing.
-Phase 4.1.1.2 Post Placement Timing Optimization | Checksum: 26772507f
+INFO: [Place 30-746] Post Placement Timing Summary WNS=0.028. For the most accurate timing information please run report_timing.
+Phase 4.1.1.2 Post Placement Timing Optimization | Checksum: 1e10c3aae
 
-Time (s): cpu = 00:03:42 ; elapsed = 00:02:49 . Memory (MB): peak = 2761.234 ; gain = 244.285
+Time (s): cpu = 00:03:42 ; elapsed = 00:02:46 . Memory (MB): peak = 2780.820 ; gain = 244.570
 
-Time (s): cpu = 00:03:42 ; elapsed = 00:02:49 . Memory (MB): peak = 2761.234 ; gain = 244.285
-Phase 4.1 Post Commit Optimization | Checksum: 26772507f
+Time (s): cpu = 00:03:42 ; elapsed = 00:02:46 . Memory (MB): peak = 2780.820 ; gain = 244.570
+Phase 4.1 Post Commit Optimization | Checksum: 1e10c3aae
 
-Time (s): cpu = 00:03:42 ; elapsed = 00:02:49 . Memory (MB): peak = 2761.234 ; gain = 244.285
+Time (s): cpu = 00:03:42 ; elapsed = 00:02:46 . Memory (MB): peak = 2780.820 ; gain = 244.570
 
 Phase 4.2 Post Placement Cleanup
-Phase 4.2 Post Placement Cleanup | Checksum: 26772507f
+Phase 4.2 Post Placement Cleanup | Checksum: 1e10c3aae
 
-Time (s): cpu = 00:03:43 ; elapsed = 00:02:49 . Memory (MB): peak = 2761.234 ; gain = 244.285
+Time (s): cpu = 00:03:43 ; elapsed = 00:02:46 . Memory (MB): peak = 2780.820 ; gain = 244.570
 
 Phase 4.3 Placer Reporting
 
@@ -582,356 +584,65 @@ INFO: [Place 30-612] Post-Placement Estimated Congestion
 |           | Global Congestion | Short Congestion  |
 | Direction | Region Size       | Region Size       |
 |___________|___________________|___________________|
-|      North|                1x1|                2x2|
+|      North|                1x1|                4x4|
 |___________|___________________|___________________|
 |      South|                1x1|                2x2|
 |___________|___________________|___________________|
-|       East|                1x1|                1x1|
+|       East|                1x1|                4x4|
 |___________|___________________|___________________|
 |       West|                1x1|                1x1|
 |___________|___________________|___________________|
 
-Phase 4.3.1 Print Estimated Congestion | Checksum: 26772507f
+Phase 4.3.1 Print Estimated Congestion | Checksum: 1e10c3aae
 
-Time (s): cpu = 00:03:43 ; elapsed = 00:02:50 . Memory (MB): peak = 2761.234 ; gain = 244.285
-Phase 4.3 Placer Reporting | Checksum: 26772507f
+Time (s): cpu = 00:03:43 ; elapsed = 00:02:47 . Memory (MB): peak = 2780.820 ; gain = 244.570
+Phase 4.3 Placer Reporting | Checksum: 1e10c3aae
 
-Time (s): cpu = 00:03:43 ; elapsed = 00:02:50 . Memory (MB): peak = 2761.234 ; gain = 244.285
+Time (s): cpu = 00:03:43 ; elapsed = 00:02:47 . Memory (MB): peak = 2780.820 ; gain = 244.570
 
 Phase 4.4 Final Placement Cleanup
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.040 . Memory (MB): peak = 2761.234 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.042 . Memory (MB): peak = 2780.820 ; gain = 0.000
 
-Time (s): cpu = 00:03:43 ; elapsed = 00:02:50 . Memory (MB): peak = 2761.234 ; gain = 244.285
-Phase 4 Post Placement Optimization and Clean-Up | Checksum: 222876d3c
+Time (s): cpu = 00:03:44 ; elapsed = 00:02:47 . Memory (MB): peak = 2780.820 ; gain = 244.570
+Phase 4 Post Placement Optimization and Clean-Up | Checksum: 1dd64332c
 
-Time (s): cpu = 00:03:44 ; elapsed = 00:02:50 . Memory (MB): peak = 2761.234 ; gain = 244.285
-Ending Placer Task | Checksum: 17df1f7af
+Time (s): cpu = 00:03:44 ; elapsed = 00:02:47 . Memory (MB): peak = 2780.820 ; gain = 244.570
+Ending Placer Task | Checksum: 1905efab8
 
-Time (s): cpu = 00:03:44 ; elapsed = 00:02:50 . Memory (MB): peak = 2761.234 ; gain = 244.285
+Time (s): cpu = 00:03:44 ; elapsed = 00:02:47 . Memory (MB): peak = 2780.820 ; gain = 244.570
 INFO: [Common 17-83] Releasing license: Implementation
-180 Infos, 24 Warnings, 2 Critical Warnings and 0 Errors encountered.
+182 Infos, 24 Warnings, 2 Critical Warnings and 0 Errors encountered.
 place_design completed successfully
-place_design: Time (s): cpu = 00:03:48 ; elapsed = 00:02:53 . Memory (MB): peak = 2761.234 ; gain = 250.121
+place_design: Time (s): cpu = 00:03:49 ; elapsed = 00:02:50 . Memory (MB): peak = 2780.820 ; gain = 245.512
 INFO: [Timing 38-480] Writing timing data to binary archive.
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:13 ; elapsed = 00:00:04 . Memory (MB): peak = 2761.234 ; gain = 0.000
+Write XDEF Complete: Time (s): cpu = 00:00:13 ; elapsed = 00:00:05 . Memory (MB): peak = 2780.820 ; gain = 0.000
 INFO: [Common 17-1381] The checkpoint 'C:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.runs/impl_1/hdmi_wrapper_placed.dcp' has been generated.
-write_checkpoint: Time (s): cpu = 00:00:21 ; elapsed = 00:00:14 . Memory (MB): peak = 2761.234 ; gain = 0.000
+write_checkpoint: Time (s): cpu = 00:00:22 ; elapsed = 00:00:14 . Memory (MB): peak = 2780.820 ; gain = 0.000
 INFO: [runtcl-4] Executing : report_io -file hdmi_wrapper_io_placed.rpt
-report_io: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.098 . Memory (MB): peak = 2761.234 ; gain = 0.000
+report_io: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.101 . Memory (MB): peak = 2780.820 ; gain = 0.000
 INFO: [runtcl-4] Executing : report_utilization -file hdmi_wrapper_utilization_placed.rpt -pb hdmi_wrapper_utilization_placed.pb
 INFO: [runtcl-4] Executing : report_control_sets -verbose -file hdmi_wrapper_control_sets_placed.rpt
-report_control_sets: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.209 . Memory (MB): peak = 2761.234 ; gain = 0.000
+report_control_sets: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.214 . Memory (MB): peak = 2780.820 ; gain = 0.000
 Command: phys_opt_design -directive Explore
 Attempting to get a license for feature 'Implementation' and/or device 'xc7a200t'
 INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a200t'
 INFO: [Vivado_Tcl 4-137] Directive used for phys_opt_design is: Explore
-INFO: [Vivado_Tcl 4-1435] PhysOpt_Tcl_Interface Runtime Before Starting Physical Synthesis Task | CPU: 16.00s |  WALL: 9.15s
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.035 . Memory (MB): peak = 2761.234 ; gain = 0.000
-
-Starting Physical Synthesis Task
-
-Phase 1 Physical Synthesis Initialization
-INFO: [Physopt 32-721] Multithreading enabled for phys_opt_design using a maximum of 2 CPUs
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.058 | TNS=-0.058 |
-Phase 1 Physical Synthesis Initialization | Checksum: 1784e110c
-
-Time (s): cpu = 00:00:09 ; elapsed = 00:00:04 . Memory (MB): peak = 2780.141 ; gain = 18.906
-
-Phase 2 SLR Crossing Optimization
-Phase 2 SLR Crossing Optimization | Checksum: 1784e110c
-
-Time (s): cpu = 00:00:09 ; elapsed = 00:00:05 . Memory (MB): peak = 2780.141 ; gain = 18.906
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.058 | TNS=-0.058 |
-
-Phase 3 Fanout Optimization
-INFO: [Physopt 32-64] No nets found for fanout-optimization.
-INFO: [Physopt 32-232] Optimized 0 net. Created 0 new instance.
-INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
-Phase 3 Fanout Optimization | Checksum: 1784e110c
-
-Time (s): cpu = 00:00:11 ; elapsed = 00:00:06 . Memory (MB): peak = 2780.141 ; gain = 18.906
-
-Phase 4 Single Cell Placement Optimization
-INFO: [Physopt 32-660] Identified 46 candidate nets for placement-based optimization.
-INFO: [Physopt 32-662] Processed net hdmi_i/microblaze_0/U0/MicroBlaze_Core_I/Performance.Core/Decode_I/Use_MuxCy[3].OF_Piperun_Stage/MUXCY_I/ex_start_fpu_i_reg.  Did not re-place instance hdmi_i/microblaze_0/U0/MicroBlaze_Core_I/Performance.Core/Decode_I/Use_MuxCy[3].OF_Piperun_Stage/MUXCY_I/mem_D[1]_i_1
-INFO: [Physopt 32-663] Processed net hdmi_i/microblaze_0/U0/MicroBlaze_Core_I/Performance.Core/Decode_I/MEM_DataBus_Addr_reg[0]_0[16].  Re-placed instance hdmi_i/microblaze_0/U0/MicroBlaze_Core_I/Performance.Core/Decode_I/MEM_DataBus_Addr_reg[15]
-INFO: [Physopt 32-663] Processed net hdmi_i/microblaze_0/U0/MicroBlaze_Core_I/Performance.Core/Decode_I/Use_MuxCy[3].OF_Piperun_Stage/MUXCY_I/EX_FPU_Op_reg[22]_1.  Re-placed instance hdmi_i/microblaze_0/U0/MicroBlaze_Core_I/Performance.Core/Decode_I/Use_MuxCy[3].OF_Piperun_Stage/MUXCY_I/D_Reg[23]_i_2
-INFO: [Physopt 32-663] Processed net hdmi_i/microblaze_0/U0/MicroBlaze_Core_I/Performance.Core/Data_Flow_I/FPU_I/Use_FPU.Using_FPU_Extended.fpu_sqrt_I1/AddSub_Gen[0].MUXCY_XOR_I/Using_FPGA.Native_I2_0.  Re-placed instance hdmi_i/microblaze_0/U0/MicroBlaze_Core_I/Performance.Core/Data_Flow_I/FPU_I/Use_FPU.Using_FPU_Extended.fpu_sqrt_I1/AddSub_Gen[0].MUXCY_XOR_I/subtract_i_1
-INFO: [Physopt 32-662] Processed net hdmi_i/microblaze_0/U0/MicroBlaze_Core_I/Performance.Core/Decode_I/MEM_DataBus_Addr_reg[6]_0[0].  Did not re-place instance hdmi_i/microblaze_0/U0/MicroBlaze_Core_I/Performance.Core/Decode_I/DI0_carry_i_4
-INFO: [Physopt 32-663] Processed net hdmi_i/microblaze_0/U0/MicroBlaze_Core_I/Performance.Core/Using_DCache.Using_WriteBack.DCache_wb_I1/cachehit_detect_I1/Using_Perf_2.tag_hit_carry/valid_data_tag_hit_conflict.  Re-placed instance hdmi_i/microblaze_0/U0/MicroBlaze_Core_I/Performance.Core/Using_DCache.Using_WriteBack.DCache_wb_I1/cachehit_detect_I1/Using_Perf_2.tag_hit_carry/Using_FPGA.Native_i_1__166
-INFO: [Physopt 32-662] Processed net hdmi_i/microblaze_0/U0/MicroBlaze_Core_I/Performance.Core/Data_Flow_I/FPU_I/Use_FPU.Using_FPU_Extended.fpu_sqrt_I1/subtract_reg_n_0.  Did not re-place instance hdmi_i/microblaze_0/U0/MicroBlaze_Core_I/Performance.Core/Data_Flow_I/FPU_I/Use_FPU.Using_FPU_Extended.fpu_sqrt_I1/subtract_reg
-INFO: [Physopt 32-662] Processed net hdmi_i/microblaze_0/U0/MicroBlaze_Core_I/Performance.Core/Decode_I/MEM_DataBus_Addr_reg[0]_0[24].  Did not re-place instance hdmi_i/microblaze_0/U0/MicroBlaze_Core_I/Performance.Core/Decode_I/MEM_DataBus_Addr_reg[7]
-INFO: [Physopt 32-662] Processed net hdmi_i/microblaze_0/U0/MicroBlaze_Core_I/Performance.Core/Decode_I/MEM_DataBus_Addr_reg[6]_0[3].  Did not re-place instance hdmi_i/microblaze_0/U0/MicroBlaze_Core_I/Performance.Core/Decode_I/DI0_carry_i_1
-INFO: [Physopt 32-662] Processed net hdmi_i/microblaze_0/U0/MicroBlaze_Core_I/Performance.Core/Decode_I/MEM_DataBus_Addr_reg[0]_0[19].  Did not re-place instance hdmi_i/microblaze_0/U0/MicroBlaze_Core_I/Performance.Core/Decode_I/MEM_DataBus_Addr_reg[12]
-INFO: [Physopt 32-662] Processed net hdmi_i/microblaze_0/U0/MicroBlaze_Core_I/Performance.Core/Decode_I/MEM_DataBus_Addr_reg[6]_0[1].  Did not re-place instance hdmi_i/microblaze_0/U0/MicroBlaze_Core_I/Performance.Core/Decode_I/DI0_carry_i_3
-INFO: [Physopt 32-662] Processed net hdmi_i/microblaze_0/U0/MicroBlaze_Core_I/Performance.Core/Decode_I/MEM_DataBus_Addr_reg[0]_0[22].  Did not re-place instance hdmi_i/microblaze_0/U0/MicroBlaze_Core_I/Performance.Core/Decode_I/MEM_DataBus_Addr_reg[9]
-INFO: [Physopt 32-662] Processed net hdmi_i/microblaze_0/U0/MicroBlaze_Core_I/Performance.Core/Decode_I/MEM_DataBus_Addr_reg[6]_0[2].  Did not re-place instance hdmi_i/microblaze_0/U0/MicroBlaze_Core_I/Performance.Core/Decode_I/DI0_carry_i_2
-INFO: [Physopt 32-662] Processed net hdmi_i/microblaze_0/U0/MicroBlaze_Core_I/Performance.Core/Decode_I/MEM_DataBus_Addr_reg[0]_0[20].  Did not re-place instance hdmi_i/microblaze_0/U0/MicroBlaze_Core_I/Performance.Core/Decode_I/MEM_DataBus_Addr_reg[11]
-INFO: [Physopt 32-662] Processed net hdmi_i/microblaze_0/U0/MicroBlaze_Core_I/Performance.Core/Using_ICache.ICache_I1/Using_Victim_Cache.victim_cache_I1/Using_Stream.clear_stream_cache_fetch.  Did not re-place instance hdmi_i/microblaze_0/U0/MicroBlaze_Core_I/Performance.Core/Using_ICache.ICache_I1/Using_Victim_Cache.victim_cache_I1/Using_FPGA.Native_I1_i_2__4
-INFO: [Physopt 32-662] Processed net hdmi_i/microblaze_0/U0/MicroBlaze_Core_I/Performance.Core/Using_ICache.ICache_I1/Using_FPGA_FSL_1.tag_hit_comparator/Comp_Carry_Chain[4].MUXCY_I/Using_FPGA.Native_1.  Did not re-place instance hdmi_i/microblaze_0/U0/MicroBlaze_Core_I/Performance.Core/Using_ICache.ICache_I1/Using_FPGA_FSL_1.tag_hit_comparator/Comp_Carry_Chain[4].MUXCY_I/req_Addr[3]_i_1
-INFO: [Physopt 32-663] Processed net hdmi_i/microblaze_0/U0/MicroBlaze_Core_I/Performance.Core/Using_ICache.ICache_I1/Using_Victim_Cache.victim_cache_I1/cache_req_raw.  Re-placed instance hdmi_i/microblaze_0/U0/MicroBlaze_Core_I/Performance.Core/Using_ICache.ICache_I1/Using_Victim_Cache.victim_cache_I1/Using_Stream.stream_req_1st_cycle_i_2
-INFO: [Physopt 32-662] Processed net hdmi_i/microblaze_0/U0/MicroBlaze_Core_I/Performance.Core/Using_ICache.ICache_I1/Using_Victim_Cache.victim_cache_I1/Using_Stream.clear_stream_cache_hold_reg.  Did not re-place instance hdmi_i/microblaze_0/U0/MicroBlaze_Core_I/Performance.Core/Using_ICache.ICache_I1/Using_Victim_Cache.victim_cache_I1/Using_FPGA.Native_i_4__40
-INFO: [Physopt 32-662] Processed net hdmi_i/microblaze_0/U0/MicroBlaze_Core_I/Performance.Core/Using_ICache.ICache_I1/Tag_RAM_Module/Not_Using_XPM.Using_B36_S36.The_BRAMs[0].RAMB36_I1/S.  Did not re-place instance hdmi_i/microblaze_0/U0/MicroBlaze_Core_I/Performance.Core/Using_ICache.ICache_I1/Tag_RAM_Module/Not_Using_XPM.Using_B36_S36.The_BRAMs[0].RAMB36_I1/Using_FPGA.Native_i_1__225
-INFO: [Physopt 32-662] Processed net hdmi_i/microblaze_0/U0/MicroBlaze_Core_I/Performance.Core/Using_ICache.ICache_I1/Using_Victim_Cache.victim_cache_I1/CI.  Did not re-place instance hdmi_i/microblaze_0/U0/MicroBlaze_Core_I/Performance.Core/Using_ICache.ICache_I1/Using_Victim_Cache.victim_cache_I1/Using_FPGA.Native_I1_i_2__3
-INFO: [Physopt 32-662] Processed net hdmi_i/microblaze_0/U0/MicroBlaze_Core_I/Performance.Core/Using_ICache.ICache_I1/Using_Stream.stream_cache_I1/Q[21].  Did not re-place instance hdmi_i/microblaze_0/U0/MicroBlaze_Core_I/Performance.Core/Using_ICache.ICache_I1/Using_Stream.stream_cache_I1/stream_addr_reg[2]
-INFO: [Physopt 32-662] Processed net hdmi_i/microblaze_0/U0/MicroBlaze_Core_I/Performance.Core/Using_ICache.ICache_I1/Using_Stream.stream_cache_I1/Q[23].  Did not re-place instance hdmi_i/microblaze_0/U0/MicroBlaze_Core_I/Performance.Core/Using_ICache.ICache_I1/Using_Stream.stream_cache_I1/stream_addr_reg[0]
-INFO: [Physopt 32-662] Processed net hdmi_i/microblaze_0/U0/MicroBlaze_Core_I/Performance.Core/Decode_I/MEM_DataBus_Addr_reg[0]_0[3].  Did not re-place instance hdmi_i/microblaze_0/U0/MicroBlaze_Core_I/Performance.Core/Decode_I/MEM_DataBus_Addr_reg[28]
-INFO: [Physopt 32-662] Processed net hdmi_i/microblaze_0/U0/MicroBlaze_Core_I/Performance.Core/Decode_I/MEM_DataBus_Addr_reg[27]_0.  Did not re-place instance hdmi_i/microblaze_0/U0/MicroBlaze_Core_I/Performance.Core/Decode_I/Using_FPGA.Native_i_2__136
-INFO: [Physopt 32-662] Processed net hdmi_i/microblaze_0/U0/MicroBlaze_Core_I/Performance.Core/Using_DCache.Using_WriteBack.DCache_wb_I1/cachehit_detect_I1/Using_Perf_1.valid_data_carry/Using_Perf_2.saved_new_tag_bits_reg[1].  Did not re-place instance hdmi_i/microblaze_0/U0/MicroBlaze_Core_I/Performance.Core/Using_DCache.Using_WriteBack.DCache_wb_I1/cachehit_detect_I1/Using_Perf_1.valid_data_carry/Using_FPGA.Native_i_3__52
-INFO: [Physopt 32-662] Processed net hdmi_i/microblaze_0/U0/MicroBlaze_Core_I/Performance.Core/Using_ICache.ICache_I1/Tag_RAM_Module/Not_Using_XPM.Using_B36_S36.The_BRAMs[0].RAMB36_I1/Comp_Carry_Chain[2].carry_sel_reg.  Did not re-place instance hdmi_i/microblaze_0/U0/MicroBlaze_Core_I/Performance.Core/Using_ICache.ICache_I1/Tag_RAM_Module/Not_Using_XPM.Using_B36_S36.The_BRAMs[0].RAMB36_I1/Using_FPGA.Native_i_1__223
-INFO: [Physopt 32-662] Processed net hdmi_i/microblaze_0/U0/MicroBlaze_Core_I/Performance.Core/Using_DCache.Using_WriteBack.DCache_wb_I1/Saved_Valid_Data_Bits[3].  Did not re-place instance hdmi_i/microblaze_0/U0/MicroBlaze_Core_I/Performance.Core/Using_DCache.Using_WriteBack.DCache_wb_I1/Using_Perf_2.saved_new_tag_bits_reg[3]
-INFO: [Physopt 32-662] Processed net hdmi_i/microblaze_0/U0/MicroBlaze_Core_I/Performance.Core/Using_ICache.ICache_I1/Using_Stream.stream_cache_I1/Q[22].  Did not re-place instance hdmi_i/microblaze_0/U0/MicroBlaze_Core_I/Performance.Core/Using_ICache.ICache_I1/Using_Stream.stream_cache_I1/stream_addr_reg[1]
-INFO: [Physopt 32-662] Processed net hdmi_i/microblaze_0/U0/MicroBlaze_Core_I/Performance.Core/Decode_I/MEM_DataBus_Addr_reg[0]_0[26].  Did not re-place instance hdmi_i/microblaze_0/U0/MicroBlaze_Core_I/Performance.Core/Decode_I/MEM_DataBus_Addr_reg[5]
-INFO: [Physopt 32-662] Processed net hdmi_i/microblaze_0/U0/MicroBlaze_Core_I/Performance.Core/Using_DCache.Using_WriteBack.DCache_wb_I1/Saved_Valid_Data_Bits[2].  Did not re-place instance hdmi_i/microblaze_0/U0/MicroBlaze_Core_I/Performance.Core/Using_DCache.Using_WriteBack.DCache_wb_I1/Using_Perf_2.saved_new_tag_bits_reg[2]
-INFO: [Physopt 32-662] Processed net hdmi_i/microblaze_0/U0/MicroBlaze_Core_I/Performance.Core/Decode_I/MEM_DataBus_Addr_reg[0]_0[18].  Did not re-place instance hdmi_i/microblaze_0/U0/MicroBlaze_Core_I/Performance.Core/Decode_I/MEM_DataBus_Addr_reg[13]
-INFO: [Physopt 32-662] Processed net hdmi_i/microblaze_0/U0/MicroBlaze_Core_I/Performance.Core/Decode_I/MEM_DataBus_Addr_reg[0]_0[23].  Did not re-place instance hdmi_i/microblaze_0/U0/MicroBlaze_Core_I/Performance.Core/Decode_I/MEM_DataBus_Addr_reg[8]
-INFO: [Physopt 32-662] Processed net hdmi_i/microblaze_0/U0/MicroBlaze_Core_I/Performance.Core/Using_ICache.ICache_I1/Using_Stream.stream_cache_I1/Q[20].  Did not re-place instance hdmi_i/microblaze_0/U0/MicroBlaze_Core_I/Performance.Core/Using_ICache.ICache_I1/Using_Stream.stream_cache_I1/stream_addr_reg[3]
-INFO: [Physopt 32-662] Processed net hdmi_i/microblaze_0/U0/MicroBlaze_Core_I/Performance.Core/Decode_I/MEM_DataBus_Addr_reg[0]_0[17].  Did not re-place instance hdmi_i/microblaze_0/U0/MicroBlaze_Core_I/Performance.Core/Decode_I/MEM_DataBus_Addr_reg[14]
-INFO: [Physopt 32-662] Processed net hdmi_i/microblaze_0/U0/MicroBlaze_Core_I/Performance.Core/Using_ICache.ICache_I1/Tag_RAM_Module/Not_Using_XPM.Using_B36_S36.The_BRAMs[0].RAMB36_I1/Comp_Carry_Chain[3].carry_sel_reg.  Did not re-place instance hdmi_i/microblaze_0/U0/MicroBlaze_Core_I/Performance.Core/Using_ICache.ICache_I1/Tag_RAM_Module/Not_Using_XPM.Using_B36_S36.The_BRAMs[0].RAMB36_I1/Using_FPGA.Native_i_1__222
-INFO: [Physopt 32-662] Processed net hdmi_i/microblaze_0/U0/MicroBlaze_Core_I/Performance.Core/Using_ICache.ICache_I1/Using_Stream.stream_cache_I1/Q[17].  Did not re-place instance hdmi_i/microblaze_0/U0/MicroBlaze_Core_I/Performance.Core/Using_ICache.ICache_I1/Using_Stream.stream_cache_I1/stream_addr_reg[6]
-INFO: [Physopt 32-662] Processed net hdmi_i/microblaze_0/U0/MicroBlaze_Core_I/Performance.Core/Using_ICache.ICache_I1/Using_Stream.stream_cache_I1/Q[19].  Did not re-place instance hdmi_i/microblaze_0/U0/MicroBlaze_Core_I/Performance.Core/Using_ICache.ICache_I1/Using_Stream.stream_cache_I1/stream_addr_reg[4]
-INFO: [Physopt 32-662] Processed net hdmi_i/microblaze_0/U0/MicroBlaze_Core_I/Performance.Core/Using_ICache.ICache_I1/Using_Victim_Cache.victim_cache_I1/Not_Using_TLBS.instr_Addr_1_reg[25].  Did not re-place instance hdmi_i/microblaze_0/U0/MicroBlaze_Core_I/Performance.Core/Using_ICache.ICache_I1/Using_Victim_Cache.victim_cache_I1/Using_FPGA.Native_I1_i_1__123
-INFO: [Physopt 32-662] Processed net hdmi_i/microblaze_0/U0/MicroBlaze_Core_I/Performance.Core/Using_ICache.ICache_I1/Using_Victim_Cache.victim_cache_I1/Not_Using_TLBS.instr_Addr_1_reg[26].  Did not re-place instance hdmi_i/microblaze_0/U0/MicroBlaze_Core_I/Performance.Core/Using_ICache.ICache_I1/Using_Victim_Cache.victim_cache_I1/Using_FPGA.Native_I1_i_1__167
-INFO: [Physopt 32-662] Processed net hdmi_i/microblaze_0/U0/MicroBlaze_Core_I/Performance.Core/Using_ICache.ICache_I1/Using_Stream.stream_cache_I1/next_stream_addr_reg[0]_0[21].  Did not re-place instance hdmi_i/microblaze_0/U0/MicroBlaze_Core_I/Performance.Core/Using_ICache.ICache_I1/Using_Stream.stream_cache_I1/next_stream_addr_reg[2]
-INFO: [Physopt 32-662] Processed net hdmi_i/microblaze_0/U0/MicroBlaze_Core_I/Performance.Core/Decode_I/MEM_DataBus_Addr_reg[0]_0[2].  Did not re-place instance hdmi_i/microblaze_0/U0/MicroBlaze_Core_I/Performance.Core/Decode_I/MEM_DataBus_Addr_reg[29]
-INFO: [Physopt 32-662] Processed net hdmi_i/microblaze_0/U0/MicroBlaze_Core_I/Performance.Core/Using_DCache.Using_WriteBack.DCache_wb_I1/Using_Perf_2.saved_new_tag_bits_reg[12]_0[1].  Did not re-place instance hdmi_i/microblaze_0/U0/MicroBlaze_Core_I/Performance.Core/Using_DCache.Using_WriteBack.DCache_wb_I1/Using_Perf_2.saved_new_tag_bits_reg[22]
-INFO: [Physopt 32-662] Processed net hdmi_i/microblaze_0/U0/MicroBlaze_Core_I/Performance.Core/Using_ICache.ICache_I1/Using_Victim_Cache.victim_cache_I1/S.  Did not re-place instance hdmi_i/microblaze_0/U0/MicroBlaze_Core_I/Performance.Core/Using_ICache.ICache_I1/Using_Victim_Cache.victim_cache_I1/Using_FPGA.Native_I1_i_1__122
-INFO: [Physopt 32-662] Processed net hdmi_i/microblaze_0/U0/MicroBlaze_Core_I/Performance.Core/Using_DCache.Using_WriteBack.DCache_wb_I1/Using_Perf_2.saved_new_tag_bits_reg[12]_0[3].  Did not re-place instance hdmi_i/microblaze_0/U0/MicroBlaze_Core_I/Performance.Core/Using_DCache.Using_WriteBack.DCache_wb_I1/Using_Perf_2.saved_new_tag_bits_reg[20]
-INFO: [Physopt 32-662] Processed net hdmi_i/microblaze_0/U0/MicroBlaze_Core_I/Performance.Core/Using_ICache.ICache_I1/Using_Stream.stream_cache_I1/next_stream_addr_reg[0]_0[23].  Did not re-place instance hdmi_i/microblaze_0/U0/MicroBlaze_Core_I/Performance.Core/Using_ICache.ICache_I1/Using_Stream.stream_cache_I1/next_stream_addr_reg[0]
-INFO: [Physopt 32-662] Processed net hdmi_i/microblaze_0/U0/MicroBlaze_Core_I/Performance.Core/Using_DCache.Using_WriteBack.DCache_wb_I1/Using_Perf_2.saved_new_tag_bits_reg[12]_0[2].  Did not re-place instance hdmi_i/microblaze_0/U0/MicroBlaze_Core_I/Performance.Core/Using_DCache.Using_WriteBack.DCache_wb_I1/Using_Perf_2.saved_new_tag_bits_reg[21]
-INFO: [Physopt 32-661] Optimized 5 nets.  Re-placed 5 instances.
-INFO: [Physopt 32-775] End 1 Pass. Optimized 5 nets or cells. Created 0 new cell, deleted 0 existing cell and moved 5 existing cells
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=0.280 | TNS=0.000 |
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.036 . Memory (MB): peak = 2780.141 ; gain = 0.000
-Phase 4 Single Cell Placement Optimization | Checksum: 1e3c48915
-
-Time (s): cpu = 00:00:15 ; elapsed = 00:00:08 . Memory (MB): peak = 2780.141 ; gain = 18.906
-
-Phase 5 Multi Cell Placement Optimization
-INFO: [Physopt 32-670] No setup violation found.  Multi Cell Placement Optimization was not performed.
-Phase 5 Multi Cell Placement Optimization | Checksum: 1e3c48915
-
-Time (s): cpu = 00:00:15 ; elapsed = 00:00:08 . Memory (MB): peak = 2780.141 ; gain = 18.906
-
-Phase 6 Rewire
-INFO: [Physopt 32-670] No setup violation found.  Rewire was not performed.
-Phase 6 Rewire | Checksum: 1e3c48915
-
-Time (s): cpu = 00:00:15 ; elapsed = 00:00:08 . Memory (MB): peak = 2780.141 ; gain = 18.906
-
-Phase 7 Critical Cell Optimization
-INFO: [Physopt 32-670] No setup violation found.  Critical Cell Optimization was not performed.
-Phase 7 Critical Cell Optimization | Checksum: 1e3c48915
-
-Time (s): cpu = 00:00:15 ; elapsed = 00:00:08 . Memory (MB): peak = 2780.141 ; gain = 18.906
-
-Phase 8 Fanout Optimization
-INFO: [Physopt 32-670] No setup violation found.  Fanout Optimization was not performed.
-Phase 8 Fanout Optimization | Checksum: 1e3c48915
-
-Time (s): cpu = 00:00:15 ; elapsed = 00:00:08 . Memory (MB): peak = 2780.141 ; gain = 18.906
-
-Phase 9 Single Cell Placement Optimization
-INFO: [Physopt 32-670] No setup violation found.  Single Cell Placement Optimization was not performed.
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.037 . Memory (MB): peak = 2780.141 ; gain = 0.000
-Phase 9 Single Cell Placement Optimization | Checksum: 1e3c48915
-
-Time (s): cpu = 00:00:15 ; elapsed = 00:00:08 . Memory (MB): peak = 2780.141 ; gain = 18.906
-
-Phase 10 Multi Cell Placement Optimization
-INFO: [Physopt 32-670] No setup violation found.  Multi Cell Placement Optimization was not performed.
-Phase 10 Multi Cell Placement Optimization | Checksum: 1e3c48915
-
-Time (s): cpu = 00:00:15 ; elapsed = 00:00:08 . Memory (MB): peak = 2780.141 ; gain = 18.906
-
-Phase 11 Rewire
-INFO: [Physopt 32-670] No setup violation found.  Rewire was not performed.
-Phase 11 Rewire | Checksum: 1e3c48915
-
-Time (s): cpu = 00:00:15 ; elapsed = 00:00:08 . Memory (MB): peak = 2780.141 ; gain = 18.906
-
-Phase 12 Critical Cell Optimization
-INFO: [Physopt 32-670] No setup violation found.  Critical Cell Optimization was not performed.
-Phase 12 Critical Cell Optimization | Checksum: 1e3c48915
-
-Time (s): cpu = 00:00:15 ; elapsed = 00:00:08 . Memory (MB): peak = 2780.141 ; gain = 18.906
-
-Phase 13 SLR Crossing Optimization
-INFO: [Physopt 32-670] No setup violation found.  SLR Crossing Optimization was not performed.
-Phase 13 SLR Crossing Optimization | Checksum: 1e3c48915
-
-Time (s): cpu = 00:00:15 ; elapsed = 00:00:08 . Memory (MB): peak = 2780.141 ; gain = 18.906
-
-Phase 14 Fanout Optimization
-INFO: [Physopt 32-670] No setup violation found.  Fanout Optimization was not performed.
-Phase 14 Fanout Optimization | Checksum: 1e3c48915
-
-Time (s): cpu = 00:00:15 ; elapsed = 00:00:08 . Memory (MB): peak = 2780.141 ; gain = 18.906
-
-Phase 15 Single Cell Placement Optimization
-INFO: [Physopt 32-670] No setup violation found.  Single Cell Placement Optimization was not performed.
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.036 . Memory (MB): peak = 2780.141 ; gain = 0.000
-Phase 15 Single Cell Placement Optimization | Checksum: 1e3c48915
-
-Time (s): cpu = 00:00:15 ; elapsed = 00:00:08 . Memory (MB): peak = 2780.141 ; gain = 18.906
-
-Phase 16 Multi Cell Placement Optimization
-INFO: [Physopt 32-670] No setup violation found.  Multi Cell Placement Optimization was not performed.
-Phase 16 Multi Cell Placement Optimization | Checksum: 1e3c48915
-
-Time (s): cpu = 00:00:15 ; elapsed = 00:00:08 . Memory (MB): peak = 2780.141 ; gain = 18.906
-
-Phase 17 Rewire
-INFO: [Physopt 32-670] No setup violation found.  Rewire was not performed.
-Phase 17 Rewire | Checksum: 1e3c48915
-
-Time (s): cpu = 00:00:15 ; elapsed = 00:00:08 . Memory (MB): peak = 2780.141 ; gain = 18.906
-
-Phase 18 Critical Cell Optimization
-INFO: [Physopt 32-670] No setup violation found.  Critical Cell Optimization was not performed.
-Phase 18 Critical Cell Optimization | Checksum: 1e3c48915
-
-Time (s): cpu = 00:00:15 ; elapsed = 00:00:08 . Memory (MB): peak = 2780.141 ; gain = 18.906
-
-Phase 19 DSP Register Optimization
-INFO: [Physopt 32-670] No setup violation found.  DSP Register Optimization was not performed.
-Phase 19 DSP Register Optimization | Checksum: 1e3c48915
-
-Time (s): cpu = 00:00:15 ; elapsed = 00:00:08 . Memory (MB): peak = 2780.141 ; gain = 18.906
-
-Phase 20 BRAM Register Optimization
-INFO: [Physopt 32-670] No setup violation found.  BRAM Register Optimization was not performed.
-Phase 20 BRAM Register Optimization | Checksum: 1e3c48915
-
-Time (s): cpu = 00:00:15 ; elapsed = 00:00:08 . Memory (MB): peak = 2780.141 ; gain = 18.906
-
-Phase 21 URAM Register Optimization
-INFO: [Physopt 32-670] No setup violation found.  URAM Register Optimization was not performed.
-Phase 21 URAM Register Optimization | Checksum: 1e3c48915
-
-Time (s): cpu = 00:00:15 ; elapsed = 00:00:08 . Memory (MB): peak = 2780.141 ; gain = 18.906
-
-Phase 22 Shift Register Optimization
-INFO: [Physopt 32-670] No setup violation found.  Shift Register Optimization was not performed.
-Phase 22 Shift Register Optimization | Checksum: 1e3c48915
-
-Time (s): cpu = 00:00:15 ; elapsed = 00:00:08 . Memory (MB): peak = 2780.141 ; gain = 18.906
-
-Phase 23 DSP Register Optimization
-INFO: [Physopt 32-670] No setup violation found.  DSP Register Optimization was not performed.
-Phase 23 DSP Register Optimization | Checksum: 1e3c48915
-
-Time (s): cpu = 00:00:15 ; elapsed = 00:00:08 . Memory (MB): peak = 2780.141 ; gain = 18.906
-
-Phase 24 BRAM Register Optimization
-INFO: [Physopt 32-670] No setup violation found.  BRAM Register Optimization was not performed.
-Phase 24 BRAM Register Optimization | Checksum: 1e3c48915
-
-Time (s): cpu = 00:00:15 ; elapsed = 00:00:08 . Memory (MB): peak = 2780.141 ; gain = 18.906
-
-Phase 25 URAM Register Optimization
-INFO: [Physopt 32-670] No setup violation found.  URAM Register Optimization was not performed.
-Phase 25 URAM Register Optimization | Checksum: 1e3c48915
-
-Time (s): cpu = 00:00:15 ; elapsed = 00:00:08 . Memory (MB): peak = 2780.141 ; gain = 18.906
-
-Phase 26 Shift Register Optimization
-INFO: [Physopt 32-670] No setup violation found.  Shift Register Optimization was not performed.
-Phase 26 Shift Register Optimization | Checksum: 1e3c48915
-
-Time (s): cpu = 00:00:15 ; elapsed = 00:00:08 . Memory (MB): peak = 2780.141 ; gain = 18.906
-
-Phase 27 Critical Pin Optimization
-INFO: [Physopt 32-670] No setup violation found.  Critical Pin Optimization was not performed.
-Phase 27 Critical Pin Optimization | Checksum: 1e3c48915
-
-Time (s): cpu = 00:00:15 ; elapsed = 00:00:08 . Memory (MB): peak = 2780.141 ; gain = 18.906
-
-Phase 28 Very High Fanout Optimization
-INFO: [Physopt 32-76] Pass 1. Identified 4 candidate nets for fanout optimization.
-INFO: [Physopt 32-232] Optimized 0 net. Created 0 new instance.
-INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
-Phase 28 Very High Fanout Optimization | Checksum: 1e3c48915
-
-Time (s): cpu = 00:00:16 ; elapsed = 00:00:08 . Memory (MB): peak = 2780.141 ; gain = 18.906
-
-Phase 29 Single Cell Placement Optimization
-INFO: [Physopt 32-670] No setup violation found.  Single Cell Placement Optimization was not performed.
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.036 . Memory (MB): peak = 2780.141 ; gain = 0.000
-Phase 29 Single Cell Placement Optimization | Checksum: 1e3c48915
-
-Time (s): cpu = 00:00:16 ; elapsed = 00:00:09 . Memory (MB): peak = 2780.141 ; gain = 18.906
-
-Phase 30 Multi Cell Placement Optimization
-INFO: [Physopt 32-670] No setup violation found.  Multi Cell Placement Optimization was not performed.
-Phase 30 Multi Cell Placement Optimization | Checksum: 1e3c48915
-
-Time (s): cpu = 00:00:16 ; elapsed = 00:00:09 . Memory (MB): peak = 2780.141 ; gain = 18.906
-
-Phase 31 SLR Crossing Optimization
-INFO: [Physopt 32-670] No setup violation found.  SLR Crossing Optimization was not performed.
-Phase 31 SLR Crossing Optimization | Checksum: 1e3c48915
-
-Time (s): cpu = 00:00:16 ; elapsed = 00:00:09 . Memory (MB): peak = 2780.141 ; gain = 18.906
-
-Phase 32 Critical Path Optimization
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=0.280 | TNS=0.000 |
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=0.280 | TNS=0.000 |
-Phase 32 Critical Path Optimization | Checksum: 1e3c48915
-
-Time (s): cpu = 00:00:16 ; elapsed = 00:00:09 . Memory (MB): peak = 2780.141 ; gain = 18.906
-
-Phase 33 BRAM Enable Optimization
-Phase 33 BRAM Enable Optimization | Checksum: 1e3c48915
-
-Time (s): cpu = 00:00:16 ; elapsed = 00:00:09 . Memory (MB): peak = 2780.141 ; gain = 18.906
-INFO: [Physopt 32-960] Skip hold-fix as initial WHS does not violate hold threshold 250 ps
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.036 . Memory (MB): peak = 2780.141 ; gain = 0.000
-INFO: [Physopt 32-603] Post Physical Optimization Timing Summary | WNS=0.280 | TNS=0.000 |
-
-Summary of Physical Synthesis Optimizations
-============================================
-
-
-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
-|  Optimization            |  WNS Gain (ns)  |  TNS Gain (ns)  |  Added Cells  |  Removed Cells  |  Optimized Cells/Nets  |  Dont Touch  |  Iterations  |  Elapsed   |
-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
-|  Fanout                  |          0.000  |          0.000  |            0  |              0  |                     0  |           0  |           1  |  00:00:01  |
-|  Single Cell Placement   |          0.339  |          0.058  |            0  |              0  |                     5  |           0  |           1  |  00:00:02  |
-|  Multi Cell Placement    |          0.000  |          0.000  |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
-|  Rewire                  |          0.000  |          0.000  |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
-|  Critical Cell           |          0.000  |          0.000  |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
-|  SLR Crossing            |          0.000  |          0.000  |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
-|  DSP Register            |          0.000  |          0.000  |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
-|  BRAM Register           |          0.000  |          0.000  |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
-|  URAM Register           |          0.000  |          0.000  |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
-|  Shift Register          |          0.000  |          0.000  |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
-|  Critical Pin            |          0.000  |          0.000  |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
-|  Very High Fanout        |          0.000  |          0.000  |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
-|  BRAM Enable             |          0.000  |          0.000  |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
-|  Critical Path           |          0.000  |          0.000  |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
-|  Total                   |          0.339  |          0.058  |            0  |              0  |                     5  |           0  |           6  |  00:00:04  |
-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.036 . Memory (MB): peak = 2780.141 ; gain = 0.000
-Ending Physical Synthesis Task | Checksum: 184aac276
-
-Time (s): cpu = 00:00:17 ; elapsed = 00:00:09 . Memory (MB): peak = 2780.141 ; gain = 18.906
+INFO: [Vivado_Tcl 4-383] Design worst setup slack (WNS) is greater than or equal to 0.000 ns. Skipping all physical synthesis optimizations.
+INFO: [Vivado_Tcl 4-232] No setup violation found. The netlist was not modified.
 INFO: [Common 17-83] Releasing license: Implementation
-278 Infos, 24 Warnings, 2 Critical Warnings and 0 Errors encountered.
+192 Infos, 24 Warnings, 2 Critical Warnings and 0 Errors encountered.
 phys_opt_design completed successfully
-phys_opt_design: Time (s): cpu = 00:00:33 ; elapsed = 00:00:19 . Memory (MB): peak = 2780.141 ; gain = 18.906
+phys_opt_design: Time (s): cpu = 00:00:16 ; elapsed = 00:00:10 . Memory (MB): peak = 2780.820 ; gain = 0.000
 INFO: [Timing 38-480] Writing timing data to binary archive.
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:12 ; elapsed = 00:00:05 . Memory (MB): peak = 2780.141 ; gain = 0.000
+Write XDEF Complete: Time (s): cpu = 00:00:13 ; elapsed = 00:00:05 . Memory (MB): peak = 2823.266 ; gain = 42.445
 INFO: [Common 17-1381] The checkpoint 'C:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.runs/impl_1/hdmi_wrapper_physopt.dcp' has been generated.
-write_checkpoint: Time (s): cpu = 00:00:21 ; elapsed = 00:00:13 . Memory (MB): peak = 2780.141 ; gain = 0.000
+write_checkpoint: Time (s): cpu = 00:00:19 ; elapsed = 00:00:10 . Memory (MB): peak = 2823.266 ; gain = 42.445
 Command: route_design -directive Explore
 Attempting to get a license for feature 'Implementation' and/or device 'xc7a200t'
 INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a200t'
@@ -946,154 +657,158 @@ INFO: [Route 35-270] Using Router directive 'Explore'.
 INFO: [Route 35-254] Multithreading enabled for route_design using a maximum of 2 CPUs
 
 Phase 1 Build RT Design
-Checksum: PlaceDB: 7f4dc746 ConstDB: 0 ShapeSum: 3f0c58ea RouteDB: 0
-Post Restoration Checksum: NetGraph: 22078ad0 NumContArr: 25b28566 Constraints: 0 Timing: 0
-Phase 1 Build RT Design | Checksum: 47ba1036
+Checksum: PlaceDB: fd4082d7 ConstDB: 0 ShapeSum: 931e77e1 RouteDB: 0
+Post Restoration Checksum: NetGraph: aecf2f97 NumContArr: b35d9c0b Constraints: 0 Timing: 0
+Phase 1 Build RT Design | Checksum: 1622ccba2
 
-Time (s): cpu = 00:01:20 ; elapsed = 00:01:05 . Memory (MB): peak = 2983.355 ; gain = 129.602
+Time (s): cpu = 00:01:20 ; elapsed = 00:01:06 . Memory (MB): peak = 3022.027 ; gain = 135.160
 
 Phase 2 Router Initialization
 
 Phase 2.1 Fix Topology Constraints
-Phase 2.1 Fix Topology Constraints | Checksum: 47ba1036
+Phase 2.1 Fix Topology Constraints | Checksum: 1622ccba2
 
-Time (s): cpu = 00:01:20 ; elapsed = 00:01:06 . Memory (MB): peak = 2985.309 ; gain = 131.555
+Time (s): cpu = 00:01:21 ; elapsed = 00:01:07 . Memory (MB): peak = 3024.250 ; gain = 137.383
 
 Phase 2.2 Pre Route Cleanup
-Phase 2.2 Pre Route Cleanup | Checksum: 47ba1036
+Phase 2.2 Pre Route Cleanup | Checksum: 1622ccba2
 
-Time (s): cpu = 00:01:21 ; elapsed = 00:01:06 . Memory (MB): peak = 2985.309 ; gain = 131.555
+Time (s): cpu = 00:01:21 ; elapsed = 00:01:07 . Memory (MB): peak = 3024.250 ; gain = 137.383
  Number of Nodes with overlaps = 0
 
 Phase 2.3 Update Timing
-Phase 2.3 Update Timing | Checksum: 169cd7b02
+Phase 2.3 Update Timing | Checksum: 1b2439f15
 
-Time (s): cpu = 00:01:46 ; elapsed = 00:01:23 . Memory (MB): peak = 3058.688 ; gain = 204.934
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.450  | TNS=0.000  | WHS=-0.823 | THS=-753.905|
+Time (s): cpu = 00:01:48 ; elapsed = 00:01:25 . Memory (MB): peak = 3097.145 ; gain = 210.277
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.198  | TNS=0.000  | WHS=-0.770 | THS=-762.544|
 
 
 Phase 2.4 Update Timing for Bus Skew
 
 Phase 2.4.1 Update Timing
-Phase 2.4.1 Update Timing | Checksum: 207bea24b
+Phase 2.4.1 Update Timing | Checksum: 235aba499
 
-Time (s): cpu = 00:02:09 ; elapsed = 00:01:36 . Memory (MB): peak = 3212.281 ; gain = 358.527
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.450  | TNS=0.000  | WHS=N/A    | THS=N/A    |
+Time (s): cpu = 00:02:12 ; elapsed = 00:01:39 . Memory (MB): peak = 3330.406 ; gain = 443.539
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.198  | TNS=0.000  | WHS=N/A    | THS=N/A    |
 
-Phase 2.4 Update Timing for Bus Skew | Checksum: 17b529876
+Phase 2.4 Update Timing for Bus Skew | Checksum: 209d1c773
 
-Time (s): cpu = 00:02:09 ; elapsed = 00:01:36 . Memory (MB): peak = 3212.281 ; gain = 358.527
+Time (s): cpu = 00:02:13 ; elapsed = 00:01:39 . Memory (MB): peak = 3330.406 ; gain = 443.539
 
 Router Utilization Summary
-  Global Vertical Routing Utilization    = 0.00212572 %
-  Global Horizontal Routing Utilization  = 0.00406477 %
+  Global Vertical Routing Utilization    = 0.00214597 %
+  Global Horizontal Routing Utilization  = 0.00399868 %
   Routable Net Status*
   *Does not include unroutable nets such as driverless and loadless.
   Run report_route_status for detailed report.
-  Number of Failed Nets               = 52432
+  Number of Failed Nets               = 53047
     (Failed Nets is the sum of unrouted and partially routed nets)
-  Number of Unrouted Nets             = 52432
+  Number of Unrouted Nets             = 53047
   Number of Partially Routed Nets     = 0
   Number of Node Overlaps             = 1
 
-Phase 2 Router Initialization | Checksum: 20bf6ab26
+Phase 2 Router Initialization | Checksum: 2666e4a89
 
-Time (s): cpu = 00:02:10 ; elapsed = 00:01:37 . Memory (MB): peak = 3212.281 ; gain = 358.527
+Time (s): cpu = 00:02:13 ; elapsed = 00:01:40 . Memory (MB): peak = 3330.406 ; gain = 443.539
 
 Phase 3 Initial Routing
 
 Phase 3.1 Global Routing
-Phase 3.1 Global Routing | Checksum: 20bf6ab26
+Phase 3.1 Global Routing | Checksum: 2666e4a89
 
-Time (s): cpu = 00:02:10 ; elapsed = 00:01:37 . Memory (MB): peak = 3212.281 ; gain = 358.527
-Phase 3 Initial Routing | Checksum: 1bc24b465
+Time (s): cpu = 00:02:13 ; elapsed = 00:01:40 . Memory (MB): peak = 3330.406 ; gain = 443.539
+Phase 3 Initial Routing | Checksum: 1e0848ed7
 
-Time (s): cpu = 00:02:22 ; elapsed = 00:01:43 . Memory (MB): peak = 3212.281 ; gain = 358.527
+Time (s): cpu = 00:02:29 ; elapsed = 00:01:48 . Memory (MB): peak = 3330.406 ; gain = 443.539
 
 Phase 4 Rip-up And Reroute
 
 Phase 4.1 Global Iteration 0
- Number of Nodes with overlaps = 4964
- Number of Nodes with overlaps = 810
- Number of Nodes with overlaps = 337
- Number of Nodes with overlaps = 157
- Number of Nodes with overlaps = 52
+ Number of Nodes with overlaps = 4719
+ Number of Nodes with overlaps = 579
+ Number of Nodes with overlaps = 195
+ Number of Nodes with overlaps = 89
+ Number of Nodes with overlaps = 23
  Number of Nodes with overlaps = 12
- Number of Nodes with overlaps = 6
+ Number of Nodes with overlaps = 4
  Number of Nodes with overlaps = 3
+ Number of Nodes with overlaps = 1
+ Number of Nodes with overlaps = 1
  Number of Nodes with overlaps = 0
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.414  | TNS=0.000  | WHS=N/A    | THS=N/A    |
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.035  | TNS=0.000  | WHS=N/A    | THS=N/A    |
 
-Phase 4.1 Global Iteration 0 | Checksum: 116a00f71
+Phase 4.1 Global Iteration 0 | Checksum: 1e875fbc2
 
-Time (s): cpu = 00:03:31 ; elapsed = 00:02:44 . Memory (MB): peak = 3212.281 ; gain = 358.527
+Time (s): cpu = 00:03:24 ; elapsed = 00:02:33 . Memory (MB): peak = 3330.406 ; gain = 443.539
 
 Phase 4.2 Global Iteration 1
  Number of Nodes with overlaps = 4
- Number of Nodes with overlaps = 25
- Number of Nodes with overlaps = 16
- Number of Nodes with overlaps = 8
- Number of Nodes with overlaps = 6
- Number of Nodes with overlaps = 3
  Number of Nodes with overlaps = 0
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.425  | TNS=0.000  | WHS=N/A    | THS=N/A    |
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.035  | TNS=0.000  | WHS=N/A    | THS=N/A    |
 
-Phase 4.2 Global Iteration 1 | Checksum: 12a8b5950
+Phase 4.2 Global Iteration 1 | Checksum: 1852edb8f
 
-Time (s): cpu = 00:03:44 ; elapsed = 00:02:57 . Memory (MB): peak = 3212.281 ; gain = 358.527
-Phase 4 Rip-up And Reroute | Checksum: 12a8b5950
+Time (s): cpu = 00:03:25 ; elapsed = 00:02:35 . Memory (MB): peak = 3330.406 ; gain = 443.539
+Phase 4 Rip-up And Reroute | Checksum: 1852edb8f
 
-Time (s): cpu = 00:03:44 ; elapsed = 00:02:57 . Memory (MB): peak = 3212.281 ; gain = 358.527
+Time (s): cpu = 00:03:26 ; elapsed = 00:02:35 . Memory (MB): peak = 3330.406 ; gain = 443.539
 
 Phase 5 Delay and Skew Optimization
 
 Phase 5.1 Delay CleanUp
-Phase 5.1 Delay CleanUp | Checksum: 12a8b5950
 
-Time (s): cpu = 00:03:44 ; elapsed = 00:02:57 . Memory (MB): peak = 3212.281 ; gain = 358.527
+Phase 5.1.1 Update Timing
+Phase 5.1.1 Update Timing | Checksum: 1e2cbcb18
+
+Time (s): cpu = 00:03:32 ; elapsed = 00:02:39 . Memory (MB): peak = 3330.406 ; gain = 443.539
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.115  | TNS=0.000  | WHS=N/A    | THS=N/A    |
+
+Phase 5.1 Delay CleanUp | Checksum: 14945ef7a
+
+Time (s): cpu = 00:03:32 ; elapsed = 00:02:39 . Memory (MB): peak = 3330.406 ; gain = 443.539
 
 Phase 5.2 Clock Skew Optimization
-Phase 5.2 Clock Skew Optimization | Checksum: 12a8b5950
+Phase 5.2 Clock Skew Optimization | Checksum: 14945ef7a
 
-Time (s): cpu = 00:03:44 ; elapsed = 00:02:57 . Memory (MB): peak = 3212.281 ; gain = 358.527
-Phase 5 Delay and Skew Optimization | Checksum: 12a8b5950
+Time (s): cpu = 00:03:32 ; elapsed = 00:02:39 . Memory (MB): peak = 3330.406 ; gain = 443.539
+Phase 5 Delay and Skew Optimization | Checksum: 14945ef7a
 
-Time (s): cpu = 00:03:45 ; elapsed = 00:02:57 . Memory (MB): peak = 3212.281 ; gain = 358.527
+Time (s): cpu = 00:03:33 ; elapsed = 00:02:39 . Memory (MB): peak = 3330.406 ; gain = 443.539
 
 Phase 6 Post Hold Fix
 
 Phase 6.1 Hold Fix Iter
 
 Phase 6.1.1 Update Timing
-Phase 6.1.1 Update Timing | Checksum: 13b712af5
+Phase 6.1.1 Update Timing | Checksum: 1ea61ce87
 
-Time (s): cpu = 00:03:51 ; elapsed = 00:03:01 . Memory (MB): peak = 3212.281 ; gain = 358.527
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.505  | TNS=0.000  | WHS=-0.062 | THS=-0.164 |
+Time (s): cpu = 00:03:40 ; elapsed = 00:02:44 . Memory (MB): peak = 3330.406 ; gain = 443.539
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.115  | TNS=0.000  | WHS=-0.150 | THS=-0.420 |
 
-Phase 6.1 Hold Fix Iter | Checksum: 12592ee40
+Phase 6.1 Hold Fix Iter | Checksum: 17358e665
 
-Time (s): cpu = 00:03:52 ; elapsed = 00:03:02 . Memory (MB): peak = 3212.281 ; gain = 358.527
-Phase 6 Post Hold Fix | Checksum: 184b1adb6
+Time (s): cpu = 00:03:40 ; elapsed = 00:02:44 . Memory (MB): peak = 3330.406 ; gain = 443.539
+Phase 6 Post Hold Fix | Checksum: 15e2dc12a
 
-Time (s): cpu = 00:03:52 ; elapsed = 00:03:02 . Memory (MB): peak = 3212.281 ; gain = 358.527
+Time (s): cpu = 00:03:41 ; elapsed = 00:02:44 . Memory (MB): peak = 3330.406 ; gain = 443.539
 
 Phase 7 Timing Verification
 
 Phase 7.1 Update Timing
-Phase 7.1 Update Timing | Checksum: 17a180651
+Phase 7.1 Update Timing | Checksum: 253881e18
 
-Time (s): cpu = 00:04:02 ; elapsed = 00:03:08 . Memory (MB): peak = 3212.281 ; gain = 358.527
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.505  | TNS=0.000  | WHS=N/A    | THS=N/A    |
+Time (s): cpu = 00:03:51 ; elapsed = 00:02:51 . Memory (MB): peak = 3330.406 ; gain = 443.539
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.115  | TNS=0.000  | WHS=N/A    | THS=N/A    |
 
-Phase 7 Timing Verification | Checksum: 17a180651
+Phase 7 Timing Verification | Checksum: 253881e18
 
-Time (s): cpu = 00:04:02 ; elapsed = 00:03:08 . Memory (MB): peak = 3212.281 ; gain = 358.527
+Time (s): cpu = 00:03:52 ; elapsed = 00:02:51 . Memory (MB): peak = 3330.406 ; gain = 443.539
 
 Phase 8 Route finalize
 
 Router Utilization Summary
-  Global Vertical Routing Utilization    = 4.22972 %
-  Global Horizontal Routing Utilization  = 5.96252 %
+  Global Vertical Routing Utilization    = 4.39901 %
+  Global Horizontal Routing Utilization  = 5.77902 %
   Routable Net Status*
   *Does not include unroutable nets such as driverless and loadless.
   Run report_route_status for detailed report.
@@ -1103,59 +818,60 @@ Router Utilization Summary
   Number of Partially Routed Nets     = 0
   Number of Node Overlaps             = 0
 
-Phase 8 Route finalize | Checksum: 17a180651
+Phase 8 Route finalize | Checksum: 253881e18
 
-Time (s): cpu = 00:04:03 ; elapsed = 00:03:08 . Memory (MB): peak = 3212.281 ; gain = 358.527
+Time (s): cpu = 00:03:52 ; elapsed = 00:02:51 . Memory (MB): peak = 3330.406 ; gain = 443.539
 
 Phase 9 Verifying routed nets
 
  Verification completed successfully
-Phase 9 Verifying routed nets | Checksum: 17a180651
+Phase 9 Verifying routed nets | Checksum: 253881e18
 
-Time (s): cpu = 00:04:03 ; elapsed = 00:03:09 . Memory (MB): peak = 3212.281 ; gain = 358.527
+Time (s): cpu = 00:03:52 ; elapsed = 00:02:51 . Memory (MB): peak = 3330.406 ; gain = 443.539
 
 Phase 10 Depositing Routes
-Phase 10 Depositing Routes | Checksum: 170104647
+Phase 10 Depositing Routes | Checksum: 22c6032f3
 
-Time (s): cpu = 00:04:07 ; elapsed = 00:03:13 . Memory (MB): peak = 3212.281 ; gain = 358.527
+Time (s): cpu = 00:03:57 ; elapsed = 00:02:56 . Memory (MB): peak = 3330.406 ; gain = 443.539
 
 Phase 11 Post Router Timing
-INFO: [Route 35-20] Post Routing Timing Summary | WNS=0.504  | TNS=0.000  | WHS=0.046  | THS=0.000  |
+INFO: [Route 35-20] Post Routing Timing Summary | WNS=0.113  | TNS=0.000  | WHS=0.049  | THS=0.000  |
 
-Phase 11 Post Router Timing | Checksum: d23c973c
+Phase 11 Post Router Timing | Checksum: 1f1311ca8
 
-Time (s): cpu = 00:04:31 ; elapsed = 00:03:26 . Memory (MB): peak = 3212.281 ; gain = 358.527
+Time (s): cpu = 00:04:22 ; elapsed = 00:03:10 . Memory (MB): peak = 3330.406 ; gain = 443.539
 INFO: [Route 35-61] The design met the timing requirement.
 INFO: [Route 35-16] Router Completed Successfully
 
-Time (s): cpu = 00:04:32 ; elapsed = 00:03:27 . Memory (MB): peak = 3212.281 ; gain = 358.527
+Time (s): cpu = 00:04:22 ; elapsed = 00:03:10 . Memory (MB): peak = 3330.406 ; gain = 443.539
 
 Routing Is Done.
 INFO: [Common 17-83] Releasing license: Implementation
-296 Infos, 24 Warnings, 2 Critical Warnings and 0 Errors encountered.
+211 Infos, 24 Warnings, 2 Critical Warnings and 0 Errors encountered.
 route_design completed successfully
-route_design: Time (s): cpu = 00:04:55 ; elapsed = 00:03:39 . Memory (MB): peak = 3212.281 ; gain = 432.141
+route_design: Time (s): cpu = 00:04:46 ; elapsed = 00:03:23 . Memory (MB): peak = 3330.406 ; gain = 507.141
 INFO: [Timing 38-480] Writing timing data to binary archive.
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:14 ; elapsed = 00:00:05 . Memory (MB): peak = 3212.281 ; gain = 0.000
+Write XDEF Complete: Time (s): cpu = 00:00:14 ; elapsed = 00:00:05 . Memory (MB): peak = 3330.406 ; gain = 0.000
+report_design_analysis: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 3330.406 ; gain = 0.000
 INFO: [Common 17-1381] The checkpoint 'C:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.runs/impl_1/hdmi_wrapper_routed.dcp' has been generated.
-write_checkpoint: Time (s): cpu = 00:00:23 ; elapsed = 00:00:15 . Memory (MB): peak = 3212.281 ; gain = 0.000
+write_checkpoint: Time (s): cpu = 00:00:25 ; elapsed = 00:00:16 . Memory (MB): peak = 3330.406 ; gain = 0.000
 INFO: [runtcl-4] Executing : report_drc -file hdmi_wrapper_drc_routed.rpt -pb hdmi_wrapper_drc_routed.pb -rpx hdmi_wrapper_drc_routed.rpx
 Command: report_drc -file hdmi_wrapper_drc_routed.rpt -pb hdmi_wrapper_drc_routed.pb -rpx hdmi_wrapper_drc_routed.rpx
 INFO: [IP_Flow 19-1839] IP Catalog is up to date.
 INFO: [DRC 23-27] Running DRC with 2 threads
 INFO: [Vivado_Tcl 2-168] The results of DRC are in file C:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.runs/impl_1/hdmi_wrapper_drc_routed.rpt.
 report_drc completed successfully
-report_drc: Time (s): cpu = 00:00:29 ; elapsed = 00:00:16 . Memory (MB): peak = 3212.281 ; gain = 0.000
+report_drc: Time (s): cpu = 00:00:31 ; elapsed = 00:00:17 . Memory (MB): peak = 3330.406 ; gain = 0.000
 INFO: [runtcl-4] Executing : report_methodology -file hdmi_wrapper_methodology_drc_routed.rpt -pb hdmi_wrapper_methodology_drc_routed.pb -rpx hdmi_wrapper_methodology_drc_routed.rpx
 Command: report_methodology -file hdmi_wrapper_methodology_drc_routed.rpt -pb hdmi_wrapper_methodology_drc_routed.pb -rpx hdmi_wrapper_methodology_drc_routed.rpx
 INFO: [Timing 38-35] Done setting XDC timing constraints.
 INFO: [DRC 23-133] Running Methodology with 2 threads
 INFO: [Vivado_Tcl 2-1520] The results of Report Methodology are in file C:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.runs/impl_1/hdmi_wrapper_methodology_drc_routed.rpt.
 report_methodology completed successfully
-report_methodology: Time (s): cpu = 00:00:34 ; elapsed = 00:00:20 . Memory (MB): peak = 3212.281 ; gain = 0.000
+report_methodology: Time (s): cpu = 00:00:36 ; elapsed = 00:00:21 . Memory (MB): peak = 3330.406 ; gain = 0.000
 INFO: [runtcl-4] Executing : report_power -file hdmi_wrapper_power_routed.rpt -pb hdmi_wrapper_power_summary_routed.pb -rpx hdmi_wrapper_power_routed.rpx
 Command: report_power -file hdmi_wrapper_power_routed.rpt -pb hdmi_wrapper_power_summary_routed.pb -rpx hdmi_wrapper_power_routed.rpx
 INFO: [Timing 38-35] Done setting XDC timing constraints.
@@ -1164,9 +880,9 @@ Running Vector-less Activity Propagation...
 Finished Running Vector-less Activity Propagation
 WARNING: [Power 33-332] Found switching activity that implies high-fanout reset nets being asserted for excessive periods of time which may result in inaccurate power analysis.
 Resolution: To review and fix problems, please run Power Constraints Advisor in the GUI from Tools > Power Constraints Advisor or run report_power with the -advisory option to generate a text report.
-308 Infos, 25 Warnings, 2 Critical Warnings and 0 Errors encountered.
+223 Infos, 25 Warnings, 2 Critical Warnings and 0 Errors encountered.
 report_power completed successfully
-report_power: Time (s): cpu = 00:00:33 ; elapsed = 00:00:19 . Memory (MB): peak = 3212.281 ; gain = 0.000
+report_power: Time (s): cpu = 00:00:35 ; elapsed = 00:00:20 . Memory (MB): peak = 3330.406 ; gain = 0.000
 INFO: [runtcl-4] Executing : report_route_status -file hdmi_wrapper_route_status.rpt -pb hdmi_wrapper_route_status.pb
 INFO: [runtcl-4] Executing : report_timing_summary -max_paths 10 -report_unconstrained -file hdmi_wrapper_timing_summary_routed.rpt -pb hdmi_wrapper_timing_summary_routed.pb -rpx hdmi_wrapper_timing_summary_routed.rpx -warn_on_violation 
 INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
@@ -1209,6 +925,8 @@ WARNING: [DRC DPIP-1] Input pipelining: DSP hdmi_i/object_localizer_1/inst/y_pos
 WARNING: [DRC DPIP-1] Input pipelining: DSP hdmi_i/object_localizer_1/inst/z_fusion/DSP48E1_inst input hdmi_i/object_localizer_1/inst/z_fusion/DSP48E1_inst/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 WARNING: [DRC DPIP-1] Input pipelining: DSP hdmi_i/object_localizer_1/inst/z_position/DSP48E1_inst input hdmi_i/object_localizer_1/inst/z_position/DSP48E1_inst/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 WARNING: [DRC DPIP-1] Input pipelining: DSP hdmi_i/object_localizer_1/inst/z_position/DSP48E1_inst input hdmi_i/object_localizer_1/inst/z_position/DSP48E1_inst/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP hdmi_i/proportional_control_0/inst/u0/product_x input hdmi_i/proportional_control_0/inst/u0/product_x/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP hdmi_i/proportional_control_0/inst/u0/product_z input hdmi_i/proportional_control_0/inst/u0/product_z/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 WARNING: [DRC DPOP-1] PREG Output pipelining: DSP hdmi_i/array_parser_1/inst/genblk1[0].ultrasonic_sensor/product output hdmi_i/array_parser_1/inst/genblk1[0].ultrasonic_sensor/product/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
 WARNING: [DRC DPOP-1] PREG Output pipelining: DSP hdmi_i/array_parser_1/inst/genblk1[10].ultrasonic_sensor/product output hdmi_i/array_parser_1/inst/genblk1[10].ultrasonic_sensor/product/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
 WARNING: [DRC DPOP-1] PREG Output pipelining: DSP hdmi_i/array_parser_1/inst/genblk1[11].ultrasonic_sensor/product output hdmi_i/array_parser_1/inst/genblk1[11].ultrasonic_sensor/product/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
@@ -1221,6 +939,8 @@ WARNING: [DRC DPOP-1] PREG Output pipelining: DSP hdmi_i/array_parser_1/inst/gen
 WARNING: [DRC DPOP-1] PREG Output pipelining: DSP hdmi_i/array_parser_1/inst/genblk1[7].ultrasonic_sensor/product output hdmi_i/array_parser_1/inst/genblk1[7].ultrasonic_sensor/product/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
 WARNING: [DRC DPOP-1] PREG Output pipelining: DSP hdmi_i/array_parser_1/inst/genblk1[8].ultrasonic_sensor/product output hdmi_i/array_parser_1/inst/genblk1[8].ultrasonic_sensor/product/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
 WARNING: [DRC DPOP-1] PREG Output pipelining: DSP hdmi_i/array_parser_1/inst/genblk1[9].ultrasonic_sensor/product output hdmi_i/array_parser_1/inst/genblk1[9].ultrasonic_sensor/product/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP hdmi_i/proportional_control_0/inst/u0/product_x output hdmi_i/proportional_control_0/inst/u0/product_x/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP hdmi_i/proportional_control_0/inst/u0/product_z output hdmi_i/proportional_control_0/inst/u0/product_z/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
 WARNING: [DRC DPOP-2] MREG Output pipelining: DSP hdmi_i/array_parser_1/inst/genblk1[0].ultrasonic_sensor/product multiplier stage hdmi_i/array_parser_1/inst/genblk1[0].ultrasonic_sensor/product/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
 WARNING: [DRC DPOP-2] MREG Output pipelining: DSP hdmi_i/array_parser_1/inst/genblk1[10].ultrasonic_sensor/product multiplier stage hdmi_i/array_parser_1/inst/genblk1[10].ultrasonic_sensor/product/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
 WARNING: [DRC DPOP-2] MREG Output pipelining: DSP hdmi_i/array_parser_1/inst/genblk1[11].ultrasonic_sensor/product multiplier stage hdmi_i/array_parser_1/inst/genblk1[11].ultrasonic_sensor/product/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
@@ -1233,14 +953,54 @@ WARNING: [DRC DPOP-2] MREG Output pipelining: DSP hdmi_i/array_parser_1/inst/gen
 WARNING: [DRC DPOP-2] MREG Output pipelining: DSP hdmi_i/array_parser_1/inst/genblk1[7].ultrasonic_sensor/product multiplier stage hdmi_i/array_parser_1/inst/genblk1[7].ultrasonic_sensor/product/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
 WARNING: [DRC DPOP-2] MREG Output pipelining: DSP hdmi_i/array_parser_1/inst/genblk1[8].ultrasonic_sensor/product multiplier stage hdmi_i/array_parser_1/inst/genblk1[8].ultrasonic_sensor/product/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
 WARNING: [DRC DPOP-2] MREG Output pipelining: DSP hdmi_i/array_parser_1/inst/genblk1[9].ultrasonic_sensor/product multiplier stage hdmi_i/array_parser_1/inst/genblk1[9].ultrasonic_sensor/product/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
-WARNING: [DRC PDCN-1569] LUT equation term check: Used physical LUT pin 'A1' of cell dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_switch/temp_curid[31]_i_1 (pin dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_switch/temp_curid[31]_i_1/I0) is not included in the LUT equation: 'O5=(A3*A4)+(A3*(~A4)*(~A5))+((~A3))'. If this cell is a user instantiated LUT in the design, please remove connectivity to the pin or change the equation and/or INIT string of the LUT to prevent this issue. If the cell is inferred or IP created LUT, please regenerate the IP and/or resynthesize the design to attempt to correct the issue.
-WARNING: [DRC PDCN-1569] LUT equation term check: Used physical LUT pin 'A1' of cell hdmi_i/axi_mem_intercon/m00_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.user_valid_i_1 (pin hdmi_i/axi_mem_intercon/m00_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.user_valid_i_1/I1) is not included in the LUT equation: 'O6=(A5)+((~A5)*(~A6)*A4)'. If this cell is a user instantiated LUT in the design, please remove connectivity to the pin or change the equation and/or INIT string of the LUT to prevent this issue. If the cell is inferred or IP created LUT, please regenerate the IP and/or resynthesize the design to attempt to correct the issue.
-WARNING: [DRC PDCN-1569] LUT equation term check: Used physical LUT pin 'A2' of cell dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_switch/temp_curid[31]_i_1 (pin dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_switch/temp_curid[31]_i_1/I1) is not included in the LUT equation: 'O5=(A3*A4)+(A3*(~A4)*(~A5))+((~A3))'. If this cell is a user instantiated LUT in the design, please remove connectivity to the pin or change the equation and/or INIT string of the LUT to prevent this issue. If the cell is inferred or IP created LUT, please regenerate the IP and/or resynthesize the design to attempt to correct the issue.
-WARNING: [DRC PDCN-1569] LUT equation term check: Used physical LUT pin 'A2' of cell dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.id_state[0]_i_1 (pin dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.id_state[0]_i_1/I0) is not included in the LUT equation: 'O6=(A6+~A6)*((A4))'. If this cell is a user instantiated LUT in the design, please remove connectivity to the pin or change the equation and/or INIT string of the LUT to prevent this issue. If the cell is inferred or IP created LUT, please regenerate the IP and/or resynthesize the design to attempt to correct the issue.
-WARNING: [DRC PDCN-1569] LUT equation term check: Used physical LUT pin 'A2' of cell hdmi_i/axi_mem_intercon/m00_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_READ.read_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.user_valid_i_1 (pin hdmi_i/axi_mem_intercon/m00_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_READ.read_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.user_valid_i_1/I1) is not included in the LUT equation: 'O6=(A1)+((~A1)*(~A6)*A5)'. If this cell is a user instantiated LUT in the design, please remove connectivity to the pin or change the equation and/or INIT string of the LUT to prevent this issue. If the cell is inferred or IP created LUT, please regenerate the IP and/or resynthesize the design to attempt to correct the issue.
-WARNING: [DRC PDCN-1569] LUT equation term check: Used physical LUT pin 'A6' of cell hdmi_i/axi_mem_intercon/m00_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.user_valid_i_1 (pin hdmi_i/axi_mem_intercon/m00_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.user_valid_i_1/I1) is not included in the LUT equation: 'O6=(A4)+((~A4)*(~A3)*A2)'. If this cell is a user instantiated LUT in the design, please remove connectivity to the pin or change the equation and/or INIT string of the LUT to prevent this issue. If the cell is inferred or IP created LUT, please regenerate the IP and/or resynthesize the design to attempt to correct the issue.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP hdmi_i/proportional_control_0/inst/u0/product_x multiplier stage hdmi_i/proportional_control_0/inst/u0/product_x/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP hdmi_i/proportional_control_0/inst/u0/product_z multiplier stage hdmi_i/proportional_control_0/inst/u0/product_z/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC PDCN-1569] LUT equation term check: Used physical LUT pin 'A1' of cell dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_switch/temp_curid[31]_i_1 (pin dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_switch/temp_curid[31]_i_1/I1) is not included in the LUT equation: 'O5=(A5*A3)+(A5*(~A3)*(~A4))+((~A5))'. If this cell is a user instantiated LUT in the design, please remove connectivity to the pin or change the equation and/or INIT string of the LUT to prevent this issue. If the cell is inferred or IP created LUT, please regenerate the IP and/or resynthesize the design to attempt to correct the issue.
+WARNING: [DRC PDCN-1569] LUT equation term check: Used physical LUT pin 'A1' of cell hdmi_i/axi_mem_intercon/m00_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_READ.read_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.user_valid_i_1 (pin hdmi_i/axi_mem_intercon/m00_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_READ.read_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.user_valid_i_1/I1) is not included in the LUT equation: 'O6=(A4)+((~A4)*(~A6)*A2)'. If this cell is a user instantiated LUT in the design, please remove connectivity to the pin or change the equation and/or INIT string of the LUT to prevent this issue. If the cell is inferred or IP created LUT, please regenerate the IP and/or resynthesize the design to attempt to correct the issue.
+WARNING: [DRC PDCN-1569] LUT equation term check: Used physical LUT pin 'A2' of cell dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_switch/temp_curid[31]_i_1 (pin dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_switch/temp_curid[31]_i_1/I0) is not included in the LUT equation: 'O5=(A5*A3)+(A5*(~A3)*(~A4))+((~A5))'. If this cell is a user instantiated LUT in the design, please remove connectivity to the pin or change the equation and/or INIT string of the LUT to prevent this issue. If the cell is inferred or IP created LUT, please regenerate the IP and/or resynthesize the design to attempt to correct the issue.
+WARNING: [DRC PDCN-1569] LUT equation term check: Used physical LUT pin 'A2' of cell hdmi_i/axi_mem_intercon/m00_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.user_valid_i_1 (pin hdmi_i/axi_mem_intercon/m00_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.user_valid_i_1/I1) is not included in the LUT equation: 'O6=(A1)+((~A1)*(~A6)*A3)'. If this cell is a user instantiated LUT in the design, please remove connectivity to the pin or change the equation and/or INIT string of the LUT to prevent this issue. If the cell is inferred or IP created LUT, please regenerate the IP and/or resynthesize the design to attempt to correct the issue.
+WARNING: [DRC PDCN-1569] LUT equation term check: Used physical LUT pin 'A3' of cell hdmi_i/axi_mem_intercon/m00_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.user_valid_i_1 (pin hdmi_i/axi_mem_intercon/m00_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.user_valid_i_1/I1) is not included in the LUT equation: 'O6=(A1)+((~A1)*(~A4)*A5)'. If this cell is a user instantiated LUT in the design, please remove connectivity to the pin or change the equation and/or INIT string of the LUT to prevent this issue. If the cell is inferred or IP created LUT, please regenerate the IP and/or resynthesize the design to attempt to correct the issue.
+WARNING: [DRC PDCN-1569] LUT equation term check: Used physical LUT pin 'A4' of cell dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.id_state[0]_i_1 (pin dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.id_state[0]_i_1/I0) is not included in the LUT equation: 'O6=(A6+~A6)*((A2))'. If this cell is a user instantiated LUT in the design, please remove connectivity to the pin or change the equation and/or INIT string of the LUT to prevent this issue. If the cell is inferred or IP created LUT, please regenerate the IP and/or resynthesize the design to attempt to correct the issue.
+WARNING: [DRC RBOR-1] RAMB output registers: RAMB hdmi_i/proportional_control_0/inst/u0/ratio_out_x_reg_1_0 output DOA (1) is connected to asynchronous registers, if you use synchronous controls you will get better results both in area and delay (RAMB has synchronous registers built in).
+WARNING: [DRC RBOR-1] RAMB output registers: RAMB hdmi_i/proportional_control_0/inst/u0/ratio_out_x_reg_1_1 output DOA (1) is connected to asynchronous registers, if you use synchronous controls you will get better results both in area and delay (RAMB has synchronous registers built in).
+WARNING: [DRC RBOR-1] RAMB output registers: RAMB hdmi_i/proportional_control_0/inst/u0/ratio_out_x_reg_1_10 output DOA (1) is connected to asynchronous registers, if you use synchronous controls you will get better results both in area and delay (RAMB has synchronous registers built in).
+WARNING: [DRC RBOR-1] RAMB output registers: RAMB hdmi_i/proportional_control_0/inst/u0/ratio_out_x_reg_1_11 output DOA (1) is connected to asynchronous registers, if you use synchronous controls you will get better results both in area and delay (RAMB has synchronous registers built in).
+WARNING: [DRC RBOR-1] RAMB output registers: RAMB hdmi_i/proportional_control_0/inst/u0/ratio_out_x_reg_1_12 output DOA (1) is connected to asynchronous registers, if you use synchronous controls you will get better results both in area and delay (RAMB has synchronous registers built in).
+WARNING: [DRC RBOR-1] RAMB output registers: RAMB hdmi_i/proportional_control_0/inst/u0/ratio_out_x_reg_1_13 output DOA (1) is connected to asynchronous registers, if you use synchronous controls you will get better results both in area and delay (RAMB has synchronous registers built in).
+WARNING: [DRC RBOR-1] RAMB output registers: RAMB hdmi_i/proportional_control_0/inst/u0/ratio_out_x_reg_1_14 output DOA (1) is connected to asynchronous registers, if you use synchronous controls you will get better results both in area and delay (RAMB has synchronous registers built in).
+WARNING: [DRC RBOR-1] RAMB output registers: RAMB hdmi_i/proportional_control_0/inst/u0/ratio_out_x_reg_1_15 output DOA (1) is connected to asynchronous registers, if you use synchronous controls you will get better results both in area and delay (RAMB has synchronous registers built in).
+WARNING: [DRC RBOR-1] RAMB output registers: RAMB hdmi_i/proportional_control_0/inst/u0/ratio_out_x_reg_1_16 output DOA (1) is connected to asynchronous registers, if you use synchronous controls you will get better results both in area and delay (RAMB has synchronous registers built in).
+WARNING: [DRC RBOR-1] RAMB output registers: RAMB hdmi_i/proportional_control_0/inst/u0/ratio_out_x_reg_1_17 output DOA (1) is connected to asynchronous registers, if you use synchronous controls you will get better results both in area and delay (RAMB has synchronous registers built in).
+WARNING: [DRC RBOR-1] RAMB output registers: RAMB hdmi_i/proportional_control_0/inst/u0/ratio_out_x_reg_1_18 output DOA (1) is connected to asynchronous registers, if you use synchronous controls you will get better results both in area and delay (RAMB has synchronous registers built in).
+WARNING: [DRC RBOR-1] RAMB output registers: RAMB hdmi_i/proportional_control_0/inst/u0/ratio_out_x_reg_1_2 output DOA (1) is connected to asynchronous registers, if you use synchronous controls you will get better results both in area and delay (RAMB has synchronous registers built in).
+WARNING: [DRC RBOR-1] RAMB output registers: RAMB hdmi_i/proportional_control_0/inst/u0/ratio_out_x_reg_1_3 output DOA (1) is connected to asynchronous registers, if you use synchronous controls you will get better results both in area and delay (RAMB has synchronous registers built in).
+WARNING: [DRC RBOR-1] RAMB output registers: RAMB hdmi_i/proportional_control_0/inst/u0/ratio_out_x_reg_1_4 output DOA (1) is connected to asynchronous registers, if you use synchronous controls you will get better results both in area and delay (RAMB has synchronous registers built in).
+WARNING: [DRC RBOR-1] RAMB output registers: RAMB hdmi_i/proportional_control_0/inst/u0/ratio_out_x_reg_1_5 output DOA (1) is connected to asynchronous registers, if you use synchronous controls you will get better results both in area and delay (RAMB has synchronous registers built in).
+WARNING: [DRC RBOR-1] RAMB output registers: RAMB hdmi_i/proportional_control_0/inst/u0/ratio_out_x_reg_1_6 output DOA (1) is connected to asynchronous registers, if you use synchronous controls you will get better results both in area and delay (RAMB has synchronous registers built in).
+WARNING: [DRC RBOR-1] RAMB output registers: RAMB hdmi_i/proportional_control_0/inst/u0/ratio_out_x_reg_1_7 output DOA (1) is connected to asynchronous registers, if you use synchronous controls you will get better results both in area and delay (RAMB has synchronous registers built in).
+WARNING: [DRC RBOR-1] RAMB output registers: RAMB hdmi_i/proportional_control_0/inst/u0/ratio_out_x_reg_1_8 output DOA (1) is connected to asynchronous registers, if you use synchronous controls you will get better results both in area and delay (RAMB has synchronous registers built in).
+WARNING: [DRC RBOR-1] RAMB output registers: RAMB hdmi_i/proportional_control_0/inst/u0/ratio_out_x_reg_1_9 output DOA (1) is connected to asynchronous registers, if you use synchronous controls you will get better results both in area and delay (RAMB has synchronous registers built in).
+WARNING: [DRC RBOR-1] RAMB output registers: RAMB hdmi_i/proportional_control_0/inst/u0/ratio_out_z_reg_1_0 output DOA (1) is connected to asynchronous registers, if you use synchronous controls you will get better results both in area and delay (RAMB has synchronous registers built in).
+WARNING: [DRC RBOR-1] RAMB output registers: RAMB hdmi_i/proportional_control_0/inst/u0/ratio_out_z_reg_1_1 output DOA (1) is connected to asynchronous registers, if you use synchronous controls you will get better results both in area and delay (RAMB has synchronous registers built in).
+WARNING: [DRC RBOR-1] RAMB output registers: RAMB hdmi_i/proportional_control_0/inst/u0/ratio_out_z_reg_1_10 output DOA (1) is connected to asynchronous registers, if you use synchronous controls you will get better results both in area and delay (RAMB has synchronous registers built in).
+WARNING: [DRC RBOR-1] RAMB output registers: RAMB hdmi_i/proportional_control_0/inst/u0/ratio_out_z_reg_1_11 output DOA (1) is connected to asynchronous registers, if you use synchronous controls you will get better results both in area and delay (RAMB has synchronous registers built in).
+WARNING: [DRC RBOR-1] RAMB output registers: RAMB hdmi_i/proportional_control_0/inst/u0/ratio_out_z_reg_1_12 output DOA (1) is connected to asynchronous registers, if you use synchronous controls you will get better results both in area and delay (RAMB has synchronous registers built in).
+WARNING: [DRC RBOR-1] RAMB output registers: RAMB hdmi_i/proportional_control_0/inst/u0/ratio_out_z_reg_1_13 output DOA (1) is connected to asynchronous registers, if you use synchronous controls you will get better results both in area and delay (RAMB has synchronous registers built in).
+WARNING: [DRC RBOR-1] RAMB output registers: RAMB hdmi_i/proportional_control_0/inst/u0/ratio_out_z_reg_1_14 output DOA (1) is connected to asynchronous registers, if you use synchronous controls you will get better results both in area and delay (RAMB has synchronous registers built in).
+WARNING: [DRC RBOR-1] RAMB output registers: RAMB hdmi_i/proportional_control_0/inst/u0/ratio_out_z_reg_1_15 output DOA (1) is connected to asynchronous registers, if you use synchronous controls you will get better results both in area and delay (RAMB has synchronous registers built in).
+WARNING: [DRC RBOR-1] RAMB output registers: RAMB hdmi_i/proportional_control_0/inst/u0/ratio_out_z_reg_1_16 output DOA (1) is connected to asynchronous registers, if you use synchronous controls you will get better results both in area and delay (RAMB has synchronous registers built in).
+WARNING: [DRC RBOR-1] RAMB output registers: RAMB hdmi_i/proportional_control_0/inst/u0/ratio_out_z_reg_1_17 output DOA (1) is connected to asynchronous registers, if you use synchronous controls you will get better results both in area and delay (RAMB has synchronous registers built in).
+WARNING: [DRC RBOR-1] RAMB output registers: RAMB hdmi_i/proportional_control_0/inst/u0/ratio_out_z_reg_1_18 output DOA (1) is connected to asynchronous registers, if you use synchronous controls you will get better results both in area and delay (RAMB has synchronous registers built in).
+WARNING: [DRC RBOR-1] RAMB output registers: RAMB hdmi_i/proportional_control_0/inst/u0/ratio_out_z_reg_1_2 output DOA (1) is connected to asynchronous registers, if you use synchronous controls you will get better results both in area and delay (RAMB has synchronous registers built in).
+WARNING: [DRC RBOR-1] RAMB output registers: RAMB hdmi_i/proportional_control_0/inst/u0/ratio_out_z_reg_1_3 output DOA (1) is connected to asynchronous registers, if you use synchronous controls you will get better results both in area and delay (RAMB has synchronous registers built in).
+WARNING: [DRC RBOR-1] RAMB output registers: RAMB hdmi_i/proportional_control_0/inst/u0/ratio_out_z_reg_1_4 output DOA (1) is connected to asynchronous registers, if you use synchronous controls you will get better results both in area and delay (RAMB has synchronous registers built in).
+WARNING: [DRC RBOR-1] RAMB output registers: RAMB hdmi_i/proportional_control_0/inst/u0/ratio_out_z_reg_1_5 output DOA (1) is connected to asynchronous registers, if you use synchronous controls you will get better results both in area and delay (RAMB has synchronous registers built in).
+WARNING: [DRC RBOR-1] RAMB output registers: RAMB hdmi_i/proportional_control_0/inst/u0/ratio_out_z_reg_1_6 output DOA (1) is connected to asynchronous registers, if you use synchronous controls you will get better results both in area and delay (RAMB has synchronous registers built in).
+WARNING: [DRC RBOR-1] RAMB output registers: RAMB hdmi_i/proportional_control_0/inst/u0/ratio_out_z_reg_1_7 output DOA (1) is connected to asynchronous registers, if you use synchronous controls you will get better results both in area and delay (RAMB has synchronous registers built in).
+WARNING: [DRC RBOR-1] RAMB output registers: RAMB hdmi_i/proportional_control_0/inst/u0/ratio_out_z_reg_1_8 output DOA (1) is connected to asynchronous registers, if you use synchronous controls you will get better results both in area and delay (RAMB has synchronous registers built in).
+WARNING: [DRC RBOR-1] RAMB output registers: RAMB hdmi_i/proportional_control_0/inst/u0/ratio_out_z_reg_1_9 output DOA (1) is connected to asynchronous registers, if you use synchronous controls you will get better results both in area and delay (RAMB has synchronous registers built in).
 WARNING: [DRC REQP-1709] Clock output buffering: PLLE2_ADV connectivity violation. The signal hdmi_i/mig_7series_0/u_hdmi_mig_7series_0_0_mig/u_ddr3_infrastructure/pll_clk3_out on the hdmi_i/mig_7series_0/u_hdmi_mig_7series_0_0_mig/u_ddr3_infrastructure/plle2_i/CLKOUT3 pin of hdmi_i/mig_7series_0/u_hdmi_mig_7series_0_0_mig/u_ddr3_infrastructure/plle2_i does not drive the same kind of BUFFER load as the other CLKOUT pins. Routing from the different buffer types will not be phase aligned.
-WARNING: [DRC RTSTAT-10] No routable loads: 58 net(s) have no routable loads. The problem bus(es) and/or net(s) are dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_inst/TMS, hdmi_i/axi_mem_intercon/m00_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, hdmi_i/axi_mem_intercon/m00_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, hdmi_i/axi_mem_intercon/m00_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_READ.read_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_CTL/ctl_reg[2:0], dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD1/ctl_reg_en_2[1], dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_CTL/ctl_reg_en_2[1], dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_switch/m_bscan_capture[0], dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_switch/m_bscan_drck[0], dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_switch/m_bscan_runtest[0], hdmi_i/axi_mem_intercon/m00_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg[2:0], hdmi_i/axi_mem_intercon/m00_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_READ.read_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg[2:0], dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg[0], hdmi_i/axi_mem_intercon/m00_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg[2:0]... and (the first 15 of 44 listed).
+WARNING: [DRC RTSTAT-10] No routable loads: 58 net(s) have no routable loads. The problem bus(es) and/or net(s) are dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_inst/TMS, dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, hdmi_i/axi_mem_intercon/m00_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_READ.read_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, hdmi_i/axi_mem_intercon/m00_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, hdmi_i/axi_mem_intercon/m00_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_CTL/ctl_reg[2:0], dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_CTL/ctl_reg_en_2[1], dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD1/ctl_reg_en_2[1], dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_switch/m_bscan_capture[0], dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_switch/m_bscan_drck[0], dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_switch/m_bscan_runtest[0], hdmi_i/axi_mem_intercon/m00_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg[2:0], hdmi_i/axi_mem_intercon/m00_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_READ.read_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg[2:0], dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg[0], hdmi_i/axi_mem_intercon/m00_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg[2:0]... and (the first 15 of 44 listed).
 INFO: [DRC AVAL-4] enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND: hdmi_i/object_localizer_1/inst/x_fusion/DSP48E1_inst: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
 INFO: [DRC AVAL-4] enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND: hdmi_i/object_localizer_1/inst/x_position/DSP48E1_inst: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
 INFO: [DRC AVAL-4] enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND: hdmi_i/object_localizer_1/inst/y_fusion/DSP48E1_inst: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
@@ -1256,7 +1016,7 @@ INFO: [DRC REQP-181] writefirst: Synchronous clocking is detected for BRAM (hdmi
 INFO: [DRC REQP-181] writefirst: Synchronous clocking is detected for BRAM (hdmi_i/axi_vdma_0/U0/I_PRMRY_DATAMOVER/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/GEN_INCLUDE_MM2S_SF.I_RD_SF/I_DATA_FIFO/BLK_MEM.I_SYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_sync_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_1) in SDP mode with WRITE_FIRST write-mode. This is the preferred mode for best power characteristics, however it may exhibit address collisions if the same address appears on both read and write ports resulting in unknown or corrupted read data. It is suggested to confirm via simulation that an address collision never occurs and if so it is suggested to try and avoid this situation. If address collisions cannot be avoided, the write-mode may be set to READ_FIRST which guarantees that the read data is the prior contents of the memory at the cost of additional power in the design. See the FPGA Memory Resources User Guide for additional information.
 INFO: [DRC REQP-181] writefirst: Synchronous clocking is detected for BRAM (hdmi_i/axi_vdma_0/U0/I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT/I_DATA_FIFO/BLK_MEM.I_SYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_sync_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_0) in SDP mode with WRITE_FIRST write-mode. This is the preferred mode for best power characteristics, however it may exhibit address collisions if the same address appears on both read and write ports resulting in unknown or corrupted read data. It is suggested to confirm via simulation that an address collision never occurs and if so it is suggested to try and avoid this situation. If address collisions cannot be avoided, the write-mode may be set to READ_FIRST which guarantees that the read data is the prior contents of the memory at the cost of additional power in the design. See the FPGA Memory Resources User Guide for additional information.
 INFO: [DRC REQP-181] writefirst: Synchronous clocking is detected for BRAM (hdmi_i/axi_vdma_0/U0/I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT/I_DATA_FIFO/BLK_MEM.I_SYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_sync_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_1) in SDP mode with WRITE_FIRST write-mode. This is the preferred mode for best power characteristics, however it may exhibit address collisions if the same address appears on both read and write ports resulting in unknown or corrupted read data. It is suggested to confirm via simulation that an address collision never occurs and if so it is suggested to try and avoid this situation. If address collisions cannot be avoided, the write-mode may be set to READ_FIRST which guarantees that the read data is the prior contents of the memory at the cost of additional power in the design. See the FPGA Memory Resources User Guide for additional information.
-INFO: [Vivado 12-3199] DRC finished with 0 Errors, 44 Warnings, 15 Advisories
+INFO: [Vivado 12-3199] DRC finished with 0 Errors, 88 Warnings, 15 Advisories
 INFO: [Vivado 12-3200] Please refer to the DRC report (report_drc) for more information.
 INFO: [Designutils 20-2272] Running write_bitstream with 2 threads.
 Loading data files...
@@ -1269,7 +1029,7 @@ Writing bitstream ./hdmi_wrapper.bit...
 INFO: [Vivado 12-1842] Bitgen Completed Successfully.
 INFO: [Project 1-1876] WebTalk data collection is mandatory when using a ULT device. To see the specific WebTalk data collected for your design, open the usage_statistics_webtalk.html or usage_statistics_webtalk.xml file in the implementation directory.
 INFO: [Common 17-83] Releasing license: Implementation
-32 Infos, 44 Warnings, 0 Critical Warnings and 0 Errors encountered.
+32 Infos, 88 Warnings, 0 Critical Warnings and 0 Errors encountered.
 write_bitstream completed successfully
-write_bitstream: Time (s): cpu = 00:00:55 ; elapsed = 00:00:42 . Memory (MB): peak = 3583.523 ; gain = 371.242
-INFO: [Common 17-206] Exiting Vivado at Mon Mar 17 19:46:30 2025...
+write_bitstream: Time (s): cpu = 00:01:01 ; elapsed = 00:00:41 . Memory (MB): peak = 3618.379 ; gain = 287.973
+INFO: [Common 17-206] Exiting Vivado at Tue Mar 18 01:03:31 2025...

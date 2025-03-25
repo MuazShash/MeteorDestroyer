@@ -91,6 +91,7 @@ set_property ip_repo_paths {
   c:/Users/Muaz/Downloads/hw/hw.ipdefs/repo
   c:/Users/Muaz/Documents/MeteorDestroyer/Parser_ip
   c:/Users/Muaz/Documents/MeteorDestroyer/Localizer_ip
+  c:/Users/Muaz/Documents/MeteorDestroyer/servo_controller_ip
 } [current_project]
 update_ip_catalog
 set_property ip_output_repo c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.cache/ip [current_project]

@@ -2,8 +2,8 @@
 # Vivado v2022.1 (64-bit)
 # SW Build 3526262 on Mon Apr 18 15:48:16 MDT 2022
 # IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
-# Start of session at: Mon Mar 17 19:34:11 2025
-# Process ID: 23612
+# Start of session at: Tue Mar 18 00:51:35 2025
+# Process ID: 65000
 # Current directory: C:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.runs/synth_1
 # Command line: vivado.exe -log hdmi_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source hdmi_wrapper.tcl
 # Log file: C:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.runs/synth_1/hdmi_wrapper.vds
@@ -17,10 +17,11 @@ INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/Muaz/Downloads/hw/hw
 INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/Muaz/Downloads/hw/hw.ipdefs/repo'.
 INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/Muaz/Documents/MeteorDestroyer/Parser_ip'.
 INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/Muaz/Documents/MeteorDestroyer/Localizer_ip'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/Muaz/Documents/MeteorDestroyer/servo_controller_ip'.
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2022.1/data/ip'.
 WARNING: [IP_Flow 19-4995] The host OS only allows 260 characters in a normal path. The IP cache path is more than 80 characters. If you experience issues with IP caching, please consider changing the IP cache to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter. 
 Current IP cache path is c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.cache/ip 
-add_files: Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 1281.340 ; gain = 0.000
+add_files: Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1272.402 ; gain = 0.000
 Command: synth_design -top hdmi_wrapper -part xc7a200tsbg484-1 -flatten_hierarchy none -directive RuntimeOptimized -fsm_extraction off
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a200t'
@@ -28,237 +29,239 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a200
 INFO: [Device 21-403] Loading part xc7a200tsbg484-1
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 23388
+INFO: [Synth 8-7075] Helper process launched with PID 62372
 WARNING: [Synth 8-9501] generate block is allowed only inside loop and conditional generate in SystemVerilog mode [C:/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:4023]
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1290.727 ; gain = 9.387
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1291.406 ; gain = 19.004
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'hdmi_wrapper' [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/hdl/hdmi_wrapper.v:12]
 INFO: [Synth 8-6157] synthesizing module 'IOBUF' [C:/Xilinx/Vivado/2022.1/scripts/rt/data/unisim_comp.v:59734]
 INFO: [Synth 8-6155] done synthesizing module 'IOBUF' (0#1) [C:/Xilinx/Vivado/2022.1/scripts/rt/data/unisim_comp.v:59734]
 INFO: [Synth 8-6157] synthesizing module 'hdmi' [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:12]
-INFO: [Synth 8-6157] synthesizing module 'hdmi_array_parser_1_0' [C:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.runs/synth_1/.Xil/Vivado-23612-DESKTOP-BINRERU/realtime/hdmi_array_parser_1_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'hdmi_array_parser_1_0' (0#1) [C:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.runs/synth_1/.Xil/Vivado-23612-DESKTOP-BINRERU/realtime/hdmi_array_parser_1_0_stub.v:5]
-INFO: [Synth 8-6157] synthesizing module 'hdmi_axi_dynclk_0_0' [C:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.runs/synth_1/.Xil/Vivado-23612-DESKTOP-BINRERU/realtime/hdmi_axi_dynclk_0_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'hdmi_axi_dynclk_0_0' (0#1) [C:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.runs/synth_1/.Xil/Vivado-23612-DESKTOP-BINRERU/realtime/hdmi_axi_dynclk_0_0_stub.v:5]
-WARNING: [Synth 8-7071] port 'LOCKED_O' of module 'hdmi_axi_dynclk_0_0' is unconnected for instance 'axi_dynclk_0' [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:554]
-WARNING: [Synth 8-7023] instance 'axi_dynclk_0' of module 'hdmi_axi_dynclk_0_0' has 25 connections declared, but only 24 given [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:554]
-INFO: [Synth 8-6157] synthesizing module 'hdmi_axi_gpio_0_0' [C:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.runs/synth_1/.Xil/Vivado-23612-DESKTOP-BINRERU/realtime/hdmi_axi_gpio_0_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'hdmi_axi_gpio_0_0' (0#1) [C:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.runs/synth_1/.Xil/Vivado-23612-DESKTOP-BINRERU/realtime/hdmi_axi_gpio_0_0_stub.v:5]
-INFO: [Synth 8-6157] synthesizing module 'hdmi_axi_gpio_video_0' [C:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.runs/synth_1/.Xil/Vivado-23612-DESKTOP-BINRERU/realtime/hdmi_axi_gpio_video_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'hdmi_axi_gpio_video_0' (0#1) [C:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.runs/synth_1/.Xil/Vivado-23612-DESKTOP-BINRERU/realtime/hdmi_axi_gpio_video_0_stub.v:5]
-INFO: [Synth 8-6157] synthesizing module 'hdmi_axi_mem_intercon_0' [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:1512]
-INFO: [Synth 8-6157] synthesizing module 'm00_couplers_imp_JC9FNM' [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:4128]
-INFO: [Synth 8-6157] synthesizing module 'hdmi_auto_ds_0' [C:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.runs/synth_1/.Xil/Vivado-23612-DESKTOP-BINRERU/realtime/hdmi_auto_ds_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'hdmi_auto_ds_0' (0#1) [C:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.runs/synth_1/.Xil/Vivado-23612-DESKTOP-BINRERU/realtime/hdmi_auto_ds_0_stub.v:5]
-INFO: [Synth 8-6157] synthesizing module 'hdmi_auto_rs_w_0' [C:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.runs/synth_1/.Xil/Vivado-23612-DESKTOP-BINRERU/realtime/hdmi_auto_rs_w_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'hdmi_auto_rs_w_0' (0#1) [C:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.runs/synth_1/.Xil/Vivado-23612-DESKTOP-BINRERU/realtime/hdmi_auto_rs_w_0_stub.v:5]
-INFO: [Synth 8-6157] synthesizing module 'hdmi_m00_regslice_0' [C:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.runs/synth_1/.Xil/Vivado-23612-DESKTOP-BINRERU/realtime/hdmi_m00_regslice_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'hdmi_m00_regslice_0' (0#1) [C:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.runs/synth_1/.Xil/Vivado-23612-DESKTOP-BINRERU/realtime/hdmi_m00_regslice_0_stub.v:5]
-WARNING: [Synth 8-7071] port 'm_axi_awregion' of module 'hdmi_m00_regslice_0' is unconnected for instance 'm00_regslice' [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:4667]
-WARNING: [Synth 8-7071] port 'm_axi_arregion' of module 'hdmi_m00_regslice_0' is unconnected for instance 'm00_regslice' [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:4667]
-WARNING: [Synth 8-7023] instance 'm00_regslice' of module 'hdmi_m00_regslice_0' has 72 connections declared, but only 70 given [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:4667]
-INFO: [Synth 8-6155] done synthesizing module 'm00_couplers_imp_JC9FNM' (0#1) [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:4128]
-INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_10D7LX3' [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:6169]
-INFO: [Synth 8-6157] synthesizing module 'hdmi_auto_rs_w_1' [C:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.runs/synth_1/.Xil/Vivado-23612-DESKTOP-BINRERU/realtime/hdmi_auto_rs_w_1_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'hdmi_auto_rs_w_1' (0#1) [C:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.runs/synth_1/.Xil/Vivado-23612-DESKTOP-BINRERU/realtime/hdmi_auto_rs_w_1_stub.v:5]
-WARNING: [Synth 8-7071] port 'm_axi_arregion' of module 'hdmi_auto_rs_w_1' is unconnected for instance 'auto_rs_w' [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:6328]
-WARNING: [Synth 8-7023] instance 'auto_rs_w' of module 'hdmi_auto_rs_w_1' has 34 connections declared, but only 33 given [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:6328]
-INFO: [Synth 8-6157] synthesizing module 'hdmi_auto_us_0' [C:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.runs/synth_1/.Xil/Vivado-23612-DESKTOP-BINRERU/realtime/hdmi_auto_us_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'hdmi_auto_us_0' (0#1) [C:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.runs/synth_1/.Xil/Vivado-23612-DESKTOP-BINRERU/realtime/hdmi_auto_us_0_stub.v:5]
-INFO: [Synth 8-6157] synthesizing module 'hdmi_s00_regslice_0' [C:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.runs/synth_1/.Xil/Vivado-23612-DESKTOP-BINRERU/realtime/hdmi_s00_regslice_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'hdmi_s00_regslice_0' (0#1) [C:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.runs/synth_1/.Xil/Vivado-23612-DESKTOP-BINRERU/realtime/hdmi_s00_regslice_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_10D7LX3' (0#1) [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:6169]
-INFO: [Synth 8-6157] synthesizing module 's01_couplers_imp_8CUCHT' [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:6580]
-INFO: [Synth 8-6157] synthesizing module 'hdmi_auto_rs_w_2' [C:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.runs/synth_1/.Xil/Vivado-23612-DESKTOP-BINRERU/realtime/hdmi_auto_rs_w_2_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'hdmi_auto_rs_w_2' (0#1) [C:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.runs/synth_1/.Xil/Vivado-23612-DESKTOP-BINRERU/realtime/hdmi_auto_rs_w_2_stub.v:5]
-WARNING: [Synth 8-7071] port 'm_axi_awregion' of module 'hdmi_auto_rs_w_2' is unconnected for instance 'auto_rs_w' [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:6769]
-WARNING: [Synth 8-7023] instance 'auto_rs_w' of module 'hdmi_auto_rs_w_2' has 40 connections declared, but only 39 given [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:6769]
-INFO: [Synth 8-6157] synthesizing module 'hdmi_auto_us_1' [C:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.runs/synth_1/.Xil/Vivado-23612-DESKTOP-BINRERU/realtime/hdmi_auto_us_1_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'hdmi_auto_us_1' (0#1) [C:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.runs/synth_1/.Xil/Vivado-23612-DESKTOP-BINRERU/realtime/hdmi_auto_us_1_stub.v:5]
-INFO: [Synth 8-6157] synthesizing module 'hdmi_s01_regslice_0' [C:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.runs/synth_1/.Xil/Vivado-23612-DESKTOP-BINRERU/realtime/hdmi_s01_regslice_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'hdmi_s01_regslice_0' (0#1) [C:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.runs/synth_1/.Xil/Vivado-23612-DESKTOP-BINRERU/realtime/hdmi_s01_regslice_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 's01_couplers_imp_8CUCHT' (0#1) [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:6580]
-INFO: [Synth 8-6157] synthesizing module 's02_couplers_imp_RBV57E' [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:6893]
-INFO: [Synth 8-6157] synthesizing module 'hdmi_s02_regslice_0' [C:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.runs/synth_1/.Xil/Vivado-23612-DESKTOP-BINRERU/realtime/hdmi_s02_regslice_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'hdmi_s02_regslice_0' (0#1) [C:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.runs/synth_1/.Xil/Vivado-23612-DESKTOP-BINRERU/realtime/hdmi_s02_regslice_0_stub.v:5]
-WARNING: [Synth 8-7071] port 'm_axi_awregion' of module 'hdmi_s02_regslice_0' is unconnected for instance 's02_regslice' [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:7172]
-WARNING: [Synth 8-7071] port 'm_axi_arregion' of module 'hdmi_s02_regslice_0' is unconnected for instance 's02_regslice' [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:7172]
-WARNING: [Synth 8-7023] instance 's02_regslice' of module 'hdmi_s02_regslice_0' has 72 connections declared, but only 70 given [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:7172]
-INFO: [Synth 8-6155] done synthesizing module 's02_couplers_imp_RBV57E' (0#1) [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:6893]
-INFO: [Synth 8-6157] synthesizing module 's03_couplers_imp_1YVIHYK' [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:7245]
-INFO: [Synth 8-6157] synthesizing module 'hdmi_s03_regslice_0' [C:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.runs/synth_1/.Xil/Vivado-23612-DESKTOP-BINRERU/realtime/hdmi_s03_regslice_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'hdmi_s03_regslice_0' (0#1) [C:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.runs/synth_1/.Xil/Vivado-23612-DESKTOP-BINRERU/realtime/hdmi_s03_regslice_0_stub.v:5]
-WARNING: [Synth 8-7071] port 'm_axi_arregion' of module 'hdmi_s03_regslice_0' is unconnected for instance 's03_regslice' [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:7380]
-WARNING: [Synth 8-7023] instance 's03_regslice' of module 'hdmi_s03_regslice_0' has 34 connections declared, but only 33 given [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:7380]
-INFO: [Synth 8-6155] done synthesizing module 's03_couplers_imp_1YVIHYK' (0#1) [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:7245]
-INFO: [Synth 8-6157] synthesizing module 'hdmi_xbar_2' [C:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.runs/synth_1/.Xil/Vivado-23612-DESKTOP-BINRERU/realtime/hdmi_xbar_2_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'hdmi_xbar_2' (0#1) [C:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.runs/synth_1/.Xil/Vivado-23612-DESKTOP-BINRERU/realtime/hdmi_xbar_2_stub.v:5]
-WARNING: [Synth 8-689] width (3) of port connection 's_axi_awready' does not match port width (4) of module 'hdmi_xbar_2' [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:2448]
-WARNING: [Synth 8-689] width (6) of port connection 's_axi_bresp' does not match port width (8) of module 'hdmi_xbar_2' [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:2452]
-WARNING: [Synth 8-689] width (3) of port connection 's_axi_bvalid' does not match port width (4) of module 'hdmi_xbar_2' [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:2453]
-WARNING: [Synth 8-689] width (3) of port connection 's_axi_wready' does not match port width (4) of module 'hdmi_xbar_2' [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:2461]
-WARNING: [Synth 8-7071] port 's_axi_bid' of module 'hdmi_xbar_2' is unconnected for instance 'xbar' [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:2387]
-WARNING: [Synth 8-7071] port 's_axi_rid' of module 'hdmi_xbar_2' is unconnected for instance 'xbar' [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:2387]
-WARNING: [Synth 8-7023] instance 'xbar' of module 'hdmi_xbar_2' has 78 connections declared, but only 76 given [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:2387]
-INFO: [Synth 8-6155] done synthesizing module 'hdmi_axi_mem_intercon_0' (0#1) [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:1512]
-INFO: [Synth 8-6157] synthesizing module 'hdmi_axi_timer_0_0' [C:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.runs/synth_1/.Xil/Vivado-23612-DESKTOP-BINRERU/realtime/hdmi_axi_timer_0_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'hdmi_axi_timer_0_0' (0#1) [C:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.runs/synth_1/.Xil/Vivado-23612-DESKTOP-BINRERU/realtime/hdmi_axi_timer_0_0_stub.v:5]
-WARNING: [Synth 8-7071] port 'generateout0' of module 'hdmi_axi_timer_0_0' is unconnected for instance 'axi_timer_0' [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:747]
-WARNING: [Synth 8-7071] port 'generateout1' of module 'hdmi_axi_timer_0_0' is unconnected for instance 'axi_timer_0' [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:747]
-WARNING: [Synth 8-7071] port 'pwm0' of module 'hdmi_axi_timer_0_0' is unconnected for instance 'axi_timer_0' [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:747]
-WARNING: [Synth 8-7023] instance 'axi_timer_0' of module 'hdmi_axi_timer_0_0' has 26 connections declared, but only 23 given [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:747]
-INFO: [Synth 8-6157] synthesizing module 'hdmi_axi_uartlite_0_0' [C:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.runs/synth_1/.Xil/Vivado-23612-DESKTOP-BINRERU/realtime/hdmi_axi_uartlite_0_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'hdmi_axi_uartlite_0_0' (0#1) [C:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.runs/synth_1/.Xil/Vivado-23612-DESKTOP-BINRERU/realtime/hdmi_axi_uartlite_0_0_stub.v:5]
-WARNING: [Synth 8-7071] port 'interrupt' of module 'hdmi_axi_uartlite_0_0' is unconnected for instance 'axi_uartlite_0' [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:771]
-WARNING: [Synth 8-7023] instance 'axi_uartlite_0' of module 'hdmi_axi_uartlite_0_0' has 22 connections declared, but only 21 given [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:771]
-INFO: [Synth 8-6157] synthesizing module 'hdmi_axi_vdma_0_0' [C:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.runs/synth_1/.Xil/Vivado-23612-DESKTOP-BINRERU/realtime/hdmi_axi_vdma_0_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'hdmi_axi_vdma_0_0' (0#1) [C:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.runs/synth_1/.Xil/Vivado-23612-DESKTOP-BINRERU/realtime/hdmi_axi_vdma_0_0_stub.v:5]
-WARNING: [Synth 8-7071] port 'mm2s_frame_ptr_out' of module 'hdmi_axi_vdma_0_0' is unconnected for instance 'axi_vdma_0' [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:793]
-WARNING: [Synth 8-7071] port 's2mm_frame_ptr_out' of module 'hdmi_axi_vdma_0_0' is unconnected for instance 'axi_vdma_0' [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:793]
-WARNING: [Synth 8-7071] port 'm_axis_mm2s_tkeep' of module 'hdmi_axi_vdma_0_0' is unconnected for instance 'axi_vdma_0' [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:793]
-WARNING: [Synth 8-7023] instance 'axi_vdma_0' of module 'hdmi_axi_vdma_0_0' has 67 connections declared, but only 64 given [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:793]
-INFO: [Synth 8-6157] synthesizing module 'hdmi_dvi2rgb_0_0' [C:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.runs/synth_1/.Xil/Vivado-23612-DESKTOP-BINRERU/realtime/hdmi_dvi2rgb_0_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'hdmi_dvi2rgb_0_0' (0#1) [C:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.runs/synth_1/.Xil/Vivado-23612-DESKTOP-BINRERU/realtime/hdmi_dvi2rgb_0_0_stub.v:5]
-WARNING: [Synth 8-7071] port 'aPixelClkLckd' of module 'hdmi_dvi2rgb_0_0' is unconnected for instance 'dvi2rgb_0' [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:858]
-WARNING: [Synth 8-7023] instance 'dvi2rgb_0' of module 'hdmi_dvi2rgb_0_0' has 20 connections declared, but only 19 given [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:858]
-WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:878]
-INFO: [Synth 8-6157] synthesizing module 'hdmi_ila_1_0' [C:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.runs/synth_1/.Xil/Vivado-23612-DESKTOP-BINRERU/realtime/hdmi_ila_1_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'hdmi_ila_1_0' (0#1) [C:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.runs/synth_1/.Xil/Vivado-23612-DESKTOP-BINRERU/realtime/hdmi_ila_1_0_stub.v:5]
-INFO: [Synth 8-6157] synthesizing module 'hdmi_mdm_1_0' [C:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.runs/synth_1/.Xil/Vivado-23612-DESKTOP-BINRERU/realtime/hdmi_mdm_1_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'hdmi_mdm_1_0' (0#1) [C:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.runs/synth_1/.Xil/Vivado-23612-DESKTOP-BINRERU/realtime/hdmi_mdm_1_0_stub.v:5]
-WARNING: [Synth 8-7071] port 'Debug_SYS_Rst' of module 'hdmi_mdm_1_0' is unconnected for instance 'mdm_1' [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:884]
-WARNING: [Synth 8-7023] instance 'mdm_1' of module 'hdmi_mdm_1_0' has 10 connections declared, but only 9 given [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:884]
-INFO: [Synth 8-6157] synthesizing module 'hdmi_microblaze_0_0' [C:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.runs/synth_1/.Xil/Vivado-23612-DESKTOP-BINRERU/realtime/hdmi_microblaze_0_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'hdmi_microblaze_0_0' (0#1) [C:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.runs/synth_1/.Xil/Vivado-23612-DESKTOP-BINRERU/realtime/hdmi_microblaze_0_0_stub.v:5]
-WARNING: [Synth 8-7071] port 'Dbg_Trig_In' of module 'hdmi_microblaze_0_0' is unconnected for instance 'microblaze_0' [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:896]
-WARNING: [Synth 8-7071] port 'Dbg_Trig_Ack_Out' of module 'hdmi_microblaze_0_0' is unconnected for instance 'microblaze_0' [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:896]
-WARNING: [Synth 8-7071] port 'M_AXI_IC_AWID' of module 'hdmi_microblaze_0_0' is unconnected for instance 'microblaze_0' [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:896]
-WARNING: [Synth 8-7071] port 'M_AXI_IC_AWADDR' of module 'hdmi_microblaze_0_0' is unconnected for instance 'microblaze_0' [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:896]
-WARNING: [Synth 8-7071] port 'M_AXI_IC_AWLEN' of module 'hdmi_microblaze_0_0' is unconnected for instance 'microblaze_0' [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:896]
-WARNING: [Synth 8-7071] port 'M_AXI_IC_AWSIZE' of module 'hdmi_microblaze_0_0' is unconnected for instance 'microblaze_0' [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:896]
-WARNING: [Synth 8-7071] port 'M_AXI_IC_AWBURST' of module 'hdmi_microblaze_0_0' is unconnected for instance 'microblaze_0' [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:896]
-WARNING: [Synth 8-7071] port 'M_AXI_IC_AWLOCK' of module 'hdmi_microblaze_0_0' is unconnected for instance 'microblaze_0' [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:896]
-WARNING: [Synth 8-7071] port 'M_AXI_IC_AWCACHE' of module 'hdmi_microblaze_0_0' is unconnected for instance 'microblaze_0' [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:896]
-WARNING: [Synth 8-7071] port 'M_AXI_IC_AWPROT' of module 'hdmi_microblaze_0_0' is unconnected for instance 'microblaze_0' [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:896]
-WARNING: [Synth 8-7071] port 'M_AXI_IC_AWQOS' of module 'hdmi_microblaze_0_0' is unconnected for instance 'microblaze_0' [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:896]
-WARNING: [Synth 8-7071] port 'M_AXI_IC_AWVALID' of module 'hdmi_microblaze_0_0' is unconnected for instance 'microblaze_0' [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:896]
-WARNING: [Synth 8-7071] port 'M_AXI_IC_WDATA' of module 'hdmi_microblaze_0_0' is unconnected for instance 'microblaze_0' [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:896]
-WARNING: [Synth 8-7071] port 'M_AXI_IC_WSTRB' of module 'hdmi_microblaze_0_0' is unconnected for instance 'microblaze_0' [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:896]
-WARNING: [Synth 8-7071] port 'M_AXI_IC_WLAST' of module 'hdmi_microblaze_0_0' is unconnected for instance 'microblaze_0' [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:896]
-WARNING: [Synth 8-7071] port 'M_AXI_IC_WVALID' of module 'hdmi_microblaze_0_0' is unconnected for instance 'microblaze_0' [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:896]
-WARNING: [Synth 8-7071] port 'M_AXI_IC_BREADY' of module 'hdmi_microblaze_0_0' is unconnected for instance 'microblaze_0' [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:896]
-WARNING: [Synth 8-7071] port 'M_AXI_IC_ARID' of module 'hdmi_microblaze_0_0' is unconnected for instance 'microblaze_0' [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:896]
-WARNING: [Synth 8-7071] port 'M_AXI_DC_AWID' of module 'hdmi_microblaze_0_0' is unconnected for instance 'microblaze_0' [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:896]
-WARNING: [Synth 8-7071] port 'M_AXI_DC_ARID' of module 'hdmi_microblaze_0_0' is unconnected for instance 'microblaze_0' [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:896]
-WARNING: [Synth 8-7023] instance 'microblaze_0' of module 'hdmi_microblaze_0_0' has 130 connections declared, but only 110 given [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:896]
-INFO: [Synth 8-6157] synthesizing module 'hdmi_microblaze_0_axi_intc_0' [C:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.runs/synth_1/.Xil/Vivado-23612-DESKTOP-BINRERU/realtime/hdmi_microblaze_0_axi_intc_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'hdmi_microblaze_0_axi_intc_0' (0#1) [C:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.runs/synth_1/.Xil/Vivado-23612-DESKTOP-BINRERU/realtime/hdmi_microblaze_0_axi_intc_0_stub.v:5]
-INFO: [Synth 8-6157] synthesizing module 'hdmi_microblaze_0_axi_periph_0' [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:2466]
-INFO: [Synth 8-6157] synthesizing module 'm00_couplers_imp_1HARIPC' [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:3996]
-INFO: [Synth 8-6155] done synthesizing module 'm00_couplers_imp_1HARIPC' (0#1) [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:3996]
-INFO: [Synth 8-6157] synthesizing module 'm01_couplers_imp_PTW8HY' [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:4740]
-INFO: [Synth 8-6155] done synthesizing module 'm01_couplers_imp_PTW8HY' (0#1) [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:4740]
-INFO: [Synth 8-6157] synthesizing module 'm02_couplers_imp_9ACNVH' [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:4865]
-INFO: [Synth 8-6155] done synthesizing module 'm02_couplers_imp_9ACNVH' (0#1) [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:4865]
-INFO: [Synth 8-6157] synthesizing module 'm03_couplers_imp_1GAIQI3' [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:4997]
-INFO: [Synth 8-6155] done synthesizing module 'm03_couplers_imp_1GAIQI3' (0#1) [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:4997]
-INFO: [Synth 8-6157] synthesizing module 'm04_couplers_imp_1OEV23V' [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:5129]
-INFO: [Synth 8-6155] done synthesizing module 'm04_couplers_imp_1OEV23V' (0#1) [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:5129]
-INFO: [Synth 8-6157] synthesizing module 'm05_couplers_imp_J2A97H' [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:5275]
-INFO: [Synth 8-6155] done synthesizing module 'm05_couplers_imp_J2A97H' (0#1) [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:5275]
-INFO: [Synth 8-6157] synthesizing module 'm06_couplers_imp_FRPBRA' [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:5407]
-INFO: [Synth 8-6155] done synthesizing module 'm06_couplers_imp_FRPBRA' (0#1) [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:5407]
-INFO: [Synth 8-6157] synthesizing module 'm07_couplers_imp_1A0NX68' [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:5539]
-INFO: [Synth 8-6155] done synthesizing module 'm07_couplers_imp_1A0NX68' (0#1) [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:5539]
-INFO: [Synth 8-6157] synthesizing module 'm08_couplers_imp_1VIC0G6' [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:5671]
-INFO: [Synth 8-6155] done synthesizing module 'm08_couplers_imp_1VIC0G6' (0#1) [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:5671]
-INFO: [Synth 8-6157] synthesizing module 'm09_couplers_imp_ULAVCG' [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:5803]
-INFO: [Synth 8-6155] done synthesizing module 'm09_couplers_imp_ULAVCG' (0#1) [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:5803]
-INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_1UVR5X' [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:6434]
-INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_1UVR5X' (0#1) [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:6434]
-INFO: [Synth 8-6157] synthesizing module 'hdmi_xbar_3' [C:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.runs/synth_1/.Xil/Vivado-23612-DESKTOP-BINRERU/realtime/hdmi_xbar_3_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'hdmi_xbar_3' (0#1) [C:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.runs/synth_1/.Xil/Vivado-23612-DESKTOP-BINRERU/realtime/hdmi_xbar_3_stub.v:5]
-WARNING: [Synth 8-689] width (15) of port connection 'm_axi_arprot' does not match port width (30) of module 'hdmi_xbar_3' [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:3957]
-WARNING: [Synth 8-689] width (15) of port connection 'm_axi_awprot' does not match port width (30) of module 'hdmi_xbar_3' [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:3961]
-INFO: [Synth 8-6155] done synthesizing module 'hdmi_microblaze_0_axi_periph_0' (0#1) [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:2466]
-INFO: [Synth 8-6157] synthesizing module 'microblaze_0_local_memory_imp_RJJ05W' [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:5935]
-INFO: [Synth 8-6157] synthesizing module 'hdmi_dlmb_bram_if_cntlr_0' [C:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.runs/synth_1/.Xil/Vivado-23612-DESKTOP-BINRERU/realtime/hdmi_dlmb_bram_if_cntlr_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'hdmi_dlmb_bram_if_cntlr_0' (0#1) [C:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.runs/synth_1/.Xil/Vivado-23612-DESKTOP-BINRERU/realtime/hdmi_dlmb_bram_if_cntlr_0_stub.v:5]
-INFO: [Synth 8-6157] synthesizing module 'hdmi_dlmb_v10_0' [C:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.runs/synth_1/.Xil/Vivado-23612-DESKTOP-BINRERU/realtime/hdmi_dlmb_v10_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'hdmi_dlmb_v10_0' (0#1) [C:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.runs/synth_1/.Xil/Vivado-23612-DESKTOP-BINRERU/realtime/hdmi_dlmb_v10_0_stub.v:5]
-WARNING: [Synth 8-7071] port 'LMB_Rst' of module 'hdmi_dlmb_v10_0' is unconnected for instance 'dlmb_v10' [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:6081]
-WARNING: [Synth 8-7023] instance 'dlmb_v10' of module 'hdmi_dlmb_v10_0' has 25 connections declared, but only 24 given [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:6081]
-INFO: [Synth 8-6157] synthesizing module 'hdmi_ilmb_bram_if_cntlr_0' [C:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.runs/synth_1/.Xil/Vivado-23612-DESKTOP-BINRERU/realtime/hdmi_ilmb_bram_if_cntlr_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'hdmi_ilmb_bram_if_cntlr_0' (0#1) [C:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.runs/synth_1/.Xil/Vivado-23612-DESKTOP-BINRERU/realtime/hdmi_ilmb_bram_if_cntlr_0_stub.v:5]
-INFO: [Synth 8-6157] synthesizing module 'hdmi_ilmb_v10_0' [C:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.runs/synth_1/.Xil/Vivado-23612-DESKTOP-BINRERU/realtime/hdmi_ilmb_v10_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'hdmi_ilmb_v10_0' (0#1) [C:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.runs/synth_1/.Xil/Vivado-23612-DESKTOP-BINRERU/realtime/hdmi_ilmb_v10_0_stub.v:5]
-WARNING: [Synth 8-7071] port 'LMB_Rst' of module 'hdmi_ilmb_v10_0' is unconnected for instance 'ilmb_v10' [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:6127]
-WARNING: [Synth 8-7023] instance 'ilmb_v10' of module 'hdmi_ilmb_v10_0' has 25 connections declared, but only 24 given [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:6127]
-INFO: [Synth 8-6157] synthesizing module 'hdmi_lmb_bram_0' [C:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.runs/synth_1/.Xil/Vivado-23612-DESKTOP-BINRERU/realtime/hdmi_lmb_bram_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'hdmi_lmb_bram_0' (0#1) [C:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.runs/synth_1/.Xil/Vivado-23612-DESKTOP-BINRERU/realtime/hdmi_lmb_bram_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'microblaze_0_local_memory_imp_RJJ05W' (0#1) [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:5935]
+INFO: [Synth 8-6157] synthesizing module 'hdmi_array_parser_1_0' [C:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.runs/synth_1/.Xil/Vivado-65000-DESKTOP-BINRERU/realtime/hdmi_array_parser_1_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'hdmi_array_parser_1_0' (0#1) [C:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.runs/synth_1/.Xil/Vivado-65000-DESKTOP-BINRERU/realtime/hdmi_array_parser_1_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'hdmi_axi_dynclk_0_0' [C:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.runs/synth_1/.Xil/Vivado-65000-DESKTOP-BINRERU/realtime/hdmi_axi_dynclk_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'hdmi_axi_dynclk_0_0' (0#1) [C:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.runs/synth_1/.Xil/Vivado-65000-DESKTOP-BINRERU/realtime/hdmi_axi_dynclk_0_0_stub.v:5]
+WARNING: [Synth 8-7071] port 'LOCKED_O' of module 'hdmi_axi_dynclk_0_0' is unconnected for instance 'axi_dynclk_0' [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:562]
+WARNING: [Synth 8-7023] instance 'axi_dynclk_0' of module 'hdmi_axi_dynclk_0_0' has 25 connections declared, but only 24 given [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:562]
+INFO: [Synth 8-6157] synthesizing module 'hdmi_axi_gpio_0_0' [C:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.runs/synth_1/.Xil/Vivado-65000-DESKTOP-BINRERU/realtime/hdmi_axi_gpio_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'hdmi_axi_gpio_0_0' (0#1) [C:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.runs/synth_1/.Xil/Vivado-65000-DESKTOP-BINRERU/realtime/hdmi_axi_gpio_0_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'hdmi_axi_gpio_video_0' [C:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.runs/synth_1/.Xil/Vivado-65000-DESKTOP-BINRERU/realtime/hdmi_axi_gpio_video_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'hdmi_axi_gpio_video_0' (0#1) [C:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.runs/synth_1/.Xil/Vivado-65000-DESKTOP-BINRERU/realtime/hdmi_axi_gpio_video_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'hdmi_axi_mem_intercon_0' [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:1527]
+INFO: [Synth 8-6157] synthesizing module 'm00_couplers_imp_JC9FNM' [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:4143]
+INFO: [Synth 8-6157] synthesizing module 'hdmi_auto_ds_0' [C:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.runs/synth_1/.Xil/Vivado-65000-DESKTOP-BINRERU/realtime/hdmi_auto_ds_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'hdmi_auto_ds_0' (0#1) [C:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.runs/synth_1/.Xil/Vivado-65000-DESKTOP-BINRERU/realtime/hdmi_auto_ds_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'hdmi_auto_rs_w_0' [C:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.runs/synth_1/.Xil/Vivado-65000-DESKTOP-BINRERU/realtime/hdmi_auto_rs_w_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'hdmi_auto_rs_w_0' (0#1) [C:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.runs/synth_1/.Xil/Vivado-65000-DESKTOP-BINRERU/realtime/hdmi_auto_rs_w_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'hdmi_m00_regslice_0' [C:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.runs/synth_1/.Xil/Vivado-65000-DESKTOP-BINRERU/realtime/hdmi_m00_regslice_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'hdmi_m00_regslice_0' (0#1) [C:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.runs/synth_1/.Xil/Vivado-65000-DESKTOP-BINRERU/realtime/hdmi_m00_regslice_0_stub.v:5]
+WARNING: [Synth 8-7071] port 'm_axi_awregion' of module 'hdmi_m00_regslice_0' is unconnected for instance 'm00_regslice' [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:4682]
+WARNING: [Synth 8-7071] port 'm_axi_arregion' of module 'hdmi_m00_regslice_0' is unconnected for instance 'm00_regslice' [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:4682]
+WARNING: [Synth 8-7023] instance 'm00_regslice' of module 'hdmi_m00_regslice_0' has 72 connections declared, but only 70 given [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:4682]
+INFO: [Synth 8-6155] done synthesizing module 'm00_couplers_imp_JC9FNM' (0#1) [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:4143]
+INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_10D7LX3' [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:6184]
+INFO: [Synth 8-6157] synthesizing module 'hdmi_auto_rs_w_1' [C:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.runs/synth_1/.Xil/Vivado-65000-DESKTOP-BINRERU/realtime/hdmi_auto_rs_w_1_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'hdmi_auto_rs_w_1' (0#1) [C:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.runs/synth_1/.Xil/Vivado-65000-DESKTOP-BINRERU/realtime/hdmi_auto_rs_w_1_stub.v:5]
+WARNING: [Synth 8-7071] port 'm_axi_arregion' of module 'hdmi_auto_rs_w_1' is unconnected for instance 'auto_rs_w' [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:6343]
+WARNING: [Synth 8-7023] instance 'auto_rs_w' of module 'hdmi_auto_rs_w_1' has 34 connections declared, but only 33 given [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:6343]
+INFO: [Synth 8-6157] synthesizing module 'hdmi_auto_us_0' [C:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.runs/synth_1/.Xil/Vivado-65000-DESKTOP-BINRERU/realtime/hdmi_auto_us_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'hdmi_auto_us_0' (0#1) [C:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.runs/synth_1/.Xil/Vivado-65000-DESKTOP-BINRERU/realtime/hdmi_auto_us_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'hdmi_s00_regslice_0' [C:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.runs/synth_1/.Xil/Vivado-65000-DESKTOP-BINRERU/realtime/hdmi_s00_regslice_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'hdmi_s00_regslice_0' (0#1) [C:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.runs/synth_1/.Xil/Vivado-65000-DESKTOP-BINRERU/realtime/hdmi_s00_regslice_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_10D7LX3' (0#1) [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:6184]
+INFO: [Synth 8-6157] synthesizing module 's01_couplers_imp_8CUCHT' [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:6595]
+INFO: [Synth 8-6157] synthesizing module 'hdmi_auto_rs_w_2' [C:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.runs/synth_1/.Xil/Vivado-65000-DESKTOP-BINRERU/realtime/hdmi_auto_rs_w_2_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'hdmi_auto_rs_w_2' (0#1) [C:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.runs/synth_1/.Xil/Vivado-65000-DESKTOP-BINRERU/realtime/hdmi_auto_rs_w_2_stub.v:5]
+WARNING: [Synth 8-7071] port 'm_axi_awregion' of module 'hdmi_auto_rs_w_2' is unconnected for instance 'auto_rs_w' [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:6784]
+WARNING: [Synth 8-7023] instance 'auto_rs_w' of module 'hdmi_auto_rs_w_2' has 40 connections declared, but only 39 given [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:6784]
+INFO: [Synth 8-6157] synthesizing module 'hdmi_auto_us_1' [C:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.runs/synth_1/.Xil/Vivado-65000-DESKTOP-BINRERU/realtime/hdmi_auto_us_1_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'hdmi_auto_us_1' (0#1) [C:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.runs/synth_1/.Xil/Vivado-65000-DESKTOP-BINRERU/realtime/hdmi_auto_us_1_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'hdmi_s01_regslice_0' [C:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.runs/synth_1/.Xil/Vivado-65000-DESKTOP-BINRERU/realtime/hdmi_s01_regslice_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'hdmi_s01_regslice_0' (0#1) [C:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.runs/synth_1/.Xil/Vivado-65000-DESKTOP-BINRERU/realtime/hdmi_s01_regslice_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 's01_couplers_imp_8CUCHT' (0#1) [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:6595]
+INFO: [Synth 8-6157] synthesizing module 's02_couplers_imp_RBV57E' [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:6908]
+INFO: [Synth 8-6157] synthesizing module 'hdmi_s02_regslice_0' [C:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.runs/synth_1/.Xil/Vivado-65000-DESKTOP-BINRERU/realtime/hdmi_s02_regslice_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'hdmi_s02_regslice_0' (0#1) [C:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.runs/synth_1/.Xil/Vivado-65000-DESKTOP-BINRERU/realtime/hdmi_s02_regslice_0_stub.v:5]
+WARNING: [Synth 8-7071] port 'm_axi_awregion' of module 'hdmi_s02_regslice_0' is unconnected for instance 's02_regslice' [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:7187]
+WARNING: [Synth 8-7071] port 'm_axi_arregion' of module 'hdmi_s02_regslice_0' is unconnected for instance 's02_regslice' [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:7187]
+WARNING: [Synth 8-7023] instance 's02_regslice' of module 'hdmi_s02_regslice_0' has 72 connections declared, but only 70 given [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:7187]
+INFO: [Synth 8-6155] done synthesizing module 's02_couplers_imp_RBV57E' (0#1) [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:6908]
+INFO: [Synth 8-6157] synthesizing module 's03_couplers_imp_1YVIHYK' [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:7260]
+INFO: [Synth 8-6157] synthesizing module 'hdmi_s03_regslice_0' [C:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.runs/synth_1/.Xil/Vivado-65000-DESKTOP-BINRERU/realtime/hdmi_s03_regslice_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'hdmi_s03_regslice_0' (0#1) [C:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.runs/synth_1/.Xil/Vivado-65000-DESKTOP-BINRERU/realtime/hdmi_s03_regslice_0_stub.v:5]
+WARNING: [Synth 8-7071] port 'm_axi_arregion' of module 'hdmi_s03_regslice_0' is unconnected for instance 's03_regslice' [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:7395]
+WARNING: [Synth 8-7023] instance 's03_regslice' of module 'hdmi_s03_regslice_0' has 34 connections declared, but only 33 given [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:7395]
+INFO: [Synth 8-6155] done synthesizing module 's03_couplers_imp_1YVIHYK' (0#1) [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:7260]
+INFO: [Synth 8-6157] synthesizing module 'hdmi_xbar_2' [C:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.runs/synth_1/.Xil/Vivado-65000-DESKTOP-BINRERU/realtime/hdmi_xbar_2_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'hdmi_xbar_2' (0#1) [C:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.runs/synth_1/.Xil/Vivado-65000-DESKTOP-BINRERU/realtime/hdmi_xbar_2_stub.v:5]
+WARNING: [Synth 8-689] width (3) of port connection 's_axi_awready' does not match port width (4) of module 'hdmi_xbar_2' [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:2463]
+WARNING: [Synth 8-689] width (6) of port connection 's_axi_bresp' does not match port width (8) of module 'hdmi_xbar_2' [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:2467]
+WARNING: [Synth 8-689] width (3) of port connection 's_axi_bvalid' does not match port width (4) of module 'hdmi_xbar_2' [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:2468]
+WARNING: [Synth 8-689] width (3) of port connection 's_axi_wready' does not match port width (4) of module 'hdmi_xbar_2' [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:2476]
+WARNING: [Synth 8-7071] port 's_axi_bid' of module 'hdmi_xbar_2' is unconnected for instance 'xbar' [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:2402]
+WARNING: [Synth 8-7071] port 's_axi_rid' of module 'hdmi_xbar_2' is unconnected for instance 'xbar' [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:2402]
+WARNING: [Synth 8-7023] instance 'xbar' of module 'hdmi_xbar_2' has 78 connections declared, but only 76 given [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:2402]
+INFO: [Synth 8-6155] done synthesizing module 'hdmi_axi_mem_intercon_0' (0#1) [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:1527]
+INFO: [Synth 8-6157] synthesizing module 'hdmi_axi_timer_0_0' [C:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.runs/synth_1/.Xil/Vivado-65000-DESKTOP-BINRERU/realtime/hdmi_axi_timer_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'hdmi_axi_timer_0_0' (0#1) [C:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.runs/synth_1/.Xil/Vivado-65000-DESKTOP-BINRERU/realtime/hdmi_axi_timer_0_0_stub.v:5]
+WARNING: [Synth 8-7071] port 'generateout0' of module 'hdmi_axi_timer_0_0' is unconnected for instance 'axi_timer_0' [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:755]
+WARNING: [Synth 8-7071] port 'generateout1' of module 'hdmi_axi_timer_0_0' is unconnected for instance 'axi_timer_0' [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:755]
+WARNING: [Synth 8-7071] port 'pwm0' of module 'hdmi_axi_timer_0_0' is unconnected for instance 'axi_timer_0' [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:755]
+WARNING: [Synth 8-7023] instance 'axi_timer_0' of module 'hdmi_axi_timer_0_0' has 26 connections declared, but only 23 given [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:755]
+INFO: [Synth 8-6157] synthesizing module 'hdmi_axi_uartlite_0_0' [C:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.runs/synth_1/.Xil/Vivado-65000-DESKTOP-BINRERU/realtime/hdmi_axi_uartlite_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'hdmi_axi_uartlite_0_0' (0#1) [C:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.runs/synth_1/.Xil/Vivado-65000-DESKTOP-BINRERU/realtime/hdmi_axi_uartlite_0_0_stub.v:5]
+WARNING: [Synth 8-7071] port 'interrupt' of module 'hdmi_axi_uartlite_0_0' is unconnected for instance 'axi_uartlite_0' [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:779]
+WARNING: [Synth 8-7023] instance 'axi_uartlite_0' of module 'hdmi_axi_uartlite_0_0' has 22 connections declared, but only 21 given [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:779]
+INFO: [Synth 8-6157] synthesizing module 'hdmi_axi_vdma_0_0' [C:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.runs/synth_1/.Xil/Vivado-65000-DESKTOP-BINRERU/realtime/hdmi_axi_vdma_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'hdmi_axi_vdma_0_0' (0#1) [C:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.runs/synth_1/.Xil/Vivado-65000-DESKTOP-BINRERU/realtime/hdmi_axi_vdma_0_0_stub.v:5]
+WARNING: [Synth 8-7071] port 'mm2s_frame_ptr_out' of module 'hdmi_axi_vdma_0_0' is unconnected for instance 'axi_vdma_0' [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:801]
+WARNING: [Synth 8-7071] port 's2mm_frame_ptr_out' of module 'hdmi_axi_vdma_0_0' is unconnected for instance 'axi_vdma_0' [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:801]
+WARNING: [Synth 8-7071] port 'm_axis_mm2s_tkeep' of module 'hdmi_axi_vdma_0_0' is unconnected for instance 'axi_vdma_0' [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:801]
+WARNING: [Synth 8-7023] instance 'axi_vdma_0' of module 'hdmi_axi_vdma_0_0' has 67 connections declared, but only 64 given [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:801]
+INFO: [Synth 8-6157] synthesizing module 'hdmi_dvi2rgb_0_0' [C:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.runs/synth_1/.Xil/Vivado-65000-DESKTOP-BINRERU/realtime/hdmi_dvi2rgb_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'hdmi_dvi2rgb_0_0' (0#1) [C:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.runs/synth_1/.Xil/Vivado-65000-DESKTOP-BINRERU/realtime/hdmi_dvi2rgb_0_0_stub.v:5]
+WARNING: [Synth 8-7071] port 'aPixelClkLckd' of module 'hdmi_dvi2rgb_0_0' is unconnected for instance 'dvi2rgb_0' [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:866]
+WARNING: [Synth 8-7023] instance 'dvi2rgb_0' of module 'hdmi_dvi2rgb_0_0' has 20 connections declared, but only 19 given [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:866]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:886]
+INFO: [Synth 8-6157] synthesizing module 'hdmi_ila_1_0' [C:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.runs/synth_1/.Xil/Vivado-65000-DESKTOP-BINRERU/realtime/hdmi_ila_1_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'hdmi_ila_1_0' (0#1) [C:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.runs/synth_1/.Xil/Vivado-65000-DESKTOP-BINRERU/realtime/hdmi_ila_1_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'hdmi_mdm_1_0' [C:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.runs/synth_1/.Xil/Vivado-65000-DESKTOP-BINRERU/realtime/hdmi_mdm_1_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'hdmi_mdm_1_0' (0#1) [C:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.runs/synth_1/.Xil/Vivado-65000-DESKTOP-BINRERU/realtime/hdmi_mdm_1_0_stub.v:5]
+WARNING: [Synth 8-7071] port 'Debug_SYS_Rst' of module 'hdmi_mdm_1_0' is unconnected for instance 'mdm_1' [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:892]
+WARNING: [Synth 8-7023] instance 'mdm_1' of module 'hdmi_mdm_1_0' has 10 connections declared, but only 9 given [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:892]
+INFO: [Synth 8-6157] synthesizing module 'hdmi_microblaze_0_0' [C:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.runs/synth_1/.Xil/Vivado-65000-DESKTOP-BINRERU/realtime/hdmi_microblaze_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'hdmi_microblaze_0_0' (0#1) [C:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.runs/synth_1/.Xil/Vivado-65000-DESKTOP-BINRERU/realtime/hdmi_microblaze_0_0_stub.v:5]
+WARNING: [Synth 8-7071] port 'Dbg_Trig_In' of module 'hdmi_microblaze_0_0' is unconnected for instance 'microblaze_0' [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:904]
+WARNING: [Synth 8-7071] port 'Dbg_Trig_Ack_Out' of module 'hdmi_microblaze_0_0' is unconnected for instance 'microblaze_0' [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:904]
+WARNING: [Synth 8-7071] port 'M_AXI_IC_AWID' of module 'hdmi_microblaze_0_0' is unconnected for instance 'microblaze_0' [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:904]
+WARNING: [Synth 8-7071] port 'M_AXI_IC_AWADDR' of module 'hdmi_microblaze_0_0' is unconnected for instance 'microblaze_0' [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:904]
+WARNING: [Synth 8-7071] port 'M_AXI_IC_AWLEN' of module 'hdmi_microblaze_0_0' is unconnected for instance 'microblaze_0' [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:904]
+WARNING: [Synth 8-7071] port 'M_AXI_IC_AWSIZE' of module 'hdmi_microblaze_0_0' is unconnected for instance 'microblaze_0' [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:904]
+WARNING: [Synth 8-7071] port 'M_AXI_IC_AWBURST' of module 'hdmi_microblaze_0_0' is unconnected for instance 'microblaze_0' [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:904]
+WARNING: [Synth 8-7071] port 'M_AXI_IC_AWLOCK' of module 'hdmi_microblaze_0_0' is unconnected for instance 'microblaze_0' [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:904]
+WARNING: [Synth 8-7071] port 'M_AXI_IC_AWCACHE' of module 'hdmi_microblaze_0_0' is unconnected for instance 'microblaze_0' [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:904]
+WARNING: [Synth 8-7071] port 'M_AXI_IC_AWPROT' of module 'hdmi_microblaze_0_0' is unconnected for instance 'microblaze_0' [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:904]
+WARNING: [Synth 8-7071] port 'M_AXI_IC_AWQOS' of module 'hdmi_microblaze_0_0' is unconnected for instance 'microblaze_0' [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:904]
+WARNING: [Synth 8-7071] port 'M_AXI_IC_AWVALID' of module 'hdmi_microblaze_0_0' is unconnected for instance 'microblaze_0' [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:904]
+WARNING: [Synth 8-7071] port 'M_AXI_IC_WDATA' of module 'hdmi_microblaze_0_0' is unconnected for instance 'microblaze_0' [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:904]
+WARNING: [Synth 8-7071] port 'M_AXI_IC_WSTRB' of module 'hdmi_microblaze_0_0' is unconnected for instance 'microblaze_0' [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:904]
+WARNING: [Synth 8-7071] port 'M_AXI_IC_WLAST' of module 'hdmi_microblaze_0_0' is unconnected for instance 'microblaze_0' [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:904]
+WARNING: [Synth 8-7071] port 'M_AXI_IC_WVALID' of module 'hdmi_microblaze_0_0' is unconnected for instance 'microblaze_0' [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:904]
+WARNING: [Synth 8-7071] port 'M_AXI_IC_BREADY' of module 'hdmi_microblaze_0_0' is unconnected for instance 'microblaze_0' [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:904]
+WARNING: [Synth 8-7071] port 'M_AXI_IC_ARID' of module 'hdmi_microblaze_0_0' is unconnected for instance 'microblaze_0' [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:904]
+WARNING: [Synth 8-7071] port 'M_AXI_DC_AWID' of module 'hdmi_microblaze_0_0' is unconnected for instance 'microblaze_0' [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:904]
+WARNING: [Synth 8-7071] port 'M_AXI_DC_ARID' of module 'hdmi_microblaze_0_0' is unconnected for instance 'microblaze_0' [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:904]
+WARNING: [Synth 8-7023] instance 'microblaze_0' of module 'hdmi_microblaze_0_0' has 130 connections declared, but only 110 given [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:904]
+INFO: [Synth 8-6157] synthesizing module 'hdmi_microblaze_0_axi_intc_0' [C:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.runs/synth_1/.Xil/Vivado-65000-DESKTOP-BINRERU/realtime/hdmi_microblaze_0_axi_intc_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'hdmi_microblaze_0_axi_intc_0' (0#1) [C:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.runs/synth_1/.Xil/Vivado-65000-DESKTOP-BINRERU/realtime/hdmi_microblaze_0_axi_intc_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'hdmi_microblaze_0_axi_periph_0' [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:2481]
+INFO: [Synth 8-6157] synthesizing module 'm00_couplers_imp_1HARIPC' [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:4011]
+INFO: [Synth 8-6155] done synthesizing module 'm00_couplers_imp_1HARIPC' (0#1) [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:4011]
+INFO: [Synth 8-6157] synthesizing module 'm01_couplers_imp_PTW8HY' [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:4755]
+INFO: [Synth 8-6155] done synthesizing module 'm01_couplers_imp_PTW8HY' (0#1) [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:4755]
+INFO: [Synth 8-6157] synthesizing module 'm02_couplers_imp_9ACNVH' [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:4880]
+INFO: [Synth 8-6155] done synthesizing module 'm02_couplers_imp_9ACNVH' (0#1) [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:4880]
+INFO: [Synth 8-6157] synthesizing module 'm03_couplers_imp_1GAIQI3' [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:5012]
+INFO: [Synth 8-6155] done synthesizing module 'm03_couplers_imp_1GAIQI3' (0#1) [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:5012]
+INFO: [Synth 8-6157] synthesizing module 'm04_couplers_imp_1OEV23V' [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:5144]
+INFO: [Synth 8-6155] done synthesizing module 'm04_couplers_imp_1OEV23V' (0#1) [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:5144]
+INFO: [Synth 8-6157] synthesizing module 'm05_couplers_imp_J2A97H' [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:5290]
+INFO: [Synth 8-6155] done synthesizing module 'm05_couplers_imp_J2A97H' (0#1) [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:5290]
+INFO: [Synth 8-6157] synthesizing module 'm06_couplers_imp_FRPBRA' [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:5422]
+INFO: [Synth 8-6155] done synthesizing module 'm06_couplers_imp_FRPBRA' (0#1) [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:5422]
+INFO: [Synth 8-6157] synthesizing module 'm07_couplers_imp_1A0NX68' [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:5554]
+INFO: [Synth 8-6155] done synthesizing module 'm07_couplers_imp_1A0NX68' (0#1) [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:5554]
+INFO: [Synth 8-6157] synthesizing module 'm08_couplers_imp_1VIC0G6' [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:5686]
+INFO: [Synth 8-6155] done synthesizing module 'm08_couplers_imp_1VIC0G6' (0#1) [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:5686]
+INFO: [Synth 8-6157] synthesizing module 'm09_couplers_imp_ULAVCG' [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:5818]
+INFO: [Synth 8-6155] done synthesizing module 'm09_couplers_imp_ULAVCG' (0#1) [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:5818]
+INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_1UVR5X' [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:6449]
+INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_1UVR5X' (0#1) [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:6449]
+INFO: [Synth 8-6157] synthesizing module 'hdmi_xbar_3' [C:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.runs/synth_1/.Xil/Vivado-65000-DESKTOP-BINRERU/realtime/hdmi_xbar_3_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'hdmi_xbar_3' (0#1) [C:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.runs/synth_1/.Xil/Vivado-65000-DESKTOP-BINRERU/realtime/hdmi_xbar_3_stub.v:5]
+WARNING: [Synth 8-689] width (15) of port connection 'm_axi_arprot' does not match port width (30) of module 'hdmi_xbar_3' [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:3972]
+WARNING: [Synth 8-689] width (15) of port connection 'm_axi_awprot' does not match port width (30) of module 'hdmi_xbar_3' [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:3976]
+INFO: [Synth 8-6155] done synthesizing module 'hdmi_microblaze_0_axi_periph_0' (0#1) [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:2481]
+INFO: [Synth 8-6157] synthesizing module 'microblaze_0_local_memory_imp_RJJ05W' [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:5950]
+INFO: [Synth 8-6157] synthesizing module 'hdmi_dlmb_bram_if_cntlr_0' [C:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.runs/synth_1/.Xil/Vivado-65000-DESKTOP-BINRERU/realtime/hdmi_dlmb_bram_if_cntlr_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'hdmi_dlmb_bram_if_cntlr_0' (0#1) [C:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.runs/synth_1/.Xil/Vivado-65000-DESKTOP-BINRERU/realtime/hdmi_dlmb_bram_if_cntlr_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'hdmi_dlmb_v10_0' [C:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.runs/synth_1/.Xil/Vivado-65000-DESKTOP-BINRERU/realtime/hdmi_dlmb_v10_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'hdmi_dlmb_v10_0' (0#1) [C:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.runs/synth_1/.Xil/Vivado-65000-DESKTOP-BINRERU/realtime/hdmi_dlmb_v10_0_stub.v:5]
+WARNING: [Synth 8-7071] port 'LMB_Rst' of module 'hdmi_dlmb_v10_0' is unconnected for instance 'dlmb_v10' [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:6096]
+WARNING: [Synth 8-7023] instance 'dlmb_v10' of module 'hdmi_dlmb_v10_0' has 25 connections declared, but only 24 given [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:6096]
+INFO: [Synth 8-6157] synthesizing module 'hdmi_ilmb_bram_if_cntlr_0' [C:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.runs/synth_1/.Xil/Vivado-65000-DESKTOP-BINRERU/realtime/hdmi_ilmb_bram_if_cntlr_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'hdmi_ilmb_bram_if_cntlr_0' (0#1) [C:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.runs/synth_1/.Xil/Vivado-65000-DESKTOP-BINRERU/realtime/hdmi_ilmb_bram_if_cntlr_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'hdmi_ilmb_v10_0' [C:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.runs/synth_1/.Xil/Vivado-65000-DESKTOP-BINRERU/realtime/hdmi_ilmb_v10_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'hdmi_ilmb_v10_0' (0#1) [C:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.runs/synth_1/.Xil/Vivado-65000-DESKTOP-BINRERU/realtime/hdmi_ilmb_v10_0_stub.v:5]
+WARNING: [Synth 8-7071] port 'LMB_Rst' of module 'hdmi_ilmb_v10_0' is unconnected for instance 'ilmb_v10' [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:6142]
+WARNING: [Synth 8-7023] instance 'ilmb_v10' of module 'hdmi_ilmb_v10_0' has 25 connections declared, but only 24 given [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:6142]
+INFO: [Synth 8-6157] synthesizing module 'hdmi_lmb_bram_0' [C:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.runs/synth_1/.Xil/Vivado-65000-DESKTOP-BINRERU/realtime/hdmi_lmb_bram_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'hdmi_lmb_bram_0' (0#1) [C:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.runs/synth_1/.Xil/Vivado-65000-DESKTOP-BINRERU/realtime/hdmi_lmb_bram_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'microblaze_0_local_memory_imp_RJJ05W' (0#1) [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:5950]
 INFO: [Synth 8-6157] synthesizing module 'hdmi_microblaze_0_xlconcat_0' [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/ip/hdmi_microblaze_0_xlconcat_0/synth/hdmi_microblaze_0_xlconcat_0.v:53]
 INFO: [Synth 8-6157] synthesizing module 'xlconcat_v2_1_4_xlconcat' [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/ipshared/4b67/hdl/xlconcat_v2_1_vl_rfs.v:14]
 INFO: [Synth 8-6155] done synthesizing module 'xlconcat_v2_1_4_xlconcat' (0#1) [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/ipshared/4b67/hdl/xlconcat_v2_1_vl_rfs.v:14]
 INFO: [Synth 8-6155] done synthesizing module 'hdmi_microblaze_0_xlconcat_0' (0#1) [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/ip/hdmi_microblaze_0_xlconcat_0/synth/hdmi_microblaze_0_xlconcat_0.v:53]
-INFO: [Synth 8-6157] synthesizing module 'hdmi_mig_7series_0_0' [C:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.runs/synth_1/.Xil/Vivado-23612-DESKTOP-BINRERU/realtime/hdmi_mig_7series_0_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'hdmi_mig_7series_0_0' (0#1) [C:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.runs/synth_1/.Xil/Vivado-23612-DESKTOP-BINRERU/realtime/hdmi_mig_7series_0_0_stub.v:5]
-WARNING: [Synth 8-7071] port 'ui_addn_clk_2' of module 'hdmi_mig_7series_0_0' is unconnected for instance 'mig_7series_0' [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:1279]
-WARNING: [Synth 8-7071] port 'ui_addn_clk_3' of module 'hdmi_mig_7series_0_0' is unconnected for instance 'mig_7series_0' [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:1279]
-WARNING: [Synth 8-7071] port 'ui_addn_clk_4' of module 'hdmi_mig_7series_0_0' is unconnected for instance 'mig_7series_0' [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:1279]
-WARNING: [Synth 8-7071] port 'app_sr_active' of module 'hdmi_mig_7series_0_0' is unconnected for instance 'mig_7series_0' [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:1279]
-WARNING: [Synth 8-7071] port 'app_ref_ack' of module 'hdmi_mig_7series_0_0' is unconnected for instance 'mig_7series_0' [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:1279]
-WARNING: [Synth 8-7071] port 'app_zq_ack' of module 'hdmi_mig_7series_0_0' is unconnected for instance 'mig_7series_0' [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:1279]
-WARNING: [Synth 8-7071] port 's_axi_bid' of module 'hdmi_mig_7series_0_0' is unconnected for instance 'mig_7series_0' [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:1279]
-WARNING: [Synth 8-7071] port 's_axi_rid' of module 'hdmi_mig_7series_0_0' is unconnected for instance 'mig_7series_0' [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:1279]
-WARNING: [Synth 8-7071] port 'init_calib_complete' of module 'hdmi_mig_7series_0_0' is unconnected for instance 'mig_7series_0' [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:1279]
-WARNING: [Synth 8-7071] port 'device_temp' of module 'hdmi_mig_7series_0_0' is unconnected for instance 'mig_7series_0' [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:1279]
-WARNING: [Synth 8-7023] instance 'mig_7series_0' of module 'hdmi_mig_7series_0_0' has 68 connections declared, but only 58 given [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:1279]
-INFO: [Synth 8-6157] synthesizing module 'hdmi_object_localizer_1_0' [C:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.runs/synth_1/.Xil/Vivado-23612-DESKTOP-BINRERU/realtime/hdmi_object_localizer_1_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'hdmi_object_localizer_1_0' (0#1) [C:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.runs/synth_1/.Xil/Vivado-23612-DESKTOP-BINRERU/realtime/hdmi_object_localizer_1_0_stub.v:5]
-INFO: [Synth 8-6157] synthesizing module 'hdmi_rgb2dvi_0_0' [C:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.runs/synth_1/.Xil/Vivado-23612-DESKTOP-BINRERU/realtime/hdmi_rgb2dvi_0_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'hdmi_rgb2dvi_0_0' (0#1) [C:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.runs/synth_1/.Xil/Vivado-23612-DESKTOP-BINRERU/realtime/hdmi_rgb2dvi_0_0_stub.v:5]
-INFO: [Synth 8-6157] synthesizing module 'hdmi_rst_mig_7series_0_100M_0' [C:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.runs/synth_1/.Xil/Vivado-23612-DESKTOP-BINRERU/realtime/hdmi_rst_mig_7series_0_100M_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'hdmi_rst_mig_7series_0_100M_0' (0#1) [C:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.runs/synth_1/.Xil/Vivado-23612-DESKTOP-BINRERU/realtime/hdmi_rst_mig_7series_0_100M_0_stub.v:5]
-WARNING: [Synth 8-7071] port 'peripheral_reset' of module 'hdmi_rst_mig_7series_0_100M_0' is unconnected for instance 'rst_mig_7series_0_100M' [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:1374]
-WARNING: [Synth 8-7023] instance 'rst_mig_7series_0_100M' of module 'hdmi_rst_mig_7series_0_100M_0' has 10 connections declared, but only 9 given [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:1374]
-INFO: [Synth 8-6157] synthesizing module 'hdmi_rst_mig_7series_0_pxl_0' [C:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.runs/synth_1/.Xil/Vivado-23612-DESKTOP-BINRERU/realtime/hdmi_rst_mig_7series_0_pxl_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'hdmi_rst_mig_7series_0_pxl_0' (0#1) [C:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.runs/synth_1/.Xil/Vivado-23612-DESKTOP-BINRERU/realtime/hdmi_rst_mig_7series_0_pxl_0_stub.v:5]
-WARNING: [Synth 8-7071] port 'mb_reset' of module 'hdmi_rst_mig_7series_0_pxl_0' is unconnected for instance 'rst_mig_7series_0_pxl' [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:1384]
-WARNING: [Synth 8-7071] port 'bus_struct_reset' of module 'hdmi_rst_mig_7series_0_pxl_0' is unconnected for instance 'rst_mig_7series_0_pxl' [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:1384]
-WARNING: [Synth 8-7071] port 'interconnect_aresetn' of module 'hdmi_rst_mig_7series_0_pxl_0' is unconnected for instance 'rst_mig_7series_0_pxl' [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:1384]
-WARNING: [Synth 8-7023] instance 'rst_mig_7series_0_pxl' of module 'hdmi_rst_mig_7series_0_pxl_0' has 10 connections declared, but only 7 given [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:1384]
-INFO: [Synth 8-6157] synthesizing module 'hdmi_v_axi4s_vid_out_0_0' [C:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.runs/synth_1/.Xil/Vivado-23612-DESKTOP-BINRERU/realtime/hdmi_v_axi4s_vid_out_0_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'hdmi_v_axi4s_vid_out_0_0' (0#1) [C:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.runs/synth_1/.Xil/Vivado-23612-DESKTOP-BINRERU/realtime/hdmi_v_axi4s_vid_out_0_0_stub.v:5]
-WARNING: [Synth 8-7071] port 'vid_vblank' of module 'hdmi_v_axi4s_vid_out_0_0' is unconnected for instance 'v_axi4s_vid_out_0' [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:1392]
-WARNING: [Synth 8-7071] port 'vid_hblank' of module 'hdmi_v_axi4s_vid_out_0_0' is unconnected for instance 'v_axi4s_vid_out_0' [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:1392]
-WARNING: [Synth 8-7071] port 'vid_field_id' of module 'hdmi_v_axi4s_vid_out_0_0' is unconnected for instance 'v_axi4s_vid_out_0' [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:1392]
-WARNING: [Synth 8-7071] port 'vtg_ce' of module 'hdmi_v_axi4s_vid_out_0_0' is unconnected for instance 'v_axi4s_vid_out_0' [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:1392]
-WARNING: [Synth 8-7071] port 'locked' of module 'hdmi_v_axi4s_vid_out_0_0' is unconnected for instance 'v_axi4s_vid_out_0' [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:1392]
-WARNING: [Synth 8-7071] port 'overflow' of module 'hdmi_v_axi4s_vid_out_0_0' is unconnected for instance 'v_axi4s_vid_out_0' [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:1392]
-WARNING: [Synth 8-7071] port 'underflow' of module 'hdmi_v_axi4s_vid_out_0_0' is unconnected for instance 'v_axi4s_vid_out_0' [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:1392]
-WARNING: [Synth 8-7071] port 'fifo_read_level' of module 'hdmi_v_axi4s_vid_out_0_0' is unconnected for instance 'v_axi4s_vid_out_0' [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:1392]
-WARNING: [Synth 8-7071] port 'status' of module 'hdmi_v_axi4s_vid_out_0_0' is unconnected for instance 'v_axi4s_vid_out_0' [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:1392]
-WARNING: [Synth 8-7071] port 'sof_state_out' of module 'hdmi_v_axi4s_vid_out_0_0' is unconnected for instance 'v_axi4s_vid_out_0' [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:1392]
-WARNING: [Synth 8-7023] instance 'v_axi4s_vid_out_0' of module 'hdmi_v_axi4s_vid_out_0_0' has 30 connections declared, but only 20 given [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:1392]
-INFO: [Synth 8-6157] synthesizing module 'hdmi_v_tc_0_0' [C:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.runs/synth_1/.Xil/Vivado-23612-DESKTOP-BINRERU/realtime/hdmi_v_tc_0_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'hdmi_v_tc_0_0' (0#1) [C:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.runs/synth_1/.Xil/Vivado-23612-DESKTOP-BINRERU/realtime/hdmi_v_tc_0_0_stub.v:5]
-WARNING: [Synth 8-7071] port 'fsync_out' of module 'hdmi_v_tc_0_0' is unconnected for instance 'v_tc_0' [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:1413]
-WARNING: [Synth 8-7023] instance 'v_tc_0' of module 'hdmi_v_tc_0_0' has 33 connections declared, but only 32 given [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:1413]
-INFO: [Synth 8-6157] synthesizing module 'hdmi_v_tc_1_0' [C:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.runs/synth_1/.Xil/Vivado-23612-DESKTOP-BINRERU/realtime/hdmi_v_tc_1_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'hdmi_v_tc_1_0' (0#1) [C:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.runs/synth_1/.Xil/Vivado-23612-DESKTOP-BINRERU/realtime/hdmi_v_tc_1_0_stub.v:5]
-WARNING: [Synth 8-7071] port 'intc_if' of module 'hdmi_v_tc_1_0' is unconnected for instance 'v_tc_1' [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:1446]
-WARNING: [Synth 8-7023] instance 'v_tc_1' of module 'hdmi_v_tc_1_0' has 30 connections declared, but only 29 given [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:1446]
-INFO: [Synth 8-6157] synthesizing module 'hdmi_v_vid_in_axi4s_0_0' [C:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.runs/synth_1/.Xil/Vivado-23612-DESKTOP-BINRERU/realtime/hdmi_v_vid_in_axi4s_0_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'hdmi_v_vid_in_axi4s_0_0' (0#1) [C:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.runs/synth_1/.Xil/Vivado-23612-DESKTOP-BINRERU/realtime/hdmi_v_vid_in_axi4s_0_0_stub.v:5]
-WARNING: [Synth 8-7071] port 'fid' of module 'hdmi_v_vid_in_axi4s_0_0' is unconnected for instance 'v_vid_in_axi4s_0' [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:1476]
-WARNING: [Synth 8-7071] port 'vtd_vblank' of module 'hdmi_v_vid_in_axi4s_0_0' is unconnected for instance 'v_vid_in_axi4s_0' [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:1476]
-WARNING: [Synth 8-7071] port 'vtd_hblank' of module 'hdmi_v_vid_in_axi4s_0_0' is unconnected for instance 'v_vid_in_axi4s_0' [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:1476]
-WARNING: [Synth 8-7071] port 'vtd_field_id' of module 'hdmi_v_vid_in_axi4s_0_0' is unconnected for instance 'v_vid_in_axi4s_0' [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:1476]
-WARNING: [Synth 8-7071] port 'overflow' of module 'hdmi_v_vid_in_axi4s_0_0' is unconnected for instance 'v_vid_in_axi4s_0' [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:1476]
-WARNING: [Synth 8-7071] port 'underflow' of module 'hdmi_v_vid_in_axi4s_0_0' is unconnected for instance 'v_vid_in_axi4s_0' [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:1476]
-WARNING: [Synth 8-7023] instance 'v_vid_in_axi4s_0' of module 'hdmi_v_vid_in_axi4s_0_0' has 28 connections declared, but only 22 given [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:1476]
+INFO: [Synth 8-6157] synthesizing module 'hdmi_mig_7series_0_0' [C:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.runs/synth_1/.Xil/Vivado-65000-DESKTOP-BINRERU/realtime/hdmi_mig_7series_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'hdmi_mig_7series_0_0' (0#1) [C:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.runs/synth_1/.Xil/Vivado-65000-DESKTOP-BINRERU/realtime/hdmi_mig_7series_0_0_stub.v:5]
+WARNING: [Synth 8-7071] port 'ui_addn_clk_2' of module 'hdmi_mig_7series_0_0' is unconnected for instance 'mig_7series_0' [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:1287]
+WARNING: [Synth 8-7071] port 'ui_addn_clk_3' of module 'hdmi_mig_7series_0_0' is unconnected for instance 'mig_7series_0' [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:1287]
+WARNING: [Synth 8-7071] port 'ui_addn_clk_4' of module 'hdmi_mig_7series_0_0' is unconnected for instance 'mig_7series_0' [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:1287]
+WARNING: [Synth 8-7071] port 'app_sr_active' of module 'hdmi_mig_7series_0_0' is unconnected for instance 'mig_7series_0' [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:1287]
+WARNING: [Synth 8-7071] port 'app_ref_ack' of module 'hdmi_mig_7series_0_0' is unconnected for instance 'mig_7series_0' [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:1287]
+WARNING: [Synth 8-7071] port 'app_zq_ack' of module 'hdmi_mig_7series_0_0' is unconnected for instance 'mig_7series_0' [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:1287]
+WARNING: [Synth 8-7071] port 's_axi_bid' of module 'hdmi_mig_7series_0_0' is unconnected for instance 'mig_7series_0' [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:1287]
+WARNING: [Synth 8-7071] port 's_axi_rid' of module 'hdmi_mig_7series_0_0' is unconnected for instance 'mig_7series_0' [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:1287]
+WARNING: [Synth 8-7071] port 'init_calib_complete' of module 'hdmi_mig_7series_0_0' is unconnected for instance 'mig_7series_0' [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:1287]
+WARNING: [Synth 8-7071] port 'device_temp' of module 'hdmi_mig_7series_0_0' is unconnected for instance 'mig_7series_0' [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:1287]
+WARNING: [Synth 8-7023] instance 'mig_7series_0' of module 'hdmi_mig_7series_0_0' has 68 connections declared, but only 58 given [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:1287]
+INFO: [Synth 8-6157] synthesizing module 'hdmi_object_localizer_1_0' [C:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.runs/synth_1/.Xil/Vivado-65000-DESKTOP-BINRERU/realtime/hdmi_object_localizer_1_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'hdmi_object_localizer_1_0' (0#1) [C:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.runs/synth_1/.Xil/Vivado-65000-DESKTOP-BINRERU/realtime/hdmi_object_localizer_1_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'hdmi_proportional_control_0_0' [C:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.runs/synth_1/.Xil/Vivado-65000-DESKTOP-BINRERU/realtime/hdmi_proportional_control_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'hdmi_proportional_control_0_0' (0#1) [C:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.runs/synth_1/.Xil/Vivado-65000-DESKTOP-BINRERU/realtime/hdmi_proportional_control_0_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'hdmi_rgb2dvi_0_0' [C:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.runs/synth_1/.Xil/Vivado-65000-DESKTOP-BINRERU/realtime/hdmi_rgb2dvi_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'hdmi_rgb2dvi_0_0' (0#1) [C:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.runs/synth_1/.Xil/Vivado-65000-DESKTOP-BINRERU/realtime/hdmi_rgb2dvi_0_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'hdmi_rst_mig_7series_0_100M_0' [C:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.runs/synth_1/.Xil/Vivado-65000-DESKTOP-BINRERU/realtime/hdmi_rst_mig_7series_0_100M_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'hdmi_rst_mig_7series_0_100M_0' (0#1) [C:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.runs/synth_1/.Xil/Vivado-65000-DESKTOP-BINRERU/realtime/hdmi_rst_mig_7series_0_100M_0_stub.v:5]
+WARNING: [Synth 8-7071] port 'peripheral_reset' of module 'hdmi_rst_mig_7series_0_100M_0' is unconnected for instance 'rst_mig_7series_0_100M' [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:1389]
+WARNING: [Synth 8-7023] instance 'rst_mig_7series_0_100M' of module 'hdmi_rst_mig_7series_0_100M_0' has 10 connections declared, but only 9 given [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:1389]
+INFO: [Synth 8-6157] synthesizing module 'hdmi_rst_mig_7series_0_pxl_0' [C:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.runs/synth_1/.Xil/Vivado-65000-DESKTOP-BINRERU/realtime/hdmi_rst_mig_7series_0_pxl_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'hdmi_rst_mig_7series_0_pxl_0' (0#1) [C:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.runs/synth_1/.Xil/Vivado-65000-DESKTOP-BINRERU/realtime/hdmi_rst_mig_7series_0_pxl_0_stub.v:5]
+WARNING: [Synth 8-7071] port 'mb_reset' of module 'hdmi_rst_mig_7series_0_pxl_0' is unconnected for instance 'rst_mig_7series_0_pxl' [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:1399]
+WARNING: [Synth 8-7071] port 'bus_struct_reset' of module 'hdmi_rst_mig_7series_0_pxl_0' is unconnected for instance 'rst_mig_7series_0_pxl' [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:1399]
+WARNING: [Synth 8-7071] port 'interconnect_aresetn' of module 'hdmi_rst_mig_7series_0_pxl_0' is unconnected for instance 'rst_mig_7series_0_pxl' [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:1399]
+WARNING: [Synth 8-7023] instance 'rst_mig_7series_0_pxl' of module 'hdmi_rst_mig_7series_0_pxl_0' has 10 connections declared, but only 7 given [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:1399]
+INFO: [Synth 8-6157] synthesizing module 'hdmi_v_axi4s_vid_out_0_0' [C:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.runs/synth_1/.Xil/Vivado-65000-DESKTOP-BINRERU/realtime/hdmi_v_axi4s_vid_out_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'hdmi_v_axi4s_vid_out_0_0' (0#1) [C:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.runs/synth_1/.Xil/Vivado-65000-DESKTOP-BINRERU/realtime/hdmi_v_axi4s_vid_out_0_0_stub.v:5]
+WARNING: [Synth 8-7071] port 'vid_vblank' of module 'hdmi_v_axi4s_vid_out_0_0' is unconnected for instance 'v_axi4s_vid_out_0' [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:1407]
+WARNING: [Synth 8-7071] port 'vid_hblank' of module 'hdmi_v_axi4s_vid_out_0_0' is unconnected for instance 'v_axi4s_vid_out_0' [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:1407]
+WARNING: [Synth 8-7071] port 'vid_field_id' of module 'hdmi_v_axi4s_vid_out_0_0' is unconnected for instance 'v_axi4s_vid_out_0' [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:1407]
+WARNING: [Synth 8-7071] port 'vtg_ce' of module 'hdmi_v_axi4s_vid_out_0_0' is unconnected for instance 'v_axi4s_vid_out_0' [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:1407]
+WARNING: [Synth 8-7071] port 'locked' of module 'hdmi_v_axi4s_vid_out_0_0' is unconnected for instance 'v_axi4s_vid_out_0' [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:1407]
+WARNING: [Synth 8-7071] port 'overflow' of module 'hdmi_v_axi4s_vid_out_0_0' is unconnected for instance 'v_axi4s_vid_out_0' [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:1407]
+WARNING: [Synth 8-7071] port 'underflow' of module 'hdmi_v_axi4s_vid_out_0_0' is unconnected for instance 'v_axi4s_vid_out_0' [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:1407]
+WARNING: [Synth 8-7071] port 'fifo_read_level' of module 'hdmi_v_axi4s_vid_out_0_0' is unconnected for instance 'v_axi4s_vid_out_0' [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:1407]
+WARNING: [Synth 8-7071] port 'status' of module 'hdmi_v_axi4s_vid_out_0_0' is unconnected for instance 'v_axi4s_vid_out_0' [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:1407]
+WARNING: [Synth 8-7071] port 'sof_state_out' of module 'hdmi_v_axi4s_vid_out_0_0' is unconnected for instance 'v_axi4s_vid_out_0' [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:1407]
+WARNING: [Synth 8-7023] instance 'v_axi4s_vid_out_0' of module 'hdmi_v_axi4s_vid_out_0_0' has 30 connections declared, but only 20 given [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:1407]
+INFO: [Synth 8-6157] synthesizing module 'hdmi_v_tc_0_0' [C:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.runs/synth_1/.Xil/Vivado-65000-DESKTOP-BINRERU/realtime/hdmi_v_tc_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'hdmi_v_tc_0_0' (0#1) [C:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.runs/synth_1/.Xil/Vivado-65000-DESKTOP-BINRERU/realtime/hdmi_v_tc_0_0_stub.v:5]
+WARNING: [Synth 8-7071] port 'fsync_out' of module 'hdmi_v_tc_0_0' is unconnected for instance 'v_tc_0' [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:1428]
+WARNING: [Synth 8-7023] instance 'v_tc_0' of module 'hdmi_v_tc_0_0' has 33 connections declared, but only 32 given [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:1428]
+INFO: [Synth 8-6157] synthesizing module 'hdmi_v_tc_1_0' [C:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.runs/synth_1/.Xil/Vivado-65000-DESKTOP-BINRERU/realtime/hdmi_v_tc_1_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'hdmi_v_tc_1_0' (0#1) [C:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.runs/synth_1/.Xil/Vivado-65000-DESKTOP-BINRERU/realtime/hdmi_v_tc_1_0_stub.v:5]
+WARNING: [Synth 8-7071] port 'intc_if' of module 'hdmi_v_tc_1_0' is unconnected for instance 'v_tc_1' [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:1461]
+WARNING: [Synth 8-7023] instance 'v_tc_1' of module 'hdmi_v_tc_1_0' has 30 connections declared, but only 29 given [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:1461]
+INFO: [Synth 8-6157] synthesizing module 'hdmi_v_vid_in_axi4s_0_0' [C:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.runs/synth_1/.Xil/Vivado-65000-DESKTOP-BINRERU/realtime/hdmi_v_vid_in_axi4s_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'hdmi_v_vid_in_axi4s_0_0' (0#1) [C:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.runs/synth_1/.Xil/Vivado-65000-DESKTOP-BINRERU/realtime/hdmi_v_vid_in_axi4s_0_0_stub.v:5]
+WARNING: [Synth 8-7071] port 'fid' of module 'hdmi_v_vid_in_axi4s_0_0' is unconnected for instance 'v_vid_in_axi4s_0' [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:1491]
+WARNING: [Synth 8-7071] port 'vtd_vblank' of module 'hdmi_v_vid_in_axi4s_0_0' is unconnected for instance 'v_vid_in_axi4s_0' [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:1491]
+WARNING: [Synth 8-7071] port 'vtd_hblank' of module 'hdmi_v_vid_in_axi4s_0_0' is unconnected for instance 'v_vid_in_axi4s_0' [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:1491]
+WARNING: [Synth 8-7071] port 'vtd_field_id' of module 'hdmi_v_vid_in_axi4s_0_0' is unconnected for instance 'v_vid_in_axi4s_0' [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:1491]
+WARNING: [Synth 8-7071] port 'overflow' of module 'hdmi_v_vid_in_axi4s_0_0' is unconnected for instance 'v_vid_in_axi4s_0' [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:1491]
+WARNING: [Synth 8-7071] port 'underflow' of module 'hdmi_v_vid_in_axi4s_0_0' is unconnected for instance 'v_vid_in_axi4s_0' [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:1491]
+WARNING: [Synth 8-7023] instance 'v_vid_in_axi4s_0' of module 'hdmi_v_vid_in_axi4s_0_0' has 28 connections declared, but only 22 given [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:1491]
 INFO: [Synth 8-6157] synthesizing module 'hdmi_xlconstant_0_0' [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/ip/hdmi_xlconstant_0_0/synth/hdmi_xlconstant_0_0.v:53]
 INFO: [Synth 8-6157] synthesizing module 'xlconstant_v1_1_7_xlconstant' [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/ipshared/fcfc/hdl/xlconstant_v1_1_vl_rfs.v:23]
 INFO: [Synth 8-6155] done synthesizing module 'xlconstant_v1_1_7_xlconstant' (0#1) [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/ipshared/fcfc/hdl/xlconstant_v1_1_vl_rfs.v:23]
@@ -277,11 +280,12 @@ INFO: [Synth 8-6155] done synthesizing module 'xlslice_v1_0_2_xlslice__parameter
 INFO: [Synth 8-6155] done synthesizing module 'hdmi_xlslice_1_0' (0#1) [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/ip/hdmi_xlslice_1_0/synth/hdmi_xlslice_1_0.v:53]
 INFO: [Synth 8-6155] done synthesizing module 'hdmi' (0#1) [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:12]
 INFO: [Synth 8-6155] done synthesizing module 'hdmi_wrapper' (0#1) [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/hdl/hdmi_wrapper.v:12]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'xlslice_0'. This will prevent further optimization [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:1501]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'ila_1'. This will prevent further optimization [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:878]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'xlslice_1'. This will prevent further optimization [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:1504]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'xlslice_2'. This will prevent further optimization [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:1507]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'object_localizer_1'. This will prevent further optimization [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:1338]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'xlslice_0'. This will prevent further optimization [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:1516]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'ila_1'. This will prevent further optimization [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:886]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'xlslice_1'. This will prevent further optimization [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:1519]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'xlslice_2'. This will prevent further optimization [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:1522]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'object_localizer_1'. This will prevent further optimization [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:1346]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'proportional_control_0'. This will prevent further optimization [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/synth/hdmi.v:1370]
 WARNING: [Synth 8-7129] Port Din[31] in module xlslice_v1_0_2_xlslice__parameterized1 is either unconnected or has no load
 WARNING: [Synth 8-7129] Port Din[30] in module xlslice_v1_0_2_xlslice__parameterized1 is either unconnected or has no load
 WARNING: [Synth 8-7129] Port Din[29] in module xlslice_v1_0_2_xlslice__parameterized1 is either unconnected or has no load
@@ -384,18 +388,18 @@ WARNING: [Synth 8-7129] Port In9[0] in module xlconcat_v2_1_4_xlconcat is either
 WARNING: [Synth 8-7129] Port In10[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
 INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1398.984 ; gain = 117.645
+Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1398.938 ; gain = 126.535
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1398.984 ; gain = 117.645
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1398.938 ; gain = 126.535
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1398.984 ; gain = 117.645
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1398.938 ; gain = 126.535
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.184 . Memory (MB): peak = 1398.984 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.194 . Memory (MB): peak = 1398.938 ; gain = 0.000
 INFO: [Netlist 29-17] Analyzing 2 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -480,6 +484,8 @@ Parsing XDC File [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/
 Finished Parsing XDC File [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/ip/hdmi_array_parser_1_0/hdmi_array_parser_1_0/hdmi_array_parser_1_0_in_context.xdc] for cell 'hdmi_i/array_parser_1'
 Parsing XDC File [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/ip/hdmi_object_localizer_1_0/hdmi_object_localizer_1_0/hdmi_object_localizer_1_0_in_context.xdc] for cell 'hdmi_i/object_localizer_1'
 Finished Parsing XDC File [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/ip/hdmi_object_localizer_1_0/hdmi_object_localizer_1_0/hdmi_object_localizer_1_0_in_context.xdc] for cell 'hdmi_i/object_localizer_1'
+Parsing XDC File [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/ip/hdmi_proportional_control_0_0/hdmi_proportional_control_0_0/hdmi_proportional_control_0_0_in_context.xdc] for cell 'hdmi_i/proportional_control_0'
+Finished Parsing XDC File [c:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.gen/sources_1/bd/hdmi/ip/hdmi_proportional_control_0_0/hdmi_proportional_control_0_0/hdmi_proportional_control_0_0_in_context.xdc] for cell 'hdmi_i/proportional_control_0'
 Parsing XDC File [C:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.srcs/constrs_1/imports/constraints/vdma_timing_workaround.xdc]
 WARNING: [Vivado 12-180] No cells matched 'get_cells -hierarchical -filter {NAME =~*axi_vdma_0*MM2S*LB_BUILT_IN*/*rstbt*/*rst_reg[*]}'. [C:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.srcs/constrs_1/imports/constraints/vdma_timing_workaround.xdc:3]
 WARNING: [Vivado 12-180] No cells matched 'get_cells -hierarchical -filter {NAME =~*axi_vdma_0*MM2S*LB_BUILT_IN*/*rstbt*/*rst_reg_reg}'. [C:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.srcs/constrs_1/imports/constraints/vdma_timing_workaround.xdc:4]
@@ -497,25 +503,25 @@ Parsing XDC File [C:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/
 Finished Parsing XDC File [C:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.runs/synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1429.098 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1398.938 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 2 instances were transformed.
   IOBUF => IOBUF (IBUF, OBUFT): 2 instances
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.015 . Memory (MB): peak = 1429.098 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.015 . Memory (MB): peak = 1398.938 ; gain = 0.000
 WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'hdmi_i/rst_mig_7series_0_pxl' at clock pin 'slowest_sync_clk' is different from the actual clock period '6.060', this can lead to different synthesis results.
 WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'hdmi_i/v_tc_1' at clock pin 'clk' is different from the actual clock period '6.060', this can lead to different synthesis results.
 WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'hdmi_i/v_vid_in_axi4s_0' at clock pin 'vid_io_in_clk' is different from the actual clock period '6.060', this can lead to different synthesis results.
 WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'hdmi_i/microblaze_0_local_memory/lmb_bram' at clock pin 'clka' is different from the actual clock period '10.000', this can lead to different synthesis results.
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1429.883 ; gain = 148.543
+Finished Constraint Validation : Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 1398.938 ; gain = 126.535
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a200tsbg484-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1429.883 ; gain = 148.543
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 1398.938 ; gain = 126.535
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -697,11 +703,12 @@ Applied set_property KEEP_HIERARCHY = SOFT for hdmi_i/xlslice_1. (constraint fil
 Applied set_property KEEP_HIERARCHY = SOFT for hdmi_i/xlslice_2. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for hdmi_i/array_parser_1. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for hdmi_i/object_localizer_1. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for hdmi_i/proportional_control_0. (constraint file  auto generated constraint).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1429.883 ; gain = 148.543
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1398.938 ; gain = 126.535
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1429.883 ; gain = 148.543
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 1398.938 ; gain = 126.535
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -724,20 +731,20 @@ Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1429.883 ; gain = 148.543
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 1398.938 ; gain = 126.535
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-565] redefining clock 'sys_clk_i'
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 1429.883 ; gain = 148.543
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 1398.938 ; gain = 126.535
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 1429.883 ; gain = 148.543
+Finished Technology Mapping : Time (s): cpu = 00:00:26 ; elapsed = 00:00:26 . Memory (MB): peak = 1406.625 ; gain = 134.223
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -749,19 +756,19 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 1429.883 ; gain = 148.543
+Finished IO Insertion : Time (s): cpu = 00:00:30 ; elapsed = 00:00:30 . Memory (MB): peak = 1414.770 ; gain = 142.367
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 1429.883 ; gain = 148.543
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 1414.770 ; gain = 142.367
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 1429.883 ; gain = 148.543
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 1414.770 ; gain = 142.367
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -803,13 +810,14 @@ Report BlackBoxes:
 |30    |hdmi_microblaze_0_axi_intc_0  |         1|
 |31    |hdmi_mig_7series_0_0          |         1|
 |32    |hdmi_object_localizer_1_0     |         1|
-|33    |hdmi_rgb2dvi_0_0              |         1|
-|34    |hdmi_rst_mig_7series_0_100M_0 |         1|
-|35    |hdmi_rst_mig_7series_0_pxl_0  |         1|
-|36    |hdmi_v_axi4s_vid_out_0_0      |         1|
-|37    |hdmi_v_tc_0_0                 |         1|
-|38    |hdmi_v_tc_1_0                 |         1|
-|39    |hdmi_v_vid_in_axi4s_0_0       |         1|
+|33    |hdmi_proportional_control_0_0 |         1|
+|34    |hdmi_rgb2dvi_0_0              |         1|
+|35    |hdmi_rst_mig_7series_0_100M_0 |         1|
+|36    |hdmi_rst_mig_7series_0_pxl_0  |         1|
+|37    |hdmi_v_axi4s_vid_out_0_0      |         1|
+|38    |hdmi_v_tc_0_0                 |         1|
+|39    |hdmi_v_tc_1_0                 |         1|
+|40    |hdmi_v_vid_in_axi4s_0_0       |         1|
 +------+------------------------------+----------+
 
 Report Cell Usage: 
@@ -839,44 +847,45 @@ Report Cell Usage:
 |24    |hdmi_microblaze_0_axi_intc  |     1|
 |25    |hdmi_mig_7series_0          |     1|
 |26    |hdmi_object_localizer_1     |     1|
-|27    |hdmi_rgb2dvi_0              |     1|
-|28    |hdmi_rst_mig_7series_0_100M |     1|
-|29    |hdmi_rst_mig_7series_0_pxl  |     1|
-|30    |hdmi_s00_regslice           |     1|
-|31    |hdmi_s01_regslice           |     1|
-|32    |hdmi_s02_regslice           |     1|
-|33    |hdmi_s03_regslice           |     1|
-|34    |hdmi_v_axi4s_vid_out_0      |     1|
-|35    |hdmi_v_tc_0                 |     1|
-|36    |hdmi_v_tc_1                 |     1|
-|37    |hdmi_v_vid_in_axi4s_0       |     1|
-|38    |hdmi_xbar                   |     2|
-|40    |IBUF                        |    19|
-|41    |IOBUF                       |     2|
-|42    |OBUF                        |     4|
+|27    |hdmi_proportional_control_0 |     1|
+|28    |hdmi_rgb2dvi_0              |     1|
+|29    |hdmi_rst_mig_7series_0_100M |     1|
+|30    |hdmi_rst_mig_7series_0_pxl  |     1|
+|31    |hdmi_s00_regslice           |     1|
+|32    |hdmi_s01_regslice           |     1|
+|33    |hdmi_s02_regslice           |     1|
+|34    |hdmi_s03_regslice           |     1|
+|35    |hdmi_v_axi4s_vid_out_0      |     1|
+|36    |hdmi_v_tc_0                 |     1|
+|37    |hdmi_v_tc_1                 |     1|
+|38    |hdmi_v_vid_in_axi4s_0       |     1|
+|39    |hdmi_xbar                   |     2|
+|41    |IBUF                        |    19|
+|42    |IOBUF                       |     2|
+|43    |OBUF                        |     6|
 +------+----------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 1429.883 ; gain = 148.543
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 1414.770 ; gain = 142.367
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 2 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:18 ; elapsed = 00:00:26 . Memory (MB): peak = 1429.883 ; gain = 117.645
-Synthesis Optimization Complete : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 1429.883 ; gain = 148.543
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:18 ; elapsed = 00:00:27 . Memory (MB): peak = 1414.770 ; gain = 142.367
+Synthesis Optimization Complete : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 1414.770 ; gain = 142.367
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.151 . Memory (MB): peak = 1429.883 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.152 . Memory (MB): peak = 1414.770 ; gain = 0.000
 INFO: [Netlist 29-17] Analyzing 2 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1448.637 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1448.848 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 2 instances were transformed.
   IOBUF => IOBUF (IBUF, OBUFT): 2 instances
 
-Synth Design complete, checksum: f8c6ff02
+Synth Design complete, checksum: 722dffc5
 INFO: [Common 17-83] Releasing license: Synthesis
-172 Infos, 217 Warnings, 0 Critical Warnings and 0 Errors encountered.
+176 Infos, 217 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:35 ; elapsed = 00:00:36 . Memory (MB): peak = 1448.637 ; gain = 167.297
+synth_design: Time (s): cpu = 00:00:35 ; elapsed = 00:00:37 . Memory (MB): peak = 1448.848 ; gain = 176.445
 INFO: [Common 17-1381] The checkpoint 'C:/Users/Muaz/Documents/MeteorDestroyer/MeteorDestroyerSystem/MeteorDestroyerSystem.runs/synth_1/hdmi_wrapper.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file hdmi_wrapper_utilization_synth.rpt -pb hdmi_wrapper_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Mon Mar 17 19:35:05 2025...
+INFO: [Common 17-206] Exiting Vivado at Tue Mar 18 00:52:27 2025...

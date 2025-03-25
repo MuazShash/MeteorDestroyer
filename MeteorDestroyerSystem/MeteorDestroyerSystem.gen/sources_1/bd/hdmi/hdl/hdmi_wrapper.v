@@ -1,7 +1,7 @@
 //Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
-//Date        : Mon Mar 17 19:30:21 2025
+//Date        : Mon Mar 17 22:15:59 2025
 //Host        : DESKTOP-BINRERU running 64-bit major release  (build 9200)
 //Command     : generate_target hdmi_wrapper.bd
 //Design      : hdmi_wrapper
@@ -38,6 +38,8 @@ module hdmi_wrapper
     hdmi_hpd,
     hdmi_rx_txen,
     push_buttons_5bits_tri_i,
+    pwm_pan,
+    pwm_tilt,
     reset,
     sys_clk_i,
     trig,
@@ -71,6 +73,8 @@ module hdmi_wrapper
   output [0:0]hdmi_hpd;
   output [0:0]hdmi_rx_txen;
   input [4:0]push_buttons_5bits_tri_i;
+  output pwm_pan;
+  output pwm_tilt;
   input reset;
   input sys_clk_i;
   output trig;
@@ -111,6 +115,8 @@ module hdmi_wrapper
   wire [0:0]hdmi_hpd;
   wire [0:0]hdmi_rx_txen;
   wire [4:0]push_buttons_5bits_tri_i;
+  wire pwm_pan;
+  wire pwm_tilt;
   wire reset;
   wire sys_clk_i;
   wire trig;
@@ -160,6 +166,8 @@ module hdmi_wrapper
         .hdmi_hpd(hdmi_hpd),
         .hdmi_rx_txen(hdmi_rx_txen),
         .push_buttons_5bits_tri_i(push_buttons_5bits_tri_i),
+        .pwm_pan(pwm_pan),
+        .pwm_tilt(pwm_tilt),
         .reset(reset),
         .sys_clk_i(sys_clk_i),
         .trig(trig),

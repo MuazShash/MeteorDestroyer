@@ -1,7 +1,7 @@
 //Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
-//Date        : Mon Mar 17 19:30:20 2025
+//Date        : Mon Mar 17 22:15:59 2025
 //Host        : DESKTOP-BINRERU running 64-bit major release  (build 9200)
 //Command     : generate_target hdmi.bd
 //Design      : hdmi
@@ -9,7 +9,7 @@
 //--------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CORE_GENERATION_INFO = "hdmi,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=hdmi,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=63,numReposBlks=44,numNonXlnxBlks=3,numHierBlks=19,maxHierDepth=1,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=4,da_board_cnt=1,da_clkrst_cnt=3,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "hdmi.hwdef" *) 
+(* CORE_GENERATION_INFO = "hdmi,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=hdmi,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=64,numReposBlks=45,numNonXlnxBlks=3,numHierBlks=19,maxHierDepth=1,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=4,da_board_cnt=1,da_clkrst_cnt=4,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "hdmi.hwdef" *) 
 module hdmi
    (DDC_scl_i,
     DDC_scl_o,
@@ -43,6 +43,8 @@ module hdmi
     hdmi_hpd,
     hdmi_rx_txen,
     push_buttons_5bits_tri_i,
+    pwm_pan,
+    pwm_tilt,
     reset,
     sys_clk_i,
     trig,
@@ -80,6 +82,8 @@ module hdmi
   output [0:0]hdmi_hpd;
   output [0:0]hdmi_rx_txen;
   (* X_INTERFACE_INFO = "xilinx.com:interface:gpio:1.0 push_buttons_5bits TRI_I" *) input [4:0]push_buttons_5bits_tri_i;
+  output pwm_pan;
+  output pwm_tilt;
   (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 RST.RESET RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME RST.RESET, INSERT_VIP 0, POLARITY ACTIVE_LOW" *) input reset;
   (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.SYS_CLK_I CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.SYS_CLK_I, CLK_DOMAIN /clk_wiz_0_clk_out1, FREQ_HZ 200000000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.0" *) input sys_clk_i;
   output trig;
@@ -476,6 +480,8 @@ module hdmi
   wire mig_7series_0_ui_clk_sync_rst;
   wire [47:0]object_localizer_0_pose;
   wire object_localizer_1_out_valid;
+  wire proportional_control_0_pwm_pan;
+  wire proportional_control_0_pwm_tilt;
   wire reset_1;
   wire rgb2dvi_0_TMDS_CLK_N;
   wire rgb2dvi_0_TMDS_CLK_P;
@@ -541,6 +547,8 @@ module hdmi
   assign echo_0_1 = echo[11:0];
   assign hdmi_hpd[0] = axi_gpio_video_gpio_io_o;
   assign hdmi_rx_txen[0] = xlconstant_0_dout;
+  assign pwm_pan = proportional_control_0_pwm_pan;
+  assign pwm_tilt = proportional_control_0_pwm_tilt;
   assign reset_1 = reset;
   assign sys_clk_i_1 = sys_clk_i;
   assign trig = array_parser_1_trig;
@@ -1359,6 +1367,13 @@ module hdmi
         .out_valid(object_localizer_1_out_valid),
         .pose(object_localizer_0_pose),
         .rstn(rst_mig_7series_0_100M_peripheral_aresetn));
+  hdmi_proportional_control_0_0 proportional_control_0
+       (.clk(mig_7series_0_ui_clk),
+        .coord_valid(object_localizer_1_out_valid),
+        .position(object_localizer_0_pose),
+        .pwm_pan(proportional_control_0_pwm_pan),
+        .pwm_tilt(proportional_control_0_pwm_tilt),
+        .rst_n(rst_mig_7series_0_100M_peripheral_aresetn));
   hdmi_rgb2dvi_0_0 rgb2dvi_0
        (.PixelClk(axi_dynclk_0_PXL_CLK_O),
         .SerialClk(axi_dynclk_0_PXL_CLK_5X_O),

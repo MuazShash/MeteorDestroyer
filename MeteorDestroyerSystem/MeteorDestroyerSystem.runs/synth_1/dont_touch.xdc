@@ -113,6 +113,9 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==hdmi_array_
 # IP: bd/hdmi/ip/hdmi_object_localizer_1_0/hdmi_object_localizer_1_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==hdmi_object_localizer_1_0 || ORIG_REF_NAME==hdmi_object_localizer_1_0} -quiet] -quiet
 
+# IP: bd/hdmi/ip/hdmi_proportional_control_0_0/hdmi_proportional_control_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==hdmi_proportional_control_0_0 || ORIG_REF_NAME==hdmi_proportional_control_0_0} -quiet] -quiet
+
 # IP: bd/hdmi/ip/hdmi_s00_regslice_0/hdmi_s00_regslice_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==hdmi_s00_regslice_0 || ORIG_REF_NAME==hdmi_s00_regslice_0} -quiet] -quiet
 

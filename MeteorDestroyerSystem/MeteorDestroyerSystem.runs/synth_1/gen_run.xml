@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a200tsbg484-1" LaunchTime="1742254263">
+<GenRun Id="synth_1" LaunchPart="xc7a200tsbg484-1" LaunchTime="1742273491">
   <File Type="PA-TCL" Name="hdmi_wrapper.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="hdmi_wrapper_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="hdmi_wrapper_reports.tcl"/>
@@ -107,4 +107,5 @@
   <BlockFileSet Type="BlockSrcs" Name="hdmi_xbar_3"/>
   <BlockFileSet Type="BlockSrcs" Name="hdmi_array_parser_1_0"/>
   <BlockFileSet Type="BlockSrcs" Name="hdmi_object_localizer_1_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="hdmi_proportional_control_0_0"/>
 </GenRun>
