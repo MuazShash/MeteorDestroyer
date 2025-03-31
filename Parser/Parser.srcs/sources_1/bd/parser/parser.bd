@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0xE72D108C23483661",
+      "boundary_crc": "0x7529F6BCC15CCC51",
       "device": "xc7a200tsbg484-1",
       "gen_directory": "../../../../Parser.gen/sources_1/bd/parser",
       "name": "parser",
@@ -30,7 +30,8 @@
       },
       "mdm_1": "",
       "array_parser_0": "",
-      "object_localizer_1": ""
+      "object_localizer_1": "",
+      "proportional_control_0": ""
     },
     "interface_ports": {
       "usb_uart": {
@@ -84,6 +85,12 @@
         "direction": "I",
         "left": "11",
         "right": "0"
+      },
+      "pwm_pan": {
+        "direction": "O"
+      },
+      "pwm_tilt": {
+        "direction": "O"
       }
     },
     "components": {
@@ -785,6 +792,12 @@
         "xci_name": "parser_object_localizer_1_0",
         "xci_path": "ip\\parser_object_localizer_1_0\\parser_object_localizer_1_0.xci",
         "inst_hier_path": "object_localizer_1"
+      },
+      "proportional_control_0": {
+        "vlnv": "xilinx.com:user:proportional_controller_pwm:1.0",
+        "xci_name": "parser_proportional_control_0_0",
+        "xci_path": "ip\\parser_proportional_control_0_0\\parser_proportional_control_0_0.xci",
+        "inst_hier_path": "proportional_control_0"
       }
     },
     "interface_nets": {
@@ -888,7 +901,32 @@
           "microblaze_0/Clk",
           "microblaze_0_local_memory/LMB_Clk",
           "array_parser_0/clk",
-          "object_localizer_1/clk"
+          "object_localizer_1/clk",
+          "proportional_control_0/clk"
+        ]
+      },
+      "object_localizer_1_out_valid": {
+        "ports": [
+          "object_localizer_1/out_valid",
+          "proportional_control_0/coord_valid"
+        ]
+      },
+      "object_localizer_1_pose": {
+        "ports": [
+          "object_localizer_1/pose",
+          "proportional_control_0/position"
+        ]
+      },
+      "proportional_control_0_pwm_pan": {
+        "ports": [
+          "proportional_control_0/pwm_pan",
+          "pwm_pan"
+        ]
+      },
+      "proportional_control_0_pwm_tilt": {
+        "ports": [
+          "proportional_control_0/pwm_tilt",
+          "pwm_tilt"
         ]
       },
       "reset_0_1": {
@@ -915,7 +953,8 @@
           "rst_clk_wiz_0_100M/peripheral_aresetn",
           "axi_interconnect_0/M01_ARESETN",
           "axi_uartlite_0/s_axi_aresetn",
-          "object_localizer_1/rstn"
+          "object_localizer_1/rstn",
+          "proportional_control_0/rst_n"
         ]
       },
       "sys_clock_1": {

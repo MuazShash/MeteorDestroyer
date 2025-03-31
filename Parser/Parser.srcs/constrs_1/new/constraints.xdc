@@ -22,3 +22,7 @@ set_property -dict { PACKAGE_PIN W7    IOSTANDARD LVCMOS33 } [get_ports { echo[1
 set_property -dict { PACKAGE_PIN W9    IOSTANDARD LVCMOS33 } [get_ports { echo[11] }]; #IO_L24N_T3_34 Sch=jb_n[3]
 
 set_property -dict { PACKAGE_PIN E22  } [get_ports { resetn }]; #IO_L22P_T3_16 Sch=sw[0]
+
+##Pmod header JC
+set_property -dict { PACKAGE_PIN AA6   IOSTANDARD LVCMOS33 } [get_ports { pwm_pan }]; #IO_L18N_T2_34 Sch=jc_n[1]
+set_property -dict { PACKAGE_PIN Y6    IOSTANDARD LVCMOS33 } [get_ports {pwm_tilt}]; #IO_L18P_T2_34 Sch=jc_p[1]

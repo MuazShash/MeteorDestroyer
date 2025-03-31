@@ -48,4 +48,7 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==parser_arra
 # IP: bd/parser/ip/parser_object_localizer_1_0/parser_object_localizer_1_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==parser_object_localizer_1_0 || ORIG_REF_NAME==parser_object_localizer_1_0} -quiet] -quiet
 
-# XDC: c:/Users/Muaz/Documents/MeteorDestroyer/Parser/Parser.gen/sources_1/bd/parser/parser_ooc.xdc
+# IP: bd/parser/ip/parser_proportional_control_0_0/parser_proportional_control_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==parser_proportional_control_0_0 || ORIG_REF_NAME==parser_proportional_control_0_0} -quiet] -quiet
+
+# XDC: c:/Users/marko/MD/MeteorDestroyer/Parser/Parser.gen/sources_1/bd/parser/parser_ooc.xdc

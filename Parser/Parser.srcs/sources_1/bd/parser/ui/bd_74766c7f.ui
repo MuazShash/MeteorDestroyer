@@ -1,51 +1,58 @@
 {
    "ActiveEmotionalView":"Default View",
-   "Default View_ScaleFactor":"0.733725",
-   "Default View_TopLeft":"1153,-116",
+   "Default View_ScaleFactor":"1.00423",
+   "Default View_TopLeft":"980,-610",
    "ExpandedHierarchyInLayout":"",
    "guistr":"# # String gsaved with Nlview 7.0r6  2020-01-29 bk=1.5227 VDI=41 GEI=36 GUI=JA:10.0 non-TLS
 #  -string -flagsOSRD
-preplace port usb_uart -pg 1 -lvl 6 -x 2480 -y 280 -defaultsOSRD
-preplace port port-id_trig -pg 1 -lvl 6 -x 2480 -y 70 -defaultsOSRD
+preplace port usb_uart -pg 1 -lvl 8 -x 2550 -y 280 -defaultsOSRD
+preplace port port-id_trig -pg 1 -lvl 8 -x 2550 -y 70 -defaultsOSRD
 preplace port port-id_sys_clock -pg 1 -lvl 0 -x -10 -y -20 -defaultsOSRD
 preplace port port-id_resetn -pg 1 -lvl 0 -x -10 -y -150 -defaultsOSRD
+preplace port port-id_pwm_pan -pg 1 -lvl 8 -x 2550 -y -560 -defaultsOSRD
+preplace port port-id_pwm_tilt -pg 1 -lvl 8 -x 2550 -y -590 -defaultsOSRD
 preplace portBus echo -pg 1 -lvl 0 -x -10 -y -60 -defaultsOSRD
-preplace inst rst_clk_wiz_0_100M -pg 1 -lvl 2 -x 960 -y -260 -defaultsOSRD
-preplace inst axi_interconnect_0 -pg 1 -lvl 3 -x 1410 -y -40 -defaultsOSRD
-preplace inst axi_uartlite_0 -pg 1 -lvl 4 -x 1730 -y 290 -defaultsOSRD
-preplace inst clk_wiz_0 -pg 1 -lvl 1 -x 570 -y -30 -defaultsOSRD
-preplace inst microblaze_0 -pg 1 -lvl 2 -x 960 -y 230 -defaultsOSRD
-preplace inst microblaze_0_local_memory -pg 1 -lvl 3 -x 1410 -y 220 -defaultsOSRD
-preplace inst mdm_1 -pg 1 -lvl 1 -x 570 -y -250 -defaultsOSRD
-preplace inst array_parser_0 -pg 1 -lvl 4 -x 1730 -y -70 -defaultsOSRD
-preplace inst object_localizer_1 -pg 1 -lvl 5 -x 2050 -y -30 -defaultsOSRD
-preplace netloc ARESETN_1 1 2 1 1250 -240n
-preplace netloc array_parser_0_distance_mm1 1 4 1 1860 -70n
-preplace netloc array_parser_0_trig 1 4 2 1890 70 NJ
-preplace netloc array_parser_0_valid 1 4 1 1880 -50n
-preplace netloc clk_wiz_0_locked 1 1 1 710 -220n
-preplace netloc echo_0_1 1 0 4 20J -160 NJ -160 1190J -190 1590J
-preplace netloc mdm_1_debug_sys_rst 1 1 1 N -240
-preplace netloc microblaze_0_Clk 1 1 4 700 -40 1240 -180 1560 20 1900
-preplace netloc reset_0_1 1 0 2 10 -150 680
-preplace netloc rst_clk_wiz_0_100M_bus_struct_reset 1 2 1 1210 -280n
-preplace netloc rst_clk_wiz_0_100M_mb_reset 1 1 2 720 -360 1250
-preplace netloc rst_clk_wiz_0_100M_peripheral_aresetn 1 2 3 1200 -200 1580J 30 1910
+preplace inst rst_clk_wiz_0_100M -pg 1 -lvl 2 -x 780 -y -180 -defaultsOSRD
+preplace inst axi_interconnect_0 -pg 1 -lvl 5 -x 1780 -y -40 -defaultsOSRD
+preplace inst axi_uartlite_0 -pg 1 -lvl 6 -x 2090 -y 290 -defaultsOSRD
+preplace inst clk_wiz_0 -pg 1 -lvl 1 -x 390 -y -30 -defaultsOSRD
+preplace inst microblaze_0 -pg 1 -lvl 2 -x 780 -y 230 -defaultsOSRD
+preplace inst microblaze_0_local_memory -pg 1 -lvl 5 -x 1780 -y 220 -defaultsOSRD
+preplace inst mdm_1 -pg 1 -lvl 1 -x 390 -y -250 -defaultsOSRD
+preplace inst array_parser_0 -pg 1 -lvl 6 -x 2090 -y -70 -defaultsOSRD
+preplace inst object_localizer_1 -pg 1 -lvl 7 -x 2380 -y -30 -defaultsOSRD
+preplace inst proportional_control_0 -pg 1 -lvl 3 -x 1200 -y -50 -defaultsOSRD
+preplace netloc ARESETN_1 1 2 3 N -160 N -160 1500
+preplace netloc array_parser_0_distance_mm1 1 6 1 2230 -70n
+preplace netloc array_parser_0_trig 1 6 2 2230 -130 2510J
+preplace netloc array_parser_0_valid 1 6 1 2220 -50n
+preplace netloc clk_wiz_0_locked 1 1 1 530 -140n
+preplace netloc echo_0_1 1 0 6 20J -100 500J -80 1020J -220 N -220 N -220 1960J
+preplace netloc mdm_1_debug_sys_rst 1 1 1 530 -240n
+preplace netloc microblaze_0_Clk 1 1 6 520 -70 1030 -150 N -150 1510 -190 1940 -160 2250
+preplace netloc reset_0_1 1 0 2 10 -180 500
+preplace netloc rst_clk_wiz_0_100M_bus_struct_reset 1 2 3 N -200 N -200 1480
+preplace netloc rst_clk_wiz_0_100M_mb_reset 1 1 2 530 20 1010
+preplace netloc rst_clk_wiz_0_100M_peripheral_aresetn 1 2 5 1040 -170 N -170 1520 -180 1920J -170 2260
 preplace netloc sys_clock_1 1 0 1 NJ -20
-preplace netloc axi_interconnect_0_M00_AXI 1 3 2 1570 10 1870
-preplace netloc axi_interconnect_0_M01_AXI 1 3 1 1550 -30n
-preplace netloc axi_uartlite_0_UART 1 4 2 NJ 280 NJ
-preplace netloc microblaze_0_M_AXI_DP 1 2 1 1190 -120n
-preplace netloc microblaze_0_debug 1 1 1 690 -260n
-preplace netloc microblaze_0_dlmb_1 1 2 1 1220 190n
-preplace netloc microblaze_0_ilmb_1 1 2 1 1230 210n
-levelinfo -pg 1 -10 570 960 1410 1730 2050 2480
-pagesize -pg 1 -db -bbox -sgen -130 -660 2590 860
+preplace netloc object_localizer_1_pose 1 2 6 1060 -210 NJ -210 N -210 NJ -210 NJ -210 2500
+preplace netloc object_localizer_1_out_valid 1 2 6 1060 100 NJ 100 N 100 NJ 100 NJ 100 2500
+preplace netloc proportional_control_0_pwm_pan 1 3 5 1320J -560 NJ -560 NJ -560 NJ -560 NJ
+preplace netloc proportional_control_0_pwm_tilt 1 3 5 1310J -590 NJ -590 NJ -590 NJ -590 NJ
+preplace netloc axi_interconnect_0_M00_AXI 1 5 2 1950 -150 2240
+preplace netloc axi_interconnect_0_M01_AXI 1 5 1 1930 -30n
+preplace netloc axi_uartlite_0_UART 1 6 2 NJ 280 NJ
+preplace netloc microblaze_0_M_AXI_DP 1 2 3 1050 -140 N -140 1490
+preplace netloc microblaze_0_debug 1 1 1 510 -260n
+preplace netloc microblaze_0_dlmb_1 1 2 3 1060 190 N 190 N
+preplace netloc microblaze_0_ilmb_1 1 2 3 N 230 N 230 1490
+levelinfo -pg 1 -10 390 780 1200 1460 1780 2090 2380 2550
+pagesize -pg 1 -db -bbox -sgen -130 -700 2660 1120
 "
 }
 {
    "da_axi4_cnt":"3",
    "da_board_cnt":"6",
-   "da_clkrst_cnt":"6",
+   "da_clkrst_cnt":"7",
    "da_mb_cnt":"9"
 }

@@ -1,8 +1,8 @@
 //Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
-//Date        : Sun Mar 30 01:28:43 2025
-//Host        : DESKTOP-BINRERU running 64-bit major release  (build 9200)
+//Date        : Mon Mar 31 00:59:58 2025
+//Host        : MUGEN running 64-bit major release  (build 9200)
 //Command     : generate_target parser_wrapper.bd
 //Design      : parser_wrapper
 //Purpose     : IP block netlist
@@ -11,12 +11,16 @@
 
 module parser_wrapper
    (echo,
+    pwm_pan,
+    pwm_tilt,
     resetn,
     sys_clock,
     trig,
     usb_uart_rxd,
     usb_uart_txd);
   input [11:0]echo;
+  output pwm_pan;
+  output pwm_tilt;
   input resetn;
   input sys_clock;
   output trig;
@@ -24,6 +28,8 @@ module parser_wrapper
   output usb_uart_txd;
 
   wire [11:0]echo;
+  wire pwm_pan;
+  wire pwm_tilt;
   wire resetn;
   wire sys_clock;
   wire trig;
@@ -32,6 +38,8 @@ module parser_wrapper
 
   parser parser_i
        (.echo(echo),
+        .pwm_pan(pwm_pan),
+        .pwm_tilt(pwm_tilt),
         .resetn(resetn),
         .sys_clock(sys_clock),
         .trig(trig),

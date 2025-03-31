@@ -3,7 +3,7 @@
 <!--                                                         -->
 <!-- Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.   -->
 
-<Project Version="7" Minor="60" Path="C:/Users/Muaz/Documents/MeteorDestroyer/Parser/Parser.xpr">
+<Project Version="7" Minor="60" Path="C:/Users/marko/MD/MeteorDestroyer/Parser/Parser.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
     <Option Name="Id" Val="0056d15ece34404081e526e2477d6e42"/>
@@ -43,6 +43,7 @@
     <Option Name="SimulatorGccVersionRiviera" Val="9.3.0"/>
     <Option Name="SimulatorGccVersionActiveHdl" Val="9.3.0"/>
     <Option Name="BoardPart" Val="digilentinc.com:nexys_video:part0:1.2"/>
+    <Option Name="SourceMgmtMode" Val="DisplayOnly"/>
     <Option Name="ActiveSimSet" Val="sim_1"/>
     <Option Name="DefaultLib" Val="xil_defaultlib"/>
     <Option Name="ProjectType" Val="Default"/>
@@ -100,20 +101,14 @@
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
-        <CompFileExtendedInfo CompFileName="parser.bd" FileRelPathName="ip/parser_array_parser_0_0/parser_array_parser_0_0.xci">
-          <Proxy FileSetName="parser_array_parser_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="parser.bd" FileRelPathName="ip/parser_lmb_bram_5/parser_lmb_bram_5.xci">
-          <Proxy FileSetName="parser_lmb_bram_5"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="parser.bd" FileRelPathName="ip/parser_object_localizer_1_0/parser_object_localizer_1_0.xci">
-          <Proxy FileSetName="parser_object_localizer_1_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="parser.bd" FileRelPathName="ip/parser_rst_clk_wiz_0_100M_0/parser_rst_clk_wiz_0_100M_0.xci">
-          <Proxy FileSetName="parser_rst_clk_wiz_0_100M_0"/>
+        <CompFileExtendedInfo CompFileName="parser.bd" FileRelPathName="ip/parser_proportional_control_0_0/parser_proportional_control_0_0.xci">
+          <Proxy FileSetName="parser_proportional_control_0_0"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="parser.bd" FileRelPathName="ip/parser_xbar_0_1/parser_xbar_0.xci">
           <Proxy FileSetName="parser_xbar_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="parser.bd" FileRelPathName="ip/parser_array_parser_0_0/parser_array_parser_0_0.xci">
+          <Proxy FileSetName="parser_array_parser_0_0"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="parser.bd" FileRelPathName="ip/parser_axi_uartlite_0_0/parser_axi_uartlite_0_0.xci">
           <Proxy FileSetName="parser_axi_uartlite_0_0"/>
@@ -124,8 +119,31 @@
         <CompFileExtendedInfo CompFileName="parser.bd" FileRelPathName="ip/parser_microblaze_0_2/parser_microblaze_0_2.xci">
           <Proxy FileSetName="parser_microblaze_0_2"/>
         </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="parser.bd" FileRelPathName="ip/parser_rst_clk_wiz_0_100M_0/parser_rst_clk_wiz_0_100M_0.xci">
+          <Proxy FileSetName="parser_rst_clk_wiz_0_100M_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="parser.bd" FileRelPathName="ip/parser_lmb_bram_5/parser_lmb_bram_5.xci">
+          <Proxy FileSetName="parser_lmb_bram_5"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="parser.bd" FileRelPathName="ip/parser_object_localizer_1_0/parser_object_localizer_1_0.xci">
+          <Proxy FileSetName="parser_object_localizer_1_0"/>
+        </CompFileExtendedInfo>
       </File>
-      <File Path="$PGENDIR/sources_1/bd/parser/hdl/parser_wrapper.v">
+      <File Path="$PSRCDIR/sources_1/new/array_parser.sv">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../Localizer_ip/src/filter.sv">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/tb/localize_tb.sv">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
@@ -134,15 +152,6 @@
       </File>
       <File Path="$PSRCDIR/sources_1/localization/min.sv">
         <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sources_1/localization/p2s.sv">
-        <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -150,7 +159,6 @@
       </File>
       <File Path="$PSRCDIR/sources_1/tb/min_tb.sv">
         <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -158,47 +166,6 @@
       </File>
       <File Path="$PSRCDIR/sources_1/localization/mult2.sv">
         <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sources_1/new/array_parser.sv">
-        <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sources_1/new/sensor_parser.sv">
-        <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sources_1/tb/tb.sv">
-        <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sources_1/localization/object_localization.sv">
-        <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sources_1/tb/localize_tb.sv">
-        <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -206,15 +173,41 @@
       </File>
       <File Path="$PSRCDIR/sources_1/tb/mult_tb.sv">
         <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/../Localizer_ip/src/filter.sv">
+      <File Path="$PSRCDIR/sources_1/localization/object_localization.sv">
         <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/localization/p2s.sv">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/new/sensor_parser.sv">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/tb/tb.sv">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PGENDIR/sources_1/bd/parser/hdl/parser_wrapper.v">
+        <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -242,7 +235,6 @@
       <Filter Type="Srcs"/>
       <File Path="$PSRCDIR/sources_1/tb/filter_tb.sv">
         <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -250,7 +242,6 @@
       </File>
       <File Path="$PSRCDIR/sources_1/tb/localize_axi_tb.sv">
         <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -322,6 +313,12 @@
     <FileSet Name="parser_object_localizer_1_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/parser_object_localizer_1_0" RelGenDir="$PGENDIR/parser_object_localizer_1_0">
       <Config>
         <Option Name="TopModule" Val="parser_object_localizer_1_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="parser_proportional_control_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/parser_proportional_control_0_0" RelGenDir="$PGENDIR/parser_proportional_control_0_0">
+      <Config>
+        <Option Name="TopModule" Val="parser_proportional_control_0_0"/>
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
@@ -426,6 +423,16 @@
       <RQSFiles/>
     </Run>
     <Run Id="parser_object_localizer_1_0_synth_1" Type="Ft3:Synth" SrcSet="parser_object_localizer_1_0" Part="xc7a200tsbg484-1" ConstrsSet="parser_object_localizer_1_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/parser_object_localizer_1_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/parser_object_localizer_1_0_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/parser_object_localizer_1_0_synth_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2022"/>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2022"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="parser_proportional_control_0_0_synth_1" Type="Ft3:Synth" SrcSet="parser_proportional_control_0_0" Part="xc7a200tsbg484-1" ConstrsSet="parser_proportional_control_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/parser_proportional_control_0_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/parser_proportional_control_0_0_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/parser_proportional_control_0_0_synth_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2022">
           <Desc>Vivado Synthesis Defaults</Desc>
@@ -575,6 +582,23 @@
       <RQSFiles/>
     </Run>
     <Run Id="parser_object_localizer_1_0_impl_1" Type="Ft2:EntireDesign" Part="xc7a200tsbg484-1" ConstrsSet="parser_object_localizer_1_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="parser_object_localizer_1_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/parser_object_localizer_1_0_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/parser_object_localizer_1_0_impl_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2022"/>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2022"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="parser_proportional_control_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7a200tsbg484-1" ConstrsSet="parser_proportional_control_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="parser_proportional_control_0_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/parser_proportional_control_0_0_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/parser_proportional_control_0_0_impl_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2022">
           <Desc>Default settings for Implementation.</Desc>

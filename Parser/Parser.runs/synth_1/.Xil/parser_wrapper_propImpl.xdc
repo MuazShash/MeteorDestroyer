@@ -1,4 +1,4 @@
-set_property SRC_FILE_INFO {cfile:C:/Users/Muaz/Documents/MeteorDestroyer/Parser/Parser.srcs/constrs_1/new/constraints.xdc rfile:../../../Parser.srcs/constrs_1/new/constraints.xdc id:1} [current_design]
+set_property SRC_FILE_INFO {cfile:C:/Users/marko/MD/MeteorDestroyer/Parser/Parser.srcs/constrs_1/new/constraints.xdc rfile:../../../Parser.srcs/constrs_1/new/constraints.xdc id:1} [current_design]
 set_property src_info {type:XDC file:1 line:1 export:INPUT save:INPUT read:READ} [current_design]
 set_property C_CLK_INPUT_FREQ_HZ 300000000 [get_debug_cores dbg_hub]
 set_property src_info {type:XDC file:1 line:2 export:INPUT save:INPUT read:READ} [current_design]
@@ -35,3 +35,7 @@ set_property src_info {type:XDC file:1 line:22 export:INPUT save:INPUT read:READ
 set_property -dict { PACKAGE_PIN W9    IOSTANDARD LVCMOS33 } [get_ports { echo[11] }]; #IO_L24N_T3_34 Sch=jb_n[3]
 set_property src_info {type:XDC file:1 line:24 export:INPUT save:INPUT read:READ} [current_design]
 set_property -dict { PACKAGE_PIN E22  } [get_ports { resetn }]; #IO_L22P_T3_16 Sch=sw[0]
+set_property src_info {type:XDC file:1 line:27 export:INPUT save:INPUT read:READ} [current_design]
+set_property -dict { PACKAGE_PIN AA6   IOSTANDARD LVCMOS33 } [get_ports { pwm_pan }]; #IO_L18N_T2_34 Sch=jc_n[1]
+set_property src_info {type:XDC file:1 line:28 export:INPUT save:INPUT read:READ} [current_design]
+set_property -dict { PACKAGE_PIN Y6    IOSTANDARD LVCMOS33 } [get_ports {pwm_tilt}]; #IO_L18P_T2_34 Sch=jc_p[1]

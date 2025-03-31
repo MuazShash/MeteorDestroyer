@@ -1,8 +1,8 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
-| Date         : Sun Mar 30 01:33:31 2025
-| Host         : DESKTOP-BINRERU running 64-bit major release  (build 9200)
+| Date         : Mon Mar 31 01:05:47 2025
+| Host         : MUGEN running 64-bit major release  (build 9200)
 | Command      : report_methodology -file parser_wrapper_methodology_drc_routed.rpt -pb parser_wrapper_methodology_drc_routed.pb -rpx parser_wrapper_methodology_drc_routed.rpx
 | Design       : parser_wrapper
 | Device       : xc7a200tsbg484-1
@@ -23,13 +23,13 @@ Table of Contents
           Floorplan: design_1
       Design limits: <entire design considered>
              Max violations: <unlimited>
-             Violations found: 18
+             Violations found: 20
 +-----------+----------+-------------------------------+------------+
 | Rule      | Severity | Description                   | Violations |
 +-----------+----------+-------------------------------+------------+
 | LUTAR-1   | Warning  | LUT drives async reset alert  | 1          |
 | TIMING-9  | Warning  | Unknown CDC Logic             | 1          |
-| TIMING-18 | Warning  | Missing input or output delay | 16         |
+| TIMING-18 | Warning  | Missing input or output delay | 18         |
 +-----------+----------+-------------------------------+------------+
 
 2. REPORT DETAILS
@@ -116,10 +116,20 @@ Related violations: <none>
 
 TIMING-18#15 Warning
 Missing input or output delay  
-An output delay is missing on trig relative to clock(s) sys_clock
+An output delay is missing on pwm_pan relative to clock(s) sys_clock
 Related violations: <none>
 
 TIMING-18#16 Warning
+Missing input or output delay  
+An output delay is missing on pwm_tilt relative to clock(s) sys_clock
+Related violations: <none>
+
+TIMING-18#17 Warning
+Missing input or output delay  
+An output delay is missing on trig relative to clock(s) sys_clock
+Related violations: <none>
+
+TIMING-18#18 Warning
 Missing input or output delay  
 An output delay is missing on usb_uart_txd relative to clock(s) sys_clock
 Related violations: <none>
