@@ -1,8 +1,9 @@
 module object_localizer #(
     parameter NUM_SENSORS = 12,
+    parameter WINDOW_SIZE = 5,
     parameter DW = 16         // Bit width for coordinates and distances
 ) (
-    input clk,
+    input clk, 
     input rstn,
     input in_valid,
     input [DW-1:0] distances [NUM_SENSORS-1:0], // Distance readings from each sensor
@@ -244,27 +245,51 @@ module object_localizer #(
         .dout(pose_z_fused)   
     );
     
-    reg [2:0] valid_counter = 0;
+    wire signed [DW-1:0] filter_input [3-1:0];
+
+    assign filter_input[0] = pose_x_fused;
+    assign filter_input[1] = pose_y_fused;
+    assign filter_input[2] = pose_z_fused;
+
+    reg fusion_valid[2];
 
     always @(posedge clk) begin
-        if(accumulate[3]) begin
-            valid_counter <= 1;
+        if(accumulate[3] & !accumulate[2]) begin
+            fusion_valid[0] <= 1;
         end
-
-        if(valid_counter != 0 && !accumulate[3])
-            valid_counter <= valid_counter + 1;
         else
-            out_valid <= 0;
+            fusion_valid[0] <= 0;
 
-        if(valid_counter == 2) begin
-            pose[0] <= pose_x_fused;
-            pose[1] <= pose_y_fused;
-            pose[2] <= pose_z_fused; 
-            out_valid <= 1;
-            valid_counter <= 0;
-        end
+        fusion_valid[1] <= fusion_valid[0];
     end
-    
+
+    wire signed [DW-1:0] filter_output [3-1:0];
+    wire filter_out_valid;
+    time_filter #(
+        .DW(DW),
+        .WINDOW_SIZE(WINDOW_SIZE),
+        .N(3)
+    )
+    filtered_positions(
+        .clk(clk),
+        .rstn(rstn),
+        .in_valid(fusion_valid[1]),
+        .data(filter_input),
+        .data_out(filter_output),
+        .out_valid(filter_out_valid)
+    );
+
+    always @(posedge clk)begin
+        if(filter_out_valid)begin
+            pose[0] <= filter_output[0];
+            pose[1] <= filter_output[1];
+            pose[2] <= filter_output[2];
+            out_valid <= filter_out_valid;
+        end
+        else
+            out_valid <= 1'b0;
+    end
+
     axi_slave_interface #(
         .NUM_SENSORS(NUM_SENSORS),
         .DW(DW)
@@ -365,7 +390,7 @@ module axi_slave_interface #(
     reg [31:0]	 reg_data_out;
 
     localparam integer ADDR_LSB = 2; // Address offset for 32-bit registers
-    localparam integer OPT_MEM_ADDR_BITS = $clog2(2*12 +1);
+    localparam integer OPT_MEM_ADDR_BITS = $clog2(12 + 3 + 2*12 +1);
 
     assign S_AXI_AWREADY	= axi_awready;
 	assign S_AXI_WREADY	    = axi_wready;
@@ -501,24 +526,26 @@ module axi_slave_interface #(
 	  else begin
 	    if (slv_reg_wren)
 	      begin
-	        case ( axi_awaddr[ADDR_LSB+OPT_MEM_ADDR_BITS:ADDR_LSB] )
-	          default: begin
-	            if (axi_awaddr[ADDR_LSB+OPT_MEM_ADDR_BITS:ADDR_LSB] < 2*12) begin
-	              int i = axi_awaddr[ADDR_LSB+OPT_MEM_ADDR_BITS:ADDR_LSB] >> 1;
-	              if (axi_awaddr[ADDR_LSB+OPT_MEM_ADDR_BITS:ADDR_LSB] % 2 == 0) begin
-	                sensor_locations[i][2] <= S_AXI_WDATA[31:16]; // x coordinate
-	                sensor_locations[i][1]  <= S_AXI_WDATA[15:0];  // y coordinate
-	              end else begin
-	                sensor_locations[i][0] <= S_AXI_WDATA[15:0];  // z coordinate
-	                sensor_angles[i] <= S_AXI_WDATA[31:16];       // sensor angle
-	              end
-	            end
-                else if(axi_awaddr[ADDR_LSB+OPT_MEM_ADDR_BITS:ADDR_LSB] == 2*12) begin
-                    sensor_tilt <= S_AXI_WDATA[15:0];
-                    max_considered_distance <= S_AXI_WDATA[31:16];
+	        case (axi_awaddr[ADDR_LSB+OPT_MEM_ADDR_BITS:ADDR_LSB])
+                default: begin
+                    if (axi_awaddr[ADDR_LSB+OPT_MEM_ADDR_BITS:ADDR_LSB] >= 16 &&
+                        axi_awaddr[ADDR_LSB+OPT_MEM_ADDR_BITS:ADDR_LSB] <= 40) 
+                    begin
+                        int i = (axi_awaddr[ADDR_LSB+OPT_MEM_ADDR_BITS:ADDR_LSB] - 16) >> 1;
+                        if ((axi_awaddr[ADDR_LSB+OPT_MEM_ADDR_BITS:ADDR_LSB] - 16) % 2 == 0) begin
+                            sensor_locations[i][2] <= S_AXI_WDATA[31:16]; // x coordinate
+                            sensor_locations[i][1] <= S_AXI_WDATA[15:0];  // y coordinate
+                        end else begin
+                            sensor_locations[i][0] <= S_AXI_WDATA[15:0];  // z coordinate
+                            sensor_angles[i] <= S_AXI_WDATA[31:16];       // sensor angle
+                        end
+                    end
+                    else if (axi_awaddr[ADDR_LSB+OPT_MEM_ADDR_BITS:ADDR_LSB] == 15) begin
+                        sensor_tilt <= S_AXI_WDATA[15:0];
+                        max_considered_distance <= S_AXI_WDATA[31:16];
+                    end
                 end
-	          end
-	        endcase
+            endcase
 	    end
 	  end
 	end
