@@ -31,7 +31,7 @@ module proportional_controller_pwm #(
     // Initializing the memories
     initial begin
         $readmemh("lut.dat",       reciprocal_lut);
-        $readmemh("ratio_lut.dat", ratio_lut);
+        $readmemh("ratio_lut_final.dat", ratio_lut);
     end
 
     // ----------------------------------------------------------------------
