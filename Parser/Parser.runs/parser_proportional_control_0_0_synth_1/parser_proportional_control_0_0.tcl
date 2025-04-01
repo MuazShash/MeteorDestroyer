@@ -70,7 +70,6 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "parser_proportional_control_0_0_synth_1" START { ROLLUP_AUTO }
-set_msg_config -id {Common 17-41} -limit 10000000
 set_param project.vivado.isBlockSynthRun true
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7a200tsbg484-1
@@ -99,7 +98,7 @@ set_property ip_output_repo c:/Users/marko/MD/MeteorDestroyer/Parser/Parser.cach
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
-read_ip -quiet c:/Users/marko/MD/MeteorDestroyer/Parser/Parser.srcs/sources_1/bd/parser/ip/parser_proportional_control_0_0/parser_proportional_control_0_0.xci
+read_ip -quiet C:/Users/marko/MD/MeteorDestroyer/Parser/Parser.srcs/sources_1/bd/parser/ip/parser_proportional_control_0_0/parser_proportional_control_0_0.xci
 
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being

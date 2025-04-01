@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Mon Mar 31 00:59:58 2025" VIVADOVERSION="2022.1">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Mon Mar 31 17:11:23 2025" VIVADOVERSION="2022.1">
 
   <SYSTEMINFO ARCH="artix7" BOARD="digilentinc.com:nexys_video:part0:1.2" DEVICE="7a200t" NAME="parser" PACKAGE="sbg484" SPEEDGRADE="-1"/>
 
@@ -25,16 +25,6 @@
         <CONNECTION INSTANCE="array_parser_0" PORT="echo"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="I" NAME="usb_uart_rxd" SIGIS="undef" SIGNAME="axi_uartlite_0_rx">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="axi_uartlite_0" PORT="rx"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="O" NAME="usb_uart_txd" SIGIS="undef" SIGNAME="axi_uartlite_0_tx">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="axi_uartlite_0" PORT="tx"/>
-      </CONNECTIONS>
-    </PORT>
     <PORT DIR="O" NAME="pwm_pan" SIGIS="undef" SIGNAME="proportional_control_0_pwm_pan">
       <CONNECTIONS>
         <CONNECTION INSTANCE="proportional_control_0" PORT="pwm_pan"/>
@@ -43,6 +33,16 @@
     <PORT DIR="O" NAME="pwm_tilt" SIGIS="undef" SIGNAME="proportional_control_0_pwm_tilt">
       <CONNECTIONS>
         <CONNECTION INSTANCE="proportional_control_0" PORT="pwm_tilt"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="usb_uart_rxd" SIGIS="undef" SIGNAME="axi_uartlite_0_rx">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="axi_uartlite_0" PORT="rx"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="usb_uart_txd" SIGIS="undef" SIGNAME="axi_uartlite_0_tx">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="axi_uartlite_0" PORT="tx"/>
       </CONNECTIONS>
     </PORT>
   </EXTERNALPORTS>
@@ -3657,7 +3657,7 @@
         </BUSINTERFACE>
       </BUSINTERFACES>
     </MODULE>
-    <MODULE COREREVISION="4" FULLNAME="/proportional_control_0" HWVERSION="1.0" INSTANCE="proportional_control_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="proportional_controller_pwm" VLNV="xilinx.com:user:proportional_controller_pwm:1.0">
+    <MODULE COREREVISION="1" FULLNAME="/proportional_control_0" HWVERSION="2.0" INSTANCE="proportional_control_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="proportional_controller_pwm" VLNV="xilinx.com:user:proportional_controller_pwm:2.0">
       <DOCUMENTS/>
       <PARAMETERS>
         <PARAMETER NAME="Component_Name" VALUE="parser_proportional_control_0_0"/>

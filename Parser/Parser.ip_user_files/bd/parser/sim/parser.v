@@ -1,8 +1,8 @@
 //Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
-//Date        : Sun Mar 30 01:28:43 2025
-//Host        : DESKTOP-BINRERU running 64-bit major release  (build 9200)
+//Date        : Mon Mar 31 17:09:33 2025
+//Host        : MUGEN running 64-bit major release  (build 9200)
 //Command     : generate_target parser.bd
 //Design      : parser
 //Purpose     : IP block netlist
@@ -507,15 +507,19 @@ module microblaze_0_local_memory_imp_1GYGW1O
         .web({microblaze_0_ilmb_cntlr_WE[0],microblaze_0_ilmb_cntlr_WE[1],microblaze_0_ilmb_cntlr_WE[2],microblaze_0_ilmb_cntlr_WE[3]}));
 endmodule
 
-(* CORE_GENERATION_INFO = "parser,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=parser,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=18,numReposBlks=13,numNonXlnxBlks=0,numHierBlks=5,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=3,da_board_cnt=6,da_clkrst_cnt=6,da_mb_cnt=9,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "parser.hwdef" *) 
+(* CORE_GENERATION_INFO = "parser,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=parser,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=19,numReposBlks=14,numNonXlnxBlks=0,numHierBlks=5,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=3,da_board_cnt=6,da_clkrst_cnt=7,da_mb_cnt=9,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "parser.hwdef" *) 
 module parser
    (echo,
+    pwm_pan,
+    pwm_tilt,
     resetn,
     sys_clock,
     trig,
     usb_uart_rxd,
     usb_uart_txd);
   input [11:0]echo;
+  output pwm_pan;
+  output pwm_tilt;
   (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 RST.RESETN RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME RST.RESETN, INSERT_VIP 0, POLARITY ACTIVE_LOW" *) input resetn;
   (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.SYS_CLOCK CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.SYS_CLOCK, CLK_DOMAIN parser_sys_clock, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.000" *) input sys_clock;
   output trig;
@@ -613,6 +617,10 @@ module parser
   wire microblaze_0_ilmb_1_READY;
   wire microblaze_0_ilmb_1_UE;
   wire microblaze_0_ilmb_1_WAIT;
+  wire object_localizer_1_out_valid;
+  wire [47:0]object_localizer_1_pose;
+  wire proportional_control_0_pwm_pan;
+  wire proportional_control_0_pwm_tilt;
   wire reset_0_1;
   wire [0:0]rst_clk_wiz_0_100M_bus_struct_reset;
   wire rst_clk_wiz_0_100M_mb_reset;
@@ -621,6 +629,8 @@ module parser
 
   assign axi_uartlite_0_UART_RxD = usb_uart_rxd;
   assign echo_0_1 = echo[11:0];
+  assign pwm_pan = proportional_control_0_pwm_pan;
+  assign pwm_tilt = proportional_control_0_pwm_tilt;
   assign reset_0_1 = resetn;
   assign sys_clock_1 = sys_clock;
   assign trig = array_parser_0_trig;
@@ -828,7 +838,16 @@ module parser
         .clk(microblaze_0_Clk),
         .distances(array_parser_0_distance_mm1),
         .in_valid(array_parser_0_valid),
+        .out_valid(object_localizer_1_out_valid),
+        .pose(object_localizer_1_pose),
         .rstn(rst_clk_wiz_0_100M_peripheral_aresetn));
+  parser_proportional_control_0_0 proportional_control_0
+       (.clk(microblaze_0_Clk),
+        .coord_valid(object_localizer_1_out_valid),
+        .position(object_localizer_1_pose),
+        .pwm_pan(proportional_control_0_pwm_pan),
+        .pwm_tilt(proportional_control_0_pwm_tilt),
+        .rst_n(rst_clk_wiz_0_100M_peripheral_aresetn));
   parser_rst_clk_wiz_0_100M_0 rst_clk_wiz_0_100M
        (.aux_reset_in(1'b1),
         .bus_struct_reset(rst_clk_wiz_0_100M_bus_struct_reset),

@@ -104,6 +104,9 @@
   "../../../bd/parser/ip/parser_object_localizer_1_0/sim/parser_object_localizer_1_0.sv" \
 -endlib
 -makelib xcelium_lib/xil_defaultlib \
+  "../../../bd/parser/ipshared/61b1/proportional_controller_pwm.v" \
+  "../../../bd/parser/ipshared/61b1/top.v" \
+  "../../../bd/parser/ip/parser_proportional_control_0_0/sim/parser_proportional_control_0_0.v" \
   "../../../bd/parser/sim/parser.v" \
 -endlib
 -makelib xcelium_lib/xil_defaultlib \

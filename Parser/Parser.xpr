@@ -71,13 +71,13 @@
     <Option Name="WTVcsLaunchSim" Val="0"/>
     <Option Name="WTRivieraLaunchSim" Val="0"/>
     <Option Name="WTActivehdlLaunchSim" Val="0"/>
-    <Option Name="WTXSimExportSim" Val="28"/>
-    <Option Name="WTModelSimExportSim" Val="28"/>
-    <Option Name="WTQuestaExportSim" Val="28"/>
+    <Option Name="WTXSimExportSim" Val="29"/>
+    <Option Name="WTModelSimExportSim" Val="29"/>
+    <Option Name="WTQuestaExportSim" Val="29"/>
     <Option Name="WTIesExportSim" Val="20"/>
-    <Option Name="WTVcsExportSim" Val="28"/>
-    <Option Name="WTRivieraExportSim" Val="28"/>
-    <Option Name="WTActivehdlExportSim" Val="28"/>
+    <Option Name="WTVcsExportSim" Val="29"/>
+    <Option Name="WTRivieraExportSim" Val="29"/>
+    <Option Name="WTActivehdlExportSim" Val="29"/>
     <Option Name="GenerateIPUpgradeLog" Val="TRUE"/>
     <Option Name="XSimRadix" Val="hex"/>
     <Option Name="XSimTimeUnit" Val="ns"/>
@@ -101,32 +101,32 @@
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
+        <CompFileExtendedInfo CompFileName="parser.bd" FileRelPathName="ip/parser_rst_clk_wiz_0_100M_0/parser_rst_clk_wiz_0_100M_0.xci">
+          <Proxy FileSetName="parser_rst_clk_wiz_0_100M_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="parser.bd" FileRelPathName="ip/parser_object_localizer_1_0/parser_object_localizer_1_0.xci">
+          <Proxy FileSetName="parser_object_localizer_1_0"/>
+        </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="parser.bd" FileRelPathName="ip/parser_proportional_control_0_0/parser_proportional_control_0_0.xci">
           <Proxy FileSetName="parser_proportional_control_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="parser.bd" FileRelPathName="ip/parser_xbar_0_1/parser_xbar_0.xci">
-          <Proxy FileSetName="parser_xbar_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="parser.bd" FileRelPathName="ip/parser_array_parser_0_0/parser_array_parser_0_0.xci">
-          <Proxy FileSetName="parser_array_parser_0_0"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="parser.bd" FileRelPathName="ip/parser_axi_uartlite_0_0/parser_axi_uartlite_0_0.xci">
           <Proxy FileSetName="parser_axi_uartlite_0_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="parser.bd" FileRelPathName="ip/parser_clk_wiz_0_0/parser_clk_wiz_0_0.xci">
-          <Proxy FileSetName="parser_clk_wiz_0_0"/>
+        <CompFileExtendedInfo CompFileName="parser.bd" FileRelPathName="ip/parser_lmb_bram_5/parser_lmb_bram_5.xci">
+          <Proxy FileSetName="parser_lmb_bram_5"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="parser.bd" FileRelPathName="ip/parser_microblaze_0_2/parser_microblaze_0_2.xci">
           <Proxy FileSetName="parser_microblaze_0_2"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="parser.bd" FileRelPathName="ip/parser_rst_clk_wiz_0_100M_0/parser_rst_clk_wiz_0_100M_0.xci">
-          <Proxy FileSetName="parser_rst_clk_wiz_0_100M_0"/>
+        <CompFileExtendedInfo CompFileName="parser.bd" FileRelPathName="ip/parser_clk_wiz_0_0/parser_clk_wiz_0_0.xci">
+          <Proxy FileSetName="parser_clk_wiz_0_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="parser.bd" FileRelPathName="ip/parser_lmb_bram_5/parser_lmb_bram_5.xci">
-          <Proxy FileSetName="parser_lmb_bram_5"/>
+        <CompFileExtendedInfo CompFileName="parser.bd" FileRelPathName="ip/parser_array_parser_0_0/parser_array_parser_0_0.xci">
+          <Proxy FileSetName="parser_array_parser_0_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="parser.bd" FileRelPathName="ip/parser_object_localizer_1_0/parser_object_localizer_1_0.xci">
-          <Proxy FileSetName="parser_object_localizer_1_0"/>
+        <CompFileExtendedInfo CompFileName="parser.bd" FileRelPathName="ip/parser_xbar_0_1/parser_xbar_0.xci">
+          <Proxy FileSetName="parser_xbar_0"/>
         </CompFileExtendedInfo>
       </File>
       <File Path="$PSRCDIR/sources_1/new/array_parser.sv">

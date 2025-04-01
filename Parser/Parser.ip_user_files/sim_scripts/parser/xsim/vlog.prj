@@ -16,6 +16,9 @@ sv xil_defaultlib --include "../../../../Parser.gen/sources_1/bd/parser/ipshared
 "../../../bd/parser/ip/parser_object_localizer_1_0/sim/parser_object_localizer_1_0.sv" \
 
 verilog xil_defaultlib --include "../../../../Parser.gen/sources_1/bd/parser/ipshared/ec67/hdl" --include "../../../../Parser.gen/sources_1/bd/parser/ipshared/4e49" \
+"../../../bd/parser/ipshared/61b1/proportional_controller_pwm.v" \
+"../../../bd/parser/ipshared/61b1/top.v" \
+"../../../bd/parser/ip/parser_proportional_control_0_0/sim/parser_proportional_control_0_0.v" \
 "../../../bd/parser/sim/parser.v" \
 
 verilog xil_defaultlib "glbl.v"

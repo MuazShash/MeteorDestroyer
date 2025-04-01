@@ -794,7 +794,7 @@
         "inst_hier_path": "object_localizer_1"
       },
       "proportional_control_0": {
-        "vlnv": "xilinx.com:user:proportional_controller_pwm:1.0",
+        "vlnv": "xilinx.com:user:proportional_controller_pwm:2.0",
         "xci_name": "parser_proportional_control_0_0",
         "xci_path": "ip\\parser_proportional_control_0_0\\parser_proportional_control_0_0.xci",
         "inst_hier_path": "proportional_control_0"

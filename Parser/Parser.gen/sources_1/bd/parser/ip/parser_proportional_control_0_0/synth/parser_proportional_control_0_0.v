@@ -47,12 +47,12 @@
 // DO NOT MODIFY THIS FILE.
 
 
-// IP VLNV: xilinx.com:user:proportional_controller_pwm:1.0
-// IP Revision: 4
+// IP VLNV: xilinx.com:user:proportional_controller_pwm:2.0
+// IP Revision: 1
 
 (* X_CORE_INFO = "top,Vivado 2022.1" *)
 (* CHECK_LICENSE_TYPE = "parser_proportional_control_0_0,top,{}" *)
-(* CORE_GENERATION_INFO = "parser_proportional_control_0_0,top,{x_ipProduct=Vivado 2022.1,x_ipVendor=xilinx.com,x_ipLibrary=user,x_ipName=proportional_controller_pwm,x_ipVersion=1.0,x_ipCoreRevision=4,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED}" *)
+(* CORE_GENERATION_INFO = "parser_proportional_control_0_0,top,{x_ipProduct=Vivado 2022.1,x_ipVendor=xilinx.com,x_ipLibrary=user,x_ipName=proportional_controller_pwm,x_ipVersion=2.0,x_ipCoreRevision=1,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED}" *)
 (* IP_DEFINITION_SOURCE = "package_project" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module parser_proportional_control_0_0 (
