@@ -138,17 +138,17 @@ module object_localizer #(
 
         //cos and sin approximations in Q0.15 format
         case (sensor_angles[out_min_index])
-            2'h0:  cos_approx <= 16'h7fff;
-            2'h1:  cos_approx <= 16'h7ba3;  
-            2'h2:  cos_approx <= 16'h7ba3;
-            default: cos_approx <= 16'h4000;
+            2'h0:  cos_approx <= 16'h7ba3;
+            2'h1:  cos_approx <= 16'h742f;  
+            2'h2:  cos_approx <= 16'h742f;
+            default: cos_approx <= 16'h7ba3;
         endcase
 
         case (sensor_angles[out_min_index])
             2'h0:  sin_approx <= 16'h0; 
-            2'h1:  sin_approx <= 16'h2121;
-            2'h2:  sin_approx <= 16'hDEDF;
-            default: sin_approx <= 32'h0;
+            2'h1:  sin_approx <= 16'h2a49;
+            2'h2:  sin_approx <= 16'hd5b7;
+            default: sin_approx <= 16'h0;
         endcase
 
         sens_x <= sensor_locations[out_min_index][2];
@@ -495,30 +495,30 @@ module axi_slave_interface #(
 	begin
 	  if ( S_AXI_ARESETN == 1'b0 )
 	    begin
-	        sensor_locations[0] <= {16'd0, 16'd0, 16'd0};     // Sensor 1: (x=0, y=0, z=0, theta=0)
+	        sensor_locations[0] <= {16'd0, 16'd0, 16'd100};     // Sensor 1: (x=0, y=0, z=0, theta=0)
             sensor_angles[0] <= 2'h0;
-            sensor_locations[1] <= {16'd74, -16'd4, 16'd0};    // Sensor 2: (x=74, y=4, z=0, theta=10)
-            sensor_angles[1] <= 2'h1;
-            sensor_locations[2] <= {-16'd74, -16'd4, 16'd0};    // Sensor 3: (x=-74, y=-4, z=0, theta=100)
-            sensor_angles[2] <= 2'h2;
-            sensor_locations[3] <= {16'd0, 16'd0, 16'd100};     // Sensor 4: (x=0, y=0, z=100, theta=0)
+            sensor_locations[1] <= {-16'd150, 16'd0, 16'd100};    // Sensor 2: (x=74, y=4, z=0, theta=10)
+            sensor_angles[1] <= 2'h2;
+            sensor_locations[2] <= {16'd150, 16'd0, 16'd100};    // Sensor 3: (x=-74, y=-4, z=0, theta=100)
+            sensor_angles[2] <= 2'h1;
+            sensor_locations[3] <= {16'd0, 16'd0, 16'd200};     // Sensor 4: (x=0, y=0, z=100, theta=0)
             sensor_angles[3] <= 2'h0;
-            sensor_locations[4] <= {16'd74, -16'd4, 16'd100};    // Sensor 5: (x=74, y=4, z=100, theta=10)
-            sensor_angles[4] <= 2'h1;
-            sensor_locations[5] <= {-16'd74, -16'd4, 16'd100};    // Sensor 6: (x=-74, y=-4, z=100, theta=100)
-            sensor_angles[5] <= 2'h2;
-            sensor_locations[6] <= {16'd0, 16'd0, 16'd200};     // Sensor 7: (x=0, y=0, z=200, theta=0)
+            sensor_locations[4] <= {-16'd150, 16'd4, 16'd200};    // Sensor 5: (x=74, y=4, z=100, theta=10)
+            sensor_angles[4] <= 2'h2;
+            sensor_locations[5] <= {16'd150, 16'd0, 16'd200};    // Sensor 6: (x=-74, y=-4, z=100, theta=100)
+            sensor_angles[5] <= 2'h1;
+            sensor_locations[6] <= {16'd0, 16'd0, 16'd300};     // Sensor 7: (x=0, y=0, z=200, theta=0)
             sensor_angles[6] <= 2'h0;
-            sensor_locations[7] <= {16'd74, -16'd4, 16'd200};    // Sensor 8: (x=74, y=4, z=200, theta=10)
-            sensor_angles[7] <= 2'h1;
-            sensor_locations[8] <= {-16'd74, -16'd4, 16'd200};    // Sensor 9: (x=-74, y=-4, z=200, theta=-10)
-            sensor_angles[8] <= 2'h2;
-            sensor_locations[9] <= {16'd0, 16'd0, 16'd300};     // Sensor 10: (x=0, y=0, z=300, theta=0)
+            sensor_locations[7] <= {-16'd150, 16'd0, 16'd300};    // Sensor 8: (x=74, y=4, z=200, theta=10)
+            sensor_angles[7] <= 2'h2;
+            sensor_locations[8] <= {16'd150, 16'd0, 16'd300};    // Sensor 9: (x=-74, y=-4, z=200, theta=-10)
+            sensor_angles[8] <= 2'h1;
+            sensor_locations[9] <= {16'd0, 16'd0, 16'd400};     // Sensor 10: (x=0, y=0, z=300, theta=0)
             sensor_angles[9] <= 2'h0;
-            sensor_locations[10] <= {16'd74, -16'd4, 16'd300};    // Sensor 11: (x=74, y=4, z=300, theta=10)
-            sensor_angles[10] <= 2'h1;
-            sensor_locations[11] <= {-16'd74, -16'd4, 16'd300};    // Sensor 12: (x=-74, y=-4, z=300, theta=100)
-            sensor_angles[11] <= 2'h2;
+            sensor_locations[10] <= {-16'd150, 16'd0, 16'd400};    // Sensor 11: (x=74, y=4, z=300, theta=10)
+            sensor_angles[10] <= 2'h2;
+            sensor_locations[11] <= {16'd150, 16'd0, 16'd400};    // Sensor 12: (x=-74, y=-4, z=300, theta=100)
+            sensor_angles[11] <= 2'h1;
 
             sensor_tilt <= 16'h2121;
             max_considered_distance <= 16'd2000;
