@@ -48,9 +48,9 @@ module object_localizer #(
     end
 
     integer i;
-    wire [DW-1:0] min_distances[2:0];
-    wire [4-1:0] min_indices[2:0];
-    wire min_3_valid;
+    wire [DW-1:0] first_look_min_distances[2:0];
+    wire [4-1:0] first_look_min_indices[2:0];
+    wire first_look_min_3_valid;
     reg [DW-1:0] sens_x;
     reg [DW-1:0] sens_y;
     reg [DW-1:0] sens_z;
@@ -68,8 +68,44 @@ module object_localizer #(
         .in_valid(in_valid),
         .din(distances),
         .index_in(index),
-        .dout(min_distances),
-        .output_index(min_indices),
+        .dout(first_look_min_distances),
+        .output_index(first_look_min_indices),
+        .out_valid(first_look_min_3_valid)
+    );
+
+    wire [DW-1:0] min_distances[2:0];
+    wire [4-1:0] min_indices[2:0];
+    wire min_3_valid;
+
+    reg [NUM_SENSORS-1:0] neighbour_maps [NUM_SENSORS-1:0];
+    
+    initial begin
+        neighbour_maps[0] <= 12'b000000111111;
+        neighbour_maps[1] <= 12'b000000011011;
+        neighbour_maps[2] <= 12'b000000101101;
+        neighbour_maps[3] <= 12'b000111111111;
+        neighbour_maps[4] <= 12'b000011011011;
+        neighbour_maps[5] <= 12'b000101101101;
+        neighbour_maps[6] <= 12'b111111111000;
+        neighbour_maps[7] <= 12'b011011011000;
+        neighbour_maps[8] <= 12'b101101101000;
+        neighbour_maps[9] <= 12'b111111000000;
+        neighbour_maps[10] <= 12'b101011000000;
+        neighbour_maps[11] <= 12'b101101000000;
+    end
+    nearest_neighbour #(
+        .NUM_SENSORS(NUM_SENSORS),
+        .N(3)
+    ) nearest_neighbour_inst (
+        .clk(clk),
+        .rstn(rstn),
+        .data_in(distances),
+        .input_indices(index),
+        .in_valid(first_look_min_3_valid),
+        .min_indices(first_look_min_indices),
+        .neighbour_maps(neighbour_maps),
+        .data_out(min_distances),
+        .out_indices(min_indices),
         .out_valid(min_3_valid)
     );
 
@@ -138,16 +174,16 @@ module object_localizer #(
 
         //cos and sin approximations in Q0.15 format
         case (sensor_angles[out_min_index])
-            2'h0:  cos_approx <= 16'h7ba3;
-            2'h1:  cos_approx <= 16'h742f;  
-            2'h2:  cos_approx <= 16'h742f;
-            default: cos_approx <= 16'h7ba3;
+            2'h0:  cos_approx <= 16'h7402;
+            2'h1:  cos_approx <= 16'h700e;  
+            2'h2:  cos_approx <= 16'h700e;
+            default: cos_approx <= 16'h7402;
         endcase
 
         case (sensor_angles[out_min_index])
             2'h0:  sin_approx <= 16'h0; 
-            2'h1:  sin_approx <= 16'h2a49;
-            2'h2:  sin_approx <= 16'hd5b7;
+            2'h1:  sin_approx <= 16'h1e06   ;
+            2'h2:  sin_approx <= 16'he1fa;
             default: sin_approx <= 16'h0;
         endcase
 
@@ -520,7 +556,7 @@ module axi_slave_interface #(
             sensor_locations[11] <= {16'd150, 16'd0, 16'd400};    // Sensor 12: (x=-74, y=-4, z=300, theta=100)
             sensor_angles[11] <= 2'h1;
 
-            sensor_tilt <= 16'h2121;
+            sensor_tilt <= 16'h0000;
             max_considered_distance <= 16'd2000;
 	    end 
 	  else begin
